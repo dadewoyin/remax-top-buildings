@@ -10,7 +10,7 @@
         <img class="img-responsive" src="{% static "images/johnchang.png" %}"/>
     </div>
     <div class="col-sm-8">
-        <h1>Letter from the CEO</h1>
+        <h1>Letter from the CEO</h1><br>
         <p>I am proud to be part of RE/MAX, the biggest
         real estate company in the world, with 6,000+
         offices in 90+ countries, and more than 90,000
@@ -48,6 +48,123 @@
             <h4 class="text-center">CEO & Founder</h3>
         </div>
     </div>
+</div><br>
+
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#allneighborhoods">All</a></li>
+        <li><a data-toggle="tab" href="#downtown">Downtown</a></li>
+        <li><a data-toggle="tab" href="#midtown">Midtown</a></li>
+        <li><a data-toggle="tab" href="#uptown">Uptown</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="allneighborhoods" class="tab-pane fade in active">
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="{% url "show_neighborhood" neighborhood="lower-east-side" %}"><img class="img-responsive" src="{% static "images/lowereast.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Lower East Side</h4><br><h5>Downtown</h5>
+                </div></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/yorkville.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Yorkville</h4><br><h5>Uptown</h5>
+                </div>
+            </div>
+            <div class="clearfix visible-xs block"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/stuytown.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Stuyvesant Town</h4><br><h5>Downtown</h5>
+                </div>
+            </div>
+            <div class="clearfix visible-md block"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/batterypark.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Battery Park City</h4><br><h5>Downtown</h5>
+                </div>
+            </div>
+            <div class="clearfix visible-lg visible-xs block"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/chinatown.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Chinatown</h4><br><h5>Downtown</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/turtlebay.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Turtle Bay</h4><br><h5>Midtown</h5>
+                </div>
+            </div>
+            <div class="clearfix visible-xs visible-md block"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/noho.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Noho</h4><br><h5>Downtown</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/nomad.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Nomad</h4><br><h5>Downtown</h5>
+                </div>
+            </div>
+            <div class="clearfix visible-lg visible-xs block"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/midtownsouth.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Midtown South</h4><br><h5>Midtown</h5>
+                </div>
+            </div>
+            <div class="clearfix visible-md block"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/tribeca.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Tribeca</h4><br><h5>Downtown</h5>
+                </div>
+            </div>
+            <div class="clearfix visible-xs block"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/rooseveltisland.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Roosevelt Island</h4><br><h5>Midtown</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/morningside.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Morningside Heights</h4><br><h5>Uptown</h5>
+                </div>
+            </div>
+            <div class="clearfix visible-lg visible-md visible-xs block"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/valley.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Manhattan Valley</h4><br><h5>Uptown</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/washington.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Washington Heights</h4><br><h5>Uptown</h5>
+                </div>
+            </div>
+            <div class="clearfix visible-xs block"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/midtown.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Midtown</h4><br><h5>Midtown</h5>
+                </div>
+            </div>
+            <div class="clearfix visible-md block"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <img class="img-responsive" src="{% static "images/hamilton.png" %}"/>
+                <div class="imgNeighborhoodName">
+                    <h4>Hamilton Heights</h4><br><h5>Uptown</h5>
+                </div>
+            </div>
 </div>
 
 {% endblock content %}
