@@ -31,3 +31,9 @@
 #homepageCarousel img {
     min-width: 100%;
 }
+
+.imgNeighborhoodName {
+    margin-top: -90px;
+    text-align: center;
+    color: #FFFFFF;
+}
