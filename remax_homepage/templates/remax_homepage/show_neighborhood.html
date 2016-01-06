@@ -49,13 +49,157 @@
     </ul>
     <div class="tab-content">
         <div id="food" class="tab-pane fade in active">
-            food
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active">
+                    <br>
+                    {% if neighborhood == "Lower East Side" %}
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img class="img-responsive" src="{% static "images/pigkhao.jpg" %}"/>
+                                <h6>Pig & Khao</h6>
+                            </div>
+                            <div class="col-lg-8">
+                                <p>The Lower East Side may be best known to you as the home of rowdy nightlife, but that adventure extends to the food scene as well.<br><br>
+
+                                You can spot Top Chef  Contestant Leah Cohen at her restaurant Pig & Khao, which mixes Thai and Filipino influences. Pork lovers will enjoy this restaurant, as their signature dishes are pork head, belly and leg. Their small bowls of beer served piggy style on the side will make your meal more than perfect!</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>Like some other punk-rock places in this neighborhood, Contra has very little signage out front to help you find it. But you’ll forgive them once you do encounter the restaurant, because their tasting menu is the rare arrangement that won’t make you forfeit rent: it costs a mere $55 for 5 courses. Their amazing variety of options and tastes will leave you coming back for more.<br><br>
+
+                                You don’t have to fight about where to eat for a group of people with various ideas: The Fat Radish is ideal for the vegetarians, but placates the carnivores with a killer bacon cheeseburger and pork chop. Your group will also agree on the gorgeously bright, all-white space, which perfectly complements the delicious food.</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <div id="take" class="tab-pane fade in">
+                    <br>
+                    {% if neighborhood == "Lower East Side" %}
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <p>If you’re looking for some quick and easy food in the Lower East Side, the area will definitely not disappoint. Takeout is a lovely option for this area due to the very small and crowded restaurant locations.<br><br>
+
+                                Looking for an exceptional slice of pizza at reasonable prices in the Lower East Side? La Margarita is the best place to grab a quality slice. The pizza is thin, crispy, and surely tasty. The best part of La Margarita is that if you get there before 6 P.M., you can snag a slice for only $2.00! Try out some of this cheap and easy pizza today.</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <img class="img-responsive" src="{% static "images/mezetto.jpg" %}"/>
+                                <h6>Mezetto</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>If you are looking for something a little more extravagant, try Mezetto. They serve a unique combination of American staples infused with Mediterranean flavors. Known for their lamb meatballs, truffled gnocchi, and chicken shawarma shishlik, they will take you on a tour of flavors from all over the Mediterranean– Italian, Israeli, Greek and beyond.<br><br>
+
+                                For some handcrafted puddings and hot or cold bubble tea, choose Pomme LES. The puddings of choice are mango, green tea, and chocolate banana pudding, which are all sure to steal your heart. They also serve sweet and savory crepes, which are absolutely delicious. Bring a friend to enjoy some tempting foods there!</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
         <div id="nightlife" class="tab-pane fade in">
-            nightlife
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active">
+                    <br>
+                    {% if neighborhood == "Lower East Side" %}
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img class="img-responsive" src="{% static "images/copperoak.jpg" %}"/>
+                                <h6>Copper & Oak</h6>
+                            </div>
+                            <div class="col-lg-8">
+                                <p>If you’d like to enjoy some great nightlife, you’ve come to the right place-the Lower East Side has some well established bars that you will surely enjoy.<br><br>
+
+                                The best bar for live music would be Mercury Lounge. They don’t just provide well-known acts, but also new performances. The famous band named Strokes got their start at this intimate, divey venue. Moreover, it’s always easy to get a beer as there’s a separate mini-bar in the music room.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>If you are a big fan of whiskey, choose Copper & Oak, a fancy whiskey house from Brandy Library’s Flavien Desoblin with more than 600 bottles crammed on backlit bookshelves. Vintage whiskey is always there for you to explore, or you could expand your wisdom with barkeepers’ guidance.<br><br>
+
+                                Loreley is a wise choice for a gathering among friends. This mellow lil’ beer garden has a tucked-away outdoor seating area, gigantic brews, as well as normal-sized, but highly enjoyable, German fare.</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <div id="club" class="tab-pane fade in">
+                    <br>
+                    {% if neighborhood == "Lower East Side" %}
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <p>Hosting several of Manhattan’s best burlesque shows at some special clubs, the Lower East Side offers plenty of late-night diversions. For the best nightlife in the neighborhood, look beyond the standard dance-club model to live gigs – the LES has the lion’s share of the city’s best downtown rock venues.<br><br>
+
+                                Looking for venues for Old School Hip Hop, R&B, Reggae & Soul Classics? Go check out bOb Bar! The music is always on point, and the drinks are just as exciting. Remember to bring your dancing shoes!</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <img class="img-responsive" src="{% static "images/mehanata.jpg" %}"/>
+                                <h6>Mehanata</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>Unlike other general clubs, Mehanata has swings on the upstairs bar in front of the bar to sit down and savor the cocktails. It is definitely the place to party hard as the downstairs bar includes three dancing pools. You will enjoy your time with dancing, hookah, and iced vodka there!<br><br>
+
+                                Most people consider the DJ and music as most crucial for evaluating a club, and Lounge 247 nailed both of these points. The club is not huge, but plays amazing music, including top 40 songs, a lot of hip hop, and 90’s throwback songs. If you decide to attend, you will be in for a treat!</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
         <div id="dailyerrands" class="tab-pane fade in">
-            daily errands
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    {% if neighborhood == "Lower East Side" %}
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img class="img-responsive" src="{% static "images/wholefoods.jpg" %}"/>
+                                <h6>Whole Foods Market</h6>
+                            </div>
+                            <div class="col-lg-8">
+                                <p>For a great grocery location, the Lower East Side will definitely please you with its wide array of stores.<br><br>
+
+                                First, Essex Street Market mainly offers a wide variety of culinary products including gourmet cheese, premium cuts of meat, fresh fish, and general grocery items. Some people love this place because of their distinctive foreign country foods, which they can buy here without a hassle. The merchants there are very friendly and create a welcoming, community-oriented environment.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>And, Whole Foods Market is no doubt your best choice to shop for very fresh foods and high quality grocery items. In fact, the Lower East Side location is commended to be the best Whole Foods in Manhattan. The large space and beautiful layout will bring you a joyful shopping experience, as well as the extra amenities of second floor seating and free Wi-Fi for two hours.<br><br>
+
+                                Another great stop is Union Market, known for their organic and natural foods, and this store was the first Gold Certificated LEED Green grocery in New York. You could even find a wonderful grab-and-go breakfast deal there in the morning.</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    {% if neighborhood == "Lower East Side" %}
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>If you’re interested in a great laundromat located in Lower East Side, the selection will not disappoint.<br><br>
+
+                                Liox Cleaners offers online-oriented service, including dry cleaning, laundry, and maid services. Their online ordering process will make your cleaning quick and convenient, and they have fabulous service to take good care of your clothes. In terms of responsibility, Liox Cleaners guarantees to give you your money back for any issue with the clothes.<br><br>
+
+                                If you’re looking for a cheaper laundromat with high quality, choose Tian Tian Laundromat. Most of the time, you can get a same day turnaround on your laundry. Just go and drop it in the morning and you could pick up a nicely folded stack of your clothes.<br><br>
+
+                                Lau’s Wash and Dry is a resident favorite for the Lower East Side. They are open most of the day and every service that they offer is reasonably priced. With great service, Lau’s cannot be beaten.</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
         <div id="attractions" class="tab-pane fade in">
             attractions
