@@ -1,0 +1,33 @@
+#compLogo {
+    height: 45px;
+}
+
+#headerSearch {
+    padding-right: 10px;
+}
+
+/* "Top" link in nav */
+#headerCollapse li:nth-child(5) a {
+    background-color: #B41C30;
+    color: #FFFFFF;
+}
+
+#pageFooter {
+    background-color: #B41C30;
+    color: #FFFFFF;
+}
+
+#pageFooter a {
+    color: #FFFFFF;
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+/* Social media span tags */
+#pageFooter p a {
+    font-size: 15px;
+}
+
+#homepageCarousel img {
+    min-width: 100%;
+}
