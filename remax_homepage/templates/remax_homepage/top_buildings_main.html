@@ -1,0 +1,53 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | Top Buildings {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <div class="col-sm-4">
+        <img class="img-responsive" src="{% static "images/johnchang.png" %}"/>
+    </div>
+    <div class="col-sm-8">
+        <h1>Letter from the CEO</h1>
+        <p>I am proud to be part of RE/MAX, the biggest
+        real estate company in the world, with 6,000+
+        offices in 90+ countries, and more than 90,000
+        agents. And as the founder of REMAX Midtown,
+        it is my honor to bring together the biggest real
+        estate company to the biggest real estate market of
+        New York City.<br><br>
+        We hope you enjoy reading our Top 30 condominium
+        buildings segmented by Downtown, Midtown,
+        and Uptown. It was after much deliberation and
+        countless sleepless nights that we selected these 90
+        total buildings.<br><br>
+        Our top 30s are unlike any other buildings in Manhattan,
+        featuring nothing less than top of the line
+        interiors, private residence clubs, restaurants, state
+        of the art fitness centers, award winning architectural
+        and interior designs, unique layouts to maximize
+        space, outstanding views of Manhattan, and
+        so much more. And after narrowing down to the
+        top 30s, we then forecasted the appreciation of the
+        units in these buildings.<br><br>
+        As the Manhattan market continues to evolve into a more international marketplace, buyers and sellers will
+        look to RE/MAX with our unmatchable brand awareness and network of agents to list their homes to help
+        in their search of their dream homes.<br><br>
+        Enjoy reading our magazine and please leave it on your coffee table.</p>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static "images/johnchangsignature.png" %}"/>
+        </div>
+        <div class="col-xs-12">
+            <h2 class="text-center">John W. Chang, MBA</h1>
+        </div>
+        <div class="col-xs-12">
+            <h4 class="text-center">CEO & Founder</h3>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
