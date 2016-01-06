@@ -7,7 +7,7 @@
 }
 
 /* "Top" link in nav */
-#headerCollapse li:nth-child(5) a {
+#headerCollapse li:nth-child(6) a {
     background-color: #B41C30;
     color: #FFFFFF;
 }
