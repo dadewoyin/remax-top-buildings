@@ -11,3 +11,6 @@ def blog_page(request):
 
 def neighborhoods_page(request):
     return render(request, "remax_homepage/neighborhoods_page.html", {})
+
+def show_neighborhood(request, neighborhood):
+    return render(request, "remax_homepage/show_neighborhood.html", {"dir": "images/" + neighborhood + ".png", "neighborhood": neighborhood.title().replace("-", " ")})

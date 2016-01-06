@@ -1,0 +1,78 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                {% if neighborhood == "Lower East Side" %}
+                    Charming and artistic, the Lower East Side exudes an alluring atmosphere that everyone wants to take part in. Bordered by the East Village, the East River, and Bowery, the downtown location is a perfect mix of beauty and movement.<br><br>
+
+                    Known for its endless nights, the Lower East Side surely will impress you with its selection of bars and clubs. They have everything from fancy to divey, fresh to timeless, and quiet to lively. Even if you’re not normally interested in the party scene, there will definitely be a classic choice for you to relax the night away at. While in the Lower East Side, check out the eclectic choices and variety of food options within the area.<br><br>
+
+                    The nightlife scene of the Lower East Side would not be complete without extraordinary attractions by day, and museums such as the Lower East Side Tenement Museum will certainly be enjoyable to visit. Other great stops include music halls, cooking classes, and even a live performance haunted house! While the Lower East Side Tenement Museum can’t be beaten, there are also many other art galleries in the area to take a look at art, both contemporary and historic. However you choose to spend your day, you will certainly enjoy it.<br><br>
+
+                    In terms of real estate, prices have recently dipped below the New York City average, so now is definitely the time to purchase a property! The cheaper prices are mainly due to the young atmosphere and vibes that this neighborhood exudes, so if this sounds appealing to you, check out the Lower East Side neighborhood today.<br><br>
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="#">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            food
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            nightlife
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            daily errands
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            attractions
+        </div>
+        <div id="shopping" class="tab-pane fade in">
+            shopping
+        </div>
+        <div id="school" class="tab-pane fade in">
+            school
+        </div>
+        <div id="health" class="tab-pane fade in">
+            health
+        </div>
+        <div id="parks" class="tab-pane fade in">
+            parks
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

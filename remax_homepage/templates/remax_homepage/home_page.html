@@ -69,10 +69,10 @@
     <div class="tab-content">
         <div id="allneighborhoods" class="tab-pane fade in active">
             <div class="col-lg-3 col-md-4 col-xs-6">
-                <img class="img-responsive" src="{% static "images/lowereast.png" %}"/>
+                <a href="{% url "show_neighborhood" neighborhood="lower-east-side" %}"><img class="img-responsive" src="{% static "images/lowereast.png" %}"/>
                 <div class="imgNeighborhoodName">
                     <h4>Lower East Side</h4><br><h5>Downtown</h5>
-                </div>
+                </div></a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6">
                 <img class="img-responsive" src="{% static "images/yorkville.png" %}"/>

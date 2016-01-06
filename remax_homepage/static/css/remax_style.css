@@ -37,3 +37,8 @@
     text-align: center;
     color: #FFFFFF;
 }
+
+#neighborhoodProperties li:nth-child(9) a {
+    background-color: #B41C30;
+    color: #FFFFFF;
+}
