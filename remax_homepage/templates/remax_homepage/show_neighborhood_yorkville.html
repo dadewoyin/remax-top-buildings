@@ -1,0 +1,357 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                A melting pot of college students, Eastern European immigrants, and the Upper East Side runoff, Yorkville attracts personalities of all types. Yorkville is bordered by Carnegie Hill and the Upper East Side.<br><br>
+
+                As a home to many, this cultural neighborhood offers something for everyone, including dining, nightlife, and shopping amenities. For food options, Yorkville mirrors the amazing caliber of dining of the Upper East Side, including cuisines of American, Japanese, and seafood cuisine. Plus, the nightlife is fantastic, particularly tailored to a younger and vibrant crowd. And, the caliber of medical service is exceptional, including practices such as Yorkville Animal Hospital and CityMD. Overall, you will definitely feel safe and secure if you choose to live in Yorkville.<br><br>
+
+                If you’re looking for something to do on the Upper East Side, Yorkville is probably the place you will find the best attractions. Between the many performances put on at the various theaters, as well as beautiful art galleries that contain only the most renowned artwork internationally, there is truly something for everyone to enjoy. And, if you are looking to unwind instead of entertained, the many parks in the Yorkville neighborhood are sure to please.<br><br>
+
+                As the demand for a property in Yorkville increases, so do the prices, as former Upper East Side residents are flocking to this location for a slightly cheaper and hipper vibe. So, if you’re interested in a property in Yorkville, start looking for the perfect rental or property to buy today!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/atlanticgrill.jpg" %}"/>
+                            <h6>Atlantic Grill</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>One of the Yorkville fine dining options is Atlantic Grill, a New American seafood restaurant. The classy vibes transcend throughout the establishment, and are complemented by the amazing seafood and sushi dishes. This is definitely a place to try if you’re interested in the seafood options of Yorkville.<br><br>
+
+                            For some great sushi, check out Tanoshi Sushi Sake Bar, which prepares some of the most incredible sushi around. The handmade sushi is crafted right in front of your eyes, and be sure to try the $72 omakase, a favorite for customers here. Overall, the sushi is the most authentic that you can order, and the prices are affordable.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try Daniel, featuring French & Traditional American fusion food. As a Michelin star restaurant, everything you try will be amazing, but the foie gras is especially to die for. Come here to be stunned by the caliber of food and class of this restaurant.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>A wonderful takeout option in Yorkville is Szechuan Kitchen, which is Chinese food specifically created for takeout. The dishes here are fresh and reliable, and if you order takeout, the delivery will surely arrive quickly.<br><br>
+
+                            If you’re in need of a healthy meal to cleanse your stomach, Good Health provides the necessary choices for you. The organic vegetarian and vegan restaurant has many options for a healthy dish, all which are customizable and ready for delivery. Come check out Good Health today!.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/hummuskitchen.jpg" %}"/>
+                            <h6>Hummus Kitchen</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, check out Hummus Kitchen for Mediterranean food with vegetarian and kosher options that are both healthy and delectable. The friendly service will definitely add to your experience, and the prices are decent enough to keep coming back.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/drunkenmunkey.jpg" %}"/>
+                            <h6>Drunken Munkey</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re in need of some casual nightlife in Yorkville, check out Drunken Munkey. This British-Bollywood twist has an Indian-type feel within the bar, including the decor, food, and drink choices. Drunken Munkey is especially known for its cocktails, so be sure to order one today along with some fantastic food.<br><br>
+
+                            Or, try Caledonia Bar, aScottish pub that offers whiskey of many varieties, in addition to other drinks. The cozy ambiance spices up the bar, while keeping the overall atmosphere classy.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For some good craft beer and bar food, visit The Pony Bar. Quality here is above average in terms of the brews, making this an ideal spot to hang out with friends and settle down at. Plus, the service is terrific, which will add to your experience of the night.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you need more of a party to liven up the night, Yorkville will definitely supply you with a great selection of clubs to choose from.<br><br>
+
+                            One of the best clubs with amazing food is Lavo, where the restaurant turns into a dance club after 9pm, complete with many tables and couches to enjoy the wonderful atmosphere here. Plus, you can come before 9 to enjoy an Italian meal before heading off to the dance floor.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/lavo.jpg" %}"/>
+                            <h6>Lavo</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, check out the open bar Saloon NYC, where most people are young and ready to party.  The reasonably priced drinks add to the atmosphere of the party, including a dance floor and lively music.<br><br>
+
+                            For a fun time, visit Sapphire New York, which has great proximity to 59th Street station. Also, the music here is superb, with a variety of cigars to smoke if you’re interested.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/fairwaymarket.jpg" %}"/>
+                            <h6>Fairway Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Or, if you’re in need of a grocery store, Yorkville surely has the choice for you.<br><br>
+
+                            Try Fairway Market if you’re looking for fresh & high quality fish, cheeses, or other basic goods. The reasonable prices are very attractive here, as there are often $5 specials for you to select the good of your choice. Plus, the staff is very informed into their products, ensuring that they can find what you’re looking for.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Check out Eddie’s Market if you’re looking to be greeted by accommodating staff, ready to help you find any one of their sandwiches, smoothies, coffee, beer, or other groceries.  Plus, the produce here is fantastic, ensuring you can purchase all of your weekly groceries here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>In terms of laundry selections, Yorkville’s opportunities for high-quality laundromats are never-ending.<br><br>
+
+                            If you’re looking for a laundromat that will service your needs and your laundry, Jeanie Dry Cleaners will do the trick. With some discounts available, Jeanie Dry Cleaning always has the customer in mind as the first priority, which is exactly what you should be looking for in your laundromat.<br><br>
+
+                            Visit Expert Cleaners if you’re interested in fast, friendly service with a guaranteed quality clean. The pick-up and delivery options are convenient, and the fact that these laundromats are very trustworthy is a definite plus.<br><br>
+
+                            Or, try Fluff-n-Fold Laundry Services, who care about their customers and knowing them on a personal level. Because of the competitive pricing, getting your clothes clean here is worth it, as you will have services which you enjoy coming back to.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/shakespeare.jpg" %}"/>
+                            <h6>Shakespeare in the Park</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Yorkville also hosts some incredible performance venues for you to check out if you’re in search of something fun to do.<br><br>
+
+                            First, try Shakespeare in the Park, which you can get tickets online to through a lottery for free. The Central Park moonlight sets the stage for the beautiful theatre, where you can buy food and drinks to complement the evening. Take part in this New York City tradition today!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, perhaps Museum of Motherhood is more your style, as an international museum and teaching facility with a focus on the history and development of families. This is a great place to take your kids and family for a fun outing that everyone will love!<br><br>
+
+                            Check out Speakeasy Dollhouse for a great Broadway show, where you can dress in costume attire from the past to take part in the show itself. As an interactive theater, you will definitely not be bored here, and your inner actor will be let out!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re in need of some fabulous art locations, Yorkville has the gallery for you. Visit Art for Eternity, which specializes in classical antiquities, Pre-Columbian art and Tribal Art, all fantastic styles that appeal a wide variety of viewers. This rotating gallery has featured pieces from Yale, Dartmouth, Princeton, and Emory, and the gallery is nationally acclaimed and recognized by Architectural Digest, NY Times, and more.!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/artforeternity.jpg" %}"/>
+                            <h6>Art for Eternity</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, visit Czech Center Gallery, which is a very fun atmosphere for kids, featuring a hands on environment with many art workshops to choose from. The Czech influences add to the appeal here, as the culture is infused into the many displays and artwork.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/athleta.jpg" %}"/>
+                    <h6>Athleta</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re in need of a fabulous shopping location, Yorkville supplies shops of all varieties.<br><br>
+
+                    If you need a cheap store to stock up on clothing, Goodwill is the perfect solution. Stocking used clothing from the likes of Brooks Brothers, Thomas Pink, Anna Taylor, J. Crew, Banana Republic, and many more, you can buy something designer for an extremely low prices. This is the ultimate choice for anyone looking for designer clothing with the necessary discount to enter their price range.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, check out Athleta, which specializes in workout clothes that are comfortable and trendy. The friendly & helpful staff is always willing to help you navigate their organized location, and if you’re interested in trying on one of their pieces, the fitting rooms feature mirrors that move to give you the perfect angle.<br><br>
+
+                    A favorite of the Yorkville area is Urban Outfitters, conveniently located in the center of the action. The well-known chain stocks great clothes at decent prices, and is very popular among hip and young shoppers looking for a trendy buy.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/chapinschool.jpg" %}"/>
+                            <h6>The Chapin School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In the case of education, Yorkville’s caliber of schools is very high.<br><br>
+
+                            Enroll your children in Brearley School, an all-girls private school for children grades kindergarten through 12th, sporting an educated and inspiring atmosphere. The best perk of this school is that the college placement is exceptional, so it is well worth the price.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, maybe The Chapin School is a better fit for your girl aged kindergarten through twelfth, as there is a foundation here of college excellence and history, as the school was founded in 1901. If college preparation is one of your main goals, The Chapin School is an excellent fit.<br><br>
+
+                            For a co-ed school, another option is Caedmon School, an independent school that also has pre-school education. The teachers are devoted to giving each child the opportunity for an individualized learning plan, so be sure to consider this selection for your child in the Yorkville area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For a fantastic university in Yorkville, try Marymount Manhattan College, a private liberal arts college in the area. Because of the small attendance, the education here is very personal, and there are limitless opportunities for learning within the bounds of New York City. In terms of the education itself, the strengths are in performing arts, communication, business, and liberal arts and sciences, ensuring a quality education in any of these areas.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/marymountmanhattan.jpg" %}"/>
+                            <h6>Marymount Manhattan College</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/edgegym.jpg" %}"/>
+                            <h6>Edge Gym</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Yorkville’s gym choices are high-quality for you to appreciate the caliber of workout that you desire.<br><br>
+
+                            One of the options is Crunch, a facility that is very clean and supplies a variety of machines on location. The staff here is helpful when instructing one of their many classes, all of which are great to participate in.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Try working out at EVF Performance regardless of whether or not you utilize the crossfit facilities, as the gym is half crossfit, half normal gym. The strength classes are especially top-notch here, especially the ones taught by Dave Kirschen, one of the top three powerlifters in the country.<br><br>
+
+                            Or, visit Edge Gym for some clean equipment in a facility that is rarely crowded. The prices here are good and reasonable, especially due to the friendly staff, new machines, and complimentary towel service. Overall, Edge Gym is a fantastic choice for your next full-time gym.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re in need of a doctor or hospital care, Yorkville can certainly provide the necessary resources.<br><br>
+
+                            In need of an urgent care facility? City MD has the staff to take care of you, from the nurses to doctors and surgeons. The waiting area is clean and sterilized, and everyone there is dedicated to providing you with the customer care that you’re looking for. Be sure to consider CityMD for your next urgent care visit, as they will definitely do a great job with your health.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/citymd.jpg" %}"/>
+                            <h6>CityMD</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>A qualified and friendly doctor in Yorkville is Hockstein Steven MD. The staff here are very caring, and his credentials speak for themselves. Even so, Dr. Hockstein is always friendly and attentive to your needs, and his office will certainly calm your nerves with its clean and spacious venue.<br><br>
+
+                            Or, visit Alan Teitelbaum, PC, a very professional doctors that is knowledgeable in his field. Dr. Teitelbaum will definitely take care of you, and follow up to make sure that all your needs are met.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/carlschurz.jpg" %}"/>
+                    <h6>Carl Schurz Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>For a park that you will love for the whole family, Yorkville’s locations will not disappoint.<br><br>
+
+                    One of the options that is definitely one of the most beautiful is Carl Schurz Park, which is certainly dog and kid friendly. Overlooking East River, the playground is perfect for a fun day of relaxation, along with the backdrop of scenery, including gardens with trees, flowers, and a pretty landscape. So, whether you bring your kids here or just enjoy a job, Carl Schurz Park is the ideal location for you.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, try spending a day at Ruppert Park, a recently renovated park that has new plants, bushes, and trees, which has created an oasis for many among the city landscape surrounding the park. As one of the most relaxing locations on the Upper East Side, visit Ruppert Park to read or just to enjoy the landscape.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=yorkville, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://www.premiumlinkgenerator.com/">premium link generator </a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}

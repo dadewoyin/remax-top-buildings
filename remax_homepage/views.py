@@ -16,7 +16,7 @@ def show_neighborhood(request, neighborhood):
     return render(request, 
         "remax_homepage/show_neighborhood_"+ neighborhood +".html", 
         {"original": neighborhood,
-         "dir": "images/" + neighborhood + ".png", 
+         "dir": "images/LG/" + neighborhood + ".png", 
          "neighborhood": neighborhood.title().replace("-", " ")})
 
 def top_buildings_main(request):
