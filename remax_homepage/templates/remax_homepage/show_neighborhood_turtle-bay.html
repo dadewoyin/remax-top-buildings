@@ -1,0 +1,289 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Known for its diverse property values and housing situations, Turtle Bay is a neighborhood in Midtown Manhattan that extends from 41st to 53rd Street and from Lexington Avenue to the East River. Turtle Bay is bordered by Murray Hill, Midtown, and Lenox Hill.<br><br>
+
+                One of the perks of living in Turtle Bay is the proximity to Midtown, yet quieter backdrop for everyday living. Even though the neighborhood is relatively small, Turtle Bay has many different dining options, from small cafes to Michelin-star restaurants. Come nighttime, the area isn’t dead, as the younger generation that resides here parties in the plentiful bars and clubs, most notably during Turtle Bay NYC happy hour.<br><br>
+
+                During the day, you can find all the essentials in Turtle Bay-great shopping locations, excellent laundry services, and local food markets. Because of all the fantastic amenities, Turtle Bay is a very livable neighborhood for people of all different walks of life, as there are laundry services on-the-go for the busy professional, as well as local grocery selections for a relaxed retiree. Regardless of your age or living style, Turtle Bay may be the perfect choice for you.<br><br>
+
+                The variety of this neighborhood attracts many different styles, ranging from those who settle in small rental apartments to the luxurious penthouses of the area’s center. Therefore, many different price points are available to buy or rent in Turtle Bay, making this a reasonable option for virtually anyone interested. Be sure to consider Turtle Bay in your next property hunt, as you may be surprised at the caliber of homes in your price range!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/sushiyasuda.jpg" %}"/>
+                            <h6>Sushi Yasuda</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For dining in Turtle Bay, you will be presented with many options to suit your needs.<br><br>
+
+                            A very upscale restaurant in Turtle Bay is Four Seasons Restaurant, which features mid-century architecture on the exterior, and beautifully designed rooms inside. The menus change by season, so you can try something new in the winter, spring, summer, and fall. They also feature many rooms, such as the Pool Room, which is more open and romantic, as well as the Grill Room, known for its power lunches.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re trying to find the best sushi of New York City, Sushi Yasuda might be the winner. Their simplified approach of focusing on the freshness of the rice and fish emphasizes the simplicity of excellent cuisine. They also have a homemade maki roll, created with individualized sushi rolls, that are shipped from Japan exclusively for Sushi Yasuda.<br><br>
+                            For arguably the best steakhouse of Midtown East, visit Wolfgang’s Steakhouse. Although the cuts here are very expensive, they are well worth the price, as customers rave about their quality. If you’re in a group, then order the porterhouse steak to share, which will be more than enough meat for your party. And, be sure to add side dishes, which embellish the steak to new heights.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For anyone looking for takeout, Turtle Bay hosts plenty of institutions to choose from.<br><br>
+
+                            If you’re in the mood for mouthwatering Greek food, check out Uncle Gussys. Even though it appears to be a simple food cart, don’t let its appearance deceive you; this is one of the most popular lunch stops in the area. You’ll have to get in a long line to try one of their many Greek options, from Souvlaki skewers to Greek salads and even a great Philly cheesesteak if you wish to try something different.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/gussys.jpg" %}"/>
+                            <h6>Uncle Gussys</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For an exotic Cambodian dish to change up your normal routine, try Num Pang Sandwich Shop. Their gourmet food creates many bold flavors, and their meats are always very tender, Dishes of choice here include their 5 spice pork belly sandwich and coconut tiger shrimp, but don’t let that deter you from trying another menu item.<br><br>
+
+                            A Provence-style artisanal restaurant located in Turtle Bay is Chicken Provence, which features health-conscious gourmet food that is both delicious and affordable. Receiving GQ’s Dish of the year award, Chicken Provence combines the delicacies of French cuisine with tender, juicy meats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/foxyjohn.jpg" %}"/>
+                            <h6>Foxy John's</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking to experience the bar scene of New York City, Turtle Bay’s offerings are spot-on.<br><br> For one of the best party bars of New York City, visit Turtle Bay NYC. Offering sporting event viewings, dancing, and a young crowd, Turtle Bay NYC is the perfect place for a young resident to have the time of their life. Plus, the beers are only $1, making this an affordable option.<br><br>
+
+                            Or, another lively bar scene is Foxy Johns Bar & Kitchen. If you come during the day, you can receive the daily lunch specials, such as $1 oysters all day. At night, there is live music, and often drink combos and specials for you to save some money on. Come check out this great bar today!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>A classic American bar located in Turtle Bay is Overlook. The friendly crowd brightens the atmosphere of this bar, so you will certainly meet someone new and interesting. Come on karaoke night to expose your inner singing talents, or any other today for some typical New York City fun.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For anyone that wants to party extra hard in Turtle Bay, there may be a club or two that they can visit while staying here.<br><br>
+                            The best club of the Turtle Bay area is LQ. They often play bachata here, a traditional Latin dance music, and even when they don’t, the music is always fun and exciting. Also, the hookah bar is extensive, leaving you many options to enjoy your night with.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/turtlebaylq.jpg" %}"/>
+                            <h6>LQ</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/mortonwilliams.jpg" %}"/>
+                            <h6>Morton Williams</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In terms of grocery stores, Turtle Bay’s supplies many authentic options to choose from.<br><br>
+
+                            One of the best local markets, The Amish Market, provides only the highest quality foods to your table. Some items of choice to buy here are the fruits and vegetables, pizzas, and other hot/cold buffet items. Overall, the prices at The Amish Market are reasonable, and the selections will definitely have you coming back to sample more.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try out Sunrise Mart for some Japanese flair in product selection. The fresh food selection is plentiful, as well as an option to purchase from their food court. Sunrise Market’s diverse products, including their specialties of katsu & udon, create a compelling reason for you to visit this grocery store.<br><br>
+
+                            A New York City favorite grocery market is Morton Williams. Known for its prepared products, try one of their sandwiches, soups, sushi rolls, or deli items to get the most out of your trip here. With many different choice for produce and staple ingredients, Morton Williams could easily become your primary grocery store.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>The laundry services of the Turtle Bay area are top-notch, ensuring you will get your money’s worth at a laundromat in this neighborhood.<br><br>
+
+                            Try Wash Club as your local laundromat if you’re looking for an honest staff that are guaranteed to take great care of your clothes. You can book your laundry services online or through their app, and when you pick them up they will be beautifully folded and clean.<br><br>
+
+                            Or, check out Champion Cleaners for cheap prices and free delivery. The friendly staff here will take care of your every need, including personalized service if necessary. Be sure to consider Champion Cleaners as your new laundromat.<br><br>
+
+                            Another reliable location for your laundry needs is 11 Goodly Laundromat, which has 30 years of experience in its large location of dry cleaning and tailoring. The owner makes an attempt to know each of its customers personally, ensuring that you will receive the highest level of customer service possible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/fictioncenter.jpg" %}"/>
+                            <h6>The Center for Fiction</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For some lively entertainment and museums, try visiting any of the venues of Turtle Bay.<br><br>
+
+                            First, The Center for Fiction supplies the area with a lovely literary collection. Created for the betterment of the Turtle Bay neighborhood, this library focuses on fictional plotlines that please children and adults alike. The library here is very diverse, and all of the carefully selected books are great reads.  With a large space, you can enjoy a book right in the library itself! The Center for Fiction is also rentable for special occasions if you’re really in love with the space.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, another library in Turtle Bay is Morgan Library, which puts a more historical spin on reading. Within their collections, they offer old copies of Gutenberg Bibles and historical manuscripts, as well as many other artifacts from history. Other amenities within Morgan Library include a formal dining room and gorgeous architecture throughout. The Morgan Library has been designated a National Historic Landmark, so come admire its beauty today!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The art galleries of Turtle Bay are also top-notch, supplying some amazing works within the small neighborhood.<br><br>
+
+                            Visit the iconic Museum of Modern Art if you’re interested in seeing some of the best works of modern times. Some possible artists here include Picasso, Van Gogh, Matisse, and Seurat, with an entire room dedicated to Van Gogh’s Starry Night Painting. The Museum of Modern Art is very popular, so you’ll be met with crowds and lines if you’re looking to see the most popular paintings. Come check out these amazing exhibits that will surely take your breath away.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/onassis.jpg" %}"/>
+                            <h6>Onassis Cultural Center</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, another cultured choice is Onassis Cultural Center, which depicts the beauty of Hellenic Civilization. The Cultural Center includes performances of Greek places, art displays, and other major cultural artifacts of Greek times. The art here is priceless, and with free admission, why pass up on this amazing offer?<br><br>
+                            Try visiting any of these locations today to witness some truly spectacular art displays of Turtle Bay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/kamkura.jpg" %}"/>
+                    <h6>Kamakura Shirts</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>While there isn’t much in terms of shopping for the Turtle Bay area, exceptional stores of all pricepoints are just minutes away in Midtown. Regardless, there are still options within Turtle Bay if you are set are shopping within the neighborhood.<br><br>
+
+                    Check out Kamakura Shirts if you’re interested in purchasing some of the best dress shirts in the United States. This Japan-based brand only houses on location in the United States, so Kamakura Shirts are definitely hard to come by and a luxury. The quality here is better than J Crew, TM Lewin, or Charles Tyrwhitt, ensuring that you can use the clothing for a long time. The salespeople here will make you feel welcome, and help you in finding your perfect find. Come visit this hidden gem of a store today!</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/ps59.jpg" %}"/>
+                    <h6>Public School 59</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Even though the neighborhood is small, Turtle Bay still houses some satisfying schooling choices.<br><br>
+
+                    One of the educational facilities within Turtle Bay is Public School 59, which enrolls students from pre-K to 5th grade. This school is very strong in academics, as it emphasis a strong core for students to successfully transition into middle and high school. In fact, in the 2007 state exams, 84% of 4th graders met standards in English, and 95% met the standards in Math, demonstrating the success of this program. Be sure to consider the school within Turtle Bay, Public School 59, when evaluating elementary school options.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/epichybrid.jpg" %}"/>
+                    <h6>Epic Hybrid Training</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>In terms of gyms, Turtle Bay offers a higher density than most neighborhoods, ensuring that you can receive the workout you’re looking for.<br><br>
+
+                    One great location to try is iLoveKickboxing.com, a kickboxing intensive facility that emphasizes the fun in a challenge workouts. While the sessions are intense, the instructors and environment here will make you want to exercise and stay fit. Make sure to stop by their website to get a special on class prices!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, perhaps Epic Hybrid Training is more your style. This gym strives to increase our strength, endurance, and mobility through multiple different exercises. Although the classes are brutal, you will definitely get your money’s worth out of your time put in.<br><br>
+
+                    Whatever the gym, Turtle Bay creates the perfect fitness environment for you to have fun at while working out.</p>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/tudorcity.jpg" %}"/>
+                    <h6>Tudor City Greens</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Within the small area, Turtle Bay contains a beautiful park that residents really rave about.<br><br>
+
+                    Tudor City Greens is a tiny private garden that is arguably the most peaceful place in Manhattan. With constant maintenance, Tudor City Gardens always appear perfectly cared for and gorgeous. Whether you’re looking to bask in the sun or read a book in the shade, this park has it all. The charm here is the serenity and relaxation that you will experience, so try Tudor City Greens the next time you are looking for some time off.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=turtle bay, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ultimatewebtraffic.com/">buy website traffic</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
