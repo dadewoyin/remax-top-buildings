@@ -5,6 +5,17 @@
 #headerSearch {
     padding-right: 10px;
 }
+/* Move content from behind nav */
+.padding {
+	padding-top: 40px;	
+}
+/* Show More Page Header */
+.floatleft {
+	float: left;	
+}
+.rating {
+	padding-top: 0px;	
+}
 
 /* "Top" link in nav */
 #headerCollapse li:nth-child(6) a {
@@ -41,4 +52,46 @@
 #neighborhoodProperties li:nth-child(9) a {
     background-color: #B41C30;
     color: #FFFFFF;
+}
+
+/* Transportation */
+.greentrain {
+	width: 25px;
+	height: 25px;	
+	background-color: #00933C;
+	border-radius: 12.5px;
+	text-align: center;
+	color: white;
+	margin-right: 3px;
+}
+.yellowtrain {
+	width: 25px;
+	height: 25px;	
+	background-color: #FCCC0A;
+	border-radius: 12.5px;
+	text-align: center;
+	margin-right: 3px;
+}
+.greytrain {
+	width: 25px;
+	height: 25px;	
+	background-color: #A7A9AC;
+	border-radius: 12.5px;
+	text-align: center;
+	margin-right: 3px;
+}
+.train-number {
+	padding-top: 2px;	
+}
+.no-list-style {
+	list-style-type: none;	
+}
+.train-text {
+	padding-top: 5px;
+	position: relative;
+	left: 3px;
+	bottom: 3px;
+}
+.map {
+	margin-bottom: 5px;	
 }

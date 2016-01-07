@@ -25,3 +25,9 @@ def show_top_buildings(request, neighborhood):
     return render(request ,"remax_homepage/show_top_buildings.html", {
         "neighborhood" : neighborhood.title().replace("-", " ")
         })
+
+def show_building_profile(request, neighborhood, rank):
+    return render(request, 
+        "remax_homepage/show_building_profile_"+neighborhood+rank+".html", 
+        {"rank": rank,
+         "neighborhood": neighborhood.title().replace("-", " ")})

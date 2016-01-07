@@ -1,12 +1,14 @@
 {% extends "remax_homepage/base.html" %}
 {% load staticfiles %}
 
+{% block title %} RE/MAX NYC | Top Buildings in {{ neighborhood }} {% endblock title %}
+
 {% block content %}
         
 <div class="container padding">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="text-center">Top 30 - {{ neighborhood }}</h1>
+            <h1 class="text-center">Top 30 Buildings in {{ neighborhood }}</h1>
         </div>
     </div>
          <br><br>
@@ -15,41 +17,41 @@
         <div class="col-sm-12 col-md-6 col-lg-4">
             <img class="img-responsive" src="{% static "images/midtown-1.png" %}" alt="midtownpic"/>
         </div>
-            <div class="clearfix visible-sm"></div>
+        <div class="clearfix visible-sm"></div>
         <div class="col-sm-12 col-md-6 col-lg-8">
             <h3>1. 13 Fake Shore Drive </h3>
             <br>
             <p>13 Fake Shore Drive is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories.</p>
-            <a href="showmore.html"> Read More </a>
+            <a href="{% url "show_building_profile" neighborhood="lower-east-side" rank=1 %}">Read More</a>
             
         </div>
-        <div class="clearfix visible-sm visible-md visible-lg"></div>
+    <div class="clearfix visible-sm visible-md visible-lg"></div>
     </div><br><br>
 
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-4">
             <img class="img-responsive" src="{% static "images/midtown-2.png" %}">
         </div>
-    <div class="clearfix visible-sm"></div>
+        <div class="clearfix visible-sm"></div>
         <div class="col-sm-12 col-md-6 col-lg-8">
             <h3>2. One 57 </h3>
             <br>
             <p>One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>    
+        <div class="clearfix visible-sm visible-md visible-lg"></div>    
     </div>
         <br> <br> <br>
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-4">
             <img class="img-responsive" src="{% static "images/midtown-1.png" %}" alt="midtownpic"/>
         </div>
-            <div class="clearfix visible-sm"></div>
+    <div class="clearfix visible-sm"></div>
         <div class="col-sm-12 col-md-6 col-lg-8">
             <h3>3. One 57 </h3>
             <br>
             <p>One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories</p>
         </div>
-        <div class="clearfix visible-sm visible-md visible-lg"></div>
+    <div class="clearfix visible-sm visible-md visible-lg"></div>
     </div><br><br>
 
     <div class="row">
@@ -62,20 +64,20 @@
             <br>
             <p>One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>   
+        <div class="clearfix visible-sm visible-md visible-lg"></div>   
     </div>
         <br> <br> <br>
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-4">
             <img class="img-responsive" src="{% static "images/midtown-1.png" %}" alt="midtownpic"/>
         </div>
-            <div class="clearfix visible-sm"></div>
+    <div class="clearfix visible-sm"></div>
         <div class="col-sm-12 col-md-6 col-lg-8">
             <h3>5. One 57 </h3>
             <br>
             <p>One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories</p>
         </div>
-        <div class="clearfix visible-sm visible-md visible-lg"></div>
+    <div class="clearfix visible-sm visible-md visible-lg"></div>
     </div>
         <br> <br> <br>
 
@@ -89,7 +91,7 @@
             <br>
             <p>One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>    
+        <div class="clearfix visible-sm visible-md visible-lg"></div>    
     </div>
         <br> <br> <br>
     <div class="row">
@@ -102,7 +104,7 @@
             <br>
             <p>One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>   
+        <div class="clearfix visible-sm visible-md visible-lg"></div>   
     </div>
         <br> <br> <br>
         
@@ -116,7 +118,7 @@
             <br>
             <p>One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>   
+        <div class="clearfix visible-sm visible-md visible-lg"></div>   
     </div>
         <br> <br> <br>
         
@@ -130,7 +132,7 @@
             <br>
             <p>One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>   
+        <div class="clearfix visible-sm visible-md visible-lg"></div>   
     </div>
         <br> <br> <br>
     
@@ -144,7 +146,7 @@
             <br>
             <p>One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>   
+        <div class="clearfix visible-sm visible-md visible-lg"></div>   
     </div>
         <br> <br>  
     
@@ -153,7 +155,7 @@
             <h2> 11. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     
     <div class="row">
@@ -161,133 +163,133 @@
             <h2> 12. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 13. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 14. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 15. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 16. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 17. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 18. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 19. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 20. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 21. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 22. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 23. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 24. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 25. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 26. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 27. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 28. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 29. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
     <div class="row">
         <div class="col-xs-12">
             <h2> 30. Fake Address </h2>
             <p> One 57 is a massive residence steps away from Central Park designed by Pritzker-Prize winning Christian de Portzamparc. One 57, on 157 West 57th Street, was developed by Extell & Aabar Investments and completed with a total of 92 units across 90 stories. </p>
         </div>
-                <div class="clearfix visible-sm visible-md visible-lg"></div>  
+        <div class="clearfix visible-sm visible-md visible-lg"></div>  
     </div>
 </div>
 
