@@ -1,0 +1,200 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                A private housing community with only 56 individual residence buildings, Stuyvesant Town is an enclave within New York City. Stuyvesant Town is bordered by Gramercy Park and East Village.<br><br>
+
+                Well known for its distinctive architecture that was collectively built as part of a housing crisis, the private Stuyvesant Town community even features its own security and newspaper from the outside world. When inside, you will experience the luxury of eating riverside at one of the many restaurants here, as well as enjoying a beer and a view when the sun sets. With many international schools gracing the Stuyvesant Town neighborhood, you are sure to get a premier education for your children at one of these prestigious schools. Regardless of why you’d like to live in Stuyvesant Town, the neighborhood and amenities here speak for themselves.<br><br>
+
+                If you’re looking to buy or rent here, you’ll be lucky to find a property available to suit your tastes, as there is a considerably lower turnaround rate in this neighborhood. But, if you do, you will definitely be satisfied with the community feel of Stuyvesant Town, and the high demand makes it a great investment for the future!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/riverpark.jpg" %}"/>
+                            <h6>River Park</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For fine dining in Stuyvesant Town, visit any of these selections and they will not disappoint.<br><br>
+
+                            First, River Park is a restaurant located on the East River, which uses fresh produce and meats to create their exquisite dishes at reasonable prices. Some dishes of choice here include Squid Ink Chitarra and pork chops, which you can savor while sitting outside on the river, or in the modern interior. Come check out River Park in Stuyvesant Town today!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, perhaps The Water Club would better suit you, as it has a spectacular view of Queens at its waterfront location. The Water Club is especially known for its seafood, which includes Lobster Bisque and tuna as especially delicious. Although somewhat pricey, the romantic ambience will make up for the price.<br><br>
+
+                            If you’re in the mood for Belgian food, Petite Abeille will live up to your expectations. The fries and mussels here are especially fantastic, and overall this is a great place to eat brunch at, even if it is a bit overpriced. Plus, come on Mondays to receive a 50% discount on Belgian beers!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of takeout in Stuyvesant Town, Bangkok 2 Thai combines American and Chinese food for the dish of your choice. The Momma’s Fried Chicken and Kee Mao are particularly exceptional, all for an affordable price. Even though the space is small, you can sit-down to eat if you’d like, or enjoy their fast delivery.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/bangkok2.jpg" %}"/>
+                            <h6>Bangkok 2 Thai</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try Murray’s Falafel for Middle Eastern food that you won’t soon forget. With options of Kosher food, everyone can enjoy the Tahini and Falafel here. At a reasonable price, you can even afford to pay for delivery, which will certainly come on time. Overall, this small restaurant is not one to forget.<br><br>
+
+                            For some amazing fresh sushi, check out Hane Sushi. With drink specials, fast delivery, and fresh food, you definitely have to try this restaurant. If you choose to eat here, enjoy the outdoor area with a relaxing ambience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/hanlonbar.jpg" %}"/>
+                    <h6>O'Hanlon's Bar</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>For a lovely bar experience, visit O’Hanlons. The sports bar atmosphere sets the tone here, complete with a pool table, darts, and fun jukebox where you can request songs. The bar itself is very long, so its able to accommodate many patrons here. Come during happy hour, from 11-8, and enjoy discounted prices.<br><br>
+
+                    Or, try The Crow’s Nest, located on the upper deck of The water Club. The views of the East River are tremendous here, and the bar is never that crowded, so you can cherish the views in peace. Although the bar’s a little pricey, the staff is attentive, and the drinks are also superb.</p>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/associated.jpg" %}"/>
+                            <h6>Associated</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you need a new staple grocery store to shop at in Stuyvesant Town, Associated is your best option. At decent prices, residents of the area love shopping here, mostly for the general basic needs that are serviced here, as well as their produce, spices, hot food, and bar. So, you can definitely find everything you need within this grocery store.<br><br>
+
+                            Or, check out Gracefully, a specialty store that stocks items ranging from Asian cuisine to gluten free specialty products. The portions here are also large, will is especially complemented by the reasonable price points displayed here. Come check out Gracefully for yourself to see what foods you can find!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you need your laundry done, Stuyvesant Town is not short on choices to select from!<br><br>
+
+                            First, try Crystal Dry Cleaners, which features dry cleaning & tailoring services that you can get with a same-day turnaround. The nice prices sweeten deal, along with the pickup and delivery offered here. Overall, the service will definitely accommodate for your needs if you make this your regular laundromat.<br><br>
+
+                            A conveniently located store is Prestige II A D Laundry Corp, which is open 7 days a week for laundry at any time. The service here is terrific for their dry cleaning and tailoring, and you will certainly get a reasonable price for the services.<br><br>
+
+                            Or, try Wu Cleaners, whose staff is very personable and friendly. Like the other laundromats in Stuyvesant Town, they also offer dry cleaning and laundry, and are very reliability with the quality of product you will receive.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/performancespace122.jpg" %}"/>
+                    <h6>Performance Space 122</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re looking for a show, visit Performance Space 122, which features off Broadway performance spaces. With many different spaces to witness performances, as well as classrooms for smaller exhibitions, there will definitely be an exciting show or performance to view while visiting Performance Space 122. The prices to attend are also affordable, so why wait to come to Performance Space 122?  </p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/unitednationsinternational.jpg" %}"/>
+                    <h6>United Nations International School</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If your child is looking to get an education in Stuyvesant Town, the international schools here are your best options.<br><br>
+
+                    One of these choices is United Nations International School, which enrolls students from elementary school to high school. This rigorous school prepares students for the SATs and beyond with their curriculum, and seeks to help every student preserve their individual culture, as students here are from over 80 different countries. As an establishment of Stuyvesant Town since 1947, you can rest assured that the level of education here is impeccable.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Another international school is British International School New York, which is well known for its state of the art technology. The atmosphere here is academic yet inspired, helping students to achieve their goals without pushing them too hard. The diverse curriculum helps students learn an international perspective on education, and this school services all international students.  </p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/watersidehealth.jpg" %}"/>
+                    <h6>Waterside Health Club</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>For a gym in Stuyvesant Town, visit Waterside Swim & Health Club. Some of their best features here include an indoor pool, fitness areas for kids, personal training, a roof deck, and tons of space for adults to work out at. With multiple full weight sets, many people are able to work out at the same time without it ever getting too crowded. Plus, the dance floor is extra spacious, so you can enjoy a class here as well! Regardless of your favorite workout activity, Waterside Swim & Health Club will definitely provide the activity and space for you to exercise at.</p>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/covepark.jpg" %}"/>
+                    <h6>Stuyvesant Cove Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re looking for a park in Stuyvesant Town, perhaps Stuyvesant Cove Park suits your tastes. Here you can view both Williamsburg and Ed Koch Queensboro Bridge, which is always a wonderful way to relax. Also, here you can play baseball at their baseball field, or cook with friends in the barbecue area. Therefore, Stuyvesant Cove Park was created with intention to entertain both children and adults, so help the community fulfill their purpose by giving it a try today!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=yorkville, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://www.premiumlinkgenerator.com/">premium link generator </a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
