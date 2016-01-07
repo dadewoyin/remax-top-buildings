@@ -1,0 +1,276 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                A secluded suburbia located in Uptown Manhattan, Hamilton Heights is the perfect real estate retreat. Hamilton Heights is bordered by Harlem and Washington Heights.<br><br>
+
+                Hamilton Heights is known for its serene location, as well as historic architecture and parks, which form a fusion of styles. One of the major parks in the area is Riverside State Park, which features many amenities for residents to enjoy, as well as park attendants that are constantly maintaining the Riverside State Park trails. Therefore, the park is always manicured and pristine, providing a beautiful getaway for residents and nonresidents alike. If you’re not interested in roaming a park, perhaps you’d like to check out the architecture, which ranges from Gothic to terracotta. Whatever your style, you will certainly find a unique building to marvel at.<br><br>
+
+                In addition to the landscape, Hamilton Heights has much to offer in terms of residential life. The City College of New York, the first CUNY university, is established here, which adds energy to the otherwise calm area. Therefore, the residential area has somewhat of a bar scene, where City College of New York students and older residents alike can cherish a fun night in Hamilton Heights. Even though most of the action is located farther downtown, the great restaurants and other amenities of the Hamilton Heights area will make it hard to leave.<br><br>
+
+                As one of the cheaper counterparts of Uptown, Hamilton Heights is an amazing spot to enjoy some peace while raising a family, enjoying married life, or even going to college. No matter why you decide to rent or buy in Hamilton Heights, you will be happy you did.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ponty.jpg" %}"/>
+                            <h6>Ponty Bistro</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The fine dining locations of Hamilton Heights offers variety and new flavors to your everyday eating regime.<br><br>
+
+                            First, for an African-French twist, try out Ponty Bistro. ABC calls this one of the top 10 African Restaurants of the entire New York City area. The service here is superb, which matches the caliber of exotic dishes for you to try. African-French cuisine is heavy on meats, especially chicken and steak, so be sure to bring an appetite when trying out this cuisine!<br><br>
+
+                            Or, Covo Trattorai is an Italian restaurant that has a traditional base with an evolved palate. The authentic cuisine includes pizza, pastas, and other classic Italian dishes. With amazing presentation and staff, you will definitely feel like family when you dine at this restaurant. The venue even offers outdoor seating on the perfect summer day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of takeout, the options are endless, and the convenience is top notch in Hamilton Heights.<br><br>
+
+                            Check out Trufa for an amazing burger and friendly staff. While here, you can also enjoy some lentil soup and dessert, which are two other specialities of the restaurant. Even if you don’t stay for your meal, the nice vibe and warm feeling of the establishment are very noticeable, making you want to come back again.<br><br>
+
+                            Or, Amy Ruth’s is a great choice if you’re looking for a pick-me-up from a hard day at work. The classic soul R&B music will definitely lift your spirits even before you try the delicious food! To top it off, the staff exudes a friendly and courteous energy, creating a very pleasurable experience.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/amyruths.jpg" %}"/>
+                            <h6>Amy Ruth's</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>As the name implies, Sushi Sushi has some awesome sushi for you to sample! Sushi Sushi offers both standard, traditional rolls and creative new flavors that will surely excite your taste buds. With an option for delivery and reasonable prices regardless, Sushi Sushi is a definite must for the Hamilton Heights area. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/hogshead.jpg" %}"/>
+                            <h6>Hogshead Cavern</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Good bars in Hamilton Heights are not hard to find; in fact, they are plentiful within the area.<br><br>
+
+                            Try Hogshead Tavern if you’re looking for a cool vibe and friendly staff. With an LGBT night on Sunday, all are certainly welcome at this establishment. Be sure to try the food alongside a drink to get the full experience of Hogshead Tavern.<br><br>
+
+                            Or, perhaps The Grange Bar and Eatery is more your style. With a Private Dining Room called The Study, you could enjoy an intimate dining and then drinks in the public space for a tremendous night to remember. There is enough space at the bar for everyone, even though it does start to get crowded through the night.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another interesting spot to enjoy for a night is Hyacinth’s Haven. This new location has one of the greatest bartenders around, set in the center of Hamilton Heights. With food accompanying your drinks and everything at reasonable prices, the balance between the food and your drink will certainly blow you away.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>One of the biggest party spaces in Hamilton Heights is Phunket Lounge. Their amazing sound system, bright lighting, and lively DJs will definitely get the party going and keep it fresh throughout the night. Ladies get in free before 1AM, so make sure to get there early.<br><br>
+
+                            Or, check out Cotton to explore the talents of great jazz musicians. Their dance floor accommodates any dancing style or movements, and they have two different floors to offer more space. The many musicians and vocalists of Cotton are truly amazing, so come listen and dance the night away!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/phuket.jpg" %}"/>
+                            <h6>Phuket Lounge</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pathmark.jpg" %}"/>
+                            <h6>Pathmark Bradhurst</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The staple grocery store in Hamilton Heights is Pathmark. A 24 hour location, they have all the necessary food and more within one convenient store. Tons of shoppers always line the aisles of this supermarket, and the DVD kiosk and Coinstar machine are also very popular. They even offer indoor parking for your rainy day troubles!<br><br>
+
+                            Or, check out Foodtown for a classic experience in grocery shopping. Their mission is to bring the freshest foods and friendliest service to the tri-state area, including a priority for organic items. With over 60 years of experience, Foodtown knows how to give you exactly the shopping trip that you’re looking for.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Within Hamilton Heights, there are some terrific laundry locations that will definitely strike your fancy.<br><br>
+
+                            First check out Broadway Dry Cleaning for a great little neighborhood experience. Located on the street corner, regulars are the main customers, who keep coming back due to the friendly staff and quick turnaround times.<br><br>
+
+                            Or, Monarch Cleaners is an incredible choice if you’re looking to meet some kind people who own one of the best laundromats in the area! The services that they offer are very professional, and they even have a delivery option with a text confirmation. Monarch Cleaners cannot be beaten in its convenience.<br><br>
+
+                            Alternatively, Family Laundromat is a clean facility that supplies tons of space to get the job done. The owners are nice, and are not overbearing when you are trying to finish your laundry. You will be in exceptional company here, as the laundromat is filled with other working-class residents looking to clean their laundry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/diamond.jpg" %}"/>
+                    <h6>Diamond District of Broadway</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>In terms of shopping, Hamilton Heights has every type of store that you’re looking for.<br><br>
+
+                    Specializing in custom made jewelry and repairs,  Diamond District of Broadway is the perfect place to stop for the high-quality stone of your choice. The quick service is definitely a plus, as well as the helpful and friendly customer service from the owners and staff. The prices here are also significantly less than big-name brands, so support your local business and head over to Diamond District of Broadway today in Hamilton Heights.<br><br>
+
+                    Or, if you’re in need of many different items, then check out Paragon Department Store. They will stock virtually everything you need, including beauty products, hair care, cleaning products, toys, clothes, and even painting supplies.  With reasonable prices, this store is a go-to for your everyday needs, as well as one-off speciality items that you may need in a pinch. Paragon is very organized, so you will have no trouble at all shopping at this location.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/countree.jpg" %}"/>
+                            <h6>Countree Cullen School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Hamilton Heights has amazing access to education, with many schools located in the neighborhood that would be perfect for your child.<br><br>
+
+                            One of these locations is New York City Community School District 5, which services the community zoned to District Five. By collaborating with high school academics, they ensure that their school meets academic standards before they even get to high school. The school also is very inclusive of parents and staff, which helps create a social community within a school environment. New York City Community School District 5 has the power to educate your child to be a leader of our future society.<br><br>
+
+                            Or, check out Countee Cullen School, called P.S. 194. Although struggling, they are focused on improving their level of education, starting with a greater focus on music and the arts. With a new staff, the teachers are expanding their resources to increase the academic standard and enthusiasm of their students.<br><br>
+
+                            Another exceptional elementary school is St. Mark, the Evangelist School. The faculty has a high emphasis on academics, and have been teaching above the new Common Core standards even before they were implemented. With a comprehensive curriculum that includes strong character development, the children who attend this school will definitely learn some key social values as well as academic ones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Hamilton Heights is home to City College, the original City University of New York. This university is one of the most developed, and offers outstanding academics within the heart of New York City. The key programs here are architecture, engineering, education, and liberal arts, but students at this university walk away with many diverse degrees. Their libraries showcase the seriousness of the university, as it holds over 1.5 million volumes of materials for the students to enjoy. You should definitely consider City College if you would like to continue living in Hamilton Heights, as its discounted tuition and acclaimed education both make this an attractive proposal.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/citycollege.jpg" %}"/>
+                            <h6>City College</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nysportsclub.jpg" %}"/>
+                            <h6>New York Sports Clubs</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In terms of fitness, Hamilton Heights’ options will not disappoint.<br><br>
+
+                            First, try New York Sports Club, a popular New York City chain of workout facilities that offer consistency and premier care to their members. This particular location is very spacious, with room to do all types of exercises. The large location also contains many updated machines, which are often busy but consistently available. Other amenities include showers, sauna, a group exercise and spin studio, and a locker room. Members here love the convenience of so many amenities in one location, as well as the great classes and equipment of New York Sports Club.<br><br>
+
+                            Another tremendous studio of Hamilton Heights is  Keep Moving Fitness. This location is perfect for anyone looking for a personal trainer, which is their specialty, although they do provide semi-privates and group classes as well. Keep Moving Fitness will definitely get you in shape and on top of your game in no time, so go check out the Hamilton Heights studio today!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The only hospital in the Hamilton Heights area is Harlem Hospital Center. This 286-bed hospital provides care including primary care, general medicine, surgery, treatment for diseases, Ob/Gyn services, pediatrics, critical care, and much more. The hospital is highly acclaimed, and well-known as one of the best medical centers in the area for treatment.  With over 90 ambulatory services, they will easily be able to save a life in a matter of minutes due to their fast response times. So, go to Harlem Hospital Center if you are in need of any health services, as they will gladly provide the top level of care available.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/harlemhospital.jpg" %}"/>
+                            <h6>Harlem Hospital Center</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/stnicholas.jpg" %}"/>
+                    <h6>St Nicholas Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The beautiful parks of Hamilton Heights will definitely take your breath away, all while creating a serene location for relaxation and time to yourself.<br><br>
+
+                    Visit St. Nicholas Park for a great space of greenery and scenic views, the perfect location for a walk or run through the park. The various pathways through the park make it easy to change up your routine, leading to an interesting route every day. Tennis courts and a playground are also available for you to enjoy when staying at this park.<br><br>
+
+                    Or, Riverside Park above 145th Street is another space available for your use. People of all cultures and ages use the park together, with subtle music playing in the background, and some spots especially created for your relaxation. With park attendants to keep all the amenities in check, you can be assured that all the trails are well-maintained.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+       <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=hamilton heights, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ultimatewebtraffic.com/">buy website traffic</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
