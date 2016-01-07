@@ -1,0 +1,308 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                One of the quietest and greenest areas of New York City, Battery Park City is perfect for a suburbian at heart to live in the city. Battery Park City is bordered by TriBeCa and Financial District.<br><br>
+
+                As expected of a serene area of Manhattan, Battery Park City holds a large number of parks within the small neighborhood, including esplanades, Teardrop Park, and South Cove Park. Residents enjoy the large green areas throughout the neighborhood, including the many oases even decorating commercial sections. Still, there are many attractions within the area, such as fine dining on the river with views of the Statue of Liberty and New Jersey, and bars with their own uniqueness. Some very high-profile department stores are located here, in addition to the many daily errand stores, such as grocery and laundry, that are also available to the everyday resident.<br><br>
+
+                In terms of real estate, Battery Park City lies significantly lower than the New York City average, making it an affordable option for many young residents that are looking to move to New York City without the added costs. Therefore, Battery Park City is ideal for anyone looking to make a move, so consider renting or buying a property here today!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/northendgrill.jpg" %}"/>
+                            <h6>North End Grill</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re interested in fine dining, Battery Park City supplies amazing choices for you.<br><br>
+
+                            Check out the North End Grill for an upscale cuisine with a menu created by Danny Meyers. While dining here, make sure to try the oysters and butterscotch pot de crme, which customers rave about.<br><br>
+
+                            Or, Blue Smoke is another fantastic option, as they serve a wide array of American dishes, such as pulled pork, ribs, sweet potato wedges, and mac n cheese. The reasonable prices here lighten up the lively atmosphere, so be sure to dine here soon.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a great view of New Jersey and the Statue of Liberty, visit Miramar. The crab cakes and other seafood dishes here are superb, which you can enjoy in the outdoor seating area, where live jazz and singing can often be heard. Plus, the prices are reasonable, so Miramar has everything you could ask for in a restaurant.  </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of takeout, Battery Park City has a lot to offer New York City.<br><br>An amazing Thai food and Asian food location can be found at Wei West, which serves everything from Pad Thai to General Tso Chicken to Sushi. Also, they have gluten-free options for those with dietary restrictions, making this a perfect choice for any customer.<br><br>
+
+                            Or, Merchants River House serves the best brunch around with views of the Statue of Liberty and Jersey skyline. The shoestring fries and fish and chips are to die for, and within a reasonable price range, you will be able to enjoy these dishes on a budget.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/merchantshouse.jpg" %}"/>
+                            <h6>Merchants River House</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another restaurant to try is Inatteso Pizzabar Casano, whose specialty is thin crust pizza, especially the Margherita. One of the more exotic dishes served here is the fried ravioli, which is a must try. The spacious location is perfect to eat in or takeout, and the prices are also reasonable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/blackhound.jpg" %}"/>
+                    <h6>Black Hound Bar</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>For an exceptional atmosphere with prices to match the ambience, Black Hound offers some of the most premium drinks around. Luckily, you can reserve a table here with no minimum, so anyone can enjoy a night at Black Hound. Although there is no happy hour, you have to try the smoky shots, which compliment the atmosphere and luxury of the night.<br><br>
+
+                    Or, check out Loopy Doopy Bar for a fun and fresh take on your local bar scene. The Popsicle drinks here are amazing, which are made from Prosecco and icepops. Complete with a prime sunset viewing location on their rooftop lounge, Loopy Doopy Bar is the perfect mellow location for a relaxing night.</p>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/batterymarket.jpg" %}"/>
+                            <h6>Battery Place Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In terms of grocery selections, Battery Park City will not disappoint in fresh produce or pre-prepared items.<br><br>
+
+                            One of these quality choices is Fruit Stand @ South End Avenue, which is open 24 hours for your late-night produce needs. The selections here are well priced, and rotate based on the fruit in season locally, although they always have bananas. The staff here is very polite and honest about the ripeness and quality of each piece of fruit.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, perhaps Battery Place Market is more your style, which displays a coffee and espresso bar of Stumptown coffee. Although the food selection is rather limited, there are free samples for all of the products within the tiny location. The sandwich bar here is made to order, which you can purchase along with some fresh fruits for a wholesome meal.<br><br>
+
+                            Another awesome store to try is Gristedes, which you should use to stock up on essentials and the basics. In addition, they have produce, a bakery, and a deli, all priced reasonably so that you can afford shopping here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For your laundry needs, Battery Park City provides the necessary services to satisfy.<br><br>
+
+                            One choice for dry cleaning and tailoring is New Fresh Cleaners, an inexpensive service that offers pick-up and delivery at no cost. The prices here are very hard to beat, and combined with exceptional service, there is no reason not to make this your recurring laundromat.<br><br>
+
+                            Or, check out 4 Seasons Cleaners for dry cleaners that use only organic agents in their process. Even though the prices are slightly more expensive, the added cost is worth going green for. Also, this laundromat can hem and tailor any of your clothing items.<br><br>
+
+                            For same-day service that will surely accommodate your schedule, visit Tribeca Park Valet. In addition to its convenience, this laundromat is extremely well price, so its bound to suit your needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/skyscrapermuseum.jpg" %}"/>
+                            <h6>Skyscraper Museum</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>After visiting the Shake Shack next door, stop by Regal Battery Park Stadium 11. Located close to the water, this clean and spacious venue sports comfortable chairs to watch many movie selections, including even 3D viewings.<br><br>
+
+                            Or, the Museum of Jewish Heritage offers a comprehensive view into the historical perspective of Ellis Island, Statue of Liberty, and Holocaust memorial, all with the intent of exposing the Jewish experience during these events. The museum is three floors, all with various stages depicting the progression of these events.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Perhaps the Skyscraper Museum would interest you, as it depicts the history of the tallest buildings to date, including Woolworth Building and World Trade Center. Although small, the museum is well organized, and will also give you a view into the future of skyscrapers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, if you’d like to view an art gallery that depicts a more casual option,  Shannon Maer is the comic book mecca of Battery Park City. With access to novels, casino games, and comic book covers, you will instantly be transported back to a time of childhood fun. Regardless of whether you’ve viewed them before, Shannon Maer’s comic book collection is a must for any child at heart.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/montmartre.jpg" %}"/>
+                    <h6>Montmartre</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>In terms of shopping, the Battery Park City locations will surely satisfy your need to buy something new.<br><br>
+
+                    One of the best stores in the area is Tory Burch, an accommodating store for women’s clothes and accessories. The store and clothing line both are very upscale, boasting some of the most popular designs in women’s fashion today.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, check out J. Crew, a joint shop for men and women that also is very high end and in fashion today. With many impeccable styles to choose from, you are bound to find exactly the item you’re looking for here. Just looking around here will definitely make you feel more fashionable.<br><br>
+
+                    For a boutique that feels like personal shopping, try Montmartre. As one of only two locations in New York City, this expensive boutique boasts rare designer items at discounts, so you can achieve the high fashion you are looking for without the extreme costs. If you have some money to spend, why not shop at Montmartre?</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/stuyhs.jpg" %}"/>
+                            <h6>Stuyvesant High School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In terms of high school education, Battery Park City is located in an optimal zone, as there are many wonderful facilities at all educational levels.<br><br>
+
+                            First, try Stuyvesant High School, which is arguably the best high school in the city. The amenities here include a variety of sports teams, and high accolades in science, mathematics, and technology. As a very competitive institution, the teachers here really aim to stimulate the children intellectually to reach their fullest potential, while also instilling key values for a comprehensive education.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, perhaps Battery Park City School is a better option for your children in grades kindergarten through eighth. With services including special education, a variety of sports, and a relatively new curriculum, Battery Park City School is a well-known choice for your primary school needs.<br><br>
+
+                            Another prestigious institution is P.S. 89 Liberty School, which only accepts 75 kindergartners every year, mostly because of the terrific amenities and academics. The cafe, gym, library, dance studio, and dedicated science room are all fantastic, and all of these amenities all center around projects to further enrich the education level.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For a quality university to improve your culinary skills, visit Institute of Culinary Education. If you are tight on finances, financial aid is available, which you may want to consider in order to enroll in their prestigious program. Successful alumni here include Suzanna Cupps, which is probably due to the more than 700 classes available, from cooking and baking to wine and pastry. Also taught here is culinary management and hospitality management, so you can learn how to run a kitchen instead of working in one.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/culinaryeducation.jpg" %}"/>
+                            <h6>Institute of Culinary Education</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/asphaltgreen.jpg" %}"/>
+                            <h6>Asphalt Green</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For a gym in Battery Park City, although the options are limited, you can definitely get what you’re looking for.<br><br>
+
+                            Try working out at  Asphalt Green – Battery Park City if you’d like to use new and useful equipment, with other amenities including a pool and locker rooms. An added perk to visiting this gym is that the hours are very late and flexible, including seven day coverage, so you can work out whenever necessary.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For a hospital or doctor in the Battery Park City area, the options are around every corner.<br><br>
+
+                            One of the choices is Battery Park Veterinary Hospital, a friendly facility that helps your pets feel better in no time with their extensive experience in specialized services. The technicians here are truly willing to help your pet in any way they can, so trust them with veterinary care the next time you need services.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/batteryparkvet.jpg" %}"/>
+                            <h6>Battery Park Veterinary Hospital</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try visiting Battery Park Dental Group if you’d like a dentist with very advanced technology, such as a non-invasive camera, x rays, and implant capabilities. All of the doctors here are truly capable, and willing, to help restore your teeth to their healthiest and prettiest versions.<br><br>
+
+                            Another option is Battery City Chiropractor, which houses Dr. Cohen. This doctor treats everything from sports injuries to haphazard conditions, and has numerous successful treatments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/esplanade.jpg" %}"/>
+                    <h6>Carl Schurz Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>One of the parks in the Battery Park City area is The Esplanade, which runs along the entire Hudson River for a clear view of the New Jersey skyline and statue of liberty. Other exciting amenities here include a volleyball court, yachts, and dog areas so you can enjoy the park with your pets. Overall, this is a fantastic sightseeing location for anyone to take interest in!<br><br>
+
+                    Another park with a playground is Teardrop Park, making it perfect for bringing your kids to. Here you can find a huge slide and sprinkler area for your kids to enjoy, as well as rock formation and pure view of nature. Often described as a hidden gem, Teardrop Park is definitely one to check out.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, visit South Cove Park if you’re looking for a park with a little more security and regulation. No dogs are allowed here, and the park is constantly monitored by security. This way, the park is guaranteed to be safe and not as crowded. South Cove offers a waterfront view of Jersey, as well as citibike rentals so you can pedal along the stunning skyline..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=battery park city, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://www.premiumlinkgenerator.com/">premium link generator </a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
