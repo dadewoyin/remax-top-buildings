@@ -1,0 +1,350 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Charming and artistic, the Lower East Side exudes an alluring atmosphere that everyone wants to take part in. Bordered by the East Village, the East River, and Bowery, the downtown location is a perfect mix of beauty and movement.<br><br>
+
+                Known for its endless nights, the Lower East Side surely will impress you with its selection of bars and clubs. They have everything from fancy to divey, fresh to timeless, and quiet to lively. Even if you’re not normally interested in the party scene, there will definitely be a classic choice for you to relax the night away at. While in the Lower East Side, check out the eclectic choices and variety of food options within the area.<br><br>
+
+                The nightlife scene of the Lower East Side would not be complete without extraordinary attractions by day, and museums such as the Lower East Side Tenement Museum will certainly be enjoyable to visit. Other great stops include music halls, cooking classes, and even a live performance haunted house! While the Lower East Side Tenement Museum can’t be beaten, there are also many other art galleries in the area to take a look at art, both contemporary and historic. However you choose to spend your day, you will certainly enjoy it.<br><br>
+
+                In terms of real estate, prices have recently dipped below the New York City average, so now is definitely the time to purchase a property! The cheaper prices are mainly due to the young atmosphere and vibes that this neighborhood exudes, so if this sounds appealing to you, check out the Lower East Side neighborhood today.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pigkhao.jpg" %}"/>
+                            <h6>Pig & Khao</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The Lower East Side may be best known to you as the home of rowdy nightlife, but that adventure extends to the food scene as well.<br><br>
+
+                            You can spot Top Chef  Contestant Leah Cohen at her restaurant Pig & Khao, which mixes Thai and Filipino influences. Pork lovers will enjoy this restaurant, as their signature dishes are pork head, belly and leg. Their small bowls of beer served piggy style on the side will make your meal more than perfect!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Like some other punk-rock places in this neighborhood, Contra has very little signage out front to help you find it. But you’ll forgive them once you do encounter the restaurant, because their tasting menu is the rare arrangement that won’t make you forfeit rent: it costs a mere $55 for 5 courses. Their amazing variety of options and tastes will leave you coming back for more.<br><br>
+
+                            You don’t have to fight about where to eat for a group of people with various ideas: The Fat Radish is ideal for the vegetarians, but placates the carnivores with a killer bacon cheeseburger and pork chop. Your group will also agree on the gorgeously bright, all-white space, which perfectly complements the delicious food.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for some quick and easy food in the Lower East Side, the area will definitely not disappoint. Takeout is a lovely option for this area due to the very small and crowded restaurant locations.<br><br>
+
+                            Looking for an exceptional slice of pizza at reasonable prices in the Lower East Side? La Margarita is the best place to grab a quality slice. The pizza is thin, crispy, and surely tasty. The best part of La Margarita is that if you get there before 6 P.M., you can snag a slice for only $2.00! Try out some of this cheap and easy pizza today.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/mezetto.jpg" %}"/>
+                            <h6>Mezetto</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you are looking for something a little more extravagant, try Mezetto. They serve a unique combination of American staples infused with Mediterranean flavors. Known for their lamb meatballs, truffled gnocchi, and chicken shawarma shishlik, they will take you on a tour of flavors from all over the Mediterranean– Italian, Israeli, Greek and beyond.<br><br>
+
+                            For some handcrafted puddings and hot or cold bubble tea, choose Pomme LES. The puddings of choice are mango, green tea, and chocolate banana pudding, which are all sure to steal your heart. They also serve sweet and savory crepes, which are absolutely delicious. Bring a friend to enjoy some tempting foods there!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/copperoak.jpg" %}"/>
+                            <h6>Copper & Oak</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’d like to enjoy some great nightlife, you’ve come to the right place-the Lower East Side has some well established bars that you will surely enjoy.<br><br>
+
+                            The best bar for live music would be Mercury Lounge. They don’t just provide well-known acts, but also new performances. The famous band named Strokes got their start at this intimate, divey venue. Moreover, it’s always easy to get a beer as there’s a separate mini-bar in the music room.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you are a big fan of whiskey, choose Copper & Oak, a fancy whiskey house from Brandy Library’s Flavien Desoblin with more than 600 bottles crammed on backlit bookshelves. Vintage whiskey is always there for you to explore, or you could expand your wisdom with barkeepers’ guidance.<br><br>
+
+                            Loreley is a wise choice for a gathering among friends. This mellow lil’ beer garden has a tucked-away outdoor seating area, gigantic brews, as well as normal-sized, but highly enjoyable, German fare.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Hosting several of Manhattan’s best burlesque shows at some special clubs, the Lower East Side offers plenty of late-night diversions. For the best nightlife in the neighborhood, look beyond the standard dance-club model to live gigs – the LES has the lion’s share of the city’s best downtown rock venues.<br><br>
+
+                            Looking for venues for Old School Hip Hop, R&B, Reggae & Soul Classics? Go check out bOb Bar! The music is always on point, and the drinks are just as exciting. Remember to bring your dancing shoes!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/mehanata.jpg" %}"/>
+                            <h6>Mehanata</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Unlike other general clubs, Mehanata has swings on the upstairs bar in front of the bar to sit down and savor the cocktails. It is definitely the place to party hard as the downstairs bar includes three dancing pools. You will enjoy your time with dancing, hookah, and iced vodka there!<br><br>
+
+                            Most people consider the DJ and music as most crucial for evaluating a club, and Lounge 247 nailed both of these points. The club is not huge, but plays amazing music, including top 40 songs, a lot of hip hop, and 90’s throwback songs. If you decide to attend, you will be in for a treat!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/wholefoods.jpg" %}"/>
+                            <h6>Whole Foods Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For a great grocery location, the Lower East Side will definitely please you with its wide array of stores.<br><br>
+
+                            First, Essex Street Market mainly offers a wide variety of culinary products including gourmet cheese, premium cuts of meat, fresh fish, and general grocery items. Some people love this place because of their distinctive foreign country foods, which they can buy here without a hassle. The merchants there are very friendly and create a welcoming, community-oriented environment.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>And, Whole Foods Market is no doubt your best choice to shop for very fresh foods and high quality grocery items. In fact, the Lower East Side location is commended to be the best Whole Foods in Manhattan. The large space and beautiful layout will bring you a joyful shopping experience, as well as the extra amenities of second floor seating and free Wi-Fi for two hours.<br><br>
+
+                            Another great stop is Union Market, known for their organic and natural foods, and this store was the first Gold Certificated LEED Green grocery in New York. You could even find a wonderful grab-and-go breakfast deal there in the morning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re interested in a great laundromat located in Lower East Side, the selection will not disappoint.<br><br>
+
+                            Liox Cleaners offers online-oriented service, including dry cleaning, laundry, and maid services. Their online ordering process will make your cleaning quick and convenient, and they have fabulous service to take good care of your clothes. In terms of responsibility, Liox Cleaners guarantees to give you your money back for any issue with the clothes.<br><br>
+
+                            If you’re looking for a cheaper laundromat with high quality, choose Tian Tian Laundromat. Most of the time, you can get a same day turnaround on your laundry. Just go and drop it in the morning and you could pick up a nicely folded stack of your clothes.<br><br>
+
+                            Lau’s Wash and Dry is a resident favorite for the Lower East Side. They are open most of the day and every service that they offer is reasonably priced. With great service, Lau’s cannot be beaten.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/rockwood.jpg" %}"/>
+                            <h6>Rockwood Music Hall</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>This hip area is not short on its share of attractions, and thus you will definitely find something enjoyable and relaxing, or scary, to explore in the Lower East Side.<br><br>
+
+                            If you like scary haunted houses, what better location than Nightmare New York Haunted House? Their talented cast will make you question every turn and move that you make, and their grand finale towards the end of the performance is sure to scare you. Each year, the team devises a new theme, so you can always come back and be scared by something new!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’d rather make a mess of food instead of witness one of fake blood, try out a cooking class at Pizza a Casa Pizza School. With impeccable attention to detail, extensive information on the method of making the pizza, and amazing results, everyone loves this amazing experience to construct a pizza by hand. Just be sure to bring a group for even more fun!<br><br>
+
+                            For some amazing live music and cocktails to accompany, Rockwood Music Hall is a great place to visit. For a minimum of one drink per set, you can enjoy talented artists perform as you travel between their three different stages. Come give this beloved musical hall a try today.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The Lower East Side area also boasts its fair share of artists, as the art galleries are populated with amazing artwork of all varieties.<br><br>
+
+                            If you enjoy counterculture movements, ABC No Rio documents them perfectly through art. With values of equality, defiance, and social justice, ABC No Rio will demonstrate the power of opposition throughout the years, including contemporary movements. This is a great place to witness some amazing and fresh artwork!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/stellarrays.jpg" %}"/>
+                            <h6>On Stellar Rays</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>On Stellar Rays is another exceptional place to stop if you’re interested in a high-end curated collection with distinct style and class. Although small, the art gallery is very upscale and put together, which would definitely provide the perfect environment to spend the night enjoying artwork!<br><br>
+
+                            Another high end gallery in the Lower East side is Lehmann Maupin Gallery, which features spacious gallery walls that make room for brilliant and renowned photography. With constantly changing exhibits, there is always something new and exciting to view at this gallery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/dressingroom.jpg" %}"/>
+                    <h6>The Dressing Room</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>When looking for the best NYC shopping, you must visit the Lower East Side in Manhattan. This neighborhood is historically known for having great deals on clothing, shoes, and accessories. The shops along Orchard Street in LES offer cheap shopping with high quality items.<br><br>
+
+                    For a women’s boutique, check out The Dressing Room, a place you would never imagined before, with the hybrid concept of a boutique highlighting clothing from local designers combined with a cocktail bar. Upstairs, up-and-coming fashion designers are featured, while downstairs operates vintage and secondhand clothing exchanges.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>If you’re looking for a men’s boutique, By Robert James is undeniably the wise choice to shop for various high fashion designers. The store specializes in classic American clothing, offering finely tailored and custom made suits, shirts, and pants. This attire is very popular among musicians and actors, most notably Jonah Hill.<br><br>
+
+                    For jewelry shopping, Delicate Raymond Jewelry Bar carries a leading jewelry designer, Michelle Zimmerman. Whether it’s incorporating intricate vintage wear offset by romantic hints of blush gems, or mixing semi-precious stones with locally sourced gold and silver, this amazing collection captures the family tradition and culture.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/shuangwen.jpg" %}"/>
+                    <h6>PS 184 Shuang Wen School</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>To the benefit of families in the area, there are many great educational facilities located right in the Lower East Side.<br><br>
+
+                    First, the Lower East Side Preparatory School features an emphasis on learning about the new technology that is constantly being developed. Therefore, this school is very practical for application to the real world, and will lead to success in industry. They teach a bilingual Chinese program, as well as certifications for various technological areas.</p>
+                </div>
+            </div>
+            <div class ="row">
+                <div class="col-xs-12">
+                    <p>Another awesome bilingual school is PS 184 Shuang Wen School, which provides students with a dual Chinese and English background and an excellent education. With integration between native speakers and new learners, both cultures can benefit from learning together in order to improve and achieve academically.<br><br>
+
+                    PS 110 Florence Nightingale also takes a specialized approach to education, as they are known for their special education programs within the school. They believe that everyone is meant to succeed, and will provide the resources to make this dream a reality.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ludlowfitness.jpg" %}"/>
+                            <h6>Ludlow Fitness</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Within the Lower East Side, there are many fitness locations that residents enjoy to get in shape.<br><br>
+
+                            One of the favorite gyms of the area is Ludlow Fitness. This fitness facility offers the standard equipment and materials, all that you could possibly need to succeed in the world of the gym. With an amazing staff and personal trainers on call to help you when you need it most, what more could you want out of this reasonable option?</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Also, a neighborhood would not be complete without its own CrossFit, so visit the Bowery CrossFit if you’re experienced in this training, or even if you’ve never tried it before. Even though the workouts are intense and very difficult, the environment is supportive and encouraging to all ages and ability levels. The coaches are also very accessible and their main goal is to see you succeed.<br><br>
+
+                            If intense one-on-one training is what you desire most, conbody by CossAtlhetics is the perfect environment for you. Their prison style boot camps will definitely get you in shape, and the personable trainers will allow you to enjoy your journey along the way.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you are in need of a hospital in the Lower East Side, you will not be disappointed by the caliber of healthcare in this area.<br><br>
+
+                            One of the public hospitals located in LES is Gouverneur Health, an NYU run research hospital that services the area. This center is dedicated to providing the neighborhood with a great location in which to receive treatments, appointments, and other types of medical care. You will definitely be impressed by the coverage you will receive here.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/gouverneurhealth.jpg" %}"/>
+                            <h6>Gouverneur Health</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If your animals are sicker than you are, take them down to Lower East Side Animal Hospital. The center for pet wellness features many different services, including dentistry, surgery, internal medicine, radiology, and even a veterinary hospital right within the medical center. They will certainly take wonderful care of your pet and ensure they are back to the dog run in no time.<br><br>
+
+                            Another medical center that may be able to alleviate your concerns is CityMD, an urgent care facility that is available to treat illnesses or any problems at whatever time you are looking for. The short wait times add to the value of having an urgent care facility right within your neighborhood.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/rooseveltpark.jpg" %}"/>
+                    <h6>Sara D. Roosevelt Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Luckily, residents of the Lower East Side can enjoy three different parks within their neighborhood, which is a major draw to the area.<br><br>
+
+                    First, Sara D. Roosevelt Park is a great option for athletes, as the park contains basketball courts, volleyball courts, handball courts, and soccer fields. In addition, there are playgrounds located in the green area of the park. The large strip of park land that spans three streets seems like an island and retreat among the concrete, and residents love its proximity to their neighborhood.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Another choice for a relaxing afternoon is Corlears Hook Park, which is perfect for dogs and children with the dog friendly areas and playgrounds. Located right next to East River Park, Corlears Hook is more geared towards walkers and children. On the other hand, John V. Lindsay East River Park is the more pristine location due to the amazing views, as it is located right on the East River. The park spans many blocks, and is full of amenities like barbecue areas, football fields, tracks, bicycling areas, places to eat, soccer fields, tennis courts, and much, much more. Be sure to check out this amazing gem of the Lower East Side!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=Lower East Side&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ww.premiumlinkgenerator.com/">premium link generator</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}

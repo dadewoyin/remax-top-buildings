@@ -13,21 +13,23 @@ def neighborhoods_page(request):
     return render(request, "remax_homepage/neighborhoods_page.html", {})
 
 def show_neighborhood(request, neighborhood):
-    return render(request, "remax_homepage/show_neighborhood.html", {
-        "original": neighborhood,
-        "dir": "images/" + neighborhood + ".png", 
-        "neighborhood": neighborhood.title().replace("-", " ")})
+    return render(request, 
+        "remax_homepage/show_neighborhood_"+ neighborhood +".html", 
+        {"original": neighborhood,
+         "dir": "images/" + neighborhood + ".png", 
+         "neighborhood": neighborhood.title().replace("-", " ")})
 
 def top_buildings_main(request):
     return render(request, "remax_homepage/top_buildings_main.html", {})
 
 def show_top_buildings(request, neighborhood):
-    return render(request ,"remax_homepage/show_top_buildings.html", {
-        "neighborhood" : neighborhood.title().replace("-", " ")
+    return render(request ,
+        "remax_homepage/show_top_buildings_"+neighborhood+".html", 
+        {"neighborhood" : neighborhood.title().replace("-", " ")
         })
 
 def show_building_profile(request, neighborhood, rank):
     return render(request, 
-        "remax_homepage/show_building_profile_"+neighborhood+rank+".html", 
+        "remax_homepage/show_building_profile_"+neighborhood+"-"+rank+".html", 
         {"rank": rank,
          "neighborhood": neighborhood.title().replace("-", " ")})
