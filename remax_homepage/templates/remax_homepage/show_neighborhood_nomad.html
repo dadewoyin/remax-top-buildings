@@ -1,0 +1,264 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                For a trendy house hunter in search of a new, classy neighborhood, NoMad meets the description perfectly. NoMad is bordered by Flatiron, Midtown South, and Kips Bay.<br><br>
+
+                In terms of NoMad restaurants, The NoMad Restaurant is the most popular and iconic choice to describe the neighborhood. Whether you come for a cocktail or another drink, or just to enjoy the delicious food, visiting this restaurant will really give you a sense of the neighborhood atmosphere. And, as one of the up-and-coming trendy areas, NoMad is not short on nightlife opportunities, including the always-active Toshi’s Living Room.<br><br>
+
+                Also, as the name North of Madison Square Park implies, the main focus of the NoMad neighborhood is the park itself. Madison Square Park prides itself on well-maintained gardens, beautiful food areas with tons of options, and playground space for the younger NoMad generation. Regardless of what attracts you to the park, Madison Square Park is a must when visiting the NoMad neighborhood.<br><br>
+
+                As a newly established real estate market, NoMad is one of the hottest areas around. So, now is your chance to get your hands on a property, whether a sale or rental, before the market becomes even more competitive. NoMad is a great choice for any young professional or working-class resident looking for a hip location that is still in the center of a professional environment.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nomadrestaurant.jpg" %}"/>
+                            <h6>The Nomad Restaurant</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a restaurant in NoMad, one of the trendiest locations is The NoMad Restaurant. With fabulous cocktails and wine selections, you will easily be able to relax while enjoying the legendary food. Some dishes that you must try when dining here are truffle stuffed chicken, chicken burger, and milk and honey dessert. The only problem here is the popularity, so make sure to book a reservation early.<br><br>
+
+                            Or, Belgian Beer Cafe NoMad is an amazing choice for Belgian & French food. In addition to the good beer selection, the food here is excellent, particularly the scallops, oysters, and mussels. You will also love the feel of the restaurant, as the venue is well furnished with an open feel.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a healthier option, Sweetgreen is the salad institution of NoMad, offering the neighborhood fresh vegetables, a high quality of products, and of course, healthy choices to decide from. You will definitely feel good about yourself while enjoying some fresh food here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For anyone in need of a quick bite to eat, TriBeCa will absolutely service your taste buds well.<br><br>
+
+                            A quick, casual restaurant to stop at is Desi Galli. The food here is fantastic, offering the cheapest curry in the neighborhood. And, with a specialization in Kathi rolls (an Indian burrito-type dish), you can easily take your meal on the go without a mess or hassle.  </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/waldys.jpg" %}"/>
+                            <h6>Waldy’s Wood Fired Pizza & Penne</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, Waldy’s Wood Fired Pizza & Penne provides the neighborhood with a relaxed atmosphere of a wood burning oven as the focal point of the restaurant. Although the menu is simple, you will definitely find all the combinations of pizza and pasta that you are looking for.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nomadbar.jpg" %}"/>
+                            <h6>The Nomad Bar</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The NoMad Bar is a defining feature of the NoMad area, located at the bottom of the renowned NoMad Hotel. While the library bar is only open until 4pm unless you’re a guest of the hotel, if you are lucky enough to stay you will witness the beautiful and romantic atmosphere, set in an upscale hotel bar vibe. Be sure to check out this iconic characteristic of the NoMad neighborhood today.<br><br>
+
+                            Or, check out Flatiron Room, a hotspot for high-end whiskey enthusiasts. The comfortable environment boasts tasteful entertainment and a beautiful backdrop for a sampling of some of the best spirits available.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The only club located within the small NoMad neighborhood is Toshi’s Living Room. Although the sole option, Toshi’s definitely makes up for it in the caliber of party it puts on. The owner, Toshi Chan, created this club after taking a mixology class, which took off into an entire venue and life-changing experience. As a result, NoMad residents are left with a fabulous venue that is always tons of fun. The appeal to this club is very classy, as you can enjoy a drink and listen to music without it being too crowded or loud. Plus, the service is amazing, as the bartenders are friendly and helpful in finding a drink for you.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/toshis.jpg" %}"/>
+                            <h6>Toshi's Living Room</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/kalustyan.jpg" %}"/>
+                            <h6>Kalustyan’s</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>NoMad residents love the variety of grocery stores located in their neighborhood, particularly Kalustyan’s. They have ingredients ranging from basic food, including bread, canned goods, and other essentials, as well as specialty seasonings, oils, and spices. Other interesting products that you can find here include henna, bitters, and essential oils. Overall, the selection is almost as great as the quality of food here.<br><br>
+
+                            Or, Spice Corner will provide you with any Indian ingredient that you could possibly want. The wide range of options can be easily sorted through with the help of the owner and shopkeepers, who are happy to help with any question.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>A classic New York City supermarket, Fairway offers the area many fresh and organic products, which come at a reasonable price. Cheaper than even a local health food store, regular customers and health junkies alike shop at this convenient location. Be sure to check out their selection when considering which grocery store to buy from.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>One of the cheapest laundry options in the NoMad area is Park Ave Cleaner, whose features are their quick service and professional atmosphere. Although quick, the staff here pays attention to your individual needs, and will clean the laundry in the way that best suits your taste.<br><br>
+
+                            Or, Bed Bug Laundry NYC is based in NoMad, which offers pickup and delivery services for the entire New York City area. With a certified clean of your laundry and linens without chemicals, you are free to use this service without fear of bed bugs returning, and is child and pet friendly.<br><br>
+
+                            For a traditional dry-cleaners, visit the Murray Hill Valet Service location. They provide many choices for dry cleaning, including a same day service, which is very convenient for your immediate needs. Their great service and reputation makes them an excellent option for your needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nomadmath.jpg" %}"/>
+                            <h6>National Museum of Mathematics</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>One of the most intellectual museums of New York City, National Museum of Mathematics in NoMad offers many levels of fun and intelligent problems for your brain to sort through. If you’re looking to impress or challenge someone on their math skills, this museum would be the ultimate place to practice. The engaging experience here will definitely raise your IQ, or at least awareness that math is not for you. Regardless of whether you like math, the staff here will make your experience pleasant and entertaining for the day. So, check out National Museum of Mathematics in NoMad!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of art, Commission NYC is a locally commissioned gallery that focuses on making artwork reasonable for the everyday customer to enjoy and purchase. The professional atmosphere and caliber of artists here add to the appeal, including some artists who are award-winning in their craft. As this art gallery was only established in 2015, the new environment is looking for a new face to join their customer base.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/commissionnyc.jpg" %}"/>
+                            <h6>Commission NYC</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/bradelis.jpg" %}"/>
+                    <h6>Bradelis</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The shopping scene at NoMad is huge, ensuring that you will find the store to make a regular clothing destination.<br><br>
+
+                    If you’re in need of lingerie and are looking for something a little unique, Bradelis is a Japanese-based store that may work for you. The sizes are geared to fit exactly to your shape, and with the help of the staff, you are sure to find an elegant piece that is very high quality.<br><br>
+
+                    One of the clothing stores located in NoMad is Ame Ame, which also offers accessories. The variety here is top-notch, and the quality of clothing matches the prices. Also, the shopping experience here is pleasant, as the owner and staff are dedicated to help you find the perfect piece. You will definitely find something unique and well worth the price here at Ame Ame.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, Dover Street Market is a retail store that focuses on stocking high end designer clothing in its seven-floor location. Almost maintained as pristinely as a museum, Dover Street Market is owned by comme de garcons, so you can be assured of the quality here. Plus, the staff is very pleasant in finding something for you to purchase.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/24hrfitness.jpg" %}"/>
+                            <h6>24 hr Fitness</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For the avid fitness nut, 24 hour Fitness offers a state-of-the-art location which amazing perks in their gym membership. With classes ranging from group exercises to personal training, you can easily lose weight or tone your body with the help of the friendly and helpful trainers. A membership here could actually change your quality of life through a workout regimen.<br><br>
+
+                            CrossFit NYC: The Black Box is another incredible choice, and a notable location because it is the largest CrossFit gym in the world, and one of the 20 original locations. Rated as top 10 across America, The Black Box will surely impress you with large amenities and equipment there. This location runs almost 400 classes each week, so you can certainly find one to fit your busy schedule.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re in need of a dentist in the NoMad area, Madison Square Dentistry can help you out. Dr. Wang’s service is impeccable, ensuring that you feel comfortable and safe before he performs any type of operation. The office is clean and well laid-out, so you will have a pleasurable experience with this high-quality doctor.  </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/madisonsquaredentistry.jpg" %}"/>
+                            <h6>Madison Square Dentistry</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/madisonsquarepark.jpg" %}"/>
+                    <h6>Madison Square Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>As NoMad is named for being North of Madison Square Park, a key feature of the neighborhood is of course Madison Square Park. Accessible for residents with disabilities, including wheelchairs, Madison Square Park offers something that everyone can utilize. The many playgrounds at this park are sure to have your children very excited, especially the countless swings on premises. Overall, the seven acre space is perfect to enjoy a lunch as Shake Shack or Madison Square Eats, as well as a walk through their gardens for a relaxing afternoon stroll. Be sure to check out Madison Square Park when in NoMad, as the beauty will not disappoint!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=nomad, new york&ie=UTF8&t=roadmap&z=16&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="http://googlemapsgenerator.com/">Google maps genhttps://ww.premiumlinkgenerator.com/erator</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
