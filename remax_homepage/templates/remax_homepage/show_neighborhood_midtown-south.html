@@ -1,0 +1,295 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                A commercial area, Midtown South is still considered less touristy than its Midtown and Midtown West counterparts. Midtown South is bordered by Chelsea, Gramercy Park, Kips Bay, and Midtown.<br><br>
+
+                Herald Square and Bryant Park offset the commercialization of Midtown South with some much-needed green space, while the rest of the neighborhood is filled with tourists and professionals alike. Shopping here is very interesting, as Midtown South houses Macy’s flagship store, as well as many other big-name brands weaved in between smaller individual locations. Whether you’re shopping or enjoying a day at the park, the restaurants will satisfy your building appetite, as dining options such as Marseille and Turco are located in Midtown South. Whatever you choose for a restaurant, you will surely be happy with the quality of your meal, and surprisingly personable service. Or, check out one of the many bars and nightlife selections, which are always roaring due to the large tourist appeal.<br><br>
+
+                If you’re looking for a property here, then you won’t have to pay much more than the New York City average, and you can certainly find a steal for a reasonable price. Even so, there are significantly lower sales in this area than overall New York City, so finding the perfect property may be more challenging. Come check out the Midtown South neighborhood will prices are relatively affordable if you’re interested in a purchase or rental in this area.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/marseille.jpg" %}"/>
+                            <h6>Marseille</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Fine dining appears at virtually every corner of Midtown South, providing you with many choices to decide from for a fantastic meal.<br><br>
+
+                            First, visit Etcetera Etcetera, an Italian restaurant with gluten-free options and a cozy atmosphere. This hidden venue is not too expensive, but is still nice enough to enjoy a meal among friends or loved ones. Be sure to try this restaurant the next time you’re wishing for Italian food.<br><br>
+
+                            Or, perhaps Aureole betters suits your tastes with its New American cuisine. Located just outside Bryant Park, the quality of food here is as superb as the service, making you feel special and welcome at this location. The classy joint is definitely one to try for some interesting combinations of flavors.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another restaurant choice is Marseille, an authentic French restaurant with an ambience and food to match the setting. The location is the perfect stop for a pre-theater meal, but before you are transported into another world through performance, Marseille will provide you with an entirely immersive experience, making you feel like a resident of Southern France. Be sure to check out this amazing restaurant today.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>One of the premier takeout options in the Midtown South area is Crisp, a Mediterranean restaurant that creates food quickly and at a reasonable price. With friendly service, Crisp is an excellent choice for a Midtown South lunch.<br><br>
+
+                            Or, a more causal selection is Shorty’s, a cheesesteak and sandwich shop that uses simple ingredients to create an ideal sandwich. Be sure to try the Italian fries, which are absolutely superb. Overall, you’ll be getting a quality meal here with the ingredients and tastes necessary to generate perfection.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/shortys.jpg" %}"/>
+                            <h6>Shorty's</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For another Mediterranean stop that focuses more on tradition, Turco Mediterranean Grill is the perfect stop. Known for their hummus, lamb gyro, and falafel sandwich, you will be satisfied with the food from appetizer to main dish to sides. The central location makes it very easy to pick up food from, and you get a discount if you check in on Yelp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/districttap.jpg" %}"/>
+                            <h6>District Tap House</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>At night, Midtown South comes alive due to the countless bar and club destinations.<br><br>
+
+                            One hip spot to visit, At Nine Restaurant & Bar, creates a balance of Thai food and full bar to attend your hunger and thirsts. With quick service, you can have a lychee martini in no time, and while you wait you will admire the trendy decorations and ambience created here.<br><br>
+
+                            Or, beer lovers should visit Beers Culture, an establishment with plenty of seating to accommodate its many customers. You can pick out the beer of your choice in the refrigerated wall units that line the bar, which are categorized by type and origin, as well as many drafts on tap. Any aficionado should check out this location today to try some new beer and learn more about the process.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another choice for a beer is District Tap House, known for sports viewings and amazing bar food. The cozy booths that line the store will fit your friends for a drink and some food, including fries, tacos, and burgers, which are the specialties. Come to District Tap House if you’re looking for some food along with a casual drink among friends.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For clubbing in Midtown South, there are many choices available for a party-filled night.<br><br>
+
+                            First, Proper West is a lounge-type location that offers an upscale sports bar feel. Finger food and beer are available if you’re looking to watch a game, as well as whiskey, bourbon, and cocktails for a more upscale occasion. The decor transforms the space into an extraordinary venue, so check out the swanky location on your next night out.<br><br>
+
+                            Or, a Korean dance club of Midtown South, The Circle Nightclub, has one of the biggest dance floors of Midtown South. The lighting is fun and exciting, and the music will keep the party alive into the early morning hours. Complete with a fun crowd that is looking to have a memorable night, The Circle Nightclub is a fine choice for your night.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/properwest.jpg" %}"/>
+                            <h6>Proper West</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re looking for a club with live music and great food, Birdland is the location for you. Featuring live jazz and blues, the candlelit location will set the tone for a truly special evening. Sometimes, the top musicians perform cabaret, but the cast will always entertain regardless.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/brooklynfare.jpg" %}"/>
+                            <h6>Brooklyn Fare</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re in need of a grocery store while in Midtown South, the choices here will not disappoint.<br><br>
+
+                            One choice is Raw Organics, an organic grocery store that specializes in smoothies and health options for anyone that is health conscious. Raw Organics is the perfect place to shop if you’re looking to get healthier, faster.<br><br>
+
+                            Or, perhaps Brooklyn Fare is more your style, as it also offers fresh organic goods, but also many specialty items. With all the staple ingredients you could possibly ask for, Brooklyn Fare also carries hard to find items that no other store can provide. Overall, this grocery store is an amazing neighborhood spot that residents love.<br><br>
+
+                            Whatever you choose, Midtown South’s grocery stores are sure to please.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For laundry, one option in Midtown South is The Laundress, a dry cleaning and laundry facility of the area. Your clothes will smell and look great after being cleaned here, and they also supply specialty wool and cashmere shampoo so you can wash instead of dry clean those products. The Laundress will definitely brighten up your laundry experiences!<br><br>
+
+                            Or, check out Happy Cleaners & Tailors if you need timely service, including dry cleaning, laundry, sewing, or tailoring. The comprehensive services offered here will surely fit any one of your clothing needs.<br><br>
+
+                            Another option, The Dhobi Dry Cleaning, is known for its free pickup and delivery, which is made easy through use of their app. This reliable services provides amazing quality at reasonable prices, so you won’t have to worry about your laundry anymore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/morganlib.jpg" %}"/>
+                            <h6>The Morgan Library & Museum</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>An attraction for scientists and medical professionals is Body Worlds: Plus, which offers a comprehensive view through the body. In addition to anatomy, you will learn the spiritual input that Body Worlds establishes for the human body, as they believe that each life is very valuable. If you’re interested, you will find this location exciting and unique.<br><br>
+
+                            Perhaps The Morgan Library & Museum will suit your tastes, as it displays artifacts such as Gutenberg Bibles and Renzo Piano. In addition, the Morgan features original sketches of Andy Warhol, Jackson Pollack, and Picasso, bringing the artists to their most basic and formative years for the viewer to dissect. Overall, the breakdown of some of the century’s greatest masterpieces will surely amaze.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re looking for a joint school and museum, International Center of Photography is the place for you. Complete with students learning the difficult art of photography, you will be able to view beautiful photographs of landscapes, including wildlife, as well as cultural pieces. With an emphasis on saving the environment, International Center of Photography is both charming and moving for their cause.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>One option for a joint art gallery and tattoo salon is Last Rite Tattoo & Art Gallery, a contemporary location that is absolutely stunning. Whether you come to consider a tattoo or view the spacious art displays, the staff will help you find exactly what you’re looking for. Be sure to check out this location for something different to enjoy today.<br><br>
+
+                            Or, perhaps House of Walker is a better choice for you, which blends food tastings, music samples, and art into one fabulous venue. This Johnny Walker experience will certainly knock your socks off as a great location to spend the night at!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/midoma.jpg" %}"/>
+                            <h6>MIDOMA</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>A beautifully curated collection located in Midtown South is MIDOMA, featuring both established and up-and-coming artists. The exhibit features a different artist each month, complete with a reception at the venue. This alternative space is a new concept in art galleries, so be sure to take part today.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/muji.jpg" %}"/>
+                    <h6>Muji</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>A popular Japanese bookstore that many residents frequent is Kinokuniya Book Store, which includes a selection of books about design, anime, and manga, with full collections available. Many trinket items are also sold here, such as anime action figures, stationary, and character-themed toys. If you’re a fan of anime or manga, Kinokuniya Book Store is perfect for you.<br><br>
+
+                    For a women’s clothing line that is both affordable and stylish, check out Muji, a Japanese department store that features clothing, accessories, and travel items. The selection here is fantastic, and many items are so gorgeous that you will have to consider a purchase. With a unique flair and style, Muji will definitely not let you down!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, a classic department store option is Macy’s, one of New York City’s iconic locations. With brands ranging from Ralph Lauren to Calvin Klein, Clinique to Estee Lauder, you will certainly find the style that suits you. You can also check out their dishware, gifts, and furniture while shopping for shoes and clothing.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/blunkfitness.jpg" %}"/>
+                            <h6>Blunk Fitness</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Of course, a Crossfit must be located in almost every neighborhood, and CrossFit Hell’s Kitchen is the location for Midtown South. The motivating and educational environment adds to the intensity of the workouts here, and with tons of equipment to choose from, you will get a varied workout every time you train. With superb coaches, the level of community and support is raised even further, creating the perfect environment to workout in.<br><br>
+
+                            A resident favorite for gyms is Blink Fitness, which through a reasonable membership you can receive friendly service without the typical Midtown crowds. This location also offers many machines, especially treadmills and ellipticals, so the typical fitness nut will have everything they need here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of doctor’s offices, Midtown South is a central point ready to transport you into any hospital location. In this neighborhood, however, there is not an individual hospital, instead many doctor’s practices to choose from.<br><br>
+
+                            One of these options is Drew Stein MD, a sports medicine specialist and professional in orthopedic care. Dr. Stein treats all injuries relating to shoulder, knees, elbows, and ankles, including possible surgery in many cases. As Dr. Stein graduated as chief resident when completing his residency training at the Hospital for Joint Disease of New York City, he will definitely lead his staff to make the right decision in your case of orthopedic treatment. Besides surgery, he often prescribes home exercises, physical therapy, and braces.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/drewstein.jpg" %}"/>
+                            <h6>Drew Stein MD</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/bryantpark.jpg" %}"/>
+                    <h6>Bryant Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>One of the parks located in Midtown South is Bryant Park, a simple venue of elegance and greenery. Although small, there are often attractions here, including yoga, movie screenings, and ping pong tournaments. Regardless of what you come to enjoy, Bryant Park certainly has the amenities to make for a pleasant excursion.<br><br>
+
+                    Or, a great shopping center of Midtown South is Herald Square, which is always filled with people enjoying a walk through the park during warm summer months and holidays. With outdoor tables to eat at or just take a load off, Herald Square is the perfect destination to people-watch or relax at.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=midtown south, new york&ie=UTF8&t=roadmap&z=16&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="googlemapsgenerator.com">googlemapsgenerator.com</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
