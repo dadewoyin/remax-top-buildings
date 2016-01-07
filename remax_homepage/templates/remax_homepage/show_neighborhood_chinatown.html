@@ -1,0 +1,277 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Always crowded with residents and tourists alike, the New York City community cannot get enough of Chinatown. This neighborhood is bordered by Little Italy, TriBeCa, and SoHo.<br><br>
+
+                One-off restaurants and heaps of cheap Chinese food define the dining scene of Chinatown, and there is always plenty of food to go around-if you’re looking for Chinese. Otherwise, you may be out of luck, except for a few Italian runoff restaurants that have made their way into the Chinatown area. But, the party scene here is amazing, sporting both bars and clubs that reflect the younger and more touristy atmosphere. For an authentic Chinatown supermarket, visit one of the locations on a street corner to pick up some spices and Asian ingredients that you cannot find anywhere else.<br><br>
+
+                In terms of real estate, Chinatown is a central location with many subway lines converging here, as well as a cultural enclave for Asian residents. Even so, the prices here are variable, and have traditionally stayed below the average New York City selling price. So, if you’re considering a new life in the US representative of Chinese culture, look into a property for buying/renting today and you won’t regret it!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/shanghaimanor.jpg" %}"/>
+                            <h6>Shanghai Asian Manor</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In Chinatown, you can expect to find the best Chinese food around, including spinoffs such as Shanghainese and other Asian dishes.<br><br>
+
+                            First, visit Prosperity Dumpling, a Chinese restaurant that is both affordable and delectable at the same time. Most people come here for their dumplings, including pork, shrimp, and scallion, as well as their sesame pancakes. Regardless of what you order, you will certainly be satisfied with the caliber of food found here.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, for Shanghainese, try Shanghai Asian Manor, which also features low prices and amazing quantity of foods. The food here is very authentic, which is complemented by the fast and friendly service you will receive if you dine here. Check out Shanghai Asian Manor today!<br><br>
+
+                            One of the best places to get noodles in Chinatown is Lam Zhou Handmade Noodle, a hole-in-the-wall location that knows how to create an authentic dish to perfection. Although the restaurant is cash only, the incredible flavors you are bound to taste will make up for the inconvenience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>One of the best takeout restaurants located on the border between Little Italy and Chinatown is Kiss My Slice, a small pizza shop that gives you a ton of pizza for your money. The staff here is friendly and respectful, ensuring that you will get exactly what you order. Also, order one of the combos if you especially want a good bang for your buck.<br><br>
+
+                            Or, another takeout restaurant in Chinatown that offers you a different cuisine is Sharkey’s Cafe. Located next to Columbus Park, this is the perfect place to stop for breakfast, where both the coffee and pastries are excellent. Try out Sharkey’s Cafe to start your day in Chinatown.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/sharkeys.jpg" %}"/>
+                            <h6>Sharkey's Cafe</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re craving Chinese food for takeout, May Wah Fast Food is the perfect solution. You can find Taiwanese food here for a cheap cost, and it will certainly be filling and delicious for the price. The chicken leg over rice is the most popular dish here, due to the secret sauce that they dress every dish with. Even if you’re not in the mood for the food here, pick up some sauce to spice up your meal!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/baron.jpg" %}"/>
+                    <h6>Bar On</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you need a bar for entertainment, Chinatown’s lively and crowded scene is exceptional.<br><br>
+
+                    Visit Clockwork Bar, a dive bar-type location that is small, yet bursting with personality. The drink of choice here are the margaritas, which are in high variety, as well as other drink types. The chill atmosphere will definitely fit the tone for a relaxed and fun night.<br><br>
+
+                    Or, perhaps Whiskey Tavern is more your style, which features attentive bartenders that are always willing to help you find a drink. With outdoor seating for a summer hangout and TVs to watch sports, Whiskey Tavern is a pub with all the amenities you need to have a fantastic night.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>A bar with a fantastic atmosphere is Bar On, whose main focus is the touch pad karaoke which is open to everyone to have fun with. The interior is beautiful, complimenting the new technology, and the staff is friendly and willing to help you with the technology or ordering a drink. Plus, the drinks are cheap, so a night out here will not cost you too much!</p>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/hongkongsuper.jpg" %}"/>
+                            <h6>Hong Kong Supermarket</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re ever in need of a grocery store to stock up on ingredients, Bangkok Center Grocery is the perfect choice for ethnic foods. Featuring everything from curry paste to thai food to Malaysian spices, Bangkok Center Grocery is a good spot for local groceries and spices. If you’re lucky, then you may even get a staff member to share tips and recipes with.<br><br>
+
+                            Or, Hong Kong Supermarket is ideal for buying Asian snacks and ingredients, and perfectly located between Little Italy and Chinatown. Even though it is small, the location is usually busy because of its popularity. The low prices and wide selection are very attractive, so be sure to stock up on Asian snacks at Hong Kong Supermarket!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another organized location that is best for buying a treat on the go is Sun Vin Grocery. The staff are very informed on the location of every product, and the food is always quick and easy to find. Here you will surely find an awesome item to purchase and take home with you!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>While in Chinatown, getting your laundry done is easy due to the selection of laundromats on location.<br><br>
+
+                            Visit EF Laundry to get all of your dry cleaning and laundry done in one location, which is made even easier due to the website check-ins, as well as pickup and delivery. The quick turnaround and long hours are both pluses to getting your laundry cleaned here.<br><br>
+
+                            Or, try Sun Park Laundromat for some coin-op machines that are never super crowded, as well as the option for them to do load washes for you. With the long hours of 7am to 9pm, you can get your laundry done and enjoy the other Chinatown amenities while you wait.<br><br>
+
+                            Another stop to check out is Allen Laundromat, a hole-in-the-wall with inexpensive washing machines and delivery service. You can pick up your laundry from these cleaners already folded and smelling great, all for an affordable price.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/eldridgemuseum.jpg" %}"/>
+                            <h6>Museum at Eldridge Street</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In terms of attractions, you’d be surprised at the caliber of museums located in Chinatown.<br><br>
+
+                            One of the modern natural history museums of New York City is Mmuseumm, which is dedicated to displaying contemporary artifacts to showcase modern world life. This museum offers an interesting and refreshing perspective into our everyday life events.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, check out Museum at Eldridge Street, which is a blast from the past for visiting and interpreting the lives of past immigrants. This museum seeks to inform our communities of the impact that immigrants have had on our society, as well as how they continue to change our lives. Be sure to visit this museum for a different view on our historical makeup.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>A gallery of the Chinatown area is Stephan Stoyanov Gallery, currently hosting the exhibit Scotland, which combines elements of traditional artwork with contemporary portraits. The artwork here is definitely very professional, so you will enjoy the high caliber of artwork displayed here.<br><br>
+
+                            Another gallery located in Chinatown is Nicelle Beauchene Gallery, where you will find geometric designs and unique perspectives of modern abstract artwork. If this sounds like you, then come on down to Nicelle Beauchene Gallery today!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nicellegallery.jpg" %}"/>
+                            <h6>Nicelle Beauchene Gallery</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/uniqulee.jpg" %}"/>
+                    <h6>Uniqulee</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re trying to find the perfect place to shop, Chinatown may have a wonderful store for you.<br><br>
+
+                    First, check out Dah Shop, a neighborhood bike shop that is owner-operated, and all the employees are friendly and helpful. With a fast turnaround, great pricing, and excellent quality of work, what more could you ask for of your bike shop?<br><br>
+
+                    Or, perhaps Uniqulee is the store you’ve been looking for. With beautiful bridal jewelry and an amazing collection of costume jewelry, you can definitely find an incredible piece to take home with you that is curated in great taste.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>If you’re looking for the Chinese equivalent of a department store, Oriental Culture Enterprise is one of the most popular and prominent Chinese stores in North America. Known primarily as a bookstore, here you can find an art gallery, art supplies, stationery, musical goods, arts and crafts, and traditional Chinese works. If you come during a book fair, then you can even get a discount on one of these items! Even if you don’t intend on buying anything, visiting this location will give you a wonderful view into Chinese culture.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/lighthousepre.jpg" %}"/>
+                    <h6>Lighthouse Preschool</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If your child is looking into educational opportunities, Chinatown’s schooling is superb.<br><br>
+
+                    First off, visit Transfiguration School, an elementary school that has Catholic influences for child development focuses on spirituality. With a strong emphasis on family, Transfiguration School has just enough religious influence to help your children develop successfully, but without a strong bias created. Overall, Transfiguration School is a fantastic choice for your child’s education.<br><br>
+
+                    Or, Lighthouse Preschool is an exceptional early education facility that teaches children ages two through six with key values, such as love, social skills, and basic school functions. After its founding in 2001, this school has been widely popular in enrollment.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Check out P.S. 130 Hernando De School if you’re looking for a school that is dedicated to excellence and commitment for every child. The school fosters personalized growth through their daycare, after-school care, and recreational activities. Also, there are school-sponsored programs in music, drama, and fitness, so that your child can receive a comprehensive education to their benefit.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/hudsonspine.jpg" %}"/>
+                    <h6>Hudson Spine and Pain Medicine</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you need medical care within the Chinatown area, you will be in good hands with the doctors of the area.<br><br>
+
+                    Visit Hudson Spine and Pain Medicine if you would like an evaluation for any sports injury, including x-rays, injections, spinal cord stimulation, and more advanced treatments for your injuries. Plus, there is a physical therapy site on location that will give you the necessary exercises to complete at home.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, Meredith Halpern, MD is a compassionate doctor with a desire to help all of her patients feel better. With a short waiting time for appointments and decent prices, Dr. Halpern will listen to all of your problems and fix them in no time. She is an overall great choice for primary physician, so be sure to utilize her in the future.</p>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/columbuspark.jpg" %}"/>
+                    <h6>Columbus Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>A representation of all that is sacred in Asian culture, Columbus Park truly allows the warmth of the Asian Community to radiate out to the public. As one of the few remaining authentic slices of Chinese culture in Manhattan, the park’s scene shows the beauty of the Asian Community through laughter and mutual enjoyment in those that frequent the area.<br><br>
+
+                    Or, check out City Hall Park, which is surrounded by historic government buildings and provides an oasis to the area. Come here during the afternoon if you’re looking to relax with a meal or some sunshine on their lawn or benches.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Try visiting Collect Pond Park if you’re intrigued by the thought of a sixty-foot pool and underground spring within the heart of New York City. This natural landscape is one of true beauty, so check out this attraction today while visiting Chinatown!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=chinatown, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="http://premiumlinkgenerator.com">premium link generator for 2016!</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
