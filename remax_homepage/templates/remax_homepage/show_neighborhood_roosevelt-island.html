@@ -1,0 +1,173 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                At only two miles long, Roosevelt Island is often discounted or overlooked as a Manhattan neighborhood-but it shouldn’t be. Located next to Midtown East, Kips Bay, and Murray Hill, Roosevelt Island is a destination within itself of beauty and peace.<br><br>
+
+                Even though there are very few attractions, dining options, or schools in the area, what Roosevelt Island lacks in quantity it makes up for in quality-the dining choices are all great, and there are plenty of green spaces to choose from to enjoy the serenity of a suburb. In fact, Roosevelt Island has some of the best views of Manhattan around, which gives residents a unique perspective on the area.<br><br>
+
+                The island is very popular in terms of real estate because the entire island is subsidized, reducing prices by up to 20-30% from comparable neighborhoods. If you make a middle income salary, you may be eligible for the same subsidies here, but beware-due to the recent rise in demand for real estate in Roosevelt Island, more and more properties have become privatized, leading to a spike in prices. The desire for properties in Roosevelt Island right now is very high, so get in while there’s still some availability if you’re looking on renting or buying here.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/riverwalkbar.jpg" %}"/>
+                            <h6>Riverwalk Bar & Grill</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Although small, Roosevelt Island packs a punch with its various fine dining options.<br><br>
+
+                            One choice for an upscale dinner is Nonno’s Focacceria, a resident favorite for pizza on Roosevelt Island. Known for their chicken roll and pizza, you will find that the service will enhance your meal even further. Try out one of Roosevelt Island’s best restaurants today!<br><br>
+
+                            Another great choice, Riverwalk Bar & Grill, offers fantastic burgers and sweet potato fries in a residential atmosphere. With a happy hour after four, you can enjoy drinks virtually any time of the day, and it will never get too loud or crowded.<br><br>
+
+                            Even though there are not many fine dining options within Roosevelt Island, the few selections here will certainly satisfy your hunger.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of takeout, you can explore many Eastern cuisines on the small island with the restaurants available.<br><br>
+
+                            One of the premier locations for takeout is Fuji East, which residents consider the best sushi on Roosevelt Island. If you dine in, you will be met with prompt and efficient service, and fresh sushi at the sushi bar will definitely hit the spot.<br><br>
+
+                            Or, order from Up Thai, which features pad Thai and pad see ew as the dishes of choice. If you order during lunch, try the lunch special, which offers a soup or salad, as well as an appetizer and entree, all for one reasonable price. The thai tea and mango flavored ice cream will certainly put your dining experience over the top.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/fujieast.jpg" %}"/>
+                            <h6>Fuji East</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Roosevelt Island natives consider Noodle Fun to be the best Chinese on the island, probably because of their delicious noodles that are constantly being delivered. Some notable dishes to try are chow fun, spare ribs, and wantons, which are all above average. Overall, you will certainly enjoy this Chinese cuisine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/riverwalkgrill.jpg" %}"/>
+                    <h6>Riverwalk Bar & Grill</h6>
+                </div>
+                <div class="col-ls-8">
+                    <p>Even though there is only one bar on the island, it definitely services the area well. Riverwalk Bar & Grill is a sports bar that residents enjoy, especially during happy hour with reduced priced drinks. The fun atmosphere and nice owner make Riverwalk Bar & Grill a local hangout spot for those who are not in the mood for leaving the island.</p>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/wholesomefactory.jpg" %}"/>
+                    <h6>Wholesome Factory</h6>
+                </div>
+                <div class="col-ls-8">
+                    <p>Even within the small area, there is a grocery store located in Roosevelt Island. Called Wholesome Factory, the grocery store offers fresh produce and herbs as fresh ingredients for your kitchen, as well as pre-prepared pizza for you to take home with you. Residents love the organic options, as well as the wide selection of canned goods. The convenient central location and friendly staff make shopping here very pleasurable.</p>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/shakespeareroosevelt.jpg" %}"/>
+                    <h6>Shakespeare</h6>
+                </div>
+                <div class="col-ls-8">
+                    <p>The island will definitely entertain you right within the neighborhood if you want to stay at home for the night.<br><br>
+
+                    Check out Island Shakespeare for an experience that’s different from average show. Actors here fill out the entire church, with multiple rooms for a comprehensive event. The spaces are beautifully decorated, which brings out the emotions and performances of the actors. Overall, this interactive experience is a must for residents and non-residents alike.</p>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/cabrini.jpg" %}"/>
+                    <h6>Cabrini Thrift Shop</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re looking for a cheap find, Roosevelt Island has the store to fit your needs.<br><br>
+
+                    Try shopping at Cabrini Thrift Shop to get secondhand goods that are reasonably priced yet still in good condition. They especially are known for their wide selection of books, so you can enjoy reading even if you’re on a budget. Be sure to check out this unique location today for some awesome secondhand finds.<br><br>
+
+                    Or, if you’d like to learn about Japanese culture, what better way to start than with Japanese attire? Kimono Hiro has the venue that you’re looking for, as their sole sales are kimonos, which you can rent or buy custom. The pricing here is reasonable, so you can indulge in your native culture or try out a new style today!</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/islandkids.jpg" %}"/>
+                    <h6>Island Kids</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The only school on the island is Island Kids, a daycare and preschool facility for the youngsters of your family. This is a nonprofit organization that seeks to enrich the lives of children aged newborn-4 years old, as well as children aged 4-10 year old during summer camp. If you need someone to watch your kids after school, Island Kids can help, as they have an after school program for kindergartners. Overall, this great resource will definitely help you out with your young and new family.</p>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/freedomspark.jpg" %}"/>
+                    <h6>Franklin D. Roosevelt Four Freedoms Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Nonresidents often flock to Roosevelt Island to witness the stunning views of Manhattan, and Franklin D. Roosevelt Four Freedoms Park is the perfect viewing site. Here, you can see the full skyline in Manhattan like you’ve never before, offset by the greenery and serenity of the park itself. Whether you decide to picnic, relax, or walk through the park, you will definitely enjoy the cleanliness, lush grasses, and overall beautiful landscape of Four Freedoms Park. Come check out this haven today!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=roosevelt island, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ww.premiumlinkgenerator.com/">premium link generator overview</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
