@@ -1,0 +1,374 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                West Harlem has diversified in recent years but has still retained its neighborhood feel. Classic brownstones can be found throughout, and these architectural gems speak to the neighborhood’s proud history.<br><br>
+
+                Originally a Dutch settlement named after the city of Haarlem in The Netherlands, modern Harlem was purchased from the Lenape tribe in 1658. Since then it has gone through many cultural revolutions, all of which have added their flavor to the neighborhood. Since its inception, the Dutch, English, Jewish and Italian residents that have called it home have all left their indelible marks. In the early 20th century, however, the demographics changed when many African Americans migrated to the area during The Great Migration.<br><br>
+
+                Harlem real estate has grown in popularity, especially amongst those searching for great deals in Manhattan real estate. West Harlem apartments and neighborhood may soon be transformed from a diamond in the rough to one of NYC’s trendier neighborhoods, with its real estate values skyrocketing. Harlem has long been a center for the arts, restaurants and exciting nightlife options, so it is perfect for someone interested in the vibrancy of New York City.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pisticci.jpg" %}"/>
+                            <h6>Pisticci</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Pisticci is an upscale Italian restaurant that has been serving the West Harlem community for years. The decor of the restaurant will make you feel like you are dining in Italy. The food is fresh and delicious, and you should definitely try Michael pasta, fig salad,ravioli with spinach, and coconut cake for dessert.<br><br>
+
+                            If you’re craving sushi, we’ve got you covered. Geisha Sushi is a great Japanese restaurant with an awesome sushi bar. The place has so many roll options like Mummy Roll, Crazy Friday Roll, and Golden Apple roll, but there are also many more. Pick out one of these eccentric rolls to try today!<br><br>
+
+                            For arguably the best Cuban restaurant not only in Harlem but all of New York City, try out Harlem’s Floridita. The food is so delicious you won’t get tired of this place. The ropa vieja is a must, as well as the excellent lechon asado. The seafood appetizer – tostones con mariscos – is mouthwatering, so try some today!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re planning to throw a BBQ for friends and family, Dinosaur Bar-B-Que is the place to order from. They also provide catering services for parties and big corporate events. Dinosaur Bar-B-Que is nationally acclaimed, as their food and sauces have won honors in publications such as Men’s Health and Eating Well magazines.<br><br>
+
+                            If you are desperate for some Chinese takeout, New Double Dragon is a great choice. The service is very quick, and delivery arrives within 20-25 minutes. And, if you want to eat healthy, you can customize your order; for example, you can order your fried rice made with brown rice instead of white or order the foods steamed instead of fried (even the general tso’s tofu).<br><br>
+
+                            For a delicious chicken and waffles place in Harlem, check out Amy Ruth’s Restaurant, located right off West 116th Street. They offer amazing critically-acclaimed American food, and with 24-hour service, this may be the most convenient restaurant in West Harlem.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/dinosaur.jpg" %}"/>
+                            <h6>Dinosaur Bar B Que</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/harlempublic.jpg" %}"/>
+                            <h6>Harlem Public</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Looking to spend a nice easy night in Harlem? Check out Harlem Public, a nice cozy pub with a huge selection of craft beers plus spirits and cocktails. This place is also known for brunch with some delicious food like buffalo chicken wings and peanut butter burgers, so try it out at either time.<br><br>
+
+                            The head bartender, Jack McGarry, at The Grange Bar & Eatery provides a good selection of cocktails like Grange Collins (Farmer’s Gin, pomegranate liqueur, basil, lemon juice, and soda) and the Convent Stroll (Heaven Hill whiskey, ginger, honey, lemon juice, and soda).The place is weathered with white-oak floors and antique chandeliers, creating a beautiful homey atmosphere.<br><br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>137 Bar & Grill, located on the corner of 137th and Broadway in Harlem, is a great place to go if you’re a passionate lover of fantastic food with terrific live music. They produce over 137 different entree options to choose from, as well as large fishbowls and bar food.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>There are also many tremendous clubs located in West Harlem for you to party the night away at.<br><br>
+
+                            Bill’s Place is an amazing club in Harlem. Led by Legendary Bill, you will have a fantastic night of pure music. The place doesn’t serve alcohol so they have a policy of BYOB (Bring your own Booze). Be sure to grab a bottle of wine on your way out to enjoy some awesome performances.<br><br>
+
+                            Or, try out Shrine, a multimedia arts and culture venue founded in 2007 by musicians and music lovers in the music capital of Harlem. The place establishes a positive, creative atmosphere for both artists and audiences from all backgrounds. The place has some jamming rock music and heavy reggae, with some lovely cocktails at a great price.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/billsplace.jpg" %}"/>
+                            <h6>Bill's Place</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For an exceptional place to socialize while you drink, visit Harlem on Fifth. They have an impeccable selection of cocktails and spirits, and the vibe inside is very positive, ensuring that you will have the time of your life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/olivemarket.jpg" %}"/>
+                            <h6>Wild Olive Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Shopping for groceries in West Harlem is effortless with their wide variety of grocery stores to choose from.<br><br>
+
+                            If you are looking for a great selection of fresh and organic foods, Wild Olive Market is the place to buy your groceries. This store is perfect for the health-conscious shopper that is interested in a tremendous selection of goods. With a convenient location and a very friendly staff, you are bound to have a good shopping experience.<br><br>
+
+                            Or, try out the traditional grocery store Foodtown, a one stop shop for all your needs. This supermarket chain sells groceries, baked goods & frozen foods, and health & beauty products at very reasonable prices.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Best Market is a family owned regional chain of supermarkets with 20 stores in New York. If you are especially looking for meat, seafood, deli, dairy, and bakery items, Best Market has the best collection of the neighborhood. This store also specializes in the sale of craft beers, so if you’re a fan, pick them out today.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>West Harlem has many laundromats and dry cleaners to help you with all of your needs.<br><br>
+
+                            Don’t have time to do your laundry yourself? Just call Baby Girl’s Bubbles & Cleaners; they will pick  your laundry up from home and deliver it to you the same day. This place offers numerous services like wash & fold, tailoring, and dry cleaning.<br><br>
+
+                            Or, check out the convenient Colombia Cleaners. Located on 549 Riverside Dr, this laundromat is a lovely place for dry cleaning and wash & fold. The staff is very friendly and professional, and you will certainly get a great value for your money.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/babygirls.jpg" %}"/>
+                            <h6>Baby Girl's Bubbles & Cleaners</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For some quick and easy service with guaranteed quality, try Broadway Dry Cleaning. This laundromat is very highly reviewed, especially for its dry cleaning, ensuring that you will get a great value for the price.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/grange.jpg" %}"/>
+                            <h6>Hamilton Grange National Memorial</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>With many attractions to choose from, you’ll never be bored in West Harlem.<br><br>
+
+                            First, you have to visit Grant’s Tomb for a needed dose of history. Also known as General Grant National Memorial, this site is the final resting place of Ulysses S Grant, the 18th president of the United States. Grant’s Tomb is the second largest mausoleum in the Western Hemisphere, so its surely a sight to witness for yourself.<br><br>
+
+                            The Church of the Intercession is located at 550 West 155th Street between Broadway and Amsterdam Ave if you’re interested in some spiritual identity. At Intercession you will be surrounded by a beautiful building, but more importantly in an open and welcoming community.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you are interested in American History you should definitely visit Hamilton Grange National Memorial, a National Park Service Site in St. Nicholas Park. This memorial has actually preserved the relocated home of U.S. Founding Father Alexander Hamilton, which is very interesting to view a piece of living history.<br><br>
+
+                            Regardless of the attractions you choose from, West Harlem will surely have a fun and enjoyable experience for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re more interested in art galleries than history, there are many to explore while in West Harlem.<br><br>
+
+                            For an exclusive viewing of modern African artwork, visit Contemporary African Art Gallery. Many artists from Europe and other parts of the world have showcased their work at this gallery, yielding a truly international experience. This is a very rare chance to see the expression of a culture that is very distinct from our own, so do not miss out on this opportunity!<br><br>
+
+                            Or, check out the Sol Studio, which has terrific events for the creative and the artistic community. The Sol Studio celebrates the creativity of honored and emerging artists from around the world and engages the public with creative expressions in the form of artwork. This hip location is definitely the place to visit if you’re interested in undiscovered artists.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/africanart.jpg" %}"/>
+                            <h6>Contemporary African Art Gallery</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, whether you’re more interested in the artwork of citizens across the globe or right within the West Harlem neighborhood, there are certainly great art galleries for you to enjoy in West Harlem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/shabazz.jpg" %}"/>
+                    <h6>Malcolm Shabazz Harlem Market</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>West Harlem also has a great shopping scene for your closet and home alike, perfect for all of your needs.<br><br>
+
+                    If you love high fashion, check out the up-and-coming Lane Bryant. This store has become identified with high quality, fashion-forward, plus size clothing and lingerie for women right here in Harlem. Trendy styles and accessories are especially designed to fit and flatter women, proving that their unique business model actually works.<br><br>
+
+                    Or, shoe lovers should head to DSW Designer Shoe Warehouse, a retail chain located on W125th Street. DSW is where shoe lovers go to find brands and styles that are in season and stylish. Each store features 25,000+ pairs of designer shoes for men and women.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>For the more eccentric and exotic, Malcolm Shabazz Harlem Market is a one-stop shop for crazy-colored textiles, clothing, and wooden handcrafts from Nigeria, Ghana and Senegal.<br><br>
+
+                    Or, vintage lovers will enjoy Vault, an old-school boutique where the footwear, hats, hoodies, T-shirts and shorts are reverentially presented in gallery-like display cases.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ps368.jpeg" %}"/>
+                            <h6>Hamilton Heights School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>There are 14 major public schools located in West Harlem, and  the majority of schools meet the Adequate Yearly Progress standards measured by New York State Department of Education. As an up-and-coming area, the educational progression of the neighborhood is improving every year.<br><br>
+
+                            One of the premier schools is Hamilton Heights School.  Located on 1750 Amsterdam Ave, this elementary school offers a very high quality education. At this school, all second-through-fifth graders are required to take Arabic language classes, making it the first of its kind in New York City to integrate Arabic into the curriculum.<br><br>
+
+                            The PS 208 Alaine Locke School is part of a federal magnet grant program that seeks to add diversity to Harlem schools, and the school is focused on moving kids toward college. Although the school requires an application, once your child is accepted, they will receive a great caliber of education.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of universities, West Harlem also contains some of the best of New York City.<br><br>
+
+                            The premier university of the neighborhood is Columbia University, which has been here for more than 250 years. Columbia is one of the best universities of the country, and as an Ivy League School, attracts many bright students that diversify the area positively and create an educational environment.<br><br>
+
+                            Also located in West Harlem, City College of New York offers outstanding teaching, learning and research. With outstanding programs in architecture, engineering, education, and the liberal arts and sciences, City College of New York prepares students for the future, and produces outstanding leaders in every field.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/columbiauni.jpg" %}"/>
+                            <h6>Columbia University</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>The Touro College of Osteopathic Medicine is a private, American osteopathic medical school. It was the first medical school to open in New York State in nearly 30 years and is the first osteopathic medical school with a special emphasis on training minority doctors. Attendance at this university is a great opportunity to receive an education in an intimate setting and attention given to each student.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/blinkfitnessharlem.jpg" %}"/>
+                            <h6>Blink Fitness</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Because a healthy body leads to a healthy mind, it is important to keep strong and fit. Fortunately, West Harlem shares in this philosophy and offers many places to work out in the area.<br><br>
+
+                            One of the great gyms in the area is Blink Fitness, which has more than 100 pieces of cardio equipment, 50+ free weights, and a spacious, well-equipped stretching area. The facility includes plenty of brightly-lit, open spaces so you have plenty of room to move and breathe while you work out.<br><br>
+
+                            Or, visit New York Fitness, a medium sized state of the art fitness center with exceptional customer service. Their certified trainers provide workout plans that are customized according to your body’s needs.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Cross Fit Harlem gym offers a unique program based on the principles of endurance, running, weightlifting, Strongman, and gymnastics. Their Policy is to Learn the Basics, Clean up the Technique, then Go-Till-You-Puke, which will transform your body in weeks if you are willing to put in the effort.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The West Harlem Community is serviced by great health care facilities in the area. Mount Sinai Health System provides exceptional medical care services. The Health System includes 2,784 full-time and part-time physicians, 3,783 voluntary physicians, and 12 freestanding ambulatory surgery centers.<br><br>
+
+                            Or, animal needs can be met at 145th street Animal Hospital, which promotes the health and well-being of companion animals through advanced treatment. This facility provides various services like wellness exams, microchipping, vaccinations, surgical procedures including spaying and neutering, and dental care.<br><br>
+
+                            For treatment of chronic illnesses such as asthma, diabetes, and hypertension, Renaissance Health Care Network Diagnostic and Treatment Center is the place to visit. They also offer referrals to inpatient hospital care and dozens of specialty services.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/mtsinai.jpg" %}"/>
+                            <h6>Mount Sinai Hospital</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Therefore, you are sure to find the hospital or emergency service that you need at West Harlem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/harlempiers.jpg" %}"/>
+                    <h6>West Harlem Piers</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>West Harlem is a centerpiece for many parks of the area, which creates beautiful greenery within the confines of New York City.<br><br>
+
+                    West Harlem Piers features a landscaped transformation of the historic Manhattanville shoreline. The natural and artificial features of this site form a valley and small sheltered cove off the Hudson River, which is a perfect spot for an intimate gathering among friends or place to relax.<br><br>
+
+                    Rising 69 feet above the Hudson River, Riverbank State Park offers a wide variety of recreational, athletic, and arts experiences for all ages, interests, and abilities. They have an Olympic-sized pool, skating rink, theatre, and restaurant all for your enjoyment while at the park.</p>
+                                    </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Jackie Robinson Park is bordered by 145th St. and 155th St., and by Bradhurst Ave and Edgecombe Ave. There is a huge swimming pool on the South End of the park, which is a main attraction, and you can also find live music in the park every weekend.<br><br>
+
+                    Therefore, West Harlem offers a diverse array of parks to choose from, which is integral in a city environment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+       <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=west harlem, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ultimatewebtraffic.com/">buy website traffic</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
