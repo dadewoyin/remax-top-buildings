@@ -1,0 +1,363 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                One of the coolest and star-studded neighborhoods, TriBeCa has earned its glamour and prestige due to the resident makeup and amenities here. TriBeCa is bordered by SoHo, Chinatown, and Financial District.<br><br>
+
+                The amenities here are top-notch, starting with the everyday dining options. From Bouley to Jung Sik, a Michelin-star restaurant is right around the corner for you to sample for a special occasion. Of course, there are also more casual options for everyday fare, with exotic choices for everyone to enjoy. After residents finish with their meal, they flock to some of the most upscale nightlife venues around to enjoy a party or fun evening with friends or partners. While not being entertained by the bars and clubs, countless performance venues line the streets to provide an alternate form of entertainment. Whether comedy or a play, you will certainly be able to find what you’re looking for in this awesome neighborhood.<br><br>
+
+                In terms of TriBeCa apartments, if you’re looking to buy or rent a property here, you better bring your checkbook with you, as prices for homes are almost 200% above the New York City average sales price. Even so, they are only increasing, as TriBeCa remains the hottest real estate in Manhattan today. So, if you’d like to join the trend and consider a property here, be prepared to pay, but you’ll definitely be getting your money’s worth in the end with a great location and attractions nearby.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/bouley.jpg" %}"/>
+                            <h6>Bouley</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking for fine dining, TriBeCa hosts some of the best restaurants in all of New York City.<br><br>
+
+                            First, experience the tastes of Bouley, created by chef David Bouley and inspired by contemporary French cuisine. Known for their amazing bread cart, porcini flan, and black truffle dashi, this upscale cuisine will certainly appeal to any sophisticated taste buds. For the quality, the prices here are reasonable, so check out Bouley today!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another interesting combination of tastes is the Korean restaurant Jung Sik, known for its tasting menu. The most popular dishes here are the octopus and red snapper, presented with a Korean twist. With a focus on presentation, this 2-star Michelin restaurant aims to serve you the prettiest tasty food that you can find.<br><br>
+
+                            Or, if you’re hungry for some meat dishes, Marc Forgione will provide you with some great dishes. Their chili lobster, chicken under a brick, and kampachi tartare are absolutely incredible here, which is complemented by their extensive wine list. At a semi-reasonable price, who could resist?</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of takeout options, TriBeCa’s food will not disappoint.<br><br>
+
+                            A vegetarian restaurant with a Mediterranean twist located in the neighborhood is Nish Nush. Their food is all kosher, including hummus, falafel, and red hot chilis, which are the customer favorites. With great prices and affordable prices, Nish Nush is a definitely must to try, especially with its fast delivery services.<br><br>
+
+                            Or, if you’re sure that you want takeout, My Belly’s Playlist would be perfect for you. With no seating, this stop is quickly moving, especially at night. The late night BLT, tomato soup, and chocolate chip cookies are all very appetizing, which can be delivered if you’d like.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nishnush.jpg" %}"/>
+                            <h6>Nish Nush</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>A delectable Italian restaurant in TriBeCa is Saluggi’s, featuring fresh mozzarella and brussel sprout pizza. Their brick oven puts a unique twist on the normal pie, and at reasonable prices, you could order this pizza all the time. Another benefit of ordering at Saluggi’s is their quick delivery.<br><br>
+
+                            Regardless of the cuisine or food you choose, TriBeCa has a restaurant to enjoy.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ward3.jpg" %}"/>
+                            <h6>Ward III</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking to find a bar, then TriBeCa definitely has the venue for you.<br><br>
+
+                            Try a drink at Manhattan Proper while watching sports to understand the full experience of this bar. With TVs located throughout, including in the bathrooms, sports are absolutely the main focus here. In terms of bar food, the truffle fries are great, which you can enjoy with a wide variety of beer options. Overall, the upscale environment of this bar provides the perfect spot to watch sports with friends.<br><br>
+
+                            Or, for a more authentic location, check out Ward III, with a feature wall of exposed brick setting the tone for the amazing location. Drinks of choice here are the bourbon bar and extensive cocktail list, which are pricey but delicious. The dim and cozy atmosphere will surely set the tone that you’re looking for in a low-key yet exciting night.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>A reasonably priced bar to stop at is B Flat, which gives off a speakeasy vibe through its live jazz and quaint location. Whether you come for the lychee martinis or wonderful cocktails, the bar will fit your needs for nightlife on a budget.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If a club is more your style, then perhaps TriBeCa will be your next stop on your nightly outings.<br><br>
+
+                            For a fabulous dancing venue, visit M 1-5. Furnished with a screen projector for the music videos, M 1-5 plays music and videos from top 40 music and EDM, in the hands of their excellent DJ. On top of these great qualities, M 1-5 has a 360 degree bar so you can always grab a drink!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/mi5.jpg" %}"/>
+                            <h6>MI-5</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, another beautiful club with rotating DJs is Haus. In the center of the dance floor hangs a gorgeous chandelier, which explains the constantly crowded atmosphere of the venue. Customers love the music choices, which are predominantly deep house music and very fun to dance to.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/wholefoodstribeca.jpg" %}"/>
+                            <h6>Whole Foods Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re in need of groceries, TriBeCa’s offerings are here to help.<br><br>
+
+                            One of the beloved supermarkets across America is Whole Foods Market, so you know you’ll be receiving high-quality consistency if you shop here. The sushi bar and hot and cold food bar are popular at this spacious location, and is also notable for its organic fresh food that is often stocked. Overall, Whole Foods is well organized and priced competitively, so you should consider this for your next grocery store.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another convenient location is Max Delivery, which will deliver your grocery and household products in a very short time period. Because they value their customers, the service here is excellent, and the prices are decent too. The only downside of purchasing from Max Delivery is that the selection here is more limited than other grocery deliveries, such as Fresh Direct.<br><br>
+
+                            For a local market of TriBeCa, visit Jin Market, known for its fresh pre-prepared Asian food. The hot food bar filed with Asian classics is always very crowded, as the dumplings are especially superb. The market also produces gourmet sandwiches and a salad bar, so although its pricey, the selection is top-notch.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Laundry in TriBeCa is both easy and efficient, as there are many choices within the neighborhood.<br><br>
+
+                            Try out White on White Cleaners, whose upscale services categorize each item by material and designer for the ultimate organization. Even though it takes a while to get your clothes, as the average turnaround is 3 days, their prices are reasonable, and they offer free delivery. Plus, White on White uses only organic cleaning agents to help save the environment.<br><br>
+
+                            Or, utilize the services of New Trio Cleaners, whose fast service is very reliable, and any item that is damaged will instantly be replaced. The only downside of this convenience is the price, as it can be a little more expensive than the average dry cleaner.<br><br>
+
+                            For an environmentally option, Tribeca Green Cleaners is focused on cleaning clothes as sustainable as possible. With same day services and expert tailoring available, this laundromat certainly has many quality amenities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/shakerattle.jpg" %}"/>
+                            <h6>Shake Rattle & Roll Dueling Pianos</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The entertainment of TriBeCa is in high supply, as performance and shows are constant here.<br><br>
+
+                            If you’re interested in a night of comedy, Dark Horse Comedy Club is the place for you. Every Saturday night, they host a 2-3 hour show featuring about 6 comedians, all at a reasonable price. As there is no dress code, you can stop here on a night of nightlife adventure, and eat thanks to their full menu.<br><br>
+
+                            Or, a perfect bachelorette location is  Shake Rattle & Roll Dueling Pianos. This venue hosts sing alongs and dance-off, and will surely involve every person in your party as part of the fun! They have received the GigMasters Rising Star Award Winner for past 2 years ensuring that the price is worth the entertainment that you will receive.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For an intimate venue that is sure to please, visit The Flea Theater. With a huge variety of shows, you can certainly find the exact performance you’re looking for, all within the small 110-person performance space. If you have the means for something more personal, Flea Theater is also available for rent.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>A fantastic art gallery is always just around the corner in TriBeCa, so come walk the streets and explore today!<br><br>
+
+                            One amazing gallery for you to find is Philip Williams Posters, which specializes in the framing and displays of posters, ranging from very vintage to modern materials and products. With rare artwork located if you dig for it, you can certainly find a beautiful poster of any style.<br><br>
+
+                            Or, Tachi Gallery offers an eclectic collection of artwork from a number of different artists. For the most part, the gallery focuses on abstract expressionism and modern art, but exceptions are made according to founder Joseph Scarpinito’s tastes.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/philipwilliams.jpg" %}"/>
+                            <h6>Philip Williams Posters</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Beautiful contemporary artwork is found at Art Projects International, which features many known artists that are also displayed in other major museums. The diverse list encompasses many individual styles, so come check out the incredible selections today.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/auno.jpg" %}"/>
+                    <h6>A Uno Tribeca</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>In terms of shopping, stores ranging from unique and sophisticated to big-name and upscale are located in TriBeCa.<br><br>
+
+                    Visit Blue In Green if you’re interested in the highly acclaimed Japanese clothing lines. The staff here is very knowledgeable, helping you to make the most of the rare brands stocked here. Japanese denim is in very high demand right now, because of its perfect fits, so come on down today!<br><br>
+
+                    A well known store across the country is J. Crew, which constructs its clothing out of very high quality fabrics for an overall upscale venue. The choices here are endless, so the staff will easily help you to make the right selection, including the option of purchasing from a liquor store on location.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>A Uno Tribeca is the ideal women’s clothing store for women looking for international designer clothes to spice up their wardrobe. Designed more as an art form than trendy wear, you will certainly make an impression if you wear the clothes purchased here. Be sure to stop by to see if their style is right for you!</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/parkpre.jpg" %}"/>
+                            <h6>The Park Pre-School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re searching for the perfect preschool for your child, The Park Pre-School in Tribeca may be your solution. Created for ages 2-5, this prestigious preschool establishes basic learning skills through fun activities, such as playtime. With a focus on independent thought, children will quickly learn how to think critically for themselves, which is a key life skill. If your child misses their preschool during the summer, no worries! The Park Preschool also offers summer programs for year-round fun.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re considering a university in TriBeCa, perhaps the neighborhood has one to suit your needs.<br><br>
+
+                            One of the most popular options of the area is Borough of Manhattan Community College, better known as BMCC. As a CUNY, the tuition is inexpensive, providing opportunities to a diverse student base. The college functions predominantly as a two year college, which is a great way to receive a quick education and then head out into the workforce. Be sure to consider this City University of New York in your college search.<br><br>
+                            Or, artists looking for a graduate school should visit New York Academy of Art, which is heavily dedicated to technical training before delving farther into creative courses. As an intellectual hub, New York Academy of Art will service any artist’s need for a creative and challenging environment.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/bmcc.jpg" %}"/>
+                            <h6>Borough of Manhattan Community College</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/barrysboot.jpg" %}"/>
+                            <h6>Barry's Boot Camp</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>TriBeCa hosts many different gym experiences for you to try in order to find the perfect facility for you.<br><br>
+
+                            First, visit Crunch, which operates many classes a week. The most popular option here is boxing, but with no long term contracts, you can choose to take classes and then stop to sample many different selections. Other amenities include a clean locker room, sauna, steamroom, and many equipment choices.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try Barry’s Boot Camp if you’re really looking to get in shape fast. They are open 7 days, so they can accommodate even your busy schedule. Their signature workout is a 30 minute cycle of cardiovascular treadmill routine & strength training, led by some of the most motivating trainers of the area. The classes here are fantastic, so sign up for one today!<br><br>
+
+                            An intense facility is Krav Maga, which after its induction class you can take classes in self-defense, fighting, strength, and fitness. Even though the classes sound violent, instructors here help you to channel your energy into a positive force, creating a truly inventive workout.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For immediate hospital care, there are various options in TriBeCa that you can visit.<br><br>
+
+                            One choice to explore is Emergency Medical Care, an urgent care facility that offers services around the clock. With a short wait time, you can receive a specialized service in no time, and the friendly staff will help you along the way.<br><br>
+
+                            Or, perhaps Weill Cornell Medical Associates is more appropriate to you for regular checkups, as they provide many different doctors in fields like internal medicine, Ob/Gyn, and endocrinology. The vast space that holds the facility definitely fits the needs of patients, ensuring that you will have plenty of privacy on your visit.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/weillcornell.jpg" %}"/>
+                            <h6>Weill Cornell Associates</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For anyone in need of orthodontics work, Chambers Street Orthodontics is one of the best practices. Dr. Cooperman & Dr. Mintzberg are the main orthodontists here, who install all types of braces, solutions for spacing, crowding, under bite, and overbite.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/washingtonpark.jpg" %}"/>
+                    <h6>Washington Market Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>TriBeCa’s wide range of park and greenery ensure that you can find a place for a stroll or athletic event.
+
+                    Seek out  Washington Market Park if you’re looking for an athletic way to enjoy the day. Furnished with a basketball court, tennis court, and pet areas, there are a variety of spaces for you to exercise. Or, you can appreciate their community garden, which is constantly maintained to ensure the health of the plants. Children can play at the playground here, while parents can sit in the shade of the gazebo or enjoy a picnic at the lawn. With recent renovations this park and greenery is a dream for parents, young adults, and children alike.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, Pier 26 is also located in TriBeCa, which features a restaurant, kayaking, beach volleyball, and plenty of seating.The beauty of the location is the view of the water, for which there are many different activities that you can have fun with. Or, come during the summer to experience the venue as a concert space, which will definitely lead to a delightful evening. Regardless, you are guaranteed to find something fun to do at Pier 26.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=tribeca, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="http://premiumlinkgenerator.com">premium link generator for 2016!</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
