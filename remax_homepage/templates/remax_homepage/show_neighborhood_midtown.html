@@ -1,0 +1,338 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                If you’re looking to get a closer look at the skyscrapers and live in the center of the action, Midtown is the perfect location for you. Midtown is bordered by Midtown West, Midtown South, Central Park South, and Midtown East.<br><br>
+
+                Home to Koreatown, Times Square, and many other cultural enclaves, Midtown is always bustling with activity and something new to see. Tourists and vendors line most of the streets in the area, and businessmen zip in and out of the heavy foot traffic. For residents, however, Midtown is a lot more than just the Chrysler Building or tourist locations: it is a center for dining, shopping, and amazing new locations to check out every spare second.<br><br>
+
+                One of the perks of living in Midtown is the dining hotspot it provides: some of the best fine dining, including the famous Le Bernardin and Aureola, is located right within Midtown proper. After eating at one of these amazing locations, or even some local takeout fare, residents flock to the local bars and clubs, which are always booming with activity and new faces. Because of the many businesses in the area, one of the most busy times of the day isn’t at night; instead, Midtown lunch delivery proves to be the most popular phrase. Even if you are not planning to work in Midtown, the outstanding delivery options here will prove to be irresistible.<br><br>
+
+                In terms of real estate, Midtown Center is one of the most popular neighborhoods, and therefore one of the most expensive. The sales prices for homes here are quite variable, with recent years experiencing a decrease in prices. The time to buy or rent in Midtown is now while prices are still low, so look into purchasing or renting a property here today!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/delfrescos.jpg" %}"/>
+                            <h6>Del Frisco’s Double Eagle Steak House</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>As the central location of Manhattan, Midtown hosts some of the most exquisite dining options for residents and tourists alike to enjoy.<br><br>
+
+                            One of the favorites of the neighborhood is Le Bernardin, one of the only 3-star Michelin restaurants in the entire New York City area. Known for its seafood, this restaurant puts a French twist on traditional dishes, which has earned it a spot as one of Pellegrino’s top 50 restaurants in the world. Le Bernardin is a once in a lifetime experience that you definitely have to try.<br><br>
+
+                            Another great stop to try in the Midtown area is Aureola, an American-style cuisine with an exquisite tasting menu. Charlie Palmer created this flagship restaurant to reflect his contemporary urban American style, which is emulated throughout your dining experience.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try Del Frisco’s Double Eagle Steak House if you’re interested in tasting some delicious steak and seafood combinations. The business casual setting has space for private dining for large events, which offer an intimate interaction with the chef’s menu. Or, try the lobster mac n’ cheese and shrimp cocktail if you are more interested in seafood than steak. Whatever you choose, Del Frisco’s Double Eagle Steak House will certainly have the perfect dish for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you are in a rush, Midtown’s large stock of takeout restaurants will surely provide a quick meal on the go.<br><br>
+
+                            First, check out Go!Go! Curry! if you’re in the mood for a delicious Indian meal. Known for their curry, Go! Go! Curry! provides cheap and fast dishes with coupons for free toppings. This simple and unique restaurant is furnished with Yankees embellishments, in honor of their inspiration, Hideki Matsui.<br><br>
+
+                            Or, Empanada Mama is an incredible choice if you need some Colombian food to brighten your day. Choose from a sweet or savory dough pocket, called an empanada, and you will enjoy the wonderful sauces and flavors of the restaurant at affordable prices.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/empanadas.jpg" %}"/>
+                            <h6>Empanadas Mama</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another amazing-tasting restaurant to try is Kung Fu Ramen, which is known for its soup dumplings. The signature dish from Shanghai, soup dumplings add soup to the interior of a dumpling to create a delectable treat that you can slurp and eat. With delivery options and handmade noodles also available, Kung Fu Ramen is the perfect stop to try something new.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/reunion.jpg" %}"/>
+                            <h6>Reunion</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re interested in partaking in some classic New York City nightlife, the Midtown bar scene will definitely live up to your standards.<br><br>
+
+                            First, check out Pocket Bar NYC if you’re looking for a spunky retreat with a wide selection of drinks. The neighborhood feel contrasts with the upscale wine bar within the venue, creating a space of intimacy and entertainment. The owner, Suzy, and her staff are all well-trained and happy to engage you in conversation. So, if you’re looking for a spot to hang for the night, Pocket Bar NYC is your place to stop!<br><br>
+
+                            Or, perhaps Jimmy’s Corner is more your style, with a warm atmosphere and cheap drinks as the centerpiece to this bar. The walls of this bar are adorned with 50’s memorabilia, which add to the dive bar type appeal to the location. Come here for drinks before or after a show and you will not be disappointed.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another exceptional bar location is Reunion, known for its cocktails and beachy vibes. One of the favorite drinks here is surfer girl, which fits into the chill summer vibe. They offer happy hour specials, including finger foods, for you to enjoy as well. Overall, if you’re looking for a fun place to party in a relaxed setting, this is the spot for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking to go clubbing in Midtown, check out any one of these clubs for a night to remember.<br><br>
+
+                            You should definitely try Terminal 5 for some awesome rock and roll music with an ambience to match the music. The sound quality here is amazing, and you can easily buy drinks without breaking the bank. To top it off, the selection of bands that play here is top notch, so you will never be disappointed with the live music that is playing.<br><br>
+                            Or, Stage 48 will provide an extraordinary experience for anyone that likes death metal, Hip Hop, or EDM. World-renowned DJs flock to this party site to entertain the people of the Midtown area, in a space with clear and loud sound for you to undoubtedly enjoy the party. Come check out this dancing extravaganza today!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/carnegieclub.jpg" %}"/>
+                            <h6>The Carnegie Club</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>
+                            For something more upscale, The Carnegie Club will surely provide you a throwback experience of luxury and opulence. This club contains a cigar lounge, cocktail bar, and plenty of chairs to appreciate the light jazz music playing in the background. With leather covering almost the entire space, it is no surprise that can find those looking for a  trendy night here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/internationalgrocery.jpg" %}"/>
+                            <h6>International Grocery</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Midtown is able to take care of all of your grocery needs by providing you with tons of options to choose from.<br><br>
+
+                            First, if you’re interested in an old world appeal, International Grocery is the perfect market for you. With great prices, friendly staff, and an amazing atmosphere, you will definitely find yourself back at this grocery store over and over again.<br><br>
+
+                            If you’re looking for healthy foods, Westerly Natural Market provides many choices , including pre-made food and ingredients for you to make your own. This place is very popular, so be sure to stop by during an odd hour if you want to beat the lines. You can certainly encounter all the items necessary for any dietary condition at this health-conscious market.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, one of the favorites in the area is Morton Williams, a high-priced store with good selection and convenient options for a quick purchase. The space is used very efficiently here, leaving room for a spacious seating area to enjoy your purchases.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>With all the business of the Midtown area, everyone needs to get their laundry and dry cleaning done. Therefore, there are tons of business available for all of your laundry needs.<br><br>
+
+                            Check out BKM Laundromat if you’re looking for a user-friendly laundromat with efficient machines that will save you money. Their reasonable prices and late hours put this laundromat at the top of the list in terms of good laundromats in the area.<br><br>
+
+                            Another similar type laundromat is Washland, another efficient choice with a bright and organized space that will surely lighten up your day. The staff here are super helpful if you have any concerns, and they do a great job folding clothes if you choose to drop them off.<br><br>
+
+                            If you really need your laundry done in a hurry, M & M Excellent Cleaner is here to help. With same day wash and fold service, you can get in and out quickly with your laundry done well. Plus, at only 80 cents a pound, it is one of the cheapest laundromats in the area.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/museummodern.jpg" %}"/>
+                            <h6>The Museum of Modern Art</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>You’ve probably seen the wax figure displays in pictures, but now you can see this famous exhibit in person at Madame Tussauds New York. These realistic wax figures are fun to take pictures with, as they depict many celebrities, both living and deceased. Madame Tussauds contains wax figures of movie stars, athletes, politicians, and even superheros!<br><br>
+
+                            Of course, The Museum of Modern Art is a must for both first-timers and residents alike. The famous painting, Starry Night, resides here, as well as many other paintings by Van Gogh, Picasso, and many other artists. If you’re looking for free admission, come after 4 PM on Fridays and you will be in luck. Regardless, you have to visit the beautiful artwork to see what you’ve been missing out on.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Also, Discovery Time Square is right in the Midtown area, where you can find exhibits of Harry Potter, Art of the Brick, Nathan Sawaya, Avengers Station, and many more. This education center provides many amazing experiences circling around the culture, art, and history of the modern age.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for an art gallery experience, Roy Lichtenstein Painting at the Equitable is the place to visit. Lichtenstein’s artwork is on display here, which you can view at no cost! The gallery is located at the AXA Event & Production Center, a venue which offers premium event spaces. So, check out this gallery and more at AXA!<br><br>
+
+                            Or, the famous Hope Sculpture is also located in Midtown, which is a must visit for anyone new to the area. The sculpture towers over the area, in the same design as the Love Sculpture close by. Come visit on Hope Day for the added bonus of a celebration of the sculpture!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/hope.jpg" %}"/>
+                            <h6>Hope Sculpture</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/uniqlo.jpg" %}"/>
+                    <h6>Uniqlo</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>One of the favorite shopping locations of the Midtown area is Uniqlo, a Japanese-based company that offers some of the best basics and winterwear in the business. This huge location is definitely a destination to check out, even if you don’t end up buying anything. With constant sales and reasonable prices, making a purchase is almost a guarantee.<br><br>
+
+                    Another mega location that will surely provide you the Midtown shopping experience is Forever 21, with its biggest location centered right in Times Square. An added bonus of the huge shopping site is the wide variety of plus size clothing available, so all shapes and sizes can enjoy this store!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Scent Elate creates a very spiritual location for you to shop for oils, lotions, candles, and many other sensual and calming products. You will pay a reasonable price for their exotic high quality items, and they will surely create an atmosphere of spirituality and peace when you decide to use them. Be sure to check out this unique store today to see what they have to offer.<br><br>
+
+                    Regardless of the store you choose, Midtown will provide you the best location to purchase the product you are looking for.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/kennedyhs.jpg" %}"/>
+                            <h6>Jacqueline Kennedy Onassis High School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re interested in the early education opportunities in Midtown, you can be assured that the level of education here is outstanding, with many options for success.<br><br>
+
+                            One of the best schools in the area is PS 212 Midtown West, a great public school for grades PK-5. The teachers here are top-notch, and there are many family events to make learning a truly communal experience. Overall you cannot go wrong at this elementary school.<br><br>
+
+                            In terms of high school, Jacqueline Kennedy Onassis High School has a terrific reputation as an accepting community school that promotes learning and curiosity through creative thinking. Sponsoring grades 9-12, you have to apply for this school, but if your child gets in, they will definitely love the environment here.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of which elementary or high school your child ends up with, they will certainly be satisfied with the level of education there.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Surprisingly, there is only one CUNY located in Midtown, but the school itself is very interesting and popular.<br><br>
+
+                            Check out CUNY Graduate School of Journalism if you’re looking for a great place to further your education in the journalism field. Located right in the heart of New York City, journalists, researchers, and social media professionals flock to this site to attain an impressive education at a discounted price. Look into this school today if you’re interested in getting an outstanding education in Midtown.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/cuny.jpg" %}"/>
+                            <h6>CUNY Graduate School of Journalism</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/midcitygym.jpg" %}"/>
+                            <h6>Mid City Gym</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The gyms of the Midtown area match the intense atmosphere of the working class; you’ll be guaranteed to find an ideal workout for you.<br><br>
+
+                            One of the leaders in Midtown fitness is Mark Fisher Fitness. MFF uses its fun atmosphere to encourage its students to attain the best possible fitness results. Through progressive training methods, this facility helps increase their customers’ health without causing injuries or long-term problems.<br><br>
+
+                            Or, Mid City Gym is the perfect choice for anyone looking for a decorated personal trainer. The owner, Vince Consalvo, holds 7 different personal training certifications, and has a large resume of a physique competitor, judge, analyst, and bodybuilding historian. Members here can receive classes in personal training, group training, boxing, stretching, as well as enjoy the supplements, juice bar, and tanning provided with a membership.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Of course, the neighborhood would not be complete without a CrossFit, and CrossFit Hell’s Kitchen is one of the best locations in Manhattan. As one of the original gyms, they are dedicated to the program instead of the popularity of the training methods, and therefore will work to help you get strong and in shape. With small classes and intense coaching, you will definitely be pushed to levels you didn’t know were possible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The CityMD – W57th Street location is the ideal Midtown spot should you have any health concerns. Steps from both Hell’s Kitchen and Columbus Circle, this position is perfect for urgent medical care and immediate situations. They offer illness and injury treatment, vaccinations, X-Rays, and emergency services every day of the year.<br><br>
+
+                            Another hospital location of Midtown is Hospital League Local 1199, which supplies free seminars and workshops for children, as well as extra courses for their needs. This location serves primarily as an educational facility, so if you’re looking to learn more about membership, check out their website today.<br><br>
+
+                            Overall, there are many hospital choices in the Midtown area to take care of your health needs and concerns.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/citymdmidtown.jpg" %}"/>
+                            <h6>City MD-W57th Street</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=midtown, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="googlemapsgenerator.com">googlemapsgenerator.com</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
