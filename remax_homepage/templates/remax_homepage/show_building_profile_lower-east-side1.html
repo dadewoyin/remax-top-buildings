@@ -1,0 +1,124 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | #{{ rank }} Building in {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+        
+    <div class="container padding">
+      <div class="row">
+      
+        <div class="visible-xs visible-sm">
+           <div class="col-xs-12">
+               <h1> #1: 13 Fake Shore Drive </h1> 
+           </div>
+           <div class="col-xs-12">
+           	   <h2 class="rating"> Price per square foot: $2,593 </h2>
+           </div>
+        </div>    
+            
+        <div class="visible-lg visible-md">
+            <div class="col-md-6">
+               <h1> #1: 13 Fake Shore Drive </h1>	
+            </div>
+            <div class="col-md-6">
+            	<h2 class="text-right"> Price per square foot: $2,593 </h2>
+            </div>
+        </div>
+      
+    </div>
+   </div>
+        <!--Carousel-->
+        
+    <div id="carousel1" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel1" data-slide-to="1"></li>
+            <li data-target="#carousel1" data-slide-to="2"></li>
+            <li data-target="#carousel1" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active"><img src="{% static "images/placeholderimg.jpg" %}" alt="First slide image" class="center-block">
+              <div class="carousel-caption">
+                <h3>First slide Heading</h3>
+                <p>First slide Caption</p>
+              </div>
+            </div>
+            <div class="item"><img src="{% static "images/placeholderimg2.jpg" %}" alt="Second slide image" class="center-block">
+              <div class="carousel-caption">
+                <h3>Second slide Heading</h3>
+                <p>Second slide Caption</p>
+              </div>
+            </div>
+            <div class="item"><img src="{% static "images/placeholderimg3.jpg" %}" alt="Third slide image" class="center-block">
+              <div class="carousel-caption">
+                <h3>Third slide Heading</h3>
+                <p>Third slide Caption</p>
+              </div>
+            </div>
+            <div class="item"><img src="{% static "images/placeholderimg4.jpg" %}" alt="Fourth slide image" class="center-block">
+              <div class="carousel-caption">
+                <h3>Fourth slide Heading</h3>
+                <p>Fourth slide Caption</p>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#carousel1" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>
+          
+          <div class="container">
+          	<div class="row">
+           	  <div clas="col-xs-12">
+              	<h2 class="text-center"> About 13 Fake Shore Drive </h2>
+              </div>
+            </div>
+          </div>
+          
+    <div class="container">
+          	<div class="row">
+           	  <div clas="col-xs-12">
+              	<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc. </p>
+              </div>
+            </div>
+          </div>
+          
+           <div class="container">
+          	<div class="row">
+           	  <div class="col-md-6">
+              	<h3 class="text-center"> Features &amp; Amenities </h3>
+                <ul>
+               	    <li> Concierge </li>
+                    <li> Doorman </li>
+                    <li> Parking </li>
+                    <li> Elevator </li>
+                </ul>
+              </div>
+         
+           	  <div class="col-md-6">
+              	<h3 class="text-center"> Transportation </h3>
+                <ul class="no-list-style">
+                	<li>
+                    <div class="greytrain floatleft"> <p class="train-number"> L </p> </div>
+                    <div class="yellowtrain floatleft"> <p class="train-number"> N </p> </div>
+                    <div class="yellowtrain floatleft"> <p class="train-number"> Q </p> </div>
+                    <div class="yellowtrain floatleft"> <p class="train-number"> R </p> </div>
+                    <div class="greentrain floatleft"> <p class="train-number"> 4 </p> </div>
+                    <div class="greentrain floatleft"> <p class="train-number"> 5 </p> </div>
+                    <div class="greentrain floatleft"> <p class="train-number"> 6 </p> </div>
+                    
+                    <p class="train-text"> at 14th St-Union Square <b> 0.4 miles </b> </p> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+               <iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="500" src="https://maps.google.com/maps?hl=en&q=19 West 21st Street New York, NY&ie=UTF8&t=roadmap&z=16&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">
+									embedgooglemaps.com
+						   </a></small></div><div><small><a href="https://ultimatewebtraffic.com/">buy websit traffic Ultimatewebtraffic</a></small></div></iframe>
+               </div>
+            </div>
+          </div>
+
+{% endblock content %}
