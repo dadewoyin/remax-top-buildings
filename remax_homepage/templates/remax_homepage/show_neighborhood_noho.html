@@ -1,0 +1,352 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                A newly developed neighborhood known for being chic and high fashion, NoHo is a trending downtown location for many buyers. NoHo is bordered by Greenwich Village, East Village, and Nolita.<br><br>
+
+                The NoHo arts district attracts many creative minds, particularly those attending Tisch School of the Arts, a college located within NYU. These artists don’t mind paying a little bit more for the neighborhood, as the distinct community quirks really add to the creativity and appeal of the area. Plus, there are countless coffeehouses and small restaurants to explore, leaving artists and young professionals alike with room to roam and find themselves.<br><br>
+
+                Another great aspect of living in NoHo is the beautiful architecture of the neighborhood, as many historic buildings call NoHo home, including the Merchant’s House Museum, which you can walk through to experience a day of history. Besides the history, residents enjoy the countless performance spaces, ranging from comedic choices to off-Broadway plays, which are all loved in the neighborhood.<br><br>
+
+                Regardless of why you’re considering NoHo, you can be assured that its neighborhood will not disappoint in community feel or creativity. Even so, the real estate prices are high for this area, as properties here are in high demand. So, if you want to get your hands on a piece of NoHo real estate, look into the options today!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/bohemian.jpg" %}"/>
+                            <h6>Bohemian Restaurant</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The NoHo neighborhood supplies the area with some amazing fine dining choices.<br><br>
+
+                            First, try Bohemian Restaurant if you’re a fan of Japanese food. Located in a virtually hidden location, Bohemian Restaurant creates some fabulous dishes within the small location. Meals of choice here among customers include the uni croquette, short rib sashimi, and foie gras soba. Thus, this restaurant perfectly combines the elements of Japanese food with fine dining for a feast to remember.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another awesome restaurant to visit is Player Earth, where the food and staff are both incredible. As it is a tiny location, getting a reservation here can be a challenge, but if you book ahead, it will be well worth your time and effort!<br><br>
+
+                            Or, perhaps Aroma Kitchen & Wine Bar is more your style, offering upscale Italian cuisine paired with delicious wines from their wine bar. A romantic location, Aroma is perfect for a date or intimate gathering among friends, and whether you try the food or just stop by for the wine, you will surely have a memorable night. The Italian food here is some of the best, particularly the linguine, stuffed calamari, and meatballs. You definitely have to try Aroma while in NoHo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of takeout, NoHo packs a punch through its flavorful, yet affordable choices.<br><br>
+                            One food stand that you have to try is Bite, which supplies the area with some of the best sandwiches and hummus around. Made from coveted Balthazar bread, Joe’s Dairy mozzarella, and organic vegetables, the menu is both healthy and delectable. Bite should definitely be on your list the next time you order takeout.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/mileend.jpg" %}"/>
+                            <h6>Mile End Delicatessen Manhattan</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, another great sandwich option, Mile End Delicatessen Manhattan, offers a more classic twist on the American sandwich. With smoked meats and many cheeses to choose from, you can select your personal favorite to make your sandwich even more amazing. Also, residents love the poutine here, which they say has the perfect amount of salt to leave an impression on the taste buds.<br><br>
+
+                            For some quality Mediterranean, the first stop you should make is Siggy’s Good Food. Health-conscious is the number one priority here, as they cook everything from salmon burgers to avocado salad, including many other vegan options. This authentic restaurant is certainly one to try, as the staff truly care about their products.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/swift.jpg" %}"/>
+                            <h6>Swift</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>With a relaxed bar scene, the nightlife in NoHo is ideal for anyone looking for a calm, yet entertaining night.<br><br>
+                            The first bar for you to visit is Swift, a modern Irish pub that excels in beer selection. The bartender here is very knowledgeable, so you can always get a recommendation for a drink to fit your style. The location itself is relatively quiet, adding to the slightly upscale appeal of the bar and beer garden.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try a drink at The Wren, which incorporates a cute atmosphere through its friendly staff and regular customers. As they serve dinner, you can pick up some bar food while enjoying a drink. The drink of choice for many customers is Blood Mary, which residents describe as on-point and delicious. Be sure to check out The Wren today!<br><br>
+                            Another bar in the area, Tom & Jerry’s, fully embodies the ideal of a neighborhood bar. This cash-only location serves mostly draft beers with comfy seating available. Although simple, the bar exudes a vibe of peace and comfort, so swig a beer at Tom & Jerry while in NoHo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of clubs, Never Sleep Alone is one of the best if you’re interested in drinking while watching a hilarious comedy. Dr. Alex, the host, is very outgoing and funny, so you will surely have fun at a night under her roof. Some highlights of the venue itself is the free champagne, as well as two drink minimum if you’re staying for the show.<br><br>
+
+                            Or, maybe Slainte Pub & Lounge is more your style as an Irish gastropub. Serving twenty craft beers in a local bar, Slainte produces food that is almost as good as the drinks. Come here to enjoy a major sporting event, or savor the food at home through its catering service.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/slainte.jpg" %}"/>
+                            <h6>Slainte Pub & Lounge</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/westsidemarket.jpg" %}"/>
+                            <h6>Westside Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>When it comes to grocery needs, NoHo delivers some high-quality stores of both local and national brands.<br><br>
+
+                            The first local choice for a grocery store is Space Market, whose main perks are the healthy items, including standard ingredients, a deli, and self-serve food bar for you to pick exactly the food and quantity of any item. With quick service and fresh products, Space Market is a must for anyone interested in standard grocery fare.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, maybe Met Food Markets has more variety for you. The brands here are on par with national names, and the selection here is decent, even though this is a neighborhood supermarket. You could definitely live off the selection of Met Food Markets for your weekly grocery needs if you choose to shop here.<br><br>
+
+                            A city favorite grocery store is Westside Market, which attracts customers due to short lines, cheap food, and fresh produce. With a strong selection of everyday items, and many choices for ethnic and specialty foods known internationally, Westside Market is both the conventional and exotic choice for your grocery needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For your laundry needs while living in NoHo, Ranjha Cleaners can help. A reliable service, the staff here is very friendly, which is key for a good laundromat. At cheap prices, Ranjha Cleaners has basically all the components for your next local laundromat.<br><br>
+
+                            Or, Brown Bag Laundry is more convenient, as you can schedule your pickup and delivery online, even with same-day service. Brown Bag is experienced in all types of clothing, so no need to worry if you have a special item that is very delicate. The overall dependability and consistency are key factors in making this laundromat a regular stop.<br><br>
+
+                            Another option for your laundry needs is Exquisite Cleaners, which is both high quality and boasts fast service. Customers here love the owner, who pays personal attention to every customer in a friendly manner. Check out this laundromat if you’re looking for a community neighborhood vibe out of your next laundromat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/bluemangroup.jpg" %}"/>
+                            <h6>Blue Man Group</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In terms of shows, NoHo offers some of the best entertainment and museums to marvel at.<br><br>
+
+                            One museum of the area is Merchant’s House Museum, a gem of history from an old house that is still intact. As the house is preserved exactly the way it was originally inhabited, the building is an amazing view into 19th century living.<br><br>
+
+                            Or, a favorite of Las Vegas which has migrated to New York City is Blue Man Group. A combination of comedy, music, and technology, Blue Man Group is one of the most entertaining live performances that one can view. Young or old, all people enjoy the humor and wit of this timeless performance.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another entertaining site to check out is The Public Theater, which houses off-Broadway shows that are cheaper and more accessible to the general population. You can purchase rush tickets here to get an even bigger discount, and once inside, the Public Theater features some classic plays, particularly those of Shakespeare. Through demonstrations of these works, the Public advocates as a cultural voice, which you should definitely experience while in NoHo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>A free gallery located in NoHo, Leica Gallery, is one of the best. Combining educational elements with entertainment, this hole-in-the-wall location should certainly be a stop the next time you are walking around the area. Be sure to give it a try!<br><br>
+
+                            Or, The Hole is another great gallery, featuring contemporary art of emerging artists. The curator here is Kathy Grayson, known for curating galleries and museums around the world. Through a community appeal and friendly environment, The Hole seeks to reach out to all types of audiences.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/leicagallery.jpg" %}"/>
+                            <h6>Leica Gallery</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another gorgeous art gallery located in NoHo is Zurcher Studio, which combines the artwork of several different exhibitions in a satellite exhibit. Here, you can view everything, including paintings, drawings, sculptures, and art technology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/supreme.jpg" %}"/>
+                    <h6>Supreme</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>One of the best shopping destinations of NoHo is Supreme, which houses the famous clothing for skaters and streetwear. As their flagship location, this store is a little bit smaller, but still stocks some amazing clothing at reasonable prices for you to experience.<br><br>
+
+                    Or, check out Spencer’s Gift if you’re looking for a unique item to put in your apartment or give to a friend. Geared towards a younger college audience, items stocked here include shirts, lava lamps, body jewelry, and more. This is definitely a great place to get something fun and interesting to spice up your apartment, and its conveniently located right next to the subway.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>For art materials, the favorite NoHo stop is Blick Art Materials. With the best prices on canvases and supplies, Blick offers a wide variety of colors and materials so you can find exactly what you’re looking for. And, if you come during a sale, then stock up on your favorite items to save a bundle.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/alphabetmusic.jpg" %}"/>
+                            <h6>Alphabet City Music Workshops</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>One unconventional educational program of NoHo is Alphabet City Music Workshops, which is focused on the adult education of musical instruments. From songwriting to playing an instrument, Alphabet City Music Workshops can help a student at any level achieve high standard results. Come check out this music facility even if you’re a beginner today!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>As NoHo is located directly next to Greenwich Village, some of the NYU amenities spill over into this neighborhood, particularly Tisch School of Art. The talent-based admissions make getting into this art/performance program very difficult, but once you’re in, the academics and program will take you the rest of the way to success. As Tisch is located in the heart of New York City, there are many opportunities around every corner for your next acting or artistic break. With programs in film, television, dramatic writing, drama, dance, cinema, and recorded music, you can choose your ideal career path within Tisch.<br><br>
+
+                            Apply to be a part of Tisch School of the Arts, located within NoHo, today.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/tisch.jpg" %}"/>
+                            <h6>Tisch School of Art</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, if you’re out of college and looking to pass the LSAT, Blueprint LSAT Preparation can help. This teaching facility is one of the best, offer both online and in-class resources. The teachers are here to explain all parts of a question, and there are many practice tests to give you a chance to improve your score. If you want to succeed in taking the LSAT, perhaps Blueprint is your best option.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/worktrainfight.jpg" %}"/>
+                            <h6>Work Train Fight</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>As finding the right gym is no easy task, NoHo’s wide variety of options is here to help you with that decision.<br><br>
+
+                            One of the most intense programs, Work Train Fight, offers a bootcamp-style course with an inviting environment to help you feel at home. The trainers, all though they push you hard, truly care about your well being and getting the most of your workout. You will definitely feel the personal connection and practically instant results of Work Train Fight.<br><br>
+
+                            Or, perhaps Cyc Fitness is more your style, with their high energy cycling classes that really get your heart rate up. The energy of these workouts are always high, and you can cool off afterwards in their huge shower space available.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another awesome choice for fitness training is Great Jones Fitness. A private training facility, the owners are committed to bringing you the latest workouts that have proven results, with dedicated to personal attention to each student. You should certainly try this studio if personal training is what works for you, as these two are the best of the area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>When faced with the decision of which medical practice to subscribe to, NoHo makes it difficult with its many high-quality practices.<br><br>
+
+                            The best cosmetic dentist of the area is Stanton E Young, DMD. After living on the West Coast and in Italy, Dr. Young decided to become a dentist, completing residency right at Lenox Hill Hospital. He will definitely deliver the results you are looking for in a cosmetic dentist, so do not hesitate in an appointment.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/stantonyoung.jpg" %}"/>
+                            <h6>Stanton E Young, DMD</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, check out Mohawk Village Medical, whose main focus in on customer care. Therefore, they have the best customer service around, striving to decrease wait times while maintaining a friendly and calm disposition. As the patient always comes first, the quality of medical care is also high, ensuring that each patient receives the best service possible.<br><br>
+
+                            A new service for NoHo is Pager NYC, where you can summon a doctor with the click of the button. Pager is very useful for urgent care, as a doctor will come to your house right away in a time of need. Try out Pager next time you have a serious medical issue.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/albertsgarden.jpg" %}"/>
+                    <h6>Albert's Garden</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The parks in NoHo are also superb, furnishing the area with a necessary green space to relax or play at.<br><br>
+
+                    A quieter selection for greenery is Albert’s Garden, a shaded garden located near Marble Cemetery. Maintained by community volunteers, Albert’s Garden really brings the neighborhood together in a spot of peace and beauty. One of the most amazing features here is the goldfish pond, set in front of a stone wall.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, check out Sara Delano Roosevelt Park for something more fun and entertaining, as it contains the Hester Street Playground. With two separate locations for younger and older kids, Sara Delano Roosevelt Park will definitely accommodate your children and all of their friends. Or, enjoy some of the athletic amenities located here, including handball courts.<br><br>
+                    Whatever you choose for your park excursion, NoHo certainly has an option suitable for you or your children’s desires.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=noho, new york&ie=UTF8&t=roadmap&z=16&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="http://googlemapsgenerator.com/">Google maps genhttps://ww.premiumlinkgenerator.com/erator</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
