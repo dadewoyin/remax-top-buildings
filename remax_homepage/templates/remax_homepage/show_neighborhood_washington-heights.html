@@ -1,0 +1,338 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                A diverse neighborhood located uptown, Washington Heights is one of the hidden gems of Manhattan. This neighborhood is bordered by Hamilton Heights to the South and Inwood to the North.<br><br>
+
+                One of the perks of living in Washington Heights is its beautiful backdrop. In fact, three parks are located within the small neighborhood, most notably Fort Tryon Park. At Fort Tryon Park, you’ll be able to relax with a picnic, serene run through the park, or even curling up with a book to enjoy the views of the George Washington Bridge. Of course, the parks are not the only attractions here, as you can visit some diverse art galleries and performing art centers that showcase the talents of Washington Heights residents. Whatever you choose, you will definitely enjoy your time in Washington Heights.<br><br>
+
+                In terms of real estate prices, Washington Heights is significantly cheaper than the New York City average for both rentals and sales. Even so, the prices are rising, so be sure to get a piece of the action while the prices are very reasonable if you’d like a great investment for the future. As a very desirable location for young professionals and independent thinkers, you should certainly consider Washington Heights for your next property.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/newleaf.jpg" %}"/>
+                            <h6>New Leaf Restaurant & Bar</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The fine dining of Washington Heights will surely amaze, with opportunities to try everything from Italian to Spanish-American fusion.<br><br>
+
+                            For a tasty treat, check out New Leaf Restaurant & Bar, which creates delicious dishes and big portions for lunch. Customer love the Challah French toast especially, but everything on the menu will strike your fancy. Come see what you’re missing at New Leaf Restaurant & Bar!<br><br>
+
+                            Or, to try what many consider the best restaurant uptown, try Beans and Vines Fine Dining. Start off your meal with a sample of their great selection of wine and beer, which will complement the amazing food offered here. Some dishes of choice include Yuca fries and Gourmet Chimi, but feel free to try anything on the menu! Make sure you try Beans and Vines while in Washington Heights.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you want to try some of the best pizza in Washington Heights, Antika Restaurant & Pizzeria is your destination. Upon ordering, you will be served a huge pie, which you should pair with a wine of choice. If you’re not in the mood for pizza, the pasta and other Italian food here is also excellent.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you want to try an American-Caribbean fusion, check out Pick and Eat. The food here is very healthy and fresh, with many vegetarian items on the menu. You can substitute virtually any ingredient here for one more to your taste, ensuring you find something perfect to eat!<br><br>
+
+                            Or, visit La Barca Restaurant if you’ve never sampled Dominican food before and are interested. The 24/7 service is very convenient for a late-night snack, and the cheap food provides you the option to order from here often. With quick delivery, you can receive the healthy dish of your choice in no time, so order from La Barca today.<br><br>
+                            For some authentic Thai food, Tung Thong Thai Restaurant is definitely for you. The quick and excellent service is perfect for lunch, which features an affordable lunch special with a ton of food. Tung Thong also offers many vegetarian options, so the restaurant will please even those with dietary restrictions.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/labarca.jpg" %}"/>
+                            <h6>La Barca Restaurant</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/buddha.jpg" %}"/>
+                            <h6>Buddha Beer Bar</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Washington Heights offers many diverse nightlife options for you to spend the night enjoying.<br><br>
+
+                            Check out Tryon Public House if you are looking to mingle and meet new people. The strong drinks served here will definitely help you become more outgoing, and the nice ambience will also set a relaxed mood. Overall, whether you come here to watch soccer or enjoy a drink, Tryon Public House will provide the environment you’re looking for.<br><br>
+
+                            If you’re interested in settling down to eat at a favorite bar of Washington Heights, Le Cheile is the perfect spot. The food served here includes veggie burgers and mozzarella sticks, which are ideal to snack on along with some drinks. The beer here is very cheap, and you can also get great deals during happy hour specials. Be sure to check out this venue while in the Washington Heights area!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, perhaps Buddha Beer Bar is better suited to your tastes, with higher quality beers served alongside amazing bar food. The low key vibe is perfect for settling down for a night, and the bartenders here will surely impress.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of clubs, try any of these options to get you moving on the dance floors of Washington Heights.<br><br>
+
+                            First, for a club with amazing views of George Washington Bridge and Hudson River, try.<br><br>
+
+                            La Marina. The backdrop for this location makes the club itself seem magical, and the live band surely amps up the party even more. Ask the bartenders to make your drink of choice, but La Marina is especially known for their delicious mojitos. Overall, you will enjoy the vibes and views of this club.<br><br>
+
+                            Check out APT 78 to experience the vibes of a live DJ, diverse music, and incredible service. The vibe here is amazing, partly due to the affordable drinks and also the diverse sets from the various DJs. Be sure to check out this establishment for a low key location to party the night away.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/lamarina.jpg" %}"/>
+                            <h6>La Marina</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re looking for something a little spicier, perhaps Monkey Room is the choice for you. Playing Latin dance music alongside a hookah bar with many flavors, Monkey Room creates an awesome dancing atmosphere with amazing bar food. Come during the happy hour to get a seat at the outdoor patio with discounted prices!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/larosa.jpg" %}"/>
+                            <h6>La Rosa Foods</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re in need of groceries, various locations in Washington Heights will be able to help you out.<br><br>
+
+                            Visit La Rosa Foods for some of the freshest meats and fish in the neighborhood. The selection here is fantastic, and the employees will help you establish which cut is right for you. The location is also very clean, ensuring that the food quality here remains intact.<br><br>
+
+                            Or, a convenient location next to the A train station is Jin’s Superette. This family-run business offers very reasonable prices and a good selection of foods, which you could easily make your regular grocery shopping location. Also, the grocery store is never too crowded, making your shopping trips even more efficient.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>A Russian grocery store option in Washington Heights is Moscow on the Hudson, which provides a phenomenal selection of cheeses, salami, and fish, as well as other products. Their convenient website and phone allows you to place an order online or by calling, so you can grocery shop right from your living room couch!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>All of your laundry needs can be taken care of at various Washington Heights laundromats.<br><br>
+
+                            One great location here is Alvin’s Crystal Cleaner, which is both flexible in pickup and drop off hours and reasonable in pricing.  With digital receipts, its easy to keep track of when you need to return to Alvin’s, and you will also enjoy the quality job completed at this establishment.<br><br>
+
+                            Or, for one of the fastest services, try Express Cleaners, whose reliability is something you can count on in the most necessary moments. The friendly staff make the experience even more convenient, as you won’t have to worry about being mischarged or your clothes damaged.<br><br>
+
+                            For a tailoring and dry cleaning service, OK Cleaners provides competitive pricing on common services that you may need. Conveniently located next to 1 Train, you can pick up and drop off your dry cleaning or tailoring right before you board the train. They also have waiting rooms to relax at, and many machines if you want to wash your laundry yourself.<br><br>
+
+                            So, any of these laundromats and dry cleaning locations will certainly service your needs while staying in Washington Heights.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/morrisjumel.jpg" %}"/>
+                            <h6>Morris Jumel Museum</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’d like to view a little bit of history shrouded in mystery, Morris-Jumel Mansion is the best place to visit. Located in Washington Heights, this home is the oldest surviving house in NYC, making it well-known as the haunted house of the neighborhood. Whether you’re interested in becoming a ghostbuster or just enjoying the beauty of historical architecture, Morris-Jumel Mansion will surely amaze you.<br><br>
+
+                            Or, for some pleasant music, visit Jazz at Marjorie Eliot’s, located in Marjorie Eliot’s historic apartment. The musicians here are very talented, and the neighborhood environment really connects friends and strangers alike within this small space. If you’re in need of some warmth and comfort, Marjorie Eliot’s is your spot.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Perhaps Sister’s Uptown Bookstore would be a great place for you to try. Whether you’d like to buy a book from the community bookstore or sip coffee at the cafe, you will love the performances and culture created at this establishment. There are also various pieces of art for you to enjoy while visiting this location, so check it out today!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The art of Washington Heights is primarily historic, so check out some amazing cultural movements from past times.<br><br>
+
+                            First, visit Hispanic Society of America to view artwork from 16th century Spanish and Latin American collections. This escape to another time is definitely the hidden gem of Washington Heights, and you will marvel at the artwork and differences between the various Hispanic art movements.<br><br>
+
+                            Or, for another portal to another time, check out The Cloisters. Featuring medieval art & architecture, this art gallery provides you will all the materials, including sculptures, paintings, and books, to make you feel a part of this time period. The Cloisters also offers tours of the gallery for a more informed perspective on what you’re looking at.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/hispanicsociety.jpg" %}"/>
+                            <h6>Hispanic Society of America</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another annual art show is Art Show at Hudson View Gardens, which showcases artists from the immediate area in a variety of forms. Whether you’re interested in photography, paintings, or sculptures, this art show is definitely one to try visiting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/probus.jpg" %}"/>
+                    <h6>Probus</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The store with the widest selection in Washington Heights is Probus, which sells everything from tanks to t-shirts to sunglasses. Known especially for their footwear, you can find items from quality brands here, and the workers are very kind in helping you find exactly what you’re looking for. Feel free to explore the many other options that they stock as well, as you may find some trendy clothing or accessories that you hadn’t been looking for before.<br><br>
+
+                    A great shoe store in the Washington Heights area is Vamps NYC, which creates an extraordinary shopping experience with the help of attentive staff and affordable prices. Known for their stylish selections, Vamps offers the footwear and accessories to please any buyer. The selection here is enormous, so you will definitely find what you are looking for!
+                    If you’re looking for clothes on the cheap, Goodwill is always a choice for a thrift store. Their wide selection of clothes provides many opportunities to pick up some steals, and the nice organization helps you find what you’re looking for in no time. Another perk of shopping here is the kind staff, which will aid you with anything they can.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/wheels.jpg" %}"/>
+                            <h6>Washington Heights Expeditionary Learning School M348</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The Washington Heights area houses some great public school education options, which will definitely help your child on the path to their university of choice.<br><br>
+                            One of the schools in the neighborhood is Washington Heights Expeditionary Learning School M348, a high school that excels in college preparation. Their small enrollment ensures that each student receives the correct attention and training to acquire the necessary skills to thrive in a college or professional environment, with specialized instruction for every student’s needs. Washington Heights Expeditionary Learning School would make a great choice for your child.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of universities, Yeshiva University offers a Washington Heights campus. This high-caliber institution definitely prepares its students for the future through its academics and other student amenities, including residence halls, dining, athletics, and extracurriculars. One of the perks of attending Yeshiva University is that they are enrolled in a four-campus library system, so you could easily attain any book or material that you could possibly need for any paper.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/yeshiva.jpg" %}"/>
+                            <h6>Yeshiva University</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/planetfitness.jpg" %}"/>
+                            <h6>Planet Fitness</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you want to work out while living in Washington Heights, finding the appropriate gym will not be a problem.<br><br>
+
+                            Check out Studio in the Heights if you’d like to stay fit through yoga or weight training. Their main goal is to challenge you in a friendly community to increase your strength, flexibility, balance, and focus, with individualized attention given to each student. The coaches here are excellent, and really add to the appeal of utilizing this studio.<br><br>
+
+                            One of the most popular fitness choices is Planet Fitness, which is a basic cheap and clean location for you to work out individually. One of the perks of Planet Fitness is the reliability, as you can be assured that they stock many machines so you’ll hardly have to wait for your workout. The staff here are also friendly, so if you need help they will definitely be there to assist you.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try  NYP Employee Fitness Center, which is an exclusive club for NY Presbyterian Hospital employees, retirees, Columbia University employees, students, and alumni. If you fall into one of these categories, you’ll be happy with the classes here, which are taught by helpful teachers that are truly invested in your learning. With free lockers and a convenient location, attendance here is a definite must if you are invited.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The New York Presbyterian Hospital location at Columbia is the closest to Washington Heights. Luckily for Washington Heights residents, the staff here is amazing, and the nurses and doctors of the hospital are highly trained. With amenities for children, emergency services, and regular care, New York Presbyterian Hospital is definitely able to service any of your needs in terms of health care.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/presbyterian.jpg" %}"/>
+                            <h6>New York Presbyterian Hospital</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/tryonpark.jpg" %}"/>
+                    <h6>Fort Tryon Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Washington Heights offers some superb parks due to its suburb-like environment.<br><br>
+
+                    First, visit Fort Tryon Park for a great view of the Hudson River, and George Washington Bridge. The gardens here are beautiful, and also features a winding path for bikers and runners. If you’d like to picnic, Fort Tryon is your location, as gorgeous grassy areas here are waiting for a delightful picnic.<br><br>
+
+                    Or, check out Jay Hood Wright Park if you have children that would like to play on a playground, or even a dog that could utilize the dog park. With a little bit of everything, including sports grounds, barbecue areas, and grassy areas to host special events at, Jay Hood Wright Park is the perfect mixture of everything a good park should have. Come check out this location today!
+                    Or, Highbridge Park features a swimming pool, concerts, and beauty in its stunning location on the East River. Residents love the mountain bike course, as well as skate park that is world class. Visit this park if you’re looking for something diverse and entertaining to fill up your day.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=washington heights&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ultimatewebtraffic.com/">buy website traffic</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}

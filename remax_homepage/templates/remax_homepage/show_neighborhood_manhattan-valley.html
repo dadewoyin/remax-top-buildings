@@ -1,0 +1,315 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                From predominantly German to Irish to Hispanic, Manhattan Valley is a very dynamic neighborhood located on the Upper West Side. Manhattan Valley is bordered by Upper West Side and Morningside Heights.<br><br>
+
+                Recently, Manhattan Valley has gained popularity because of its rising social scene and growing economy. Characterized by the availability of green spaces, great dining spots, and bars, Manhattan Valley offers both a peaceful location and a party in one. Older residents can enjoy the diverse fine dining options, while younger students love to party at the many bars and clubs in the area. Even though the area is not known for its attractions, there are many fun things to do-from a museum tour to visiting an art gallery to shopping at one of the many stores-that attract residents and tourists alike.<br><br>
+
+                The easy access of Manhattan Valley really increases its desirability, as it intersects three subway lines within the small area. There are a rising number of Columbia and Barnard students from Morningside Heights that are moving to Manhattan Valley, adding to the appeal of a younger generation in the neighborhood. Therefore, the real estate market for Manhattan Valley has begun to boom, creating a high demand for these cheaper Manhattan Valley apartments. So, if you’re interested in a Manhattan Valley apartment, consider a property to rent or buy today!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/flordemayo.jpg" %}"/>
+                            <h6>Flor de Mayo</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking for some fine dining in the Manhattan Valley, the choices are diverse.<br><br>
+
+                            For a fantastic American restaurant with amazing soups and salads, try eating at Buster’s in Manhattan Valley. Their service is almost as high-quality as the food, as the servers strive to create a comforting vibe while serving you amazing food. With use of only local food and fresh ingredients, this restaurant should top your list for food to try in Manhattan Valley.<br><br>
+
+                            An exceptional stop for Chino-Latino fare is Flor de Mayo, where you can find a combination of Chinese food and Mexican food that will definitely be delicious. From sweet plantains to yellow rice to roasted chicken, whatever style you try will amaze you at the blend of flavors. To top it off, the service here is amazing, ensuring that you will have a lovely time here.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>You’ve probably never tried Malaysian food before, so now is a great time to sample some at Malaysia Grill. They are most famous here for their coconut rice and roti canai, a Malaysian flatbread influenced by Indian flavors. This hidden treasure will surely provide you with an unforgettable new cuisine experience, so try some of their signature dishes today!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re up for trying some cultural food, Manhattan Valley is your place to eat! Their streets are packed with restaurants of all variety, ensuring that you can get a quality meal of all cuisines.<br><br>
+
+                            First, if you want a marvelous place to eat out from, try Saiguette. This Vietnamese restaurant serves some of the best banh mi in New York City, and its moon cakes and pho are also amazing! The freshness of the food is unparalleled, so you will surely enjoy an affordable Vietnamese treat at this restaurant.<br><br>
+
+                            Or, if you’re in the mood for an authentic spicy meal, eat at Szechuan Garden. Their food is among the best Chinese of the Upper West Side due to its amazing quality and service. You will not be disappointed with this meal, as long as you can take the heat!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/saiguette.jpg" %}"/>
+                            <h6>Saiguette</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a quick bite to eat where you’re sure to get a great bang for your buck, visit the Indian restaurant Doaba Deli. For $8, you get a choice of four curries and sides, ensuring that you will be full and satisfied for the price. They offer terrific vegetarian options as well, complete with tea and desserts to try.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/lionshead.jpg" %}"/>
+                            <h6>Lion's Head</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The bars of Manhattan Valley offer tastes for many styles, so try some amazing drinks and bar food today!<br><br>
+
+                            First, check out Amsterdam Tavern if you’re hungry and in the mood for a drink. With amazing nachos and sweet potato fries, as well as an extensive beer list, you will surely find exactly the taste you are looking for. Amsterdam Tavern is not very crowded nor expensive, so you can even enjoy this bar on a budget.<br><br>
+
+                            Or, if you’re more in the mood for a dive bar, then Lion’s Head may be perfect for you. The food here of choice are the tater tots, which you can savor along with some cheap beer and a great selection. Complete with a relaxed setting and friendly staff, Lion’s Head has all the tools you need for a fun night.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another interesting find is The dam, which offer specials throughout the week on different drinks, such as Martini Mondays and Tequila Thursdays. Be sure to check out the website ahead of time to find which day your favorite drink is discounted! If you want some food with your drinks, parmesan truffle fries are always a tremendous option, or ask the friendly bartender for his suggestion.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If a club is more your style, then Manhattan Valley definitely has a great location for you.<br><br>
+
+                            First, check out Smoke Jazz Club if you’re looking to see one of the many bands that perform live jazz. The intimate and dark venue is a perfect setting for the jazz club, complete with a kitchen of soul food beforehand if you’re interested. The location is often busy, so be sure to get reservations at night or on the weekend.<br><br>
+
+                            Or, try The West End if you’re interested in awesome cabaret performances that are fun to dance to. With tons of drink specials and an LGBT friendly setting, you will have a fun time with friends at this location. Even though the setting is a dive bar type, the dancing and ambience are top notch.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/lavo.jpg" %}"/>
+                            <h6>The West End</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>A gay bar in the Manhattan Valley area is Suite. Whether you’re interested in drag or just a fun dance, Suite has all the facilities necessary for a fantastic time. The club features karaoke and a dance floor, which houses some of the happiest people of the area.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/westsidemarketvalley.jpg" %}"/>
+                            <h6>Westside Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>One of the best markets in the Manhattan Valley is Westside Market, a 24 hour food market that sells almost everything you need. They have a large variety of fresh fruit and vegetables, cooked food, a huge selection of cheese, a salad bar, and hot meals. The friendly employees and efficient clerks make your shopping experience here very enjoyable.<br><br>
+
+                            Another upscale market is Garden of Eden. This stop is perfect for Columbia students, as they offer a 10% student discount and a half price food bar after 8pm. Some other perks of this grocery store are its proximity to many transit lines, as well as great prices and organic food selection. </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Of course, a nationally recognized brand is Whole Foods Market, where you can be guaranteed to get incredible quality of products and a wide selection of foods. With a wine store, salad bar, and distinguished prepared food section, this Whole Foods has all the amenities that you would expect and want from a grocery store.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>You don’t have to worry about doing your laundry yourself in Manhattan Valley, as there are many laundromats available to take care of your dry cleaning and laundry needs.<br><br>
+
+                            Check out Zoya Cleaners if you need anything from dry cleaning to tailoring work. The friendly owner here uses only organic cleaning agents, which really helps your clothes reach another level of clean. The perks of using this laundromat are free delivery and pick ups, as well as fast service, ensuring you will get a great quality in a welcoming setting.<br><br>
+
+                            Another superb choice for your laundry needs is New York Dry Cleaners. Their specialization is tailoring, but any of their services will reflect the detail-oriented nature of the owner. His personal attention to every problem, as well as his patience, kindness, and honesty keep the customers coming back and excited to bring their clothes to New York Dry Cleaners.  <br><br>
+
+                            For a quick turnaround time with reasonable prices, try La Mode Organic Dry Cleaner. Furnished with great employees, consistent service, and expertise in alterations and hemming, this store will take care of any clothing that you may need cleaned.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/roerich.jpg" %}"/>
+                            <h6>Nicholas Roerich Museum</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The many attractions of the Manhattan Valley area keep residents and tourists alike coming back for more.<br><br>
+
+                            First, you should definitely visit Nicholas Roerich Museum, a museum that holds Roerich’s artwork, which combines Russian and Asian influences to create a beautiful and unique art selection. With free admission and kind staff that truly care about the art, you will certainly find Nicholas Roerich Museum inspirational and beautiful, so check it out today!<br><br>
+
+                            Or, if you’re looking for a luxurious way to tour New York City, Vivatours USA can certainly facilitate a tour tailored exactly to your tastes. With guides that speak English, Spanish, and Portuguese, you will be able to find a driver and tour guide to converse with and take you to various locations, including shopping, attractions, dinners, and sporting events. What better way to enjoy your visit to Manhattan Valley?</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a display of talent and performance, check out The West End, a lounge that offers many different performances for your viewing pleasure. The production and performers here are very professional, so you will definitely love one of their shows along with some tasty snacks and beer. Residents love enjoying a night here of relaxation and fun, and you will as well.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Manhattan Valley offers some beautiful artwork for your viewing pleasure.<br><br>
+
+                            Alan Klotz Gallery is an extraordinary option if you’re interested in viewing 19th and 20th century vintage photography. As a member of the Association of International Photography Art Dealers, this gallery is a professional buyer and seller of artwork in the New York City area. The gallery also offers collector’s seminars and auctions for even greater interaction with the artwork.<br><br>
+
+                            Or, Gail Martin Gallery provides many fantastic viewing opportunities, with a display of ancient, antique, and ethnographic textiles. Many of these textiles come from exotic locations, like Central Asia, Africa, Pre-Columbian Peru, and other historical regions, combined with the work of contemporary artists.</p>
+                                                    </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/klotzgallery.jpg" %}"/>
+                            <h6>Alan Klotz Gallery</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/urbanoutfitters.jpg" %}"/>
+                    <h6>Urban Outfitters</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re a big shopper, then Manhattan Valley will definitely have the perfect destination for you!<br><br>
+
+                    Men and women alike can enjoy The Jewel Boutique, which specializes in custom jewelry, including watches, diamonds, stones, and repairs. The quality here is absolutely amazing, and you will surely receive great service along with your product. The owner is very patient and willing to work hard for you to receive exactly the design or repair that you are looking for.<br><br>
+
+                    Another well-known department store that you will love shopping at is TJ MAXX, which is known for its variety and amazing bargains for name brand items. Everything from clothes to household goods is provided here, in a very organized and spacious environment. Be sure to check out their Manhattan Valley location today.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, try shopping at Urban Outfitters if you’re looking for a younger look while still maintaining a nice name brand appeal. Although the prices are more expensive, they are reasonable considering the quality and brand presence, and you will certainly look fashionable and chic in Urban Outfitters apparel.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/montessori.jpg" %}"/>
+                    <h6>Morningside Montessori School</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The schools in the Manhattan Valley area focus on a comprehensive education that benefits the community as well as individual students.<br><br>
+
+                    One of the schools in the district is Morningside Montessori School, a private school for young children that prepares children for the future. Using teaching methods such as reading, writing, counting, addition, and subtraction, students learn the basic fundamentals while also learning self-expression and respect. Thus, a comprehensive education is the first priority at Morningside Montessori School.<br><br>
+
+                    Or, Solomon Schechter School of Manhattan is a great choice for children in Kindergarten to 8th grade. A Jewish Day School, Solomon Schechter School of Manhattan prides itself on small class sizes that focus on each student learning to the best of their ability. This teaching style is very effective at engaging the students with the outside world and their surroundings.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/bodystrength.jpg" %}"/>
+                            <h6>BodyStrength Fitness</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Workouts are facilitated in Manhattan Valley by the many facilities and emphasis on fitness in the neighborhood.<br><br>
+
+                            Check out Liberated Fitness NYC if you’re looking for a small gym that provides a strong community support to all members. The coaches are all supportive and excellent trainers, and the motivational environment really pushes each student to the next level of fitness. Be sure to consider this gym as your regular stop in Manhattan Valley.<br><br>
+
+                            Another excellent choice is BodyStrength Fitness, which is the epitome of a perfect neighborhood gym. Through a basic class card, you can take both yoga classes and fitness classes, as well as the occasional Zumba class when available. Full of energy and creativity, this gym will definitely push you to success.  </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try Krav Maga Experts for conditioning training, self-defense class, and martial arts. The workouts are tough, but certainly worth the effort, as you will feel the results after only a few classes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In terms of medical care, there’s a CityMD located in the Manhattan Valley area. This urgent care facility offers professional medical care in a convenient location. In addition, the clinic is very clean and spacious, which is a backdrop for the efficiency and thoroughness of the doctors there.<br><br>
+
+                            If you need a gynecologist or obstetrician, Aster Ob/Gyn houses great doctors for your care. The staff is very knowledgeable & professional, which will keep you comfortable even in a tough situation. The doctors pay special attention to what their patients say, and are available for many long hours.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/urgentcare.jpg" %}"/>
+                            <h6>Cure Urgent Care</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another efficient and painless facility is Cure Urgent Care. Boasting high quality care, the process and treatment at this urgent care is some of the best, so consider it in a time of need.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=manhattan valley neighorhood&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="http://premiumlinkgenerator.com">premium link generator for 2016!</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
