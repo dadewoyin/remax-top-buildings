@@ -1,0 +1,352 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                The East Village is located next to Gramercy Park and Greenwich Village in the Lower East Side. Known for its lively nightlife and constant activity, East Village bars and restaurants are the centerpiece of life as soon as the sun sets. As one of the most hip and fashionable districts in Lower Manhattan, many people visit the diverse East Village restaurants and bars from all over the city to enjoy the amazing cuisine and drinks.<br><br>
+
+                Besides the amazing East Village bars and cuisine, the East Village also boasts a very unique shopping scene due to the recent influence of a younger generation in the area. Formerly, the East Village offered primary thrift store style boutiques, but now lays claim to a combination of vintage styles and modern boutiques.<br><br>
+
+                In terms of residential appeal, the East Village is one of the rising stars of New York City, due to its awesome nightlife scene and proximity to many exciting areas. Because of this, prices have increased dramatically over the past few years, mimicking the surge of new development in the area. Now is a great time to invest in the East Village while average rental costs are still a little below the NYC average, because they are projected to increase in the future.<br><br>
+
+                So, whether you’re drawn to the East Village restaurants and bars, the updated shopping scene, or genuine melting pot of residents, the East Village is sure to provide you an amazing home that you won’t want to leave.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pylos.jpg" %}"/>
+                            <h6>Pylos</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>An amazing formal dinner option in the East Village is Degustation, which offers contemporary Spanish cuisine with a French twist. Whether you order off the menu or try the 8-course tasting menu instead, the food will combine beautiful presentation and flavor.<br><br>
+
+                            Or, if trying new food is more your style, Ippudo NY features the most sought after Japanese Ramen of the city. This renowned institution has locations worldwide, and is known for its unique pork-based broth.<br><br>
+
+                            For a traditional Greek meal, spend an evening at Pylos, an East Village favorite. This restaurant offers amazing appetizers, Greek salads, meats, and seafood for an unforgettable main course.<br><br>
+
+                            Anyone with a sweet tooth should try ChikaLicious Dessert Bar, with the dish of choice being a 3 course pre-fixe menu with a wide palette of tastes and a constantly updated menu.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a dessert stop with a variety of choices, try Fresco Gelateria. They are open for long hours and serve gelato and sorbets, coffee, pastries, and lunch choices.  This shop creates all of their gelato from scratch, and will surely amaze you with their traditional flavors and surprise you with some new ones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a great sandwich shop in the East Village, Xe May features a unique twist on the classic dishes with a Vietnamese flair. They also offer different types of Vietnamese tea, tacos, and salads for you to enjoy.<br><br>
+
+                            For something light yet filling, try out Crepes Canaveral from Brittany, a small shop located in the East Village. Served directly by Frenchman Jean-Christophe, the store creates many different combinations of crepes, including gluten free options.<br><br>
+
+                            Or, try Honest Chops for some fresh meat with flavor you won’t soon forget. Their meats are local and organic, so they will surely produce the highest quality products.<br><br>
+
+                            If you’re feeling more adventurous, finish your meal with Blythe Ann’s, located in the center of the East Village. Their vegan ice cream selections will surely not disappoint your taste buds or your wallet!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/crepes.jpg" %}"/>
+                            <h6>Crepes Canaveral from Brittany</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of what quick and easy take-out option you are looking for, the East Village is sure to have a quality source to savor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/wayland.jpg" %}"/>
+                            <h6>The Wayland</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Everyone enjoys a laid-back bar setting to hang out at, and Blackbird not only offers this fantastic atmosphere but also boasts tremendous bar food to savor with your drinks.<br><br>
+
+                            If you’re looking for a more specific selection of drinks, Proletariat is a crowd favorite bar. This classic bar supplies a very wide selection of craft beers to choose from, including many upscale and unusual beers that you cannot easily find.<br><br>
+
+                            The Wayland also incorporates a specific style into their lively atmosphere, as they are known especially for their amazing cocktails.<br><br>
+                            Or, if you are looking for a lovely all-around hangout, perhaps Pinks is more your style. Their walls are filled with vintage car parts decor, including a Thunderbird hood displayed front and center. They are known for their distinct personality, great drinks, and friendly service.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Feel free to explore these options and many more in the East Village, and you will definitely find the perfect bar for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for something more fast-paced in the East Village, there are many clubs for you to visit.<br><br>
+
+                            One of the most famous clubs in the East Village is Nublu. Known for its incredible live music and finding new artists, there is always something happening at this great location.<br><br>
+
+                            For a marvelous late-night stop on a night out, visit Bowery Electric. This dance club plays a variety of modern and throwback music for many demographics to enjoy. They host a lot of different events on a nightly basis so you can choose which group you want to see.<br><br>
+
+                            Although eccentric to some with a moose head on the center of the dance floor,  Bedlam is an up-and-coming club to visit if you’re looking for some good vibes. Their location is very cute and inviting, and hosts a diverse population of patrons every night.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nublu.jpg" %}"/>
+                            <h6>Nublu</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/unionmarket.jpg" %}"/>
+                            <h6>Union Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The East Village has a variety of grocery stores to suit any of your individual needs, whether it be a specialty product that you are looking for or a fresh, organic market.<br><br>
+
+                            If you’d like to buy from a familiar nationwide grocery store, check out Trader Joe’s. Their unique variety often stocks very healthy and affordable foods for you to enjoy even if health-conscious. They provide everything from fresh foods to prepackaged meals and frozen meals, which are all delicious and easily stored at your convenience.<br><br>
+
+                            When you’re short of time and looking for some quality pre-prepared food, then check out Union Market. They offer many specialty items and prepared foods, as well as regular grocery items, to ensure that you can find what you’re looking for on schedule.<br><br>
+
+                            For a more traditional grocery store, try the Village Farm Grocery, a conventional option with a variety of product choices at reasonable prices. They also provide delivery for a more convenient and time-saving order.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a quality laundry cleaning service, try Pure Organic Dry Cleaners. They offer quick and efficient service with an organic and sustainable clean that you will certainly be pleased with.<br><br>
+
+                            Or, if Lin Laundromat is closer to you, check it out. Its cheap and fast cleaning will definitely meet your standard of excellence, and allow you to clean clothes at your convenience.<br><br>
+
+                            For some great service, quick and simple process, and a great location, try the Exquisite Cleaners.<br><br>
+
+                            Regardless of the laundromat you choose, your professional and formal attire will be well taken care of in the dry cleaners of the East Village.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/poet.jpg" %}"/>
+                            <h6>Nuyorcian Poet’s Cafe</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The East Village offers many entertainment opportunities for a memorable day. If you’re a fan of slam poetry or would like to see it for the first time, visit the Nuyorcian Poet’s Cafe and explore its diverse and engaging entertainment. Or, stop by one of the many community gardens of the East Village to enjoy the beautiful greenery.<br><br>
+
+                            The East Village also houses some of the most underrated museums of New York City. The Museum of Reclaimed Urban Space, created by the people who started the greenery movement, details the culture of the area and its fight to retain community gardens.<br><br>
+
+                            For those who are interested in the history of the Prohibition twenties, visit the Museum of the American Gangster. Tour guides here describe a detailed history of the building and information on the gangster activity that once transgressed their walls.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’d like to relax in a cinema with some historical relevance, try the Anthology Film Archives. They show many different films, and even though it is a small space, the independent vibe will keep you coming back.<br><br>
+
+                            So, whatever the style of museum you prefer, the East Village will be sure to entertain and amaze you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Besides the amazing street art that sprinkles the streets of the East Village, there are many informal art galleries around the neighborhood.<br><br>
+
+                            For a quaint, charming gallery, visit Mascot Studio in the East Village. The owner, an artist, sells both original work and other great finds at reasonable prices. His eclectic style is evident throughout the gallery.<br><br>
+
+                            The Dorian Grey Gallery also offers an awesome art viewing experience. With constantly changing new exhibitions filled with beautiful artwork, this gallery is sure to please any art enthusiast.<br><br>
+
+                            If you’re interested in a fresh perspective of artwork in the neighborhood, look no further than the SB D Gallery. This is a non-profit art gallery that differentiates itself by using technology to project the images for a unique viewing experience.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/dorian.jpg" %}"/>
+                            <h6>Dorian Grey Gallery</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>From traditional art galleries to technologically diverse features, the East Village will surely contain an enjoyable art experience for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/deux.jpg" %}"/>
+                    <h6>Pas de Deux</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>As an up-and-coming destination for New York City shopping, the East Village will satisfy your desire for vintage and boutique clothing. With its growing demand from its young, hip residents, the selection for modern fashion is beginning to blend in with the existing vintage style.<br><br>
+
+                    If you’re interested in quintessential East Village vintage, Screaming Mimi’s will surely supply you some great options. Based in name brand vintage designers, Screaming Mimi’s believes in the fashion from yesterday, and even houses a private penthouse with designer items for the high end buyer. And, for the vintage needs of your home, the Upper Rust Antiques displays a huge selection of antiques and collectibles.<br><br>
+
+                    In terms of modern fashion, Pas de Deux is one of the premier high-end boutiques of the East Village, and the Parisian style definitely gives the buyer a taste of high end fashion. If instead of a vintage look you are looking for a steal, Gabay’s will surely exceed your expectations. As a family-run shoe store, the owners buy name-brand shoes at surplus and then are able to discount them at over 50%!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>So, whether you’re looking to try out a vintage style or something modern, the East Village has plenty to offer.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/communityschool.jpg" %}"/>
+                            <h6>East Village Community School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In addition to the beautiful Tompkins Square Park, families can enjoy a good public education base for their children. The East Village Community School is a highly ranked public elementary school enrolling 276 students. Complete with a diverse student population, many extracurricular activities, and above-average test scores, this elementary school will surely provide a strong base for future education.<br><br>
+
+                            For middle school, the public Tompkins Square Middle School contains 376 students. This school proves to be a great foundation to get into high schools, and will not disappoint.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The East Village is also renowned for housing the university Cooper Union, which adds to the diversity of the region and an intellectual atmosphere. Established in 1859 by Peter Cooper, the population of this university sits at under 1,000, and is known for its instruction in the arts and sciences. Cooper Union only accepts 7.7% of its applicants, so admission is very competitive and the level of education is very high. Therefore, students of the East Village can expect to have the option of a great university if they wish to stay in the same neighborhood.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/cooper.jpg" %}"/>
+                            <h6>Cooper Union</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/iron.jpg" %}"/>
+                            <h6>Iron & Silk Fitness Center</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For fitness in the East Village,  there are both conventional gyms and original fitness options.<br><br>
+
+                            If you are interested in a Crossfit location in the East Village, Crossfit East River is one of the best. Complete with a dedicated program and hands-on training, this location instructs a mandatory 8-class foundational study to ensure that members have the correct technique, which residents enjoy.<br><br>
+
+                            For something more unconventional, look no further than Punk Rope. Channeling elementary school gym class in an adult fitness setting, Punk Rope offers a high energy experience that is sure to be a fun time.<br><br>
+
+                            If you’d prefer a conventional gym, become a member at the Iron & Silk Fitness Center. This individually-run center provides top-notch equipment and personal attention to make sure that you are achieving your goals.<br><br>
+
+                            The East Village is sure to keep you moving, whether by jumping, lifting, or something in between, at one of its many fitness centers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you need medical attention, there are many choices to ensure your health while staying in the East Village. There are hospitals, such as the Beth Israel Medical Center, as well as endless specialty health centers at your disposal.<br><br>
+
+                            For a mental health hospital that is centrally located in the East Village, East Village Access offers medical support for mental disabilities and aid in their full recovery.<br><br>
+
+                            In addition, there are countless stand-alone practices with very highly rated doctors, such as Dr. Dave Ores, Dr. Herbert Lawrence, and Dr. Sujan Patel. Regardless of which practice and doctor you choose, the quality of care in the area will exceed your needs and desires.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/beth.jpg" %}"/>
+                            <h6>Beth Israel Medical Center</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/villagepark.jpg" %}"/>
+                    <h6>East Village Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>In the center of the East Village lies Tompkins Square Park, a perfect spot to enjoy the greenery or many of its amenities. The park attracts a diverse array of individuals, and a central location of the East Village for everyone to appreciate. Children can cherish the two playgrounds within the park, and everyone can use the chess tables, handball courts, and basketball courts that are all offered. Or, if you are just looking to have a relaxing stroll, this park is the ideal spot to walk through. In addition, Tompkins Square Park is a hotspot for entertainment, featuring a drag festival Wigstock, the Howl Festival, and the Charlie Parker Jazz Festival. Complete with outdoor pools to cool off in during a hot day, Tompkins Square Park offers a fun activity for all.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=east village, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ww.premiumlinkgenerator.com/">premium link generator overview</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
