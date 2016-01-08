@@ -1,0 +1,339 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                A perfect balance between wealth and practicality, the Upper West Side is one of the favorite residential neighborhoods of New York City. Upper West Side is bordered by Lincoln Square, Morningside Heights, and Central Park South.<br><br>
+
+                One of the many things that the Upper West Side is known for is the infamous Upper West Side restaurants. The fine dining selections in this neighborhood are simply superb, with chefs from Jean Georges to John Fraser taking residence in this area. Even though Upper West Side restaurants are often very expensive, there are also some surprisingly affordable cheap eats if you are willing to look for hole-in-the-wall locations. Regardless of where you choose to dine, the Upper West side will definitely have the perfect choice for you.<br><br>
+
+                Another attractive quality of the Upper West Side is the attractions that the neighborhood provides, from the Hayden Planetarium to Metropolitan Opera. These high class venues will certainly astound you with their elegance, and the attractions that follow are also delightful.<br><br>
+
+                In terms of real estate opportunities, even though the Upper West Side is known for being a very expensive neighborhood, it is actually more affordable than people can imagine. With sale prices and rental averages only slightly above the New York City average, this is a great place to reside in if you’re looking for a well-maintained neighborhood that is perfect for families and young residents alike. As one of the most desirable neighborhoods, consider buying/renting from the Upper West Side today.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/dovetail.jpg" %}"/>
+                            <h6>Dovetail</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Matching the high pricepoint of the Upper West Side, there are an abundance of high-quality restaurants to choose from on a night out.<br><br>
+
+                            If you want a meal that will absolutely blow you away, no Upper West Side restaurant can beat the elegance of Jean-Georges. A sampling of French, American, and Asian influences, Jean-Georges food will certainly impress even the harshest of critics. Their pre-fixe menu or tasting menu is the best way to get a real sense of the menu, or you could try an item a la carte from their constantly updated menu.<br><br>
+
+                            Another very luxurious option is Dovetail, which showcases John Fraser’s masterpieces in an intimate and upscale setting. With a variety of pre-fixe choices that cycle throughout the week, you can definitely taste your fair share of this contemporary American cuisine.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For an amazing Mediterranean restaurant, Boulud Sun is the best of the best. With a modern layout and fresh colors throughout the space, the restaurant feels as fresh as the food. Whether you’re in the mood for a filling pasta or flavorful fish, Boulud Sun will certainly provide the taste that you’re looking for.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a terrific delivery, takeout, and restaurant stop, Grill 212 is the perfect stop for you. Their wide variety of Middle Eastern foods offer a delectable choice for every customer, including generous portions and personable service. They also offer a complimentary salad bar to accompany many of the dishes, which is a tremendous addition to an already complete meal.<br><br>
+
+                            Or, try out Anthi’s Greek Food, a take-out only shop that offers great quality at a low cost-a typical hole in the wall location. With authenticity in check, you can try some of the original favorite Greek food available-just watch out for the relatively small portion sizes! Come give this small business with a big bite a try today.<br><br>
+
+                            In terms of authenticity, The Great Burrito trumps all others in its fresh Mexican food offerings. Another hole in the wall, be careful during busy hours as the location can get crowded, but the food at the end is definitely worth the hassle. All dishes accurately portray their Mexican roots, in a way that could not possibly be more delicious.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/grill212.jpg" %}"/>
+                            <h6>Grill 212</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/vanguard.jpg" %}"/>
+                            <h6>Vanguard</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Looking to spend a nice easy night in Harlem? Check outHarlem Public, a nice cozy pub with a huge selection of craft beers plus.<br><br>
+
+                            With the bar scene on the Upper West Side being notoriously busy from the bustle of Lincoln Square, there are also fantastic bars without the traffic in this neighborhood.<br><br>
+
+                            If you’re looking for an upscale speakeasy, the Manhattan Cricket Club is perfect for you. They have a small cocktail menu, but you can order virtually any combination and cocktail off the menu. The cozy and fun environment is the ideal setting for a relaxing night.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For someone who likes to nibble while ordering from a wine list, Vanguard creates this exceptional atmosphere to chill. While you shouldn’t come hungry as the food is just for taste, the wine will leave you perfectly satisfied.<br><br>
+
+                            Or, for a classic bar experience, try George Keeley. With great food to go along with your beer of choice, they also offer free popcorn to munch on while you wait.<br><br>
+
+                            Any of these options would be a lovely choice to spend the night at on the Upper West Side!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Within the Upper West Side you can absolutely find some great party venues to enjoy clubbing for the night.<br><br>
+
+                            First, if you love the stars almost as much as a lively party, then One Step Beyond is for you. Even though the tickets are expensive, the location makes up for the price-the club is located in Hayden Planetarium within the Museum of Natural History! They offer different DJs every night, so be sure to check out their style before choosing when to attend. Regardless, you are bound to have an amazing experience here!<br><br>
+
+                            Or, if you’re looking for something slightly toned down yet filled with great vibes, check out Dizzy’s Club Coca Cola. The main attraction here is the live jazz, and with some of the best entertainers in the city, you will definitely be impressed with their performances. Dizzy’s Club Coca Cola also features good food and drinks, making this a location to write home about.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/dizzys.jpg" %}"/>
+                            <h6>Dizzy’s Club Coca Cola</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/traderjoe.jpg" %}"/>
+                            <h6>Trader Joe's</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Because of the primarily residential appeal, the Upper West Side features some great grocery stores that you will surely like.<br><br>
+
+                            A classic grocery store choice is Trader Joe’s, where you’ll be met by a reliable standard of excellence in the products that you purchase. The fresh quality of their premade food, even when frozen, will surely amaze and delight you. To top it off, their reasonable prices will definitely keep you coming back again and again.<br><br>
+
+                            Another impeccable choice for groceries is West 82nd Grocery, a smaller store with an authentic vibe and cheap prices. This convenience store serves the area as a deli, delivery service for basic goods at any hour of the night, and a convenient place to pick up the little things that you may need for cooking. The service here is personable and friendly, so you certainly have a great time shopping here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Whether you’re interested in a cheap wash-and-fold service or an upscale dry cleaner, the Upper West Side will have the perfect laundromat for you.<br><br>
+
+                            First, P & K Laundromat offers everything you could want in a laundromat-great service, fast turnaround, and cheap prices. With the option for delivery for all of your products, including the wash-and-fold and dry cleaning, the efficiency and wonderful service of this laundromat cannot be beaten.<br><br>
+
+                            Or, check out Spotmaster Cleaners if you have a stain that just won’t go away. As their name implies, they are able to get rid of virtually any mess possible, all for a reasonable price and lovely service.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/spotmaster.jpg" %}"/>
+                            <h6>Spotmaster Cleaners</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re willing to pay a little bit more for even better quality, West 79 St Laundromat is the place for you. The main thing you are paying for here is reliability, as you can ensure a great clean and fold service every time at this laundromat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/hayden.jpg" %}"/>
+                            <h6>Hayden Planetarium</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you and your kids are looking for a fun activity to complete together in the Upper West Side, check out Little Shop of Crafts. You can choose from making stuffed animals, or painting pottery, mosaics, or ceramics, for there is definitely an art style for every child. Because there is no time minimum for painting, you can relax and enjoy your quality time with your kids.<br><br>
+
+                            Or, the Hayden Planetarium is an exciting option to explore the depths of the universe and learn a few things. You could easily spend a full day or more touring the many exhibits and main attractions of the vast planetarium. With attractions to interest even those who never thought they would like astrology, this is surely a destination for everyone in your group to appreciate.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a more musical attraction, The Metropolitan Opera is a great choice. With everyone dressed in their best attire, the entire venue exudes opulence and elegance, which leaves you speechless by the time you step through the door. The lively acting and beautiful music will certainly make for a fantastic and memorable night.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re interested in visiting an art gallery while in the Upper West Side, there are plenty to choose from in the neighborhood.<br><br>
+
+                            First, Columbus Art Gallery offers very cheap framing prices, which customers love because of the great quality and service, as well as thousands of prints to choose from if you are looking to buy right there. If you can’t find what you’re looking for on display, they have an enormous selection of catalogues with more prints that you can order.<br><br>
+
+                            Or, try out Ran Art Gallery if you are looking to view some beautiful art or get one of your own prints framed. With many framed pictures lining the walls of fantastic taste and variety, this is a great store just to stop and look around at, as you will surely find something interesting to you.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ranart.jpg" %}"/>
+                            <h6>Ran Art Gallery</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re looking to find some iconic street art, then check out Bansky Better Out Than In #20, a beautiful piece located on the wall of a building on the Upper West Side. With a glass encasement and video camera, hopefully this artwork will be preserved by the time you visit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/shishi.jpg" %}"/>
+                    <h6>Shishi</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Whether you’re looking for a well-known boutique or unknown steal, the Upper West Side offers an environment that could be perfect for you.<br><br>
+
+                    First, one of the hidden gems of the Upper West Side is Shishi, a cute boutique with style that will certainly blow you away. The staff here are like personal stylists, bringing you pieces and offering clothing that is exactly your style and could fit any event perfectly. With good prices, you will definitely walk out with more than what you came in for.<br><br>
+
+                    Another awesome choice is Upper 90, a sportswear store that offers jerseys, jackets, shoes, and more to its shoppers. With a large interior and attentive staff, you will find what you are looking for within minutes. The quality here is superb, and the prices just as nice, so there is no reason not to shop here.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>If you’re looking for an incredible selection of jewelry, KT Collection is ideal for you. Even though the jewelry is expensive, you will absolutely get all that you paid for and more due to the great quality of the products. With designs from the new and modern to vintage, KT Collection offers a style for everyone to enjoy.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/ps87.jpg" %}"/>
+                    <h6>PS 87 William T. Sherman School</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Of course, given the popularity and expense of the Upper West Side as a residential area, the school systems are definitely top-notch.<br><br>
+
+                    First, one of the great schools is PS 87 William T. Sherman School, an elementary school that is frequently honored with awards and distinctions due to its excellent caliber of education. With over 1,000 students, the teachers at this elementary school still somehow manage to provide individualized attention to each of their students.<br><br>
+
+                    Another amazing school of the Upper West Side is PS 166 The Richard Rogers School of The Arts and Technology. As the name implies, the elementary school focuses on integrating the newest technology into their teaching methods, and also work to help parents take part in the learning process. They also offer programs for Gifted and Talented, as well as Dual Language programs for international students.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Regardless of the school you choose, your child will surely receive a strong education at one of these schools or many others of the Upper West Side.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/equinoxuws.jpg" %}"/>
+                            <h6>Equinox</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The fitness options on the Upper West Side fit perfectly with those of a conventional gym.<br><br>
+
+                            For an intensive and motivating spin class, visit Flywheel Sports. Their attentive and high energy workouts will keep you out of breath yet having a good time. They also provide free water and shoes within their luxurious locations, complete with changing rooms and showers.<br><br>
+
+                            If a classic gym is what you’re looking for, go to Equinox. This gym supplies a membership that extends to a variety of classes and times, offering flexibility of different exercises and techniques. Or, if you need a personal trainer to keep you motivated, try X 93 Fitness. With a focus on reaching your goals instead of competition, this fitness center will keep you coming back to its clean environment. Because there are no membership costs, it also costs less than some of the other gyms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>No one has to worry about the quality of hospital care in the Upper West Side, as there are countless facilities to choose from.<br><br>
+
+                            First, the Weill Cornell Medical College offers a great location on the Upper West Side for all of your medical needs. With electronic health records, you can easily transfer and update all necessary information for the highest efficiency possible. As a primary care physician group, this is a incredible choice for a primary doctor’s office.<br><br>
+
+                            Or, Urgent Care Upper West Side, run by Mount Sinai Hospitals, is a great choice for any immediate problem that you may have. With the ability to care for a wide range of problems, their emergency service is top notch.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/weillcornell.jpg" %}"/>
+                            <h6>Weill Cornell Medical College</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If your pets are sick and need care, check out Animal General as a possible option for their treatment. With over 25 years of service, this hospital is dedicated to providing all animals with the best chance for full health as possible, and use only the best practices and highest standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/riversidepark.jpg" %}"/>
+                    <h6>Riverside Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Of course, Central Park is the main greenery spot for most of the residents of the Upper West Side, But, if you’re interested in trying out a new location and different environment, there are other parks as well that you can choose from to enjoy.<br><br>
+
+                    First, Riverside Park is a very long and thin park lining the West Side of the Upper West Side, and ventures almost all the way up Upper Manhattan. With a beautiful landscape and epic views sandwiching in a functional bike/walking trail, this park is perfect for somebody active that is looking for an escape and beautiful location to cherish. Riverside Park also features other amenities, such as baseball fields, basketball courts, eateries, fitness equipment, marinas, playgrounds, skate parks, tennis courts, and much more.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Even though small, Theodore Roosevelt Park is rated one of the best small parks of New York City. Featuring a dog run and green space, residents love to come here and enjoy a private and serene location that is even less populated than Central Park. Come check out their beautiful spaces today!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=upper west side, new york&ie=UTF8&t=roadmap&z=13&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com"> embedgooglemaps.com
+        </a></small></div><div><small><a href="http://premiumlinkgenerator.com">premium link generator for 2016!</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
