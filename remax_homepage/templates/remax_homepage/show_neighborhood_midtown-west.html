@@ -1,0 +1,336 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                We’ve all heard of Times Square and the Theater District because of the stories of the bright lights, busy streets, and tall buildings that people talk about when referring to their dream of living in NYC. Then you also have Hell’s Kitchen, which has a nightlife scene that helps NYC live up to its title of the city that never sleeps. What you probably didn’t know about Hell’s Kitchen, Times Square, and Theater District is that they are all neighborhoods in Midtown West.<br><br>
+
+                Bordered by Chelsea, Midtown South, Turtle Bay, and Murray Hill, Midtown West is one of the most desirable and popular neighborhoods that is iconic to New York City.<br><br>
+
+                Midtown West has many interesting attractions, including Rockefeller Center, home to Radio City Music Hall and Carnegie Hall, which are among the most prestigious performance spaces in existence. With Herald Square also located within the neighborhood, there are plenty of places to enjoy, both day and night. In addition to the fabulous venues located within Midtown West, the neighborhood also boasts great food and nightlife entertainment. Many Michelin-star restaurants take residence in Midtown West, as well as lively bars that are open for most of the night.<br><br>
+
+                In terms of real estate, Midtown West is a central point of Manhattan, as almost every main NYC Subway line goes through there. This makes the properties very attractive due to the location and proximity to nightlife, which is reflected in the expensive prices of the neighborhood. With spacious room for growth in a lively and engaged neighborhood, Midtown West is the perfect spot to call home.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/bernardin.jpg" %}"/>
+                            <h6>Le Barnardin</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For an amazing culinary and dining restaurant experience, go to Le Bernardin. Le Bernardin offers spectacular service and their wait staff is very attentive. The food presentation looks incredible and tastes even more delicious.<br><br>
+
+                            If you’re looking for something quiet, worth the money, and excellent quality, head out to Aureole. Offering very good service with a polite wait staff, Aureole prides itself on their friendly and attentive nature. Customers love the amazing presentation and taste of the chicken, so be sure to try this dish and many others today.<br><br>
+
+                            The Modern provides a classy atmosphere, an amazingly creative menu, and excellent service. The front bar is open but intimate and has a nice modern warmth to it, and the dining space is contemporary with fantastic natural light that comes in from the MOMA garden. The Modern is a great place to celebrate a special occasion.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Midtown West offers some exceptional takeout options right within the neighborhood. Be sure to try all of the various choices to get a taste for the area!<br><br>
+
+                            The price, tastiness, quickness, and friendliness makes Lz Sushi a winner when it comes sushi.  Lz Sushi has a bunch of freshly made rolls prepared in a fridge and ready to go, making this a very convenient option. The Spicy Tuna and the Eel Avocado Rolls are great, as well as the hot food that they serve.<br><br>
+
+                            Or, try out NY Pizza Suprema, which is rated the best slice of pizza in Manhattan. Pizza Suprema also epitomizes New York style pizza, with their large slices, extremely thin crusts, crispy edges, and soft centers. Customer service is good overall and all of their staff are very knowledgeable.<br><br>
+
+                            If you’re in the mood for some awesome burritos, check out Burrito Box. This restaurant offers free chips and salsa while you wait. I would recommend this place to vegetarians who are in the mood for Mexican, because they have several items on the menu that are vegetarian friendly. Burrito Box is a terrific place for a quick pick up and go, and their delivery is fast if you’re in their delivery area. This place is perfect for a quick stop and wonderful food.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pizzasupreme.jpg" %}"/>
+                            <h6>NY Pizza Supreme</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/rumhouse.jpg" %}"/>
+                            <h6>The Rum House</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a awesome bar to hang out at for the night, Midtown West has the ideal location for you.<br><br>
+
+                            For a trendy setting with incredible drinks, check out The Rum House. Everything from the decor and bartender uniforms to the drink menus all seamlessly tie their early 1900’s theme together, taking you back to another time.  The laid back setting and fantastic service make it a perfect backdrop to a pleasurable night, as well as nightly live music to add to the fun.<br><br>
+
+                            With exceptional drinks and amazing views,  The Skylark is a rooftop bar that you definitely want to visit. The views at this rooftop bar are incredible, and only further enhanced with their delicious cocktails. You get awesome views of the Hudson River, Times Square, and of course, the Empire State Building. The rooftop has comfortable seating with heat lamps when it gets chilly, so head out at any time of the year to view the beauty of New York City.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, another good choice to drink at is Three Monkeys. You will enjoy the ambiance, appreciate the spaciousness of the bar, welcome the fine service, and find they have fair pricing. To top it off, they have a truly great beer selection.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a fun place to spend the night out at, Midtown West definitely has the location for you.<br><br>
+
+                            First, you have to check out 48 Lounge for great music and vibes. Set in a beautiful venue and complete with friendly staff and service, 48 Lounge offers reasonably priced food and drinks to spur a good time. There is constantly music playing, including a regular live DJ, who enjoys hip hop and top charts numbers. With lots of space and excellent ambiance, it basically contains everything that you could want for an amazing night.<br><br>
+
+                            For fun, drinks, and dancing, Copacabana is the place to go. Copacabana is a multi-level club where everyone is dancing and having a good time. The club is split up into two floors, so there’s a large dance floor on the second floor where the stage and the live band plays the Top 40 and the best Spanish hits. The first level has a banquet room where you can dance the ‘old school’ Salsa, Samba, Rumba, Bachata, Merengue. Overall, there’s a type of music and style for everybody!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/copacabana.jpg" %}"/>
+                            <h6>Copacabana</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/westerly.jpg" %}"/>
+                            <h6>Westerly Natural Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Midtown West also boasts its fair share of grocery stores, all of terrific quality and market freshness.<br><br>
+
+                            A market that’s inclusive to everyone’s dietary needs is Westerly Natural Market. The employees are super helpful and can direct you where you need to go. Also, the store is organized and it’s pretty easy to find what you are looking for. Westerly Natural Market has a large selection of organic, vegan, vegetarian, gluten-free, and non-GMO items. No matter what your dietary needs are, their great selection has you covered.<br><br>
+
+                            For your spices, olives, dried fruits, nuts, grains, flour, and rice needs, head over to Ninth Avenue International Foods. Because they sell these items in bulk, their prices are not expensive, and they have attentive service to help you decide. If you enjoy coffee, they have a wide variety of beans that they freshly roast themselves on premises.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for an excellent laundromat in Midtown West that is prompt, courteous, and affordable, Bkm Laundromat is the perfect match. With efficient machines and super helpful staff, Bkm Laundromat is a superb laundromat for a convenient service. This place is superb for quick dry cleaning, and they will pick up your laundry for free if you live within a close radius of their location in Midtown West.<br><br>
+
+                            Mr. Green Laundry is your standard laundromat with a wash and fold service available. The location is also close to Starbucks and Dunkin Donuts so you can grab a coffee or a bite to eat while you wait. Choose this laundromat because of its great service, inexpensive services, and quick turnaround time.<br><br>
+
+                            Or, try out Ms Buffy’s French Cleaners, which features a very kind and courteous staff. The perk of using this laundromat is that all dry cleaning services are done using environmentally-friendly products. With the option of free delivery, you will definitely be very happy with the overall experience at Ms Buffy’s French Cleaners.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/greenlaundry.jpg" %}"/>
+                            <h6>Mr. Green Laundry</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/moma.jpg" %}"/>
+                            <h6>Museum of Modern Art</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>One of the most renowned museums of the Midtown West area is the Museum of Modern Art. Featuring many famous artists, including Monet, Warhol, Picasso, Van Gogh, and more, MOMA is one of the few great museums of New York City that you have to visit. If you enjoy the artwork by the most famous artists, they have dedicated a room to Monet’s Water Lilies, as well as various works by Picasso and Van Gogh. Many people choose to visit MOMA just to see the famous painting Starry Night, and the crowds are always huge around this exhibit.<br><br>
+
+                            Watching Phantom of the Opera at the Majestic Theater is a once in a lifetime experience. Phantom of the Opera is the longest running Broadway show to date, which is no surprise due to the amazing choreography and acting. With breathtaking scenes and a fluid setting, everyone must watch this show at least once.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re interested in artwork, Midtown West will definitely live up to your expectations.<br><br>
+
+                            First, check out Christie’s, an auction house that functions like a gallery with furniture, artwork, and sculptures. There is a ton of art at this site that is constantly circulating, of all different artists and styles, meaning that there is artwork for everyone to enjoy. If you’d like to purchase artwork, everything is discounted, which makes the purchase even easier.<br><br>
+
+                            If you’re at all interested in theatre, visit Triton Gallery to view a beautiful display of window cards dating back almost a hundred years. These collectibles are in very good condition and serve as an amazing way to view the history of Broadway. If you were interested in purchasing one of these window cards, the prices here are reasonable as well.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/christies.jpg" %}"/>
+                            <h6>Christie's</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of your interests, the art galleries of Midtown West will surely impress.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/dsw.jpg" %}"/>
+                    <h6>DSW Designer Shoe Warehouse</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Midtown West also boasts some amazing shopping locations right in the neighborhood.<br><br>
+
+                    If you’ve never heard of Uniqlo, try out their affordable, simple, and good quality clothing. The store is large and super clean, the customer service reps are super helpful, and there’s a large fitting room that is ideal for trying on your new buys. Uniqlo has been gaining popularity in recent years, so hop on the trend and you will be pleasantly surprised!<br><br>
+
+                    Or, a staple to every girl’s closet is Forever 21, and the one located in Midtown West is a dream. With four floors, its amazingly large location boasts great prices and service, which is perfect for spending a few hours exploring the many items. Their constantly changing collections offer a fresh view into the fashion world, and also means that you can come back frequently to check out their new items!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>For an amazing shoe store that carries all different types of shoes, check out DSW Designer Shoe Warehouse. This store prides itself on its organization, ensuring that you can find the shoe you are looking for within seconds. Their variety is also fantastic, which is further enhanced by the friendly staff that are waiting to help you pick out shoes.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ps212.jpg" %}"/>
+                            <h6>PS 212 Midtown West</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Midtown West is a wonderful area to raise kids, as there are many fine educational facilities located right within the neighborhood.<br><br>
+
+                            First, one of the best schools in the area is PS 212 Midtown West. This elementary school has exceptional ratings and percentage of students passing standardized testing, as well as a diverse yet rigorous environment for children to enjoy. PS 212 Midtown West would definitely be the perfect educational starting point for any aspiring academic.<br><br>
+
+                            Or, check out M529 Jacqueline Kennedy Onassis High School if you’re interested in participating in the development of an up-and-coming school with great potential. Although the reported benchmarks are lower than the city’s average, the school’s mission and atmosphere will carry a dedicated student far into the college realm.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For such a big neighborhood, it may come as a surprise that there is only one university located in Midtown West. Nonetheless, The Graduate Center resides in the area, and as a City University of New York, offers a great public school education for a lower cost. This CUNY delivers most of the doctoral degrees of all of the universities, and thus is the premier provider of public graduate education. The school awards a variety of degrees, ranging from business to theatre, and includes master’s and doctoral programs. Therefore, the Graduate Center, located in Midtown West, is a marvelous option for a graduate university right in New York City.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/cunygrad.jpg" %}"/>
+                            <h6>The Graduate Center</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pfmidtownwest.jpg" %}"/>
+                            <h6>Planet Fitness</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking to get into shape in Midtown West, there are many great options to do so.<br><br>
+
+                            For a classic gym experience with a brand you can trust, work out at the Midtown West location of Planet Fitness. A very helpful and friendly staff sets the atmosphere here for a hard workout, and they have very updated equipment. Planet Fitness will definitely satisfy your fitness needs as well as offer a few perks, as they have massage chairs, a hydro massage bed, and tanning machines for your use and enjoyment.<br><br>
+
+                            Or, check out the beautiful facilities of Equinox.  The amenities at Equinox are amazing, as everything is very new, and staff work round the clock to maintain the image of perfection that the gym prides itself on. With a variety of classes and expert instructors, you will certainly get a sound workout. Afterwards, try the juice press bar in lobby with a solid section of drinks and quick snacks. If you do splurge on the membership, you will not regret their amazing classes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The hospitals in Midtown West definitely service the area well and maintain the health of the neighborhood.<br><br>
+
+                            If you try out Roosevelt Hospital, you will find that the staff is very helpful in ensuring you are recovering to your top health.  The rooms there are always well maintained, and with the knowledgeable doctors, this is an all-around fantastic place to visit when you have a health concern.<br><br>
+
+                            At CityMD you will be greeted with great customer service even in your time of need. Their system of online registration makes your trip to the doctor’s office even easier and faster. To top it off, the doctors are very knowledgeable, professional, personable, and thorough, ensuring that you get the top quality of care. After your visit, CityMD will follow-up with you to make sure that you’re in your top health.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/roosevelthospital.jpg" %}"/>
+                            <h6>Roosevelt Hospital</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a patient with orthopedic injuries, visit Drew A Stein, MD, especially if you are interested in sports medicine. The staff at his office are very knowledgeable and professional, and will offer you the best treatment plan to get you back into top shape.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/heraldsq.jpg" %}"/>
+                    <h6>Herald Square Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>In Midtown West there are many fabulous parks for you to enjoy. First, you can take a stroll through Herald Square, a beautiful monument that epitomizes the beauty of New York City. This is a great retreat from the department stores like Forever 21, H&M, and Macy’s, so you can sit for a quiet lunch during your break from shopping. This is definitely a destination to explore when you’re in the area.<br><br>
+
+                    Another tremendous park is Pier 84 Park, a perfect place to get away from the hustle and bustle of NYC while still in the center of the action. The park has tables and chairs at the end of the pier that are awesome to sit on and watch the boats go by, a grassy patch that you’ll love to lie on to sunbathe during the warmer months, and a dog park. Don’t forget about the great view of the Manhattan skyline, or you may miss out on an opportunity to view New York City like you’ve never done before.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>There are many fantastic parks to enjoy while in Midtown West, so you shouldn’t miss out.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=midtown west, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ww.premiumlinkgenerator.com/">premium link generator overview</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
