@@ -1,0 +1,360 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Greenwich Village is a staple to New York City, as one of the most iconic and well loved neighborhoods that everyone appreciates. The neighborhood is bordered by West Village, NoHo, and Midtown South, and is located downtown.<br><br>
+
+                Perhaps the greatest attraction for everyone to enjoy in Greenwich Village is Washington Square Park. Always brewing with activity, Washington Square Park is a hub for the area’s residents to relax at. The iconic arch in the center of the park marks the meeting place of creativity and professionalism, a collaborative vibe which echoes throughout the culture of the Greenwich Village.<br><br>
+
+                Greenwich Village is also known for being the home of New York University (NYU). The NYU campus extends throughout much of the neighborhood, and definitely influences the culture in a creative and artistic way. The liveliness of New York University also attracts a great nightlife scene and many activities, so there is never a dull moment in Greenwich Village.<br><br>
+
+                In terms of real estate, the neighborhood is one of the most desirable, and therefore, most expensive. With an average sales price of more than 45% over the New York City average, Greenwich Village is certainly a pricey place to rent or buy in. But, a property in Greenwich Village will surely make a good investment, as their median prices have continually increased over the past few years.<br><br>
+
+                So, if a centrally located neighborhood and the home of the NYU campus appeals to you, then check out Greenwich Village as a possible housing option.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/gotham.jpg" %}"/>
+                            <h6>Gotham Bar and Grill</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For a special night out at an upscale restaurant, Greenwich Village will exceed your highest expectations.<br><br>
+
+                            If you’re looking for some amazing New American food, try Gotham Bar and Grill. Even at its expense, this restaurant makes up for it in taste and the opportunity to spot celebrities. Or, for a more sustainable option, try Blue Hill. With choices for a pre fixe or tasting menu so you can choose how to plan your meal, this farm to table restaurant only uses the freshest ingredients.<br><br>
+
+                            For an old-fashioned Italian dining experience, book a reservation a month in advance for Carbone. If the fresh homemade pasta doesn’t sound appealing, try one of their meat options for dinner. Be careful though, as the price can grow to over $300 a person.<br><br>
+
+                            Regardless of your choice for a night of fine dining, Greenwich Village offers a great range of selections for you to enjoy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Due to the large competition of restaurants in Greenwich Village, there are many speciality stores that only produce one product. One of these favorites is Sticky’s Finger Joint, which is known for its chicken fingers. The chicken can be made into combinations of garlic, sauces, or even salted caramel that you didn’t know were possible! If you’re looking for a speciality sweet store, try Milk and Cookies. They produce cookies all day in a variety of flavors, including ice cream sandwiches, which are sure to hit the spot.<br><br>
+
+                            If you’re looking for something with more variety, try Saigon Shack. This Vietnamese restaurant offers cheap cuisine with a legendary bahn mi which you will love. Or, if you’re tired of Chipotle but still interested in quality fast food Mexican, Dos Toros Taqueria is a great option.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/sticky.jpg" %}"/>
+                            <h6>Sticky's Finger Joint</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Greenwich Village will certainly have some quick and easy food to leave you satisfied and coming back for more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/analogue.jpg" %}"/>
+                            <h6>Analogue</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Due to the diverse neighborhood setting, Greenwich Village has an amazing variety of bars for a lovely nightlife option.<br><br>
+
+                            If you’re looking for a traditional beer pub, try out Arts and Crafts Beer Parlor. With a wide variety of beers to choose from, this parlor pairs a quality drink with fantastic ambience to create the ideal bar experience. They also have a beautiful art collection for you to check out.<br><br>
+
+                            For a thrilling bar that has excitement even during the week, check out 124 Old Rabbit Club. Their dimly lit setting can be perfect for a romantic evening or to enjoy with friends at the bar, and their extensive beer list surely will not disappoint.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If instead you’re interested in a laid-back lounge with great live jazz and blues, be sure to visit Analogue. With a beautiful bar, wonderful seating options, and a dynamic vibe, Analogue can be the ideal setting for a night out.<br><br>
+
+                            Greenwich Village can offer you any vibe and ambience for the nightlife that you are looking for.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for an upbeat club to spend the night partying at, Greenwich Village definitely will not disappoint.<br><br>
+
+                            First, try out The Village Underground if you’re looking for the combination of great drinks and music. They have a house band that plays every night, as well as guest performances that are sure to please. This club will surely get you dancing and having a good time.<br><br>
+
+                            While in Greenwich Village, you have to check out I Love Vinyl if you love authentic vinyl records. Promising to only play from vinyl with no other use of technology, I Love Vinyl creates an amazing dance party without even using a laptop. They create hours of fun and a dancing environment that you will not want to leave.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/vinyl.jpg" %}"/>
+                            <h6>I Love Vinyl</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, if a dance club is what you’re looking for, Greenwich Village will have an amazing party waiting for you at one of its many clubs. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/lifethyme.jpg" %}"/>
+                            <h6>Lifethyme Natural Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Greenwich Village’s grocery options are many, complete with health items, speciality features, or a regular supermarket.<br><br>
+
+                            For a health food store, try Lifethyme’s The Market. They have many organic and fresh choices, as well as pre-prepared foods for an on the go meal. With a juice bar, produce, salad bar, and normal groceries, they will surely be supplied with anything healthy you may require.<br><br>
+
+                            If you’re willing to spend a little more money in order to get quality groceries, Whole Foods Market is for you. If you can manage to get past the prepared foods section without picking up something, the groceries will definitely satisfy your supermarket requirements. Be prepared to wait in line, however, as this grocery store is very popular.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Gunz Fine European Food also is a staple of Greenwich Village, as it stocks many specialty European items to make the perfect authentic dish. This store will be amazing for your European desires.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Greenwich Village houses affordable laundry options for university students and residents alike, ensuring you will get a quality clean at a great price point.<br><br>
+
+                            Crown Cleaners provides cheap laundry services with a reputation for friendly customer service and high quality. They have many services available and are flexible with their pickup times.<br><br>
+
+                            Or, if you’re looking for a combination of laundry and dry cleaning, look no further than Ok Fashion Town Cleaners. With personable service at a reasonable price, their overall dependability cannot be beaten.<br><br>
+
+                            For a thorough clean with a price to match, Young French Cleaner offers a great service to the area with their dry cleaning, laundry, and tailoring needs.<br><br>
+
+                            So, for whatever your needs are in laundry, Greenwich Village is sure to help.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/provincetown.jpg" %}"/>
+                            <h6>Provincetown Playhouse</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking to be entertained in Greenwich Village, you have a variety of options, as the neighborhood boasts many off-Broadway plays. Try the Provincetown Playhouse, which was turned into a playhouse from a bottling company in 1918 for the enjoyment of the neighborhood. There are constantly new and exciting plays and shows in this playhouse, so be sure to check back often for something that you particularly enjoy.<br><br>
+
+                            If you’re interested in music, Greenwich Village holds an abundance of jazz halls, such as Village Vanguard and Blue Note. Both of these studios are among the most renowned in New York City. If you’ve never listened to jazz music before, come see what you’re missing out on.<br><br>
+
+                            Depending on your mood or personal style, Greenwich Village will have a performance of the arts available at your fingertips to keep you inspired.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Or if you’re interested in art, Greenwich Village has many options to feast your eyes on.<br><br>
+
+                            For a fresh view on art, explore the Grey Art Gallery. Run by NYU, the Grey Art Gallery offers a look into unique perspectives of our culture in all different forms of art. Their goal is to create social context of our history in the form of artwork, and to display the diverse forms of expression through various views. There are also many events held at the Grey Art Gallery for your entertainment pleasure.<br><br>
+
+                            If you like photography, visit the Leica Gallery. Their unique exhibitions creates a fresh perspective on images of our world, including the display of many famous photographs. For the grand total cost of zero dollars, this is definitely a place to explore.<br><br> 
+
+                            Greenwich Village has many unique artistic perspectives to offer the world, and you will have a lot of fun viewing them.  </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/greyart.jpg" %}"/>
+                            <h6>Grey Art Gallery</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/purdy.jpg" %}"/>
+                    <h6>Purdy Girl</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Greenwich Village is one of New York City’s epicenters for shopping. Whether it be name brand designs or cute quaint boutiques, you’ll be sure to find something to buy in this neighborhood.<br><br>
+
+                    Putting aside the common labels, Greenwich Village has many hidden gems that are unique to the area. For example, if you like flea markets, visit The Market. Set up with many different designers and artists, The Market offers a wide array of materials so that there is something for everyone to enjoy.<br><br>
+
+                    If you’re interested in custom leather without the price tag of a designer label, try out the gorgeous Village Tannery. They make leather bags, wallets, and purses by hand, and are also open to your own custom wishes. For a timeless look at an affordable price, the Village Tannery is hard to beat.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>For a quintessential Greenwich Village boutique, go to Purdy Girl. Their trendy designs are sure to be the latest fashions and an ideal addition to your wardrobe. Purdy Girl’s clothing supplies a look for all occasions, so check it out for any style.<br><br>
+
+                    Regardless of your style or clothing desires, Greenwich Village has the perfect outfit waiting for you in one of its stores.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ps41.jpg" %}"/>
+                            <h6>PS 41 Greenwich Village School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Greenwich Village lies in one of the most competitive school districts of New York City, with a very high level of education at the elementary and middle school levels.<br><br>
+
+                            One of the best public elementary schools is PS 41 Greenwich Village School. With a diverse student body, this school maintains a high academic level and great teachers for a sound foundation in education. In 2013, this school had the largest waitlist of any other in all of New York City, emphasizing its high demand and value to families.<br><br>
+
+                            In addition, PS 3 Charrette School is a superb academic option for elementary students. With a focus in the arts and attention to the diversity of the student body, Charrette distinguishes itself through its sense of community and coordination.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of which school you choose, Greenwich Village students will certainly be on the right path to a wonderful middle school, high school, and eventually university.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for an urban university located in the heart of the city, New York University is the college for you. Situated right along Washington Square Park, NYU has an undergraduate population of 22,000 and is ranked one of the best colleges in the United States. With an acceptance rate of only 32.4%, the only thing deterring potential students from the university is the high cost of attendance.<br><br>
+
+                            The university takes pride in its global presence and international studies, making NYU truly the best for global citizens. They specialize in a variety of careers, most notably business and the arts. For the creative mind and independent spirit, New York University is the perfect fit and a fantastic platform for a career in Manhattan. Therefore, Greenwich Village is a great home for those interested in this intellectual atmosphere.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nyu.jpg" %}"/>
+                            <h6>New York University</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/305fitness.jpg" %}"/>
+                            <h6>305 Fitness</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>To get in shape after eating the amazing Greenwich Village food, there are many gyms sprinkled throughout the neighborhood.<br><br>
+
+                            If you’re looking for some high energy, high motivation exercise, 305 Fitness is the perfect fit for you. Even though it comes at a high price, this gym will get you in shape and in a great mood due to its amazing environment and trainers.<br><br>
+
+                            For a luxury gym and spa with endless amenities, become a member at Clay. In addition to their extensive workout collection, Clay offers a pilates studio, spa, roofdeck, lounge, and private training as perks of their membership. Although expensive, Clay will definitely get you into shape and relaxed at the same time.<br><br>
+
+                            CityRow offers a new experience to many with its rowing classes. They have combinations of rowing and yoga, cardio, and other exercises for a comprehensive program that is sure to work you hard while leaving you exhilarated.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, whatever you’re excited about exercising on, Greenwich Village will have equipment-and the gyms-to give you the experience that you’re looking for.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Following the recent closure of Saint Vincent’s, the major hospital of Greenwich Village, the neighborhood will be constructing a new hospital that will be ready soon.<br><br>
+
+                            In the meantime, visit New York Doctors Urgent Care if you need medical attention. Open seven days a week, they offer quick and easy medical care in a variety of fields. They will neatly and efficiently take care of any needs that you may have, and cause you the least hassle.<br><br>
+
+                            No need to worry about your medical care in Greenwich Village, as there are several doctor’s offices, as well as urgent care to take care of you.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/greenwichurgent.jpg" %}"/>
+                            <h6>New York Doctors Urgent Care</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/squarepark.jpg" %}"/>
+                    <h6>Washington Square Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Located in the center of the Greenwich Village neighborhood is Washington Square Park. An eclectic variety of gatherings, Washington Square Park appeals to the diverse crowd of Greenwich Village residents.<br><br>
+
+                    In the center of the park lies the arch created in honor of George Washington, the namesake of the site. The park was a historic site of political activism in the early 1900s, especially after the Triangle Shirtwaist fire protests and Beat Generation home base.<br><br>
+
+                    From dance classes to festivals to playtime, Washington Square Park certainly has something for everyone to enjoy, and is perfect for children with its playgrounds and greenery. There are dog runs, a performance area, and many chess tables to enjoy. Regardless of your favorite activity, Washington Square Park is the hangout spot of Greenwich Village.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=greenwich village, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="googlemapsgenerator.com">googlemapsgenerator.com</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
