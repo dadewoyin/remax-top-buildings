@@ -1,0 +1,399 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Central Harlem is bounded by Fifth Avenue on the East, Central Park on the South, Morningside Park, St. Nicholas Avenue and Edgecombe Avenue on the West, and the Harlem River on the North. Central Harlem is a neighborhood facing a new wave of social and economic gentrification, spurred by fierce crime fighting and retail development efforts.<br><br>
+
+                Since its revolution of African American art and culture in the Harlem Renaissance, Central Harlem is abuzz with art and history. The culture of Central Harlem is very diverse, as there is a mix of the history of the neighborhood, as well as the waves of college students in the area. This neighborhood is become more and more popular due to the combination of affordable houses and great transportation, attracting a variety of styles.<br><br>
+
+                As Manhattan’s real estate market again nears record-setting levels, Harlem finds itself in the heart of another real estate renaissance. New condominiums have replaced decades-old vacant lots, while stately yet neglected brownstones are being freshly renovated. With the real estate industry booming, there are plenty of condos, brownstones, and apartments at very reasonable prices, attracting major opportunities for investors worldwide.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/cheri.jpg" %}"/>
+                            <h6>Cheri</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking for fine dining in Central Harlem, the restaurants are impeccable and will not disappoint.<br><br>
+
+                            When in Central Harlem you should definitely check out BLVD Bistro, a traditional American restaurant. The most talked about dish is the Crab Cake Benedict with Creole Hollandaise sauce, as recommended by Chef Carlos. If this doesn’t sound appealing, then you will surely find another soul food dish on their extensive menu to explore.<br><br>
+
+                            When it comes to seafood, Lolo’s Seafood Shack knows what they are serving; the restaurant is a haven for seafood lovers. With a Caribbean influence, the dishes are sure to offer some new and surprising tastes to enjoy. Be sure to come on an empty stomach!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you are looking for a nice romantic evening, check out Cheri, a unique French restaurant using only fresh and organic ingredients. The restaurant also provides a good selection of French wines and occasionally they have live music to finish off the night.<br><br>
+
+                            So, regardless of your style, Central Harlem will certainly have a great choice of dining for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you are looking for a quick bite to eat in the area, Central Harlem definitely has the place for you.<br><br>
+
+                            Maharaja Palace has served the Harlem community over the years with some delicious food. Quick delivery and an extensive selection of food makes Maharaja Palace the most promising Indian restaurant in the neighborhood.<br><br>
+
+                            If you are craving Mexican food, Jesus Taco is the restaurant you want to order from. Steak burrito, shrimp nachos, and chicken fajitas are only some of the mouthwatering dishes that you can find for a great price.<br><br>
+
+                            Or, check out Pizza Stop to grab some delicious pizza in Harlem area. Pizza Stop has laid down the benchmark for the quality of pizza in the neighborhood, so don’t miss out on their Chicago-style or thin crust.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/maharaja.jpg" %}"/>
+                            <h6>Maharaja Palace</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of the cuisine, Central Harlem has the perfect takeout option for you to savor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/harlemtavern.jpg" %}"/>
+                            <h6>Harlem Tavern</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re staying for the nightlife of Central Harlem, you will certainly have a fun time at one of their many bars.<br><br>
+
+                            If you’re looking for a fantastic beer stop, Bier International offers a wide selection of ten European beers plus a dozen of international bottles. If you are at Bier International, try their signature beer Sugar Hill Golden Ale for some tasty flavors.<br><br>
+
+                            One of the premier bars in Harlem, Harlem Tavern is a 7000 square foot venue with a seating capacity of 350. Harlem Tavern provides 80 different beers (20 drafts and 60 bottles), so you will surely have a memorable time with your friends and family.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try out 67 Orange Street. Located right of the Frederick Douglass Blvd, between West 112th and 113th Street, this bar is a cozy vintage place with some great cocktails.With some amazing music, it will definitely live up to your expectations of one the best bars in Harlem.<br><br>
+
+                            Wherever you choose to spend your evening in Harlem, it will not disappoint.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking to dance and party the night away, Central Harlem has the perfect scene to spend the night at.<br><br>
+
+                            Showman’s Jazz Club is the best club in Harlem to hear live jazz and blues. They also feature special events such as Retiree’s Night on the first Tuesday of every month. Showman’s Jazz Club has showcased top musicians and legendary artists which include Sarah Vaughan, Lionel Hampton, Duke Ellington, Pearl Bailey, Eartha Kitt, Jimmy Rogers, and Grady Tate. You’re certainly in for a treat at this amazing club!<br><br>
+
+                            Or, check out Ginny’s Supper Club in the basement of Marcus Samuelsson’s Red Rooster. This club serves New American fare with soul-food accents, along with classic cocktails of great quality. Their ambience and vibe will absolutely set the tone for an incredible night.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ginnys.jpg" %}"/>
+                            <h6>Ginny's Supper Club</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a feel of the history in the area, visit Apollo Theater. As one of the oldest theaters in Harlem at over 100 years old, it is an integral representation of the dynamic past of Central Harlem.  The venue is noted for African-American performers, and will definitely produce a lively performance to enjoy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/fairwayharlem.jpg" %}"/>
+                            <h6>Fairway Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The grocery options in Harlem are plentiful and sure to leave you with quality ingredients to create a meal with.<br><br>
+
+                            For an upscale market in the heart of Harlem, visit Best Yet Market. You will find almost everything on your grocery list in this market, while getting fantastic deals during their weekly sales. This grocery stop is at the top of the list for many citizens of Central Harlem.<br><br>
+
+                            Or, perhaps you’d like to try out a diverse store with great products. If so, seek out Fairway Market between 132nd and 133rd Street. The store has a wonderful selection of organic food and is best known for its fruits and vegetable, gourmet items, and cheese. Pricing of all the products is very reasonable considering the quality of groceries available.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’d like to try something new and different, check out Fine Fare, one of the best groceries store in Harlem. The store is very unique because it offers Spanish, Caribbean, Mexican and Asian spices all at one place, exemplifying the diversity of the community. For selection, quality, and price, this store ranks very highly and is a top performer.<br><br>
+
+                            Therefore, Central Harlem will be able to accommodate all of your grocery needs through its various market choices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you have laundry needs while in Central Harlem, there are a lot of exceptional options for dry-cleaning and laundry services.<br><br>
+
+                            First, you can try The Laundry Room, located at W 166th Street. This jointly laundry and dry cleaning service provides great service to its customers, with timely delivery and quality work. You may even be able to pick up your laundry on the same day!<br><br>
+
+                            Or, visit Grace Cleaner’s for another quality laundry store. They offer many services like dry cleaning, wash and fold, and tailoring. The employees are very friendly and professional, providing these services at a very reasonable prices with a high-quality result.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/grace.jpg" %}"/>
+                            <h6>Grace Cleaner's</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of your location in Central Harlem, you are sure to find some amazing laundry deals with a quick turnaround.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/morris.jpg" %}"/>
+                            <h6>Morris Jumel Museum</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>There are lot of major attractions in Central Harlem for you to have fun with during your free time.<br><br>
+
+                            For example, visit the Studio Museum, featuring a high caliber of arts, paintings, photos, and more by artists of African descent. You will definitely appreciate the culture and history of this region through the recognition of this artwork.<br><br>
+
+                            Or, try Morris-Jumel Mansion, which was built in 1765 by Colonel Roger Morris and his wife, Mary Philipse. This mansion is a landmarked historic site and museum, and Manhattan’s oldest house. Through historic site tours and education programs, the museum interprets the mansion in the context of domestic life in New York City from 1765 until 1865. You will be enamored by the complexity of the mansion and the unique historical perspective that it has to offer.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, if you’re interested in learning the history of Central Harlem, there are many spots for you to visit and enjoy the culture.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Because of the huge cultural ties and history of this neighborhood, Central Harlem produces some of the best artwork of New York City.<br><br>
+
+                            In Knox Gallery, you will find work of emerging and established fine artists of high quality and unique perspectives. The gallery specializes in showcasing work of artists whose work reaches beyond the boundaries of the mainstream, focusing on different branches of contemporary art.<br><br>
+
+                            Or, try out Renaissance Fine Art gallery, which displays the work of painters, sculptors, and photographers specializing in the works from the Diaspora. Their mission is to cultivate emerging collectors, provide stellar gallery representation to well-established and emerging artists.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/albright.jpg" %}"/>
+                            <h6>Albright-Knox Art Gallery</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a fresh taste of contemporary art and design, go to Tatiana Pages Gallery. The gallery welcomes collaborations for workshops, lectures, and other events in our space. Tatiana also focuses on Latin American artists in their exhibition in order to provide a platform in which to display their culture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/hm.jpg" %}"/>
+                    <h6>H&M</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>There are plenty of awesome places to shop in Harlem, which is especially known for providing apparel at a reasonable price.<br><br>
+
+                    First, shop at the H&M located on 125th Street. Usually packed during weekends and the sale season because of its amazing deals and quality for the price, this store a very desirable option for some quality apparel.<br><br>
+
+                    Or, if you’d like to explore the spoils of the famous such as Kris Humphries and Julez Sanchez, you must visit Harlem Haberdashery. This store makes custom apparel which is very popular among rappers and athletes. Harlem Haberdashery has a wide variety of selections for both men and women, from preppy menswear to polished streetwear.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>The one stop store Harlem Underground specializes in hoodies, baseball caps, sweatshirts, and track jackets, or customers can personalize their own looks with original designs. There is also an exclusive Spike Lee collection that many customers enjoy, so check it out today.<br><br>
+
+                    So, regardless of your style, Harlem has some of the trendiest stores for you to shop at!</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/charter.jpg" %}"/>
+                            <h6>Success Academy Charter School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>With 16 district schools and even more charter schools located in Central Harlem, there are many options for your children to choose from in this neighborhood.<br><br>
+
+                            Because of the huge divide between charter schools and public schools that are constantly in competition, the level of education consistently increases in all areas. The first choice you’ll have to make for your children when you live in Harlem is which of these paths you’d like to pursue.<br><br>
+
+                            Charter schools such as Success Academy Charter School and DREAM Charter School are among some of the highest rated in the city, and are still public education (just not district). Both of these schools emphasize inclusion of diversity, rigorous academics, and a positive attitude, making them terrific choices to set up your child at.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, if you’d like to place your children in the district public school, PS 180 Hugo Newman College Preparatory is one of the best of the neighborhood, located in one of the most rapidly growing areas of Central Harlem.<br><br>
+
+                            Therefore, there are definitely great options in Central Harlem to send your children to.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In addition to the large number of schools in the neighborhood, Central Harlem offers many college choices for a comprehensive education.<br><br>
+
+                            The most renowned university of the area is the highly acclaimed Columbia University. Established more than 250 years ago, president Lee C. Bollinger Columbia continually leads this university to greatness as one of the best schools in the nation. At only a seven percent acceptance rate, attendance of this university would provide a solid base and reputation for your career.<br><br>
+
+                            There are also many other colleges within Central Harlem, such as the City College of New York. They display outstanding teaching, learning, and research for their students, and specialize in engineering, education and liberal arts. As a City University of New York, there are lower attendance costs associated with this public university.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ccny.jpg" %}"/>
+                            <h6>City College of New York</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>And, many choose to attend the The College of New Rochelle, which comprises of four schools: Women School of Arts & Sciences, the School of Nursing, the Graduate School, and the School of New Resources. Every year approximately 4000 students join CNR due to its strong sense of community and academics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pfharlem.jpg" %}"/>
+                            <h6>Planet Fitness Gym</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>There are lot of great gyms in Harlem which will help you stay fit and toned, leaving you with an enjoyable workout and healthier body.<br><br>
+
+                            A classic New York City staple, there is a Planet Fitness Gym located on W125th Street. A spacious gym with a number of cardio machines, lots of equipment, and motivating coaches, Planet Fitness is sure to get you into your top shape.<br><br>
+
+                            Or, try out Liberated Fitness if you’re interested in a unique style fitness center where the coaches focus on the power of physical mastery. Coach Mike’s concept of training individuals outside in Open Park requires a lot of physical endurance, so be sure to bring your A game if you choose to train here.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a very professional experience, visit New York Sports Club. They offer innovative programs, first-class facilities, and exceptional customer service that helps individuals change their lifestyle completely. New York Sports Club’s team of professionals will help you achieve your goals through their guidance, support, and motivation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Residents of Central Harlem need not be worried about the standard of health care in the area, as there is a centrally located hospital, as well as multiple practices in the area.<br><br>
+
+                            In case of an emergency requiring medical attention, Harlem Hospital Center provides a wide range of medical, surgical, diagnostic, therapeutic, and family support services to the residents in Central Harlem. The Hospital provides over 90 specialized ambulatory care services, including same-day surgery, behavioral health services, community substance abuse treatment, dentistry, and oral surgery.<br><br>
+
+                            In case you need to see a dental specialist in Harlem, Dr. James E. McIntosh Dental Clinic provides general and specialty dentistry for patient of all ages. Residents highly recommend his dentist work while living in Central Harlem.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/harlemhosp.jpg" %}"/>
+                            <h6>Harlem Hospital Center</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Whatever your injury or affliction may be, Central Harlem has the medical resources to make you healthy again.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/harlemriverpark.jpg" %}"/>
+                    <h6>Harlem River Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>With a variety of parks in the area, Central Harlem also provides marvelous public recreational space.<br><br>
+
+                    Visit the Harlem River Park, which was built by the city of New York along 20 acres of Harlem Waterfront. The park has restored the historic access by providing pedestrian access over Harlem River Drive, as well as supplying the neighborhood access to many sports fields, such as baseball fields and basketball courts.<br><br>
+
+                    St. Nicholas Park is another beautiful park that was built on the steeply banks of Central Harlem. This park features scenic hills, wide walkways two basketball courts, handball courts, picnic areas, chess tables, a large dog run, and three standard playgrounds.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>For yet another park located in the Central Harlem area, Morningside Park spans 13 blocks and historically served as a divider between Morningside Heights and Harlem. The tree-lined paths are perfect for bike riding, jogging, or walking your dog, and tackling the stairs and hills is also a tough workout.<br><br>
+
+                    The abundance of park and recreational options in Central Harlem make choosing to live here a great choice.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=harlem, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="googlemapsgenerator.com">googlemapsgenerator.com</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
