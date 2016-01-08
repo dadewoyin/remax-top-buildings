@@ -1,0 +1,345 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Carnegie Hill is a sophisticated neighborhood located on the Upper East Side, which is bordered by East Harlem, Yorkville, and Upper East Side.<br><br>
+
+                Known for its historic buildings and residential appeal, Carnegie Hill is currently the most expensive northern neighborhood of New York City. While there are no longer functioning mansions in the area, the existing mansions have been converted into office buildings and apartments within the space. Even with a demand for more real estate, many legal blockades have been placed on upcoming projects to preserve the character of the area. Therefore, Carnegie Hill has been able to maintain a lot of its historic appeal while ushering in a new generation.<br><br>
+
+                Because of its ideal location on the Upper East Side, Carnegie Hill offers some of the best restaurants in all of New York City, particularly for fine dining. If you’d like to try anything from contemporary American to sushi, the cuisine here will not disappoint a sophisticated palate. Or, if shopping is more your interest, then make sure to stop by Chanel or Urban Outfitters located in the area. One of the perks of living in Carnegie Hill is the proximity to incredible attractions, especially the Metropolitan Museum of Art. You can always find something interesting to do here, such as visiting the Jewish Museum NYC.<br><br>
+
+                Many people flock to Carnegie Hill due to the amazing architecture, great school systems (Hunter College High School is located in the area), and proximity to both Midtown and Uptown. As such, real estate prices are higher than the New York City average, and the desirability is only continuing to increase. Be sure to consider a rental or purchase in Carnegie Hill today!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/tanoshi.jpg" %}"/>
+                            <h6>Tanoshi Sushi Sake Bar</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Looking for the ultimate fine dining experience in Carnegie Hill? Well, there are a plethora of places to choose from.<br><br>
+
+                            First off, you can stop by Daniel. This culinary destination is known for giving guests their money’s worth and more. From the Warm Guanaja Chocolate Coolant to the Black Sea Bass, you will not be disappointed by the amazing tastes you will experience. It does not stop at the food though, as the waiters know exactly what to recommend, offering world class service to enhance your meal.<br><br>
+
+                            Next, check out Tanoshi Sushi Sake Bar, where you will be amazed by the mouthwatering scallops, gourmet Japanese cuisine, and five star sushi bar. The omakaze experience is one that will leave you craving more. The staff is there to help guests get the best out of their dining experience.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Last but not least, make sure to visit Pinocchio Ristorante, an Italian restaurant that is unlike any other you’ve been to. You will automatically feel as if you were transported to Rome for a perfect dinner, especially if you try the homemade Truffle Tortellini Alla Vodka. The fresh food will astonish you, leaving you speechless and incredibly satisfied to say the least.<br><br>
+
+                            These are just three of the many wonderful fine dining establishments of Carnegie Hill!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Whether you’re interested in tastes from Asia or Latin America, Carnegie Hill’s takeout options will satisfy your needs.<br><br>
+
+                            One great takeout spot to check out is Up Thai, a Carnegie Hill favorite for Thai food. The distinguished dishes here are the lunch specials, served daily, as well as the thai tea and ice cream for dessert. If you’re looking to eat in the restaurant, you will be pleased with the decor and fast pace of the food.<br><br>
+
+                            For some tasty Indian food within the neighborhood, try Om Restaurant. One of the biggest perks of dining here is the amazing customer service, but they also offer free delivery to the entire Upper East Side. This is the best place to try some authentic Indian food.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/thai.jpg" %}"/>
+                            <h6>Up Thai</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Pio Pio is a fine choice for anyone looking to try classic Peruvian cuisine. Known as the best Peruvian food in New York City, their most popular dishes are the Rotisserie Chicken and Green Sauce. Be sure to try this terrific combination of flavors today!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pony.jpg" %}"/>
+                            <h6>The Pony Bar</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Looking for a night out in Carnegie Hill? There are a ton of places to choose from.<br><br>
+
+                            First, stop by The Pony Bar, where you are sure to find the craft beer that you desire. It is the perfect spot to cool off and relax with friends, and you will be wowed by the service of the bartenders recommending you a list of beers that seems never-ending.<br><br>
+
+                            Next, check out Caledonia Bar, a nice and cozy whiskey bar. This establishment offers all the whiskey you could ever think of, and also includes numerous options of wine and beer. Whatever your drink of choice, you can find it at Caledonia Bar.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Ryan’s Daughter, a fun-filled Irish bar, creates a sense of community alongside a party room to enjoy with friends. From the pool table to the pop-a-shot basketball in the back, there are many fun activities to choose from while savoring your favorite drinks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Looking for a club in Carnegie Hill? You are in luck, because there are many to choose from.<br><br>
+
+                            First, you can stop by Club Macanudo for a cool old school feel. It is ideal for a romantic evening for two, and also works as a casual spot to catch up with friends. The state-of-the-art ventilation system is definitely a plus, so you won’t feel the heat as you tear up the dance floor.<br><br>
+
+                            Or, NYCPartyVip can help you plan the perfect party if you find the location on the Upper East Side. This marketing company can transform any nightclub or lounge into the ultimate clubbing experience that you’ve always desired. Come check out James’ amazing services today if you can’t find the ideal club for you.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/macanudo.jpg" %}"/>
+                            <h6>Macanudo</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/fairwaycarnegie.jpg" %}"/>
+                            <h6>Fairway Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Looking for groceries in Carnegie Hill will not be an issue when there are so many options to choose from!<br><br>
+
+                            First, stop by Fairway Market, where you will be sure to find all of your favorite food items. From the fresh fish to all of the organic foods, you will get unbeatable prices and great quality at this location.<br><br>
+
+                            Next, check out Agata & Valentina, for some of the best quality meat, poultry, and fish Carnegie Hill has to offer. Make sure to pick up the prepared food and delicious rotisserie chickens, which you can easily find with the help of excellent staff service.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>You can also make your way to Citarella, a world class seafood market featuring five star fresh fish and lobster. They focus on the freshness, quality, and value of their products. You will be amazed by the enormous selection of fresh seafood and aged prime meats along with prepared foods and gourmet groceries.<br><br>
+
+                            So if you want to live somewhere and never have to fret about grocery shopping, Carnegie Hill is your go-to area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>While living in Carnegie Hill, you are not going to need to get stressed over laundry, as there are plenty of reliable places to choose from.<br><br>
+
+                            Fluff-n-Fold Laundry Services is the place to be at when you are searching for an excellent price paired with a kind owner to make you feel right at home. Your clothes will instantly be clean with their state-of-the-art equipment. There are also options to drop off or pick up your clothes, or they will deliver them right to your home.<br><br>
+
+                            At The Mat II, you will find washers of all sizes. This 24/7 laundry store makes everything convenient in the tedious chore of doing your laundry. With excellent service and assistance, you will not be disappointed, and may actually enjoy laundry for once!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/fluff.jpg" %}"/>
+                            <h6>Fluff n Fold Laundry Serivces</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Eastside Laundromat & Dry Cleaner is another place on the list of go-to places to get your chores done in Carnegie Hill. You will be thoroughly impressed by the cleanliness of this establishment, as its known as the most convenient and reasonably priced place around. One of the convenient services that they offer is the ability for you to drop off your clothes and pick them up on your own time.<br><br>
+
+                            Laundry doesn’t have to be a pain. Come to Carnegie Hill and see how!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/met.jpg" %}"/>
+                            <h6>The Metropolitan Museum of Art</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In Carnegie Hill, you are definitely going to want to check out one of the many museums.<br><br>
+
+                            One of these is none other than The Metropolitan Museum of Art, one of the best museums around the world. You will be amazed by the ancient to modern-age work of different countries. Walking through this museum is like walking through time, so hop in that time machine as soon as you can.<br><br>
+
+                            Next up, we have the amazing Guggenheim Museum, where you can admire the brilliant architecture. It is a place to make a whole experience out of and find something new every time you come.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>The Frick Collection is internationally recognized as a premier museum and research center. It is known for its distinguished Old Master paintings and outstanding examples of European sculpture and decorative arts. From Rembrandt to Vermeer, Bellini to Goya, and Gainsborough to Whistler, you will certainly enjoy the amazing artwork that will blow you away<br><br>
+                            The brilliant artwork located within the Carnegie Hill area has to be seen to be believed; once you do, you will wish you came earlier!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Carnegie Hill also offers some beautiful displays of art for your viewing pleasure.<br><br>
+
+                            Gagosian Gallery is one of the best in the area for modern art, producing exhibitions by many legendary artists of the modern art era. Come check it out to view some stunning, timeless artwork.<br><br>
+
+                            Or, another art gallery of choice is Erarta New York, which showcases contemporary art of the New York City area, especially that of Russian artists. With an emphasis on Russian art internationally, Erata seeks to spread the beauty of Russian artwork everywhere.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/gagosian.jpg" %}"/>
+                            <h6>Gagosian Gallery</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Of course, the premier art gallery of the entire neighborhood is The Metropolitan Museum of Art. One of the best museums of the world, The Metropolitan Museum of Art will show you pieces from ancient to modern times, showcasing many different countries in the process. With a chronological viewing, all the pieces are neat and easy to find. Check this off your bucket list the next time you’re in Carnegie Hill.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/outfitters.jpg" %}"/>
+                    <h6>Urban Outfitters</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>When you’re in need of a great shopping day to get rid of some stress, Carnegie Hill has the perfect outlet for you.<br><br>
+
+                    First, one of the coolest stores in the area is Urban Outfitters, a younger and hip brand that stocks many bohemian clothes and household items. Whether you buy art or a new comforter, you will surely be impressed by the amazing selection and style of Urban Outfitters. The best part of Urban Outfitters is that its not that expensive!<br><br>
+
+                    Or, for something more upscale, Chanel may be the store for you. The best location in New York City, this Chanel offers the most bags and costume jewelry around. Chanel completes the experience with a quiet location that provides good service so you can find exactly what you’re looking for.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Regardless of the store you choose, Carnegie Hill will definitely provide the shopping experience you’ve always wanted.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/hchs.jpg" %}"/>
+                            <h6>Hunter College High School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Carnegie Hill houses perhaps the best public high school of New York City, as well as several other elementary schools that are just as good.<br><br>
+
+                            Students flock from all over New York City to attend Hunter College High School, a public school with some of the best college placement rates of the entire district. Students who are able to pass the exams and gain a spot in this prestigious high school often attend the top-ranked universities after this education, ensuring that the level of academics is very high.<br><br>
+
+                            There are also two independent day schools in the Carnegie Hill area, namely Brearley School and Chapin School. The Brearley School is distinguished in its collaborative and community efforts, which they use in order to enrich the lives of the girls at their school. Chapin School is also all-girls, and instead seeks to focus on the intellectual and personal growth of each girl within their system. Both are great options for girls looking for an independently successful organization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The only university located in Carnegie Hill is New York School of Interior Design. This four year university offers undergraduate and graduate programs, which are ranked #3 and #1 in the nation, respectively. Evidently, this is the spot to come to if you are interested in interior design, due to the credentials and academic caliber of the university.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/interior.jpg" %}"/>
+                            <h6>New York School of Interior Design</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/fhitting.jpg" %}"/>
+                            <h6>The Fhitting Room</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Gyms in Carnegie Hill are everywhere, so you will have no problem finding one that suits your workout style.<br><br>
+
+                            Many people in Carnegie Hill enjoy EVF Performance, which is a half Cross Fit, half normal workout facility. In addition to Cross Fit, they have conditioning, strength, and rowing classes for every athletic and fitness level to try out. The coaches there are very professional and friendly, so you will certainly appreciate the atmosphere here.<br><br>
+
+                            Or, for something even more intense, try out  The Fhitting Room, a High Intensity Training fitness studio. They pride themselves on their small class sizes and intimate workout environments, giving you the best chance at fitness success possible. Their high-energy workouts will certainly deliver the body-changing experience that you’re looking for.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, whatever the gym you choose, you will definitely get the exercise you need while staying in Carnegie Hill.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The Lenox Hill Hospital services the entire Upper East Side, including Carnegie Hill. A 652 bed hospital, Lenox Hill Hospital is nationally known as one of the best medical and surgery centers. Through a dedication to excellent patient care for residents and nonresidents alike, Lenox Hill Hospital is the perfect choice for a medical necessity.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/lenoxhospitalues.jpg" %}"/>
+                            <h6>Lenox Hill Hospital</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=carnegie hill, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="googlemapsgenerator.com">googlemapsgenerator.com</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
