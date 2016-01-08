@@ -1,0 +1,350 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Kips Bay is a trapezoid-shaped area that is bordered by Murray Hill, Gramercy Park, and Midtown South.<br><br>
+
+                Known for its serenity and high level of medical care, Kips Bay is often overlooked when discussing New York City neighborhoods-but it shouldn’t be. The neighborhood is actually one of the biggest steals you can find within NYC, as the inexpensive property prices, friendly environment, and impeccable location make this an ideal place to call home.<br><br>
+
+                One thing you definitely won’t have to worry about in Kips Bay is proximity to hospitals. With NYU Langone Medical Center, Bellevue Hospital Center, and the Manhattan VA Hospital all located within the neighborhood, as well as the NYU College of Dentistry and School of Medicine in the area, there are no shortages of doctors to address all of your health needs. And, the medical colleges in the area help bring a vibrancy to the neighborhood, without being too overt.<br><br>
+
+                Another perk of Kips Bay is the Kips Bay AMC, which is favored by residents in the neighborhood. This Kips Bay theatre provides a wonderful source of entertainment without having to veer out of the neighborhood, while still maintaining a quiet atmosphere.<br><br>
+
+                Because of its low activity rates, Kips Bay also has a lower crime rate than the Manhattan average. In addition to the low crime, the low rents are very desirable for young professionals and families in the area, who make up the predominance of the Kips Bay residents. With a median age of 31, Kips Bay has a distinctly young feel, while still maintaining the maturity of a quiet neighborhood.<br><br>
+
+                Therefore, whether you’re excited for the quiet yet central neighborhood, superb hospitals, or even the Kips Bay AMC, Kips Bay will exceed your expectations for a residential neighborhood within New York City.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/marchi.jpg" %}"/>
+                            <h6>Marchi's Restaurant</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>There are many fine dining options to choose from within the small neighborhood of Kips Bay. Located at 31st Street and 2nd Avenue, Marchi’s Restaurant offers old school yet authentic Italian cuisine. It is a family owned and operated legendary restaurant that has been serving New Yorkers since 1930. Once here, you will be well taken care of by attentive servers. The outdoor garden dining area feels amazing when you can enjoy both your favorite dish and the breeze of a beautiful day.<br><br>
+
+                            If you’d like to try a new Japanese restaurant, visit O Ya. After it just opened this summer, O Ya has already made it to the list of Best Restaurants Ranked in Yelp with their freshest sashimi and dedication to perfection. They must be doing something right, so experience it for yourself.<br><br>
+
+                            Vatan Indian Vegetarian is definitely a gem in Kips Bay for both vegetarians and non-vegetarian customers. The Gujarati Thali entrees and Indian style interior decorations might convince you that you are actually in India, or at least enhance your meal.<br><br>
+
+                            At the American restaurant The Cannibal, you can try some unique specialty dishes that are sure to please. While some might consider slow roasted pig head a little intimidating, their exquisite layers of flavors make this dish their specialty.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for some great food selections in Midtown, Kips Bay’s takeout does not disappoint.<br><br>
+
+                            For pasta lovers with big appetites, Bistango is highly recommended. This restaurant provides appetizing Italian cuisine with a gluten free option to suit any dietary need. Spinach ravioli with pesto sauce is their specialty, so make sure to try it!<br><br>
+
+                            Or, check out Oishi Bay if you like the sound of a Japanese restaurant/sushi bar that offers not only traditional sushi rolls and sashimi but also creative original sushi rolls. This exceptional find comes at an affordable price, making it a fantastic option to enjoy for lunch.<br><br>
+
+                            For something exotic, Sahara’s Turkish Cuisine provides a variety of Middle Eastern, Mediterranean, and Turkish cuisine from 11am to 11pm. The falafel here is so authentic that it raises the bar for all other Middle Eastern food in the area.<br><br>
+
+                            If you’re looking for something fast and easy, Patrizia’s Pizza and Pasta will have your take-out orders ready quickly and has a discount of 15% off for NYU students and faculty. Clams, vegetables, cheese plate, calamari, panini, pasta, and pizzas here are both delicious and modestly priced.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/bistango.jpg" %}"/>
+                            <h6>Bistango Restaurant</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/tonic.jpg" %}"/>
+                            <h6>Tonic East</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’d like to enjoy a night out in New York City, come to Kips Bay for a tremendous location and drinks.<br><br>
+
+                            If you’re interested in a sports bar with lovely drinks, Tonic East is the perfect spot for you. Not only can you enjoy your drinks at the bar, but also you can lay back and cherish a cool breeze and an amazing view of Empire State Building on its roof deck.<br><br>
+
+                            Numerous types of beers and free freshly made popcorn are provided in Waterfront Ale House. It has been serving exceptional craft beers for more than two decades with a exceptional vibe and location.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, check out Paddy Reilly’s Music Bar, a fabulous Irish pub that offers live music usually played by fun bands. Complete with a decent beer list, this traditional well-furnished places provides amazing ambiance and a good price by Manhattan standards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Or, if you’d like to up it a notch with the partying, check out one of the lively clubs in Kips Bay.<br><br>
+
+                            The Hill probably has any kind of drinks that you can possibly want, and happy hour specials throughout the week. The upstairs area is a more private place that you can book for all types of parties. Want to get tipsy and enjoy yourself in a great ambiance? The Hill is the place to go.<br><br>
+
+                            Although there are not many clubs located in the Kips Bay area, the ones that you can find will definitely be high quality and live up to your expectations./p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/thehill.jpg" %}"/>
+                            <h6>The Hill</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/fairway.jpg" %}"/>
+                            <h6>Fairway Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Kips Bay is definitely one of the most livable neighborhoods in Manhattan and as such, it is easy to find an awesome grocery store in the area.<br><br>
+
+                            First, Fairway Market has a great deal of the basics and freshest fruits and vegetables. They also offer assorted bakeries with gluten free and organic options. Also, they have weekly deals of different products, which is perfect for budgeting.<br><br>
+
+                            If you are looking for a place for vegetarian grocery shopping, Future Village Farm should be a lovely choice. Not only is a wide variety of vegetarian choices featured here, but also a good selection of fresh vegetables, fruits, frozen food, deli and salads.<br><br>
+
+                            At 32nd Street and 3rd Avenue is another recommended grocery shop: Gristedes, a supermarket chain that has been feeding New Yorkers for more than 100 years. Their assortment includes fresh meat, produce, dairy products, bakeries, frozen foods, gourmet foods, and nonfood items for daily use.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>There are many dry cleaning and laundry services offered in the Kips Bay area should the need arise.<br><br>
+
+                            On 3rd Avenue between 28th Street and 29th Street, Ace Luck of P & N provides dry cleaning, pickup and drop off, and self-service with 24/7 hours availability. Most of the time, they have same-day turnaround, including pick up and drop off. Plus, the accommodating staff will make your laundry experience even better.<br><br>
+
+                            East 29 St Laundry is of course located on East 29st, between 2nd Avenue and 3rd Avenue. Dry cleaning and pick up/drop off service are also provided here. And, this laundry experience is very excellent due to the personable service of the staff.<br><br>
+
+                            Liox Cleaners does not do their laundry on site, so there are no washing machines in the shop. However, they still offer dry cleaning, pickup and drop off, and sewing & alterations. Their website services make having laundry done so much easier; you can register an account with them and place orders & schedule pick up/drop off time online!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/comedy.jpg" %}"/>
+                            <h6>New York Comedy Club</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Kips Bay houses the longest-running production house in continuous operation in New York City called Liberty Studios. Founded in 1963, it now produces films, videos, advertising, and e-commerce productions. Liberty Studios has received both Emmy and Academy Award nominations.<br><br>
+
+                            New York Comedy Club features different comedians from time to time and sometimes during the weekend two shows are hosted continuously by different comedians. Not only does this comedy club feature hilarious comedians, but also an intimate atmosphere that makes comedian-audience interaction possible. Last but not least, soft drinks, alcoholic drinks, and finger-licking snacks are available for your enjoyment.<br><br>
+
+                            For a live stage performance, Richmond Shepard Theatre is another favorable choice. The theatre usually performs plays, but once in a while live music performances are also held here. It is one of the top-notch theaters in the city due to its small setting that provides intimacy between performers and audience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Kips Bay also features many art galleries to explore on a rainy day or in your free time.<br><br>
+
+                            For a technologically advanced viewing experience, try out Holographic Studios, located on East 26th Street between 2nd Avenue and 3rd Avenue. The gallery is famous for its hologram displays throughout the premises. Established in 1979, it is the world’s oldest gallery of holography and it sells amazing holograms, which make cool and amusing gifts to admire.<br><br>
+
+                            If you are interested in watching how paintings are beautifully framed, E Mayan Studio is highly recommended. Paintings from 19th and 20th century to contemporary scenes are framed here. Besides a great selection of paintings, sketches and photographic work are also on display in the art gallery, leaving you with a variety of options to view.<br><br>
+
+                            Therefore, Kips Bay offers many art galleries to choose from for amazing exhibitions of different varieties.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/holo.jpg" %}"/>
+                            <h6>Holographic Studios</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/housing.jpg" %}"/>
+                    <h6>Housing Works</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re looking for a great shopping experience in the middle of New York City, Kips Bay is your stop.<br><br>
+
+                    If you like thrift store shopping, Housing Works is a wonderful option on 23rd Street between 3rd Avenue and Lexington Avenue. It sells almost everything you could possibly imagine, ranging from accessories, artwork, and jewelry to clothes and shoes. The coolest part of the store is that you can place bids in auctions for assorted intriguing goods on their website.<br><br>
+
+                    If you are looking for department stores in Kips Bay, you should check out DoGoodBuyUs on 30th Street between 1st Avenue and 2nd Avenue. You can probably find everything you need here in this mid-sized traditional department store.<br><br>
+
+                    Underneath It All is definitely a must because who doesn’t like accessories? On 3rd Avenue between 29th Street and 28th Street, Underneath It All has everything the world of accessories has to offer, such as hats, wigs, necklaces, earrings, and rings.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>For a great cosmetics store that provides all types of products, visit Ramy Cosmetics. At the store, they offer the Ramy Beauty Therapy Studio, where they can fix your eyebrows, apply makeup, and teach you how to apply makeup on your own. Following the philosophy of the founder Ramy: Minimum makeup, Maximum impact! the studio will teach you how to use the least makeup to look stunning.  </p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/churchill.jpg" %}"/>
+                            <h6>Churchill School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Bellevue Educare Child Care Center has a great child-care service focusing on adult-child interaction that is believed to be beneficial for children’s development in early stages, as well as elementary school classes that feature intestinal-teaching. It also holds events like Picture Day twice every year (once in the spring and once in the fall).<br><br>
+
+                            For families with children of 2-4 years old, Acorn School is one of the best pre-school candidates as a non-profit organization that has been serving New Yorkers since 1966 with quality childhood education.<br><br>
+
+                            Located at the heart of Kips Bay, Churchill School, a K-12 coeducational day school, has prepared countless students for college. Academics are not the only focus of this school; perseverance, resilience, and the importance of self-awareness and self-advocacy are also instilled in the daily life of students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Located at the very southeastern corner of Kips Bay is Baruch College, which contains more than 17,000 ethnically diverse students. In 2015, Baruch College is within the top 25 for value according to GraduatePrograms.com, and Colleges.com ranks Baruch College the top financial school in New York, as well as fourth in the nation. Obviously, Baruch College offers a great level of education that is very desirable.<br><br>
+
+                            In addition, the NYU College of Dentistry is located on the West Side of 1st Avenue in Kips Bay. With over 1,800 students, this university site definitely has a presence in the Kips Bay area. NYU College of Dentistry is ranked No. 6 in the nation according to USDentalSchools.com, making this college a great choice for future dentists.<br><br>
+
+                            Walking along the 1st Avenue in Kips Bay, you will probably feel a sense of academia and groups of NYU students all the time.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/baruch.jpg" %}"/>
+                            <h6>CUNY Baruch College</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/hype.jpg" %}"/>
+                            <h6>Hype Gym</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Located at the heart of Kips Bay, MH Fitness not only provides assorted types of equipment, but also one-on-one sessions with clear goals. You can purchase the Buddy Package, a private training service provided for individuals who have similar goals and wish to reduce costs by partnering with one another.<br><br>
+
+                            Or, check out Hype Gym, which has several special offers including a Free 3 Day Pass that gives you unlimited access for 3 days and a free personal training assessment when you purchase a membership. Independent personal trainers, personal training services, and specialty semi-private training service are also available. With 7,500 square feet of state-of-the-art cardio and strength equipment, your exercise experience could be amazing.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Elite Health provides a quality personal training service, as well as nutritional services. This facility also offers other specialty treatments related to hormone therapy and weight loss.<br><br>
+                            Regardless of the gym you choose, the quality of the Kips Bay facilities is unparalleled.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Kips Bay has many hospitals in the area should the need arise, with a top quality of service and hospital.<br><br>
+
+                            For a top rated hospital right in Kips Bay, visit NYU Langone Medical Center. The medical center has numerous specialties ranging from airway, breathing, and lung conditions to kidney and liver conditions. As one of the nation’s premier academic medical centers, Langone scored first for overall patient safety and quality among leading academic medical centers.<br><br>
+
+                            Bellevue Hospital Center is the oldest continuously operating hospital in America. They trace their roots back to 1736 when a six-bed infirmary opened on the second floor of the New York City Almshouse. Often referred to as a national treasure, Bellevue defines the very best traditions of public medicine as a public service vital to the wellbeing of our civil society.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nyulangone.jpg" %}"/>
+                            <h6>NYU Langone Hospital</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another hospital that lies on the East side of 1st Avenue is the Manhattan VA Hospital. It has services in acute medicine, surgery, acute psychiatry, neurology, and rehabilitation medicine. As for other types of conditions, outpatient service is available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/vincent.jpg" %}"/>
+                    <h6>Vincent F. Albano, Jr. Playground</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>At the northwestern corner of 29th Street and 2nd Avenue, Vincent F. Albano, Jr. Playground is a fenced playground open during the daytime with a large playground set for children and benches & tables for adults. Its welcoming and intimate environment is perfect for a play-date among kids, or for you to relax and enjoy a beautiful day.<br><br>
+
+                    Perhaps you’d like to visit Bellevue South Park, which is located along the west side of Mt. Carmel Place. This park is a beloved recreational destination for both children and adults, especially with volleyball and basketball courts available during the day time. A sculpture named Skaggerak displayed in Bellevue South Park is a nice addition to the community and the surrounding area.<br><br>
+
+                    Located at North Side of 23rd Street is Asser Levy Recreation Center, including Asser Levy Playground, Asser Levy Pool, and Asser Levy Recreation Center. Visitors can play ping pong, badminton, chess, soccer, football, tee-ball, as well as exercise, jog, practice yoga or simply sit in the shaded bench to unwind. There is an indoor pool reserved for members only, but the 120-foot wide outdoor pool is open to the public for free during the summer, making this a children’s hotspot during the warmer months.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=kips bay, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="googlemapsgenerator.com">googlemapsgenerator.com</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}

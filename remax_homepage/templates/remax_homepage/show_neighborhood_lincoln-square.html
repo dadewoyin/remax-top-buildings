@@ -1,0 +1,338 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                If you’re interested in living in an area filled with culture and fine dining, check out Lincoln Square. It is home to many cultural centers and theaters, as well as excellent restaurants within the Upper West Side. Now transformed as a new cultural hub, Lincoln Square attracts many tourists and residents alike. With Central Park, Columbus Circle, and the infamous Lincoln Center as highlights, this neighborhood surely services all your needs and wants.<br><br>
+
+                While in Lincoln Square, you’ll be near Lincoln Center for the Performing Arts, well known all over the world for the most sophisticated forms of art around. You can take a seat at the fountain in the center and people-watch in the mornings with your morning coffee, or just stroll past with friends to marvel at its glowing beauty at night. The Lincoln Square cinema is also a highlight for many residents to relax and enjoy.<br><br>
+
+                There are great shopping choices as well in Lincoln Square, such as the shops at Columbus Circle and The Shopping Center Group. After a tiring shopping day, you’ve probably worked up an appetite to sit at one of the many fine dining options. Good thing you’re in Lincoln Square, because the Lincoln Square restaurants are tough to beat. With Nougatine Terrace at Jean-Georges or Panevino Restaurant near Lincoln Center, your cravings will be satisfied. After a satisfying meal, you can wash it down with a delicious cocktail at some of the best bars and clubs, such as Bar Rique and Henry, a liquor bar.<br><br>
+
+                Regardless of whether you go shopping, visit Lincoln Center, or watch some Lincoln Square cinema, Lincoln Square will definitely provide you with an amazing experience.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/jean.jpg" %}"/>
+                            <h6>Jean-Georges</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re in the mood for a more refined setting than your living room, Lincoln Square has some wonderful fine dining restaurants to offer.<br><br>
+
+                            First, come on down to Asiate. It features a modern American cuisine with sophisticated interpretations of traditional fare. Its panoramic city views also add to the elegant setting. You can start off your night with the snapper sashimi and end it with branzino, along with winner wine.<br><br>
+
+                            You can walk down to Central Park West for eclectic new French cuisine overlooking the infamous Central Park. At Jean-Georges, you will experience a one-of-a-kind atmosphere, along with unforgettable tastings. In the summer, you can try the champagne mango salad or if you’re in the mood for something heartier, take a bite of the delicious Cedric’s grilled beef tenderloin. You taste buds will be on fire, guaranteed.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For an unsurpassed gourmet experience, try Petrossian. It serves a French-influenced contemporary menu featuring caviar, smoked fish and foie gras delicacies that are known around the world. The dining room displays crystal wall sconces and bronze sculptures, making your experience unforgettable.<br><br>
+
+                            If you’re looking to try some amazing award-winning dishes, nothing compares to Rosa Mexicano. It means Mexican Pink, which reflects the individualistic Mexican cuisine. You’ll be dining in a stylish and festive atmosphere, sipping on the unbeatable Pomegranate Margaritas, while eating the traditional guacamole prepared tableside.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Tired after a long day at work and looking for a mouth-watering meal? No worries, Lincoln Square provides great takeout options.<br><br>
+
+                            Shun Lee West offers eclectic Chinese cuisine that’ll make you want more to call back for more. What makes their food so special is the fact that it shines a light on an unconventional Oriental fare, food that you will definitely enjoy.<br><br>
+
+                            If you’re searching for a fabulous Italian meal, I recommend you call up Serafina Upper West Side. It has world-class pizza, pasta, and unbeatable wine from all around the world.<br><br>
+
+                            Landmarc calls out to all those French and Italian lovers. Their menu consists of savory blended cuisines, along with an award-winning wine list. You won’t be disappointed with their delicious dishes.<br><br>
+
+                            If Classic American dining is more your style, Old John’s Luncheonette is your destination. Order their delicious burgers, salads and entrees straight to your door. Their dishes will ignite your taste buds, especially their excellent chicken pot pie and rice pudding!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/shunlee.jpg" %}"/>
+                            <h6>Shun Lee West</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/sud.jpg" %}"/>
+                            <h6>Boulud SUD</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>After dinner, one usually likes to hit up a bar with good friends and family to have a drink or two..or three. This is definitely the case in Lincoln Square, where there are a ton of options for all kinds of night environments.<br><br>
+
+                            For a laid-back atmosphere, try out Lincoln Park for a friendly environment. You can start off park skins or wild wings, and wash it down with one of your favorite draft beers such as a Stella Artois.<br><br>
+
+                            For a great night guaranteed, come on down to Dakota Bar, where every night is a party. In the heart of the Upper West Side, Dakota Bar provides an incredible wine list for all the wine lovers and tasty cocktails. Some of our favorite cocktails include the UWS Negroni and the Apropos Spritzer.<br><br>
+
+                            If you’re someone who prefers a more traditional vibe, try Barcibo Enoteca. They offer an incredible wine list of 40 glasses and 130 bottles from all over Italy. If you enjoy beer more try La Forza, or if you’re in the mood for classic white wine, purchase the Chardonnay St. Michel Eppan for a magical night.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>No one does Mediterranean flare better than Boulud Sud. They have an incredible bar & lounge, with a renowned cocktail list, dessert wines, gin, and wines. For a Mediterranean cocktail, try the Cantando Lupo, or if you’re a lover of gin, try Santiago’s Cup for a taste of the beach.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a more vibrant atmosphere to party the night away, Lincoln Square does not skimp on the amount of clubs in the area.<br><br>
+
+                            If you’re a music lover, especially fond of classical music, bring your friends to Dizzy’s Club Coca-Cola. Live jazz is what sets the mood in this cozy Upper West Side club. You can have a fabulous dinner with tasty drinks, all while listening to your favorite jazz artists.<br><br>
+
+                            An intimate basement jazz club named Iridium could be another possible destination to end your night at. Everything is influenced by Les Paul, the father of the eclectic guitar. The vibe is incredible, with guest stars of iconic guitarists such as Jeff Beck and Steve Miller. You can listen, while eating and drinking fine foods and cocktails, respectively.<br><br>
+
+                            If you want views of the action on Columbus Circle and Central Park, stay the night at Stone Rose Lounge. It’s a swanky modern lounge offering upscale cocktails and a terrific view. Start off with the delicious Grapefruit Basil Martini and continue your night with the Girl Next Door. But be careful, because your tab will be greater than you think by the end of the night.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/dizzy.jpg" %}"/>
+                            <h6>Dizzy's Club Coca-Cola</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/wholefoodslincoln.jpg" %}"/>
+                            <h6>Whole Foods Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In search of great food in Lincoln Square for your kitchen, look no further than Whole Foods Market. This eco-minded chain with natural & organic grocery items, housewares and other products provides you with a lot of variety and essential ingredients for your favorite home-cooked meals.<br><br>
+
+                            For the healthiest route, go to Trader Joe’s for your most signature items. It’s one of the most well-known grocery chains that offers all items including produce, dairy and wine & beer. It has the best deals, and this location grants lots of space to shop freely.<br><br>
+
+                            For a warehouse-style chain supermarket, head to Western Beef Supermarket. It holds all meats, seafood & dairy you could possibly want. It also has a very large bakery and deli section with lots of selection. For exceptional prices and variety, come check out this grocery store in Lincoln Square.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Looking for the best laundry service of Lincoln Square and possibly all of New York City? Look no further than Lincoln Terrace Cleaners. It has more than 40 years of experience in the garment care industry. It is a full-service dry cleaning and laundry company, committed to providing customers with exceptional quality and reliability. They deal with retail and corporate clients to theaters, hotels and wholesales to offer the best service and value.<br><br>
+
+                            For excellent laundry services, head to 102 West Laundromat Corporation. The employees handle your laundry with care and concern. The place is well kept and clean, with all the staff being very friendly and polite. You get your clothes back fast and they do a very thorough job.<br><br>
+
+                            If you want fast and friendly service, Excellent Cleaners can take care of you. The customer service is unbeatable, as well as the quality of their work. If you’re busy or in a rush, try their new drop-off laundries that work like a charm. You’ll always be satisfied with their work.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/102west.jpg" %}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/mitzi.jpg" %}"/>
+                            <h6>Mitzi E Newhouse Theater</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>YIn the mood for something cultural? Lincoln Square offers you the perfect destinations. With Lincoln Center in its center, you’ll never run out of things to see. The Mitzi E Newhouse Theater is an established theater that shows plays and musicals that are renowned and all-time favorites to many attendees.<br><br>
+
+                            For classical music lovers, there’s no better place to appreciate music than the world-famous Metropolitan Opera. It’s the world’s largest classical music organization in North America. It presents 27 different operas each year, with up to 7 performances of 4 different works each week. If you haven’t yet bought your tickets to an upcoming show, I highly encourage you to see for yourself what the hype is all about.<br><br>
+
+                            Interested in arts and design? Come check out The Museum of Arts and Design! Its exhibitions and educational programs celebrate the creative process of crafted works that enhance contemporary life. With its new location at 2 Columbus Circle, with more than 54,000 square feet, the Museum has endless space to exhibit incredible art.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Folk art also attracts lots of interested people. At the American Folk Art Museum, lovers of folk art can appreciate all types of creative expressions of contemporary artists from native and foreign lands. Its collection holds more than 7,000 objects from the 18th century to the present.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>To stroll and view magnificent Japanese art, head to Scholten Japanese Art! It offers beautiful galleries with exhibitions devoted to images of nature, landscape, and classical Western idealization. They’re very unique pieces of work that deserve a visit!<br><br>
+
+                            For more distinctive art, pay a visit to Shan Shui Gallery of Fine Art. This Chinese influenced gallery provides paintings that are abstract and of animals, birds and flowers, calligraphy, figural, and landscapes.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/scholten.jpg" %}"/>
+                            <h6>Scholten Japanese Art</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/c21.jpg" %}"/>
+                    <h6>Century 21 Department Store</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re looking for some of the best shopping in the city, Lincoln Square offers it for you. Just steps away is Columbus Circle, well-known for its location across from Central Park and its elegant shops. The Shops at Columbus Circle have everything you’re looking for. It has luxurious shops ranging from A to Z such as Armani Exchange, Bebe, Coach, J.Crew, Sephora, and TUMI, to just name a few. There is much variety including jewelry, bakeries, fashion, eyewear, health and beauty, things for the home, and electronics. The mall is decorated with sophistication and class, so your experience shopping is effortless.<br><br>
+
+                    For excellent and quality service, head on over to Broadway, where the brand-name Zara is located. Zara is known to be associated for those with refined taste. Whether you’re going out on a date with your significant other or just hitting the park for a picnic with close friends, Zara will have the right outfit for you.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Wondering where to find great deals for a great price? Search no more. Century 21 Department Store is your ideal destination. Who would turn down lower prices for designer brands? All items are up to 65% off retail, 100% of the time! That’s a deal you can never pass up.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/blessed.jpg" %}"/>
+                            <h6>School of the Blessed Sacrament</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The schools located in Lincoln Square are top notch, ensuring that your children will receive a quality education right within your neighborhood.<br><br>
+
+                            If you’re looking to enroll your kids in a school with traditions and morals, go to the School of the Blessed Sacrament. It’s a Catholic elementary school, with grades from Pre-K through eighth grade. Their parish, families, faculty and staff are committed to educating your children about the heart and mind, in a faith-filled environment. The education they gain will foster Christian leadership, individual responsibility and service in their community.<br><br>
+
+                            If perchance you would like to go the public school route, enroll your children in the Professional Children’s School. The grades range from 6-12, so faculty is committed to providing your child with the best education and tools needed to enter high school. It’s a small class size, with individualized attention and focus on specialized career paths children might be interested in such as ballet, or music.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>One of the most prestigious performing arts schools in the world, The Julliard School, is located in the famous Lincoln Center. This is where the best of the best in performing arts, theater, music, dance and writing come together to further educate themselves for the end goal of landing a prestigious role on Broadway or The Metropolitan Opera.<br><br>
+
+                            If you’re more of a math and science type of person, the New York Institute of Technology could be a great match for you. Offering over 90 degree programs, including undergraduate, graduate and professional degrees in more than 50 fields of study, NYIT is committed to providing you with a career-oriented professional education.<br><br>
+
+                            If you excel in academia, you can apply for the Macaulay Honors College at CUNY. It’s an extremely prestigious group of highly educated individuals that want to better themselves and their community. If accepted, you get granted full-tuition to the CUNY of your choice. What’s better than going to college for free, and free perks?</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/julliard.jpg" %}"/>
+                            <h6>Julliard School</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/jcc.jpg" %}"/>
+                            <h6>JCC Manhattan</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Tired of unequipped, unclean gyms? Welcome to the new era of Sports Clubs in Lincoln Square. Equinox allows you ease and comfort when you work out. This is a state-of-the-art fitness center, with multiple levels, all with sweeping views of the NYC skyline. Equinox offers you not just equipment, but guidance and training with effective classes with real professionals.<br><br>
+
+                            For a very effective workout with excellent results, start your new membership at Bootcamp Republic. For high-quality consistency, stick with Bootcamp Republic for the fastest, most effective workouts. You’ll never want to try out another place again.<br><br>
+
+                            For overall health and wellness, enroll in JCC Manhattan. They have specialized fitness classes, member groups, meditation and exercises for Parkinson’s and cancer care. The purpose is to help you achieve optimal, all-around health.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re ever in need of urgent care while staying in Lincoln Square, head to Urgent Care Manhattan. They’re well known for immediate assistance and excellent treatment. You can get great care for a short wait and low cost. It’s a better alternative than a visit to a hospital emergency room.<br><br>
+
+                            And, Mount Sinai Roosevelt has been awarded a prestigious award for its excellent care and use of information technology. It has excellent emergency services and care you deserve. It also has top doctors and services in anything you may need.<br><br>
+
+                            For world class clinical healthcare, do not hesitate to go to Mount Sinai St. Luke’s. Known for their compassion and sensitivity, their top of the line doctors commit to offering only the best quality and safety. For emergency surgeries or visits, Mount Sinai St. Luke’s is the perfect place you should go to.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/sinai.jpg" %}"/>
+                            <h6>Mount Sinai Roosevelt</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/centralparklincoln.jpg" %}"/>
+                    <h6>Central Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>One of the largest parks in the world, Central Park, is conveniently located near Lincoln Square. Central Park West, to be specific, is closest to this neighborhood. It stretches about 35 city blocks long, filled with fantastic attractions such as The Lake, The Great Lawn and Strawberry fields to name a few. If you’re looking for a stroll in the park, or a wonderful, peaceful picnic on The Great Lawn, Central Park West is your destination.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=lincoln square, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ultimatewebtraffic.com/">buy website traffic</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
