@@ -1,0 +1,340 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                The Financial District is a neighborhood located at the southern tip of Manhattan, which comprises of the offices and headquarters of many major financial institutions, including the New York Stock Exchange and the Federal Reserve Bank of New York.<br><br>
+                Anchored by Wall Street in the Manhattan Financial District, New York City has been called both the most economically powerful city and the leading financial center of the world, and the New York Stock Exchange is the world’s largest stock exchange by total market capitalization. Therefore, the Financial District is very powerful in the business world, and is well known for these attributes.<br><br>
+                However, the Financial District also has many other characteristics that are often overlooked, such as its convenient location, large number of bars and restaurants, as well as hotels for vacationing. Even though the Financial District bars are often quiet, they make for a great venue to relax and enjoy a peaceful night by yourself or with a few friends. The large volume of workers by day have increased the demand for high-quality restaurants, which still operate in the company of other residents after the business class leaves. Therefore, Financial District makes a terrific spot to marvel at the bustle by day and peaceful venues by night.<br><br>
+
+                In terms of real estate, towering office complexes meld with old world conversions and new luxurious residential constructions in the Financial District (FiDi). The transportation to Financial District is very convenient, as many roads and transport paths in New York City begin or end here. So, if you’re interested in a tremendous working location that also functions as an amazing neighborhood by night, check out a property in the Financial District.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/capitalgrille.jpg" %}"/>
+                            <h6>The Capital Grille</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Whether you are looking for a quality French restaurant or are more interested in American cuisine, Financial District definitely has the ideal spot for you.<br><br>
+
+                            Bustling and lively, Brasserie Les Halles is a typical Parisian brasserie that serves fresh and simple dishes of France’s everyday cuisine. They provide various meat and seafood options for you to enjoy, as well as amazing truffle french fries.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you are looking for a desirable location for a business meeting or high class gathering,  Delmonico’s may be perfect for you. As one of the oldest restaurants still in operation, Delmonico’s offers an exquisite variety of dishes in their classic dining room. Their signature dishes include steak, Baked Alaska, Eggs Benedict, Lobster Newberg, and Chicken a la Keene.<br><br>
+
+                            If you love meat and seafood, The Capital Grille is a good choice for you. The Capital Grille is a fine-dining restaurant that supplies dry aged steaks, fresh seafood, an award-winning wine list, and professional service in an atmosphere of relaxed elegance. Come try out their critically acclaimed food today!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you love seafood and are looking for a quick lunch, Luke’s Lobster is the perfect choice for you. Their speciality is a deliciously fresh lobster roll that allows you to truly taste Maine at its best. Luke’s Lobster purchases only the finest ingredients, as each bag they purchase contains a quarter-pound of pure lobster meat to make one lobster roll.<br><br>
+
+                            For an exceptional experience in Asian food, visit Bennie’s Thai Cafe. The casual atmosphere is a wonderful place to stop and relax at while enjoying some tasty food. Try the sweet sausage and the grilled beef with Thai chili sauce, both of which are bursting with amazing flavors. This restaurant is sure to have a great-tasting dish that you will like.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/lukeslobster.jpg" %}"/>
+                            <h6>Luke's Lobster</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or if you prefer European style food, check out Bridge Cafe, which specializes in an eclectic menu that maintains global influences. They use only the best sustainable products, especially for their meat and seafood ingredients. They offer comfort food in an old world New York setting, which is a lovely way to experience the neighborhood.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/chantelle.jpg" %}"/>
+                            <h6>Hotel Chantelle Rooftop</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a fantastic venue to enjoy your night at, the Financial District has some lovely options for you.<br><br>
+
+                            One of the greatest Financial District bars is Hotel Chantelle Rooftop. Set up with beautiful French decor, this is a fabulous spot to relax as you sit on a rooftop, listen to the jazz band play, and savor a brioche. Their venue space also hosts various events throughout the year, so you can book this space for a more intimate setting.<br><br>
+
+                            Jeremy’s Ale House is known worldwide for its fresh seafood and ice cold quarts of beer. When in NYC try their fried calamari or fresh shrimp, which can be cooked 8 different ways. These dishes will definitely do the trick as you enjoy some beer and the fresh ambiance.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Specializing in seasonal flavors, Apotheke crafts its cocktails with fresh, daily made ingredients by using local and organic produce. They strive to make cocktails that target your weaker areas, much like a real apothecary. From stress relievers to painkillers to aphrodisiacs, Apotheke has a prescription cocktail to suit your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Looking for a good club to relax at after an intense day of working in the Financial District? Iron Horse NYC is a great club that can satisfy your needs. I can assure you that you’ll definitely love the party, as there’s never a dull moment. With a pool table and photo booth for added fun, there are endless activities to enjoy at Iron Horse.<br><br>
+
+                            A respite from the boisterous pubs on Stone Street, Vintry offers a candlelit atmosphere and a sprawling wine and whiskey list. For those who don’t want to drink their whiskey straight up, the cocktail menu employs plenty of variations. The elegance and class of this venue are unparalleled, so you will surely appreciate a night of dashing style.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/vintry.jpg" %}"/>
+                            <h6>Vintry</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Modern and sleek, Bar Seven Five doesn’t have an actual bar, rather, moveable â€œpodsâ€ bring the bartender and drink station to you. For all of its future-forward design, the cocktail menu skews old school.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/wholefoodsfinancial.jpg" %}"/>
+                            <h6>Whole Foods Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Looking for a wonderful grocery store in Manhattan’s Financial District? There is no place better than the Whole Foods Market. This eco-minded chain supplies natural & organic grocery items, housewares, and other products that offer you a variety of ingredients for your favorite home-cooked meals.<br><br>
+
+                            Prime Essentials is a unique and modern independent pharmacy located near Manhattan Financial District. They are equipped with a fully stocked pharmacy, and the front of the store displays a superstore setting. Prime Essentials creates a one-stop shopping experience for customers with the ability to buy groceries, household products, kitchenware, appliances, pet products, stationery, health & beauty aids, electronics, and even more. This is a great location to check out if you are looking to complete all of your shopping at one location.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, you should definitely check out Zeytuna, which has one of the widest selections of breakfast, lunch, and dinner options in the city. Whether pancakes, salads, sushi, or pizza strike your fancy, you will always know that Zaytuna can provide you a wide selection of your favorite dishes. Conveniently located in the heart of the Financial District, Zeytuna is a perfect choice for downtown diners looking to get their fill of impeccable food at reasonable prices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The laundromats in Financial District mirror the pace of the neighborhood: many offer fast turnaround with delivery options.<br><br>
+
+                            First, check out Alba Dry Cleaner & Tailor if you need a laundromat that you can turn to any day of the week. With late hours and a high quality service, you can definitely trust this store with all of your laundry needs. They will even send you a confirmation email to notify you when your laundry is ready!<br><br>
+
+                            Another laundromat that prides itself on organic cleaning agents is New Fresh Cleaners. They provide pick up and delivery for dry cleaning, all with competitive pricing and amazing quality. The overall attributes of this business cannot be beaten.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/albadry.jpg" %}"/>
+                            <h6>Alba Dry Cleaner & Tailor</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, Mr. Rafael’s Cleaners & Tailor is a consistently great selection that provides one of the fastest services in the area, as well as one of the cheapest. With discounts for your dissatisfaction, their promise of perfection will certainly yield the excellent clean you are looking for.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/911memorial.jpg" %}"/>
+                            <h6>9/11 Memorial Museum</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Even though the events of 9/11 were very tragic, perhaps you will take solace in the 9/11 Memorial Museum which seeks to memorialize the people who perished during this time. The museum itself has a beautiful layout, complete with video, photo, and voicemail compilations from the event. Whether you come to mourn or learn about what took place, visiting the 9/11 Museum while in the Financial District is a must.<br><br>
+
+
+                            Or, perhaps you would like to view the scene of where the financial transactions actually take place-Wall Street itself. Noticeable just by the busy financial executives crowding the streets of the area, Wall Street contains the New York Stock Exchange, Trump Towers, Charging Bull, and Trinity Church. There is definitely a lot to see here if you choose to walk around this iconic and bustling neighborhood. </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Because of the high end locale,  World Trade Gallery is in high demand for its framing and art gallery services. With a great selection of artwork in the store, including engravings, maps, and posters, as well as framing using materials from wood and metal to glass and hand made gold, World Trade Gallery definitely procures the highest quality of products that you could imagine.<br><br>
+
+                            Even though there are other framing services in the area, the top choice is clearly World Trade Gallery for framing or finding a fantastic piece of artwork.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/worldtradegallery.jpg" %}"/>
+                            <h6>World Trade Gallery</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/century21.jpg" %}"/>
+                    <h6>Century 21</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>While most of the residents are busy working in the Financial District, they are missing out on some amazing shopping opportunities.<br><br>
+
+                    One of the well-known department stores of the Financial District is Century 21. You can find clothing by the best designers of New York City at this store, all for a fraction of the price of a regular name-brand design. With a constantly updated selection and a dedication to fine service, Century 21 has all the qualities necessary for a great shopping experience.<br><br>
+
+                    If you’re interested in clothing of even higher quality and are willing to pay a larger sum, check out BEAU. This brand makes custom clothing from Holland & Sherry fabrics, all for under $1,000 per suit. Many customers love the amazing feel of the clothing, as well as its wearability. If this sounds like a style you may enjoy, have a suit made for you at Beau</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, perhaps you are looking for some fine jewelry. If so, then DeNatale is the perfect find for you to revel in. Each piece here means more than just jewels and metal, as DeNatale Jewelers seeks to provide you with a fashionable piece as well as a collectible to remember the amazing moments of your life.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/stuyfinancial.jpg" %}"/>
+                            <h6>Stuyvesant High School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The schools that are located within the Financial District are very high caliber, ensuring that your children receive a top education within this neighborhood.<br><br>
+
+                            First, check out Stuyvesant High School, a ten story building that is renowned around New York City for its excellent college placement. While the workload is heavy and challenging, the teachers liven up the experience and seek to enrich the knowledge of the students. There are over 100 different clubs for students to participate in, ensuring that they will enjoy their high school education and college years to come.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, Millennium High School is another great high school choice if your student is more interested in liberal arts academics. This education prepares graduates for their college of choice, and helps them to set meaningful goals to frame their future. With excellent leadership and teaching staff, Millennium High School is a clear opportunity for a superb education.<br><br>
+
+                            Another option for your children is Lehman Manhattan Preparatory School, a school that focuses on the International Baccalaureate Diploma Program. As the only independent school in New York City, the students are connected to other schools around the world for a comprehensive international learning experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Within the Financial District also lies two universities that hold a high standard of education.<br><br>
+
+                            One of the options for a university within the Financial District is Pace University.The great location is complemented by an excellent education from caring professors, as well as a career services program that ensures you will be ready for real world opportunities. The networking and entrepreneurship positions here are top notch, so make sure to keep Pace in mind for a university.<br><br>
+
+                            Another university in the area, St. John’s University, utilizes the philosophy of student involvement to prepare them for global opportunities past the college level. Students come from close to 120 countries in order to attend this university, due to its standout academics, internship opportunities, and study abroad capabilities. Be sure to look further into applying here if you want to stay in the Financial District for college.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pace.jpg" %}"/>
+                            <h6>Pace University</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/equinox.jpg" %}"/>
+                            <h6>Equinox</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Even though the Financial District is always moving, residents still make time to keep up with their fitness. Therefore, there are many great locations for you to try out today!<br><br>
+
+                            One of the premier fitness facilities of New York City is Equinox. This club is renowned for creating an occasion that combines fitness with luxury, to make working out an enjoyable experience that members will want to return to. With classes at all levels, you can receive the training and personal attention that you need to attain results.<br><br>
+
+                            If personal training is more your style, then hire one of the trainers at Just Train. They prioritize your health and well-being over anything else, and will work right alongside you in order to realize the results you are looking for. Just Train uses the most recent technology, as they currently operate inBody, a machine that breaks down your body composition into everyday terms.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Complete Body is a fitness and wellness facility featuring 30,000 square feet of equipment and services in an elegant and inviting environment. Housing a full fitness center, juice bar, spin studio, physical therapy facility, professional rock-climbing wall, and expanded saunas & steam rooms, their facility provides an atmosphere that encourages and rewards dedication. Come check out this upscale location today to start achieving your goals!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The many hospitals in the Financial District area make living here a very viable and safe option.<br><br>
+
+                            One of the best medical practices in the Financial District area is CURE Urgent Care. Complete with top-notch facilities, this center specializes in the immediate treatment of Financial District residents. CURE Urgent Care also has extended hours, so they will be able to take care of you at any time.<br><br>
+
+                            Another urgent care facility located in the Financial District is Medhattan, which offers services ranging from physicals to pediatrics to injury treatment centers. Their reasonable prices and long hours make Medhattan a convenient choice for any Financial District resident, so check out this facility in a time of need.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/urgentcare.jpg" %}"/>
+                            <h6>CURE Urgent Care</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re looking for an immediate consultation without an appointment or the emergency room hassle, then MedRite Urgent Care Center is the perfect choice for you. Their walk-in services include treatment for severe injuries and illnesses, as well as preventive care and pediatrics. This center will definitely help you out in a time of need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=financial district, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://www.premiumlinkgenerator.com/">premium link generator </a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
