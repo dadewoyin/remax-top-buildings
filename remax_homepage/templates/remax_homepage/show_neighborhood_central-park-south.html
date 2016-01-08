@@ -1,0 +1,359 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Although perhaps the smallest neighborhood in all of New York City, Central Park South is definitely one of the most important. Its span of two blocks offers some of the most desirable real estate-as well as the most expensive-due to the distinguished Central Park views and amazing location.<br><br>
+
+                At the edge of Central Park South lies Columbus Circle, which contains some fabulous shopping centers and novelties to utilize. If you’re more in the mood for walking than shopping, the South End of Central Park provides beautiful grounds to wander around. There are also other modes of transportation in Central Park, such as carriage rides and pedicabs, which could be a more fun way to tour Central Park.<br><br>
+
+                Central Park South’s Midtown location gives it ideal proximity to both the business-centered downtown and the residential uptown, which is perfect regardless of where you’re travelling. The prices are certainly above the New York City average for both rentals and sales, and only continue to increase. As one of the most desirable neighborhoods of New York City, you’ll certainly have to fight to get a good price on one of these properties, but it is definitely worth the hassle.<br><br>
+
+                So whether you’re enjoying the view one the rooftop of a Central Park South building, shopping in Columbus Circle, or walking around in the park itself, Central Park South will leave you with a sense of opulence and pleasure.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/marea.jpg" %}"/>
+                            <h6>Marea</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>With its prime location right on Central Park, the restaurants of Central Park South are often very luxurious and expensive. You will certainly find some fabulous dining in this neighborhood!<br><br>
+
+                            First, if you’re looking for a fantastic seafood restaurant with high accolades, check out Marea. They offer a wide variety of seafood and meat dishes, and have Italian influences of pasta and antipasti to accompany them. The most talked about dish here is the octopus fusilli with bone marrow, but every item on the menu is a delight.<br><br>
+
+                            Or, for some tremendous Italian with beautiful views of Central Park, visit Villagio on the Park. With several different dish options, including an abundance of meat and seafood, you will surely leave here stuffed and satisfied.  Villagio is easily one of the best Italian restaurants of New York City.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of what you choose, the fine dining of Central Park South will definitely impress.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Although it is hard to find fast and easy food within the bustle of Central Park South, there are a few superb options if you are short on time.<br><br>
+
+                            For some teriffic pizza, check out Angelo’s Coal Oven Pizzeria. They make an exemplary crust and marinara sauce, producing an amazing balance of flavors. Angelo’s also offers a full bar to enjoy with your meal.<br><br>
+
+                            Or, if instead you want a quick bite to eat, try Angela’s Sandwich Shop. This small store can be easily missed, but the sandwiches are high quality and affordable. Also, Angela’s is a great option for breakfast, as they make quick and cheap selections.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/fika.jpg" %}"/>
+                            <h6>FIKA</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re looking for a pastry and some coffee or hot chocolate to take with you on a stroll through Central Park, FIKA is your place. This Swedish coffeehouse creates fresh coffee, chocolates, and other treats, all within walking distance of Central Park.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/artleague.jpg" %}"/>
+                            <h6>The Art Students League</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Central Park South boasts some amazing upscale bars to match its caliber of food.<br><br>
+
+                            First, try Southgate Bar and Lounge for an extravagant night in a beautiful setting. While they serve three meals a day, the best time to come is after dark for some appetizers and cocktails to savor the night. This bar is located within in the Marriott along Central Park, so it definitely creates the perfect atmosphere for your evening.<br><br>
+
+                            Or, check out Whiskey Park for an ideal environment to spend the evening. Although their drinks are expensive, they make up for them with their quality and other attractions, such as their free pool table and multiple television sets. Come here for a relaxed and fun night!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’d really like to enjoy the views of the neighborhood, what better way than at a rooftop bar? Visit The Roof and be greeted by plenty of space, wonderful vibes, and expensive cocktails. Make sure to go on a sunny day so you can explore the outdoor area!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Even though Central Park South is not known for its nightlife, you can still check out the clubs in the area if you’re looking for a great nighttime party.<br><br>
+
+                            The most renowned club in the area is The Carnegie Club, which features its delicious cocktails and cigar bar. With their own cigar menu alongside their signature drinks, you definitely have to love both to enjoy this upscale lounge. The ambience of this club is its main distinction, as you will instantly feel transported back to the 1950s era of leather seats, dark lighting, and a classic vibe. Be sure to check this site out today if the thought of cocktails and cigars is interesting to you!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/carnegieparksouth.jpg" %}"/>
+                            <h6>The Carnegie Club</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/morton.jpg" %}"/>
+                            <h6>Morton Williams</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Due to its prime location, Central Park South houses many grocery stores for you to stock up on all of the necessary items.<br><br>
+
+                            For a classic grocery store that is sure to please, visit Morton Williams in its Central Park South location. They offer a wide variety of choices to choose from, including fresh produce and pre-prepared food to enjoy on the go. In addition, Morton Williams has some of the best service in the area, so you will surely have a pleasurable experience.<br><br>
+
+                            Or, if you’re looking for a market that prepares many different dishes as well as offering a variety of ingredients, Dali Market is perfect for you. They are also cheaper than many other grocery stores of the area, so you’ll definitely get a great bang for your buck.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>There are many other grocery stores in Central Park South, so you will be satisfied with the selection and prices at any of these locations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Central Park South also has many options for an amazing laundry service with convenience.<br><br>
+
+                            If you’re interested in a very luxurious clean, check out Essex Cleaners and Tailors. They offer tailoring, dry cleaning, as well as normal laundry services, ensuring that all of your needs can be taken care of at one store. The store also provides good service to top off the experience, so the only thing you have to worry about is the price.<br><br>
+
+                            Or, Grace Cleaners is another excellent selection for a quality clean at a lower price. With a variety of choices, reasonable prices, and good service, this is a great pick to make your regular laundromat. The convenient location also makes it a fine choice for all residents of the area.<br><br>
+
+                            Regardless of your location in Central Park South, there are many laundromats to service all of your needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/artanddesign.jpg" %}"/>
+                            <h6>Museum of Arts and Design</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’d like something else to do besides roaming around Central Park for the whole day, there are some great choices to have fun at a museum or tours in Central Park South.<br><br>
+
+                            The amazing Museum of Art and Design is located right in Central Park South, which is a perfect stop if the weather isn’t good enough to stay in Central Park. This museum features the progression of art: basically, the art of art. They take submissions from many different fields, leading to a diverse display of talents and beauty. There are always many different exhibitions to explore and marvel in the refinement of art.<br><br>
+
+                            Or, if you’d like to tour Central Park without the hassle of walking through all the blocks, Peter Pan Tours of Central Park and NYC Horse Carriage Rides are both good options. These tours offer pedicabs and horse carriages as the mode of transportation to experience the beauty of Central Park without exerting all the energy.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, there are many things to do in Central Park South, both within Central Park itself and the surrounding areas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For those who are interested in the artistic side of Central Park South, it will not disappoint in its abundance of quality artwork and display.<br><br>
+
+                            If you’d like to experience an art class firsthand, visit The Art Students League. They offer classes in addition to their gallery, so you can try your hand at drawing from a variety of class options. Or, if you’d just like to relax and marvel at some completed artwork, the Art Students League also has a gallery for you to enjoy.<br><br>
+
+                            For an Asian inspired gallery that demonstrates the beauty of Eastern artwork, check out the Ana Tzarev Gallery. Although pricey if you actually want to purchase the art, come in for a look at the countless displays and you will not be disappointed. This is a great way to unwind from a day of excitement, so make sure to include it as part of your day.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/artstudents.jpg" %}"/>
+                            <h6>The Art Students League</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of the gallery you choose, Central Park South will definitely impress you with the quality of its artists and artwork.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/goodman.jpg" %}"/>
+                    <h6>Bergdorf Goodman</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you are looking for some world-renowned high fashion, try shopping Central Park South. This area has some of the most expensive stores in all of New York City.<br><br>
+
+                    You may want to start off your shopping trip at the amazing Bergdorf Goodman. Whether stopping to enjoy their afternoon tea, marvel at their collection of designer clothing, or even purchase a few items, Bergdorf’s certainly will exceed all expectations of luxury. They offer many of the highest-end brand names, such as Valentino, Louboutins, and Oscar de la Renta to name a few. You will definitely be impressed with their selections and quality.<br><br>
+
+                    Or, for some of the best men’s clothing available, visit Saint Laurent. One of the best stores in the area for customer service, they will make you feel comfortable, even with the huge price tags. If you are looking for men’s clothing, there is no better place to shop.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>No outfit is complete without some jewelry from Tiffany & Co, so stop in today to get that perfect piece you’ve been searching for. Even if you cannot fathom spending so much money on one item, walking through Tiffany’s will leave you in awe of their beautiful products.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ps212.jpg" %}"/>
+                            <h6>PS 212 Midtown West</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Although there may not be many schools within Central Park South itself, the neighborhood is zoned to District 2, which is home to many exceptional schools.<br><br>
+
+                            One of the best schools of the neighborhood is PS 212 Midtown West, an elementary school that exceeds the academic standards of both the city and district. They seek to integrate a variety of identities into one comprehensive educational experience. The rigor of Midtown West is sure to transcend into the later middle school and high school careers.<br><br>
+
+                            Perhaps you want your child to attend PS 111 Adolph S. Ochs, a fantastic Pre-K through 8th grade school with a lot to offer to its students. With foreign languages, extracurriculars, and diversity in the student body, this school is a great place for students to grow in their education. Although their academics are not very strong, they have been increasing in the past few years, and are sure to continue.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, wherever you want to send your child, there is a perfect option waiting for them in the early years of their education.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re an international student and looking for a place to study, Central Park South may be the location for you. Within the neighborhood lies Kaplan, an international school that teaches English in various courses. This school is essential to the transition for many students into the American lifestyle, and really opens up job and career opportunities for those that are able to speak a second language. With over 45 locations, Kaplan has brought the international realm together in the pursuit of languages. This great location is the perfect environment to learn a new language, as well as experience things you never would have imagined.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/kaplan.jpg" %}"/>
+                            <h6>Kaplan</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/athletic.jpg" %}"/>
+                            <h6>The New York Athletic Club</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Many Central Park South residents are adamant about staying in shape, so its no surprise that the neighborhood offers many great fitness options.<br><br>
+
+                            If you like the personal training style of fitness, visit Re-Fit. They combine a variety of different techniques and styles to create a challenging workout matched to each person’s individual level. Their prices are also very reasonable, ensuring that you will keep coming back to this awesome location. So try out Re-Fit today if you want to see what a real workout is like!<br><br>
+
+                            Or, become active at The New York Athletic Club’s Manhattan City House. This location provides world-class facilities and are renowned for wrestling, fencing, judo, water polo, track and field, and rowing. They now have become a staple to New York City’s social scene as well, as they host events and house guests all within the club. In total, the members at the New York Athletic Club hold 248 medals, proving their excellence in all categories.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Whatever your fitness style, Central Park South is the perfect location to enjoy a tough workout.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Even within the small mileage of Central Park South, there are many qualified doctors and health services to keep you in the best health.<br><br>
+
+                            Should you have any problems with your teeth, Dr. Paul Gregory would be happy to help. Serving jointly as an orthodontist and a dentist, he can fix any dental problems that you may have with a commitment to your top health. He is highly reviewed in the area and a top choice for many.<br><br>
+
+                            Or, if you have any affliction with depression or anxiety, Dr. John Shershow is a terrific choice to manage your illness. As a psychiatrist, he could aid your mental state through both therapy or medication, and will choose the best option to keep you in great health.<br><br>
+
+                            Therefore, there are many doctors in the area that can help you with any medical problem that you may have, all within the convenience of Central Park South.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/paul.jpg" %}"/>
+                            <h6>Dr. Paul Gregory</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/centralpark.jpg" %}"/>
+                    <h6>South End of Central Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The reason why Central Park South is so expensive is because of the views of Central Park. Because of the wonderful location, everyone in the neighborhood is within a five minute walk of the greatest park of New York City. With so much to see and do, the possibilities are endless for a fantastic day in the park.<br><br>
+
+                    On the South End of Central Park, there are many fun activities that you can enjoy. If you love architecture, check out the many statues that are sprinkled throughout the park, including Simon Bolivar, Jose Julian Marti, and Christopher Columbus. There are also beautiful places to enjoy a stroll through the park, such as the Olmstead Flower Bed and Hallett Nature Sanctuary.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, if you are more active, then you can stop by the Wollman Rink for ice skating in the winter, while during the summer you can lay out in Sheep Meadow to feel the sun on your face. Complete with playgrounds, sports equipment and areas, plenty of spots to eat, as well as venues to gather at for events, the South End of Central Park has everything you could possible wish for.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=central park south, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="http://googlemapsgenerator.com/">Google maps genhttps://ww.premiumlinkgenerator.com/erator</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}

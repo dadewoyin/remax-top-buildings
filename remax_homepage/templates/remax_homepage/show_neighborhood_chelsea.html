@@ -1,0 +1,351 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                A combination of a gorgeous location, fabulous dining spots, and hip Chelsea art galleries make Chelsea stand out from the New York City crowd. Located next to Midtown South, West Village, and Midtown West, Chelsea is definitely in the center of the action while still maintaining a unique voice.<br><br>
+
+                As for the history of Chelsea, the neighborhood was a sanctuary for the LGBT community, which was essentially threatened for a long time in New York City. Therefore, Chelsea is now one of the most accepting and open cultures, perfect for any personality type or background.<br><br>
+
+                Today, you can enjoy Chelsea by strolling through one of its parks, shopping at some of the hippest stores in New York City, or checking out an iconic Chelsea art gallery. Some of the highlights of this neighborhood are their performances, namely Sleep No More and Joyce Theatre. Sleep No More is a revolutionary and iconic production that offers an interactive performance of the play MacBeth. The entire play, from its backdrop to amazing actors, will provide you with a great night of excitement. Or, a more refined option is Joyce Theatre, which features various exhibitions of dance productions that are loved by all of New York City.<br><br>
+
+                In terms of real estate, the prices of Chelsea are actually decreasing, making it a perfect time to buy at the bottom of the market. Still, the housing and rental prices are above New York City average, so you will have to pay for access to such an iconic and wonderful neighborhood.<br><br>
+
+                Regardless of what attracts you about Chelsea, follow your gut and look into some of their real estate opportunities today!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/colicchio.jpg" %}"/>
+                            <h6>Colicchio & Sons Main Dining Room</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Whether you’re looking for Italian, American, or Spanish food, Chelsea has the perfect fine dining location for you.<br><br>
+
+                            For a tremendous American restaurant that is owned by Top Chef judge Tom Colicchio, visit Colicchio & Sons Main Dining Room. Their service alone is something to rave about, not to mention the amazing food. All dishes are served as appetizers, so you will have plenty of stomach space to try out new dishes for a fraction of the cost. All elements of this restaurant are genius, and Colicchio & Sons will not disappoint.<br><br>
+
+                            Another superb choice is Scarpetta, an Italian restaurant located right in Chelsea. Another TV star, the owner Scott Conant is one of the judges on Chopped, and is notoriously hard on subpar pasta dishes, which is probably because his restaurant serves some of the best pasta in New York City! Make sure that you try a variety of appetizers and entrees around your table to experience the full grandeur of the restaurant.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, if you’re interested in some great Spanish cuisine, check out Salinas. Residents love what they consider the best sangria in the area, as the mix contains a good ratio of liquor instead of being primarily sweet. Be sure to share a lot of tapas among your group, as there are many unique tastes to try.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a quick bite to eat, Chelsea will not disappoint with its large collection of restaurants in the neighborhood.<br><br>
+
+                            One of Chelsea’s greatest eats is Jonny’s Panini NYC, which serves amazing sandwiches. They offer 18 options that are reasonably priced at $10-$13, ensuring that there will be an selection for everyone to enjoy. In addition to their scrumptious paninis, try out their awesome lattes, especially the Nutella Latte, a resident favorite.<br><br>
+
+                            Another cozy cafe stop in Chelsea that you should try is A Little Taste, which makes some of the best coffee in the area. Whether you’d like your coffee hot or iced (with coffee ice cubes), this refreshing drink will surely satisfy. You can also enjoy one of their fresh pastries while there if you’d like.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/westville.jpg" %}"/>
+                            <h6>Westville</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re tired of indulgences and would like to cleanse your palate with something healthy, Westville is the ideal stop for you. Because their main ingredient in their dishes is usually vegetables, you will be left feeling revitalized by this wholesome restaurant. With their many additions and substitutions, you can definitely create the perfect meal for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/coopers.jpg" %}"/>
+                            <h6>Cooper's Craft and Kitchen</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Even though Chelsea is a relatively quiet neighborhood, it still offers a wide variety of bars to choose from.<br><br>
+
+                            If you’re a craft beer aficionado then Cooper’s Craft and Kitchen is perfect for you. Be sure to check out $1 Fish Taco Mondays or $12 Burger and Beer Tuesdays if you really want to get a great deal while enjoying their beautiful atmosphere. This place is ideal for someone who wants to cherish an exceptional bite to eat along with their specialty beer options.<br><br>
+
+                            Another stop during your night could be Bar B, a standing room only bar with an open kitchen and an extensive wine list. The bartenders will help you decide on a tailored wine pairing as you savor some small bites. Bar B is certainly the place you want to go if you’re looking for a night of socialization and relaxation, so try it out!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>One terrific location that you will absolutely want to check out is Bathtub Gin, a speakeasy hidden within a coffee shop that boasts a good vibe, loud music, and awesome drinks. Bathtub Gin is especially known for their gin cocktails (hence the name), so be sure to try one of them out as you lounge around their restaurant bathtub.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>There are also many clubs located in Chelsea that are very high-end and exotic for you to love.<br><br>
+
+                            One of the most infamous places of Chelsea is The Eagle, a notoriously provocative gay club. Here you will find tons of leather, lively music and dancing, and certainly a night that you will never forget. The bartenders at this club are definitely on point, and you will also enjoy their impeccable service.<br><br>
+
+                            Also located within the Chelsea area is Marquee New York, a classy club that offers many performances throughout the week, as well as a never-ending dance party on the weekends. The space displays luxurious leather seating, bright and bold lighting, and great drinks. Come here for a night to remember!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/marquee.jpg" %}"/>
+                            <h6>Lavo</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Perhaps the most famous location in the Chelsea neighborhood is 1 Oak, a hotspot for celebrity sightings and big ticket prices. Although this fabulous venue may come at a price, the experience that you will receive will certainly be worth the payout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/traderjoechelsea.jpg" %}"/>
+                            <h6>Trader Joe's</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Because of the high residential population, there are many grocery stores within the Chelsea area that you will appreciate.<br><br>
+
+                            First, if you’re comfortable with the classics, check out Trader Joe’s, a national brand of grocery stores that supplies specialty products, as well as fresh and prepackaged goods. This store is known for its awesome vibes, high caliber of food, and variety of options. Another great choice that is known nationally is Whole Foods Market, known for their organic food and huge selection of pre-prepared foods. Even though the prices can get high and the lines hectic, the trouble is definitely worth your time.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>There are also some specialty stores located in the area that will surely please your taste buds, one of which is Westside Market. This high-quality store offers lovely produce, and an all-around comprehensive shopping experience. Although expensive and sometimes crowded, you will surely find what you are looking for at Westside Market.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>There are also many affordable and excellent laundry options located within the Chelsea area to choose from.<br><br>
+
+                            First, The Eco Laundry Company is a laundromat that uses only renewable resources to fuel its operations, including using wind energy and significantly less water, which is better for the environment. Even though they pride themselves on this message, their prices are still affordable and their quality is top notch.<br><br>
+
+                            Also, check out Digital Cleaners if you’re interested in a joint laundry, dry cleaning, and tailor location. For a quicker turnaround time and higher quality, you’ll have to pay a higher price, but the results will definitely be worth your hassle.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ecolaundry.jpg" %}"/>
+                            <h6>The Eco Laundry Company</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>As its name implies, Flat Rate Cleaners offers a flat price of a $4.99 clean for any item. They have amazing customer service, as they always call you when your clothes are ready, and also provide an incredible clean. Check out this laundromat today!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/rubin.jpg" %}"/>
+                            <h6>Rubin Museum of Art</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>With a reputation for a neighborhood of entertainment and enjoyment, Chelsea offers its fair share of attractions that you will definitely love.<br><br>
+
+                            One of the most famous locations in Chelsea is The Joyce Theatre, a premier dance hall that showcases the beauty of performance. People flock from all over New York City for their beautiful performances, and are constantly offering new shows for you to visit. The theatre itself is beautiful and intimate, and will certainly supply a tremendous atmosphere for you to appreciate.<br><br>
+
+                            Another museum in the area is Rubin Museum of Art, which focuses on the art and culture of the Himalayas. The venue features exhibitions and performances of many varieties, which are perfect to learn about the culture in a new light. Besides its marvelous offerings of art, this museum has a fantastic bar and cafe, which only add to the appeal.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>One of the most groundbreaking shows is Sleep No More, and with their performance location in Chelsea, this is the ideal place to stop while in the area. Centered around the story of MacBeth, this interactive performance takes you around a mansion of acting and mystery for a play like you’ve never seen before.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If Chelsea could only be known for one thing, it would definitely be its artwork. The art galleries of the area are among the best, so check them out and prepare to be amazed.<br><br>
+
+                            First, check out the David Zwirner Gallery if you’re interested in art with impeccable taste in an exhibit space that you will certainly have fun with. Although the exhibits are constantly changing, you will have an opportunity to see many different styles of art-something for everyone to marvel at.<br><br>
+
+                            Or, a superb location of contemporary artists is Jonathan LeVine Gallery. This gallery displays pop art-like designs and styles, while keeping their collections in high taste and always fashionable. So, if you’d like to look at street art of the highest caliber within a gallery, Jonathan LeVine is the place for you.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/zwirner.jpg" %}"/>
+                            <h6>Davir Zwirner Gallery</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re looking for a gallery with free admission and artwork to please the masses, The Pace Gallery is perfect for you. They feature many different artists, including rotating collections, but regardless you will always find something new and interesting to enjoy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/chelseamarket.jpg" %}"/>
+                    <h6>Chelsea Market</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re looking for the perfect little shop to stop at, Chelsea surely has a tremendous location for you.<br><br>
+
+                    One of the favorite market locations that offers a variety of shops and foods is Chelsea Market. With fresh food, lovely trinkets, and amazing ambience, Chelsea Market will be worth your time and money to stop at. This venue has the ideal stop for any cuisine, so be sure to try it for a meal.<br><br>
+
+                    Another vibrant shop in Chelsea is Story, which completely changes its entire theme and merchandise every eight weeks to reinvent itself. Based on the concept of a dynamic magazine, this retail shop will definitely get you excited to shop in their fresh and inspired space. Come check it out today for some tremendous buys!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Another clothing store that is curated in exceptional taste is Lingo, which supplies women’s clothing from young and new designers that are sure to please. Because they always are changing up their pieces and selections, be sure to stop by often to snag a new find.<br><br>
+
+                    If you’re looking to fit in with the cool, hip vibe of the Chelsea neighborhood, men must check out Nasty Pig. With an affinity for only the suave and luxurious, Nasty Pig will make you look the part in the most classic and upscale way.<br><br>
+
+                    Regardless of which store you choose, Chelsea will absolutely have a great food or clothing venue for you to revel in!</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/ps11.jpg" %}"/>
+                    <h6>PS 11 The William T.Harris School</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you have children that are looking for a good education, Chelsea will exceed all expectations because of the amazing schools in the area.<br><br>
+
+                    One of the great elementary schools in the area is PS 11 The William T. Harris School, which services the neighborhood with an educational plan devised by teachers of Columbia University. This school is dedicated to providing everyone with the same level of care and attention, so that no student feels lost in the material. The William T Harris School performs very well academically, making is an all-around superb option.<br><br>
+
+                    Also, PS 33 Chelsea Prep is located in the area, which creates a dynamic learning environment for its 350 elementary school students. With many partnerships from organizations ranging from Whitney Museum to Traditional Chinese Dance, this school definitely establishes a focus on all aspects of learning.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>So, regardless of which school your children end up attending, it will certainly meet the caliber of education that you are looking for.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/crunch.jpg" %}"/>
+                            <h6>Crunch</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>With many young and active residents located in Chelsea, it is only fit that they offer many gyms for you to work out at.<br><br>
+
+                            If you’re looking for a great facility that will have your heart pumping profusely, check out Crunch. With its multi level building complete with many differentiated equipment locations, there is definitely something different for you to work out on every day to reach maximum fitness. Or, try out one of their diverse class options if you’d like a more guided environment. Plus, its a judgment-free zone, so all ages and abilities are welcome!<br><br>
+
+                            Another awesome choice for a fitness facility in Chelsea is Pace for Success, an intensive workout that will surely get you into shape. The motivation and energy are the main draws for choosing this gym, as you will certainly be pushed to your limit to success. Come try out one of their intensive classes today!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Chelsea also boasts some great hospitals within the area, so any health concerns that you may have will be easily taken care of within their facilities.<br><br>
+
+                            One of the best hospitals in the Chelsea neighborhood isn’t for humans. The Heart of Chelsea Animal Hospital is known for its high tech solutions to animal health issues, through use of acupuncture, radiology, herbology, pet laser therapy, and many more resources. Whether you choose a traditional option or a holistic one, Heart of Chelsea will take good care of your pet.<br><br>
+
+                            As the historically most LGBT friendly neighborhood in all of New York City, Chelsea’s health services mirror its open-minded attitude. Callen-Lorde Community Health Center specifically helps anyone who is lesbian, gay, bisexual, or transgender to receive the medical attention that they need, regardless of whether or not they are able to pay. As advocates for the LGBT community, Callen-Lorde is one of the staple Chelsea resources.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/chelseaanimal.jpg" %}"/>
+                            <h6>Chelsea Animal Hospital</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>The Beth Sinai Medical Group also has an urgent care location in Chelsea, which is perfect for anyone with immediate health needs. With many different services available, this urgent care will certainly tend to your medical condition as quickly and effectively as possible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/chelseapark.jpg" %}"/>
+                    <h6>Chelsea Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Chelsea Park is a great spot located right in Chelsea which is very popular and beautiful! With amenities including baseball fields, playgrounds, basketball courts, fitness equipment, and handball courts, there are countless activities to explore at Chelsea Park. Or, many people appreciate the simple pleasure of relaxing in the park and taking a break from the hustle and bustle of the New York City lifestyle.<br><br>
+
+                    If you’re interested in a park that is filled with history, then check out the historical Chelsea Waterside Park. After many transformations, the park now includes a dog run, basketball courts, recreational area, and playground, as well as a beautiful lawn and walking area for those who are interested in unwinding. Regardless of which activity you enjoy, be sure to stop by this serene location today.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=chelsea, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="http://googlemapsgenerator.com/">Google maps genhttps://ww.premiumlinkgenerator.com/erator</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
