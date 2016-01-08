@@ -1,0 +1,346 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Lenox Hill is a neighborhood located on the Upper East Side, next to Central Park South, and Midtown East. This area is known for its upscale atmosphere, including restaurants, shopping, and house prices.<br><br>
+
+                One of the main attractions in Lenox Hill for visitors is the beautiful art stored in the Frick Collection. If you’re interested in Renaissance art, one of the most elegant and influential periods in art history, the Frick Collection is perfect for you. Or, if you’d prefer to do some shopping while in Lenox Hill, the opportunities to find upscale items are endless: from Kate Spade to Anthropologie, you are bound to find a quality store that you enjoy.<br><br>
+
+                The residential makeup of Lenox Hill makes it the environment perfect for young families or postgraduates, as it is a step away from the commotion of Midtown, yet still close to the action. Families are attracted to the amazing school systems in the neighborhood, which is a huge draw. Residents can also feel safe in terms of their health, as the Lenox Hill Hospital has been standing for over a hundred years. The Lenox Hill Hospital is renowned for their dedication to patient care and quality service, and the Lenox Hill radiology is one of the best in all of New York City.<br><br>
+
+                Because of the huge allure of the many Lenox Hill amenities, prices for the area are among the most expensive in New York City. Lenox Hill also recently ranked first in richest neighborhoods of New York City, so its no surprise that this neighborhood is filled with big money. If you’d like to buy or rent your way into this fabulous environment, be prepared to pay a hefty price.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/daniel.jpg" %}"/>
+                            <h6>Daniel</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For the more expensive side of Lenox Hill, there are many upscale restaurants that can meet your tastes.<br><br>
+
+                            If you are looking for more of a splurge for dinner, try The Simone. This upscale French spot not only boasts amazing food but also creates the perfect romantic atmosphere for you to enjoy an evening with a significant other. They are also known for establishing amazing wine pairings to perfect the night.<br><br>
+
+                            For another upscale dining experience, Daniel would make an excellent choice. With a two-star Michelin rating, this restaurant lives up to its expectations through its drinks and service. Their signature 7-course meal offers many different tastes, all a product of French cuisine.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re still hungry for dessert, look to Lady M Boutique. Their signature is a mille crepe cake that has 20 layers of crepes in between light layers of pastry cream and caramelized around the outside. Although expensive, every bite will be worth the price, as this is one of the best cakes of New York City. </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Lenox Hill has a tremendous variety of restaurants and stores that will make finding the appropriate dining easy.<br><br>
+
+                            If you’re looking for a exceptional sandwich place that provides catering and takeout, look no further than William Poll Gourmet Foods. They are known for their gourmet sandwiches, and also offer salads, soups, and dinner options. William Poll Gourmet Foods bakes fresh pastries to finish off a great meal if you’re interested.<br><br>
+
+                            Or, for some casual Greek fare, try Mamagyro. This restaurant offers a quick bite to eat of some authentic Greek dishes, complete with Greek pastries if you’d like to try.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/upthai.jpg" %}"/>
+                            <h6>Up Thai</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>A more exotic option would be Up Thai, a Thai restaurant that is centrally located in the Upper East Side. They create traditional dishes with their own twist, which customers rave about. Be sure to try a noodle dish, and sampling a few appetizers wouldn’t hurt!<br><br>
+
+                            For dessert, Two Little Red Hens is the perfect sugary retreat. Their cupcakes are among the best in New York City and will easily satisfy your sweet tooth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/thebar.jpg" %}"/>
+                            <h6>The Bar Room</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Lenox Hill’s bar scene grant a wide of array of options, including casual classic bars and fancy lounges.<br><br>
+
+                            For a casually laid-back experience, visit The Bar Room. Whether you come here for dinner or just for drinks, The Bar Room will surely please. They are known for their cocktails, so order one and relax for a few hours at this humble location.<br><br>
+
+                            If instead you’re interested in an iconic upscale bar to spend a few hours of intimate conversation, try Bemelmans Bar. Located within the Carlyle, Bemelmans Bar has walls adorned with depictions of the Madeline children’s books to honor the namesake Ludwig Bemelmans. This romantic setting features a round-the-clock piano player, and live jazz later in the evening. It will certainly be the perfect way to finish off your day and relax to the music.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of your bar style, Lenox Hill have some great choices for your nightlife experiences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>While Lenox Hill isn’t exactly known for its nightlife, there are a few exceptional clubs that you can visit in the area.<br><br>
+
+                            If you’re looking for a high-styled club that matches the grandeur of Lenox Hill, you must try Metropolitan Club. Beautifully decorated and designed, Metropolitan Club creates an exclusive environment through its members-only policy. They also make great cocktails, so you can definitely have a terrific night while enjoying the beautiful architecture. Also, the club has many food options so that you can appreciate a fantastic meal.<br><br>
+
+                            Or, if you’d like to try another classy club, the non-profit Union Club offers events to enjoy. For a night of style that often benefits a charity, the Union Club delivers the perfect event. The atmosphere is also very exclusive, so you’ll have to find your way in to cherish the beautiful location.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/metclub.jpg" %}"/>
+                            <h6>Metropolitan Club</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/matter.jpg" %}"/>
+                            <h6>A Matter of Health</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>While living in Lenox Hill, you can stop at a number of grocery stores to stock up on everyday supply, with many specialty stores also in the area.<br><br>
+
+                            If you’re looking for your grocery store staple, check out Food Emporium. Its proximity and variety of selection make it the number one choice for many shoppers, even though the price and crowded aisles can sometimes pose a problem. Regardless, you can surely find everything you need at this store.<br><br>
+
+                            For something healthier at a reasonable price, try A Matter of Health. Complete with salad and juice bars, as well as an amazing selection of products, A Matter of Health will certainly put you on the right track to a healthy lifestyle.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, if you’re interested in Japanese delicacies, you may like Katagiri Japanese Grocery. This store sells authentic products for you to make your own creations, as well as pre-made products to take home and enjoy.<br><br>
+
+                            No matter the type of food you are looking for, Lenox Hill will have a great grocery store near you</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Whether you need laundry or dry cleaning services, the laundromats of Lenox Hill service the area with a variety of options to choose from.<br><br>
+
+                            With free pickup and delivery services, Bright Cleaners offers great service at an affordable price. If you need to have laundry cleaned or dry cleaned, this laundromat may be perfect for you.<br><br>
+
+                            Or, for another high end clean, Savitt Cleaners will be able to help with your dry cleaning and laundry needs. Although at a higher price point, their impeccable service will compensate and make you a regular customer.<br><br>
+
+                            So, there’s definitely no need to fear the dry cleaning and laundry options of Lenox Hill, as you can certainly find a terrific selection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/grolier.jpg" %}"/>
+                            <h6>The Grolier Club</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For a fun way to spend your day, Lenox Hill provides many attractions that service the neighborhood as points of interest.<br><br>
+
+                            If you’re interested in an all-around amazing display of the arts, visit French Institute Alliance Francaise while in Lenox Hill. This is one of the few places that creates a display of the Gallic culture and language, and offers shows, theater, and dance as entertainment. They even supply language classes to complement the show of culture.<br><br>
+
+                            Or, perhaps you may enjoy The Grolier Club, a library that hosts many events in the area in the name of supporting books and printing as an art form. They also present many exhibitions on the history of the printing in the library, including personal collections of bibliographies that were created specifically for the library.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of which attraction you use, Lenox Hill will certainly provide some great entertainment for you to enjoy!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Thanks to famous art galleries such as the Frick Collection, Lenox Hill has made a name for itself in the art world.<br><br>
+
+                            If you’re interested in seeing world-famous art, spend a day at the Frick Collection. This museum contains Renaissance-era artwork by the likes of Rembrandt, Vermeer, and Renoir, and is sure to amaze you with its high caliber of displays.<br><br>
+
+                            Or, for something more exotic, visit Asia Society, which displays the beauty of Asian culture and food while offering an educational experience on the symbiosis between the cultures.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/frick.jpg" %}"/>
+                            <h6>Frick Collection</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>The Society of Illustrators also is popular in Lenox Hill, which promotes the arts through world-wide exhibitions at its location. It will certainly display a vibrant and exotic gallery for your viewing pleasure featuring the best illustrations of all time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/anthro.jpg" %}"/>
+                    <h6>Anthropologie</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Shopping in Lenox Hill boasts only the highest quality of designer boutiques and fashions. If you’re looking for women’s fashions, Lenox Hill is perfect for you.<br><br>
+
+                    For a women’s boutique that also stocks home decor and miscellaneous items, visit Anthropologie. Complete with two levels of bridal selections, Anthropologie offers a unique selection of signature products that can fit perfectly with any wardrobe. Their fashion transcends into the home as well with their line of home decor, so you can express your fashion style with your clothes and your home.<br><br>
+
+                    If instead you are looking for a top-notch handbag line, check out Kate Spade’s location in Lenox Hill. This store also carries shoes, clothing, jewelry, and home decor, giving you an all-around place to shop for your favorite items. Beware, because if you enter Kate Spade you may not be able to leave without a new handbag addition.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>If an iconic Lenox Hill department store is more your style, Barney’s should be your next stop. Known for their expensive prices and upscale fashion, Barney’s represents the true spirit of the Upper East Side. Be sure to visit during sale season, because there are many items you can get for an affordable price!</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ps183.jpg" %}"/>
+                            <h6>PS 183 Robert L. Stevenson Elementary School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Families of Lenox Hill will be overjoyed by the level of education they experience at the public schools. From Eleanor Roosevelt High School to PS 183 and PS 167, there are many options to choose from to get a premier education for your child.<br><br>
+
+                            The best public high school of Lenox Hill is Eleanor Roosevelt High School, which contains about 500 students. With the difficult admissions, Lenox Hill students have an advantage of getting into this school because priority is giving to students of this neighborhood. They offer many challenging classes and fantastic college placement, making Eleanor Roosevelt one of the best public high schools of New York City.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Students in elementary school will be very happy at PS 183 Robert L. Stevenson Elementary School. With great middle school placement, this elementary school provides a strong core of education and an emphasis in the performance arts should the student be interested. Many students from this elementary school choose MS 167 Robert F. Wagner Middle School, which is one of the top middle schools.<br><br>
+
+                            Regardless of their level of education, your children will experience a high quality of education throughout their early years.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re interested in remaining in the Lenox Hill neighborhood for college, look no further than the College University of New York Hunter College. The largest CUNY of New York City, Hunter offers many degrees at a discounted cost for in-state students, making this choice affordable and practical. The college currently enrolls around 20,000 students, and the admissions rates are only about 31%, making it selective. Hunter College primarily is known for its degrees offered in performing arts, but also has a variety of other degrees and master’s programs. This college has a special focus on maintaining the presence of women and minorities within the college, and extend many services and distinctions to preserve this balance.<br><br>
+
+                            So, if you’re looking to stay within the beauty of Lenox Hill, Hunter College may be perfect for you.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/hunter.jpg" %}"/>
+                            <h6>Hunter College</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/remorca.jpg" %}"/>
+                            <h6>Remorca</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Within Lenox Hill, there are many fitness centers that can suit your various fitness styles and give you a tremendous workout.<br><br>
+
+                            If you’re most comfortable with a personal trainer pushing you to be your best, try Definitions. Their new facilities offer showers and dressing rooms, as well as the top of the line fitness trainers in New York City. Once you’ve gone through a personal evaluation, Definitions trainers will work with you every step of the way to achieve your fitness goals.<br><br>
+
+                            For a more zen approach to fitness, experience Remorca Fitness. Founded on the basis of luxury and an emphasis on aspects of fitness, Remorca provides both personal training and group classes to help you stay motivated, with a complimentary breakfast from Altesi after the class to start off your day.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, if you’re looking for a luxurious fitness experience located right in Lenox Hill, these gyms are perfect for you!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Lenox Hill also provides outstanding hospital care located right in the neighborhood.<br><br>
+
+                            If something were to happen to you in Lenox Hill and you needed medical treatment, the Lenox Hill Hospital would put you right at ease. At over 100 years old, this hospital has a foundation in exceptional medical care, and treats over 325,000 patients per year. With comprehensive medical care, the Lenox Hill Hospital would be able to take care of any specialized or individual need that you may have. So, trust the best hospital that the Lenox Hill community has been using for years, and you will not be disappointed by their level of care.<br><br>
+
+                            Or, you can visit one of the many esteemed private practices located right in Lenox Hill as well. Whatever your choice, Lenox Hill will definitely provide you with the level of care necessary to get you back on track.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/lenoxhospital.jpg" %}"/>
+                            <h6>Lenox Hill Hospital</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=lenox hill, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ultimatewebtraffic.com/">buy website traffic</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
