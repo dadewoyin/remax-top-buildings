@@ -1,0 +1,331 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                One of the most vibrant communities of Manhattan, East Harlem is a growing neighborhood to watch for young residents looking for cheaper rent. East Harlem is bordered by Harlem and Yorkville.<br><br>
+
+                A defining characteristic for East Harlem is the large Latino population, which has earned the neighborhood the name of El Barrio or Spanish Harlem. This population represents a large cultural shift, however, as Italians used to predominantly occupy the area only a few years ago. Now, there is a nice blend between the cultures, giving East Harlem a distinctive cultural atmosphere.<br><br>
+
+                One of the perks of living in East Harlem is the authenticity of the attractions here. From authentic Mexican food that you can find on every street corner to the amazing street art lining some of the walls, El Barrio is definitely a great place to live if you enjoy diverse experiences. While you’re here, be sure to check out some of the museums housed in the neighborhood, which depict everything from the history of jazz to the art of the neighborhood. Therefore, East Harlem restaurants and attractions will surely make you want to call SpaHa home.<br><br>
+
+                Because of the developing neighborhood, the prices here are significantly cheaper than in other areas, making East Harlem the perfect place for a terrific investment. The trends are positive, however, and in the future this neighborhood will develop even further into one of the hubs of New York City.<br><br>
+
+                So, check out the East Harlem restaurants and attractions today to decide if renting or buying here is right for you!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ricardo.jpg" %}"/>
+                            <h6>Ricardo Steakhouse</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Because it is known as El Barrio, Spanish for The Neighborhood, East Harlem supplies some of the best Mexican and Spanish food of all of New York City.<br><br>
+
+                            First, one of the only American joints in the area is Ricardo Steakhouse, which is certainly worth diverting from the typical Mexican cuisine due to the amazing garlic bread, mashed potatoes, and steak that this restaurant provides. Coupled with strong drinks and a loud yet cozy atmosphere, the food and vibe are surely worth the trip.<br><br>
+
+                            Or, for a classic Hispanic meal, check out Cascalote Latin Bistro. With their tres leches pancakes, quinoa risotto, and Short Ribs Benedict, the food will leave you full yet wishing that you could eat more. The restaurant is run by a family business, so the service is almost as amazing as the food.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’ve never had cemitas, which are big Mexican sandwiches, venture out to Cafe Ollin to try some of the best. When you’re not in the mood for a sandwich, try out the spicy pork tacos or burrito, and definitely taste the chips and guac. Be sure to finish off your meal with a delectable sangria to ensure your full satisfaction of tastes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The takeout restaurants in El Barrio have more diversity than fine dining options, so you can find a variety of foods to eat on the go.<br><br>
+
+                            If you’re in the mood for Indian, try Polash, one of the best in the area. Their best dish is Chicken Vindaloo or any of their curries, which you can order and get the choice of free delivery. With inexpensive food, a bargain lunch buffet, and quick and easy service, this restaurant cannot be beaten.<br><br>
+
+                            Another awesome restaurant choice is SpaHa Soul, a Southern soul food style restaurant. As the name implies, you can find unbelievable cornbread and collard greens, and your main course can range from fried chicken to mac and cheese, or garlic mashed potatoes to gravy. Although the service is slow, this restaurant is definitely worth your time.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/polash.jpg" %}"/>
+                            <h6>Polash</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, check out the incredible Absolute Thai. With cheap food you can get a great bang for buck with their lunch special, as well as quick delivery. The dishes of choice here are pad kee mao, pad thai, pad see ew, and spring rolls, so if this sounds good, check out this hole in wall today.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/damore.jpg" %}"/>
+                            <h6>D’amore WineBar&Caffe</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re wondering about the nightlife scene in East Harlem, you don’t have to worry-El Barrio has many great spots for you to spend a few hours at.<br><br>
+
+                            First, you must try Damore WineBar & Caffe if you’re any type of wine connoisseur. This cozy, welcome environment contains some of the best wine imported from Italy. With the romantic setting and large selection, you will definitely come back for more wonderful ambience and drinks.<br><br>
+
+                            If a dive bar is more your scene, experience The Duck. Country music blasts full time through the antique juke box at this cute location, which adds to the appeal of this amazing find. Like any dive bar, The Duck offers cheap beer, but this bar is special due to the addition of pool tables, games, and friendly vibes that this place emits.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For something more upscale, try The Lexington Social, an intimate venue where the food is almost as good as the drinks. If you’re stopping in for dinner, try the truffle fries and other tapas, or check out the bar, which has good drinks and a large selection. At a reasonable price, The Lexington Social is the perfect selection for your night.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>East Harlem’s lively atmosphere also supports some incredible clubs to dance the night away at.
+
+                            Check out The Guthrie Inn for some excellent cocktails and a chill vibe. Complete with dim lighting, The Guthrie Inn definitely has the ideal atmosphere that you are looking for in a classy club.<br><br>
+
+                            Or, another impressive venue is Lounge 108, which pumps Spanish music all night. This club is one of the trendiest and crowded locations in the area, yet still manages to emit a friendly neighborhood vibe. Come on Saturday to experience live salsa night, or enjoy the live DJ on Friday.<br><br>
+
+                            For something complete different, try A’dar Moroccan Lounge, which has a great DJ and bartender. The difference here is the music-the club plays Hip Hop and R&B music-as well as the hookah bar option right within the venue. The low key vibe and good service make this another notable choice to experience.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/lounge108.jpg" %}"/>
+                            <h6>Lounge 108</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/wildolive.jpg" %}"/>
+                            <h6>Wild Olive Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>One first-rate choice for your grocery needs is Wild Olive Market. This store houses a deli counter, fresh produce, organic food, bulk products, great beer selection, and fresh bagels, so what more could you ask for? Because they offer local products, support your local business today by visiting this grocery store.<br><br>
+
+                            A healthier option in East Harlem is Jahlookova Health Market. Their vegan ice cream, supplements, concoctions, juice shop, veggie patty, and other healthy foods put their store over the top as the best health market in the area.<br><br>
+
+                            Be prepared to bring your own bags and a quarter for shopping carts if you plan to shop at Aldi. This classic choice is the cheapest in area, because you can buy your frozen foods and canned ingredients in bulk here. The healthy foods and friendly service are both components that make this store a marvelous selection.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re looking to do laundry in Spanish Harlem, Mobile City Services may be perfect for you. With a website that you can use for delivery, this store is very convenient for your laundry needs. The affordable prices and good customer service are perks to the dry cleaning and alteration services that they provide.<br><br>
+
+                            Another option for your primary laundromat is 106th Street French Dry Cleaners. The advantages of this store are the reasonable prices and reliable, great service, as well as the fact that they deliver! The laundromat can also do alterations and will definitely tailor to your needs.<br><br>
+
+                            For a laundromat that offers both coin-op and drop-off laundry, try Good Luck Laundry. The costs here vary based on load and time spent, but you can be assured that the environment here is fast paced, and all the machines work. Good Luck Laundry also has decent prices for you to work into your budget.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/newyorkmuseum.jpg" %}"/>
+                            <h6>Museum of the City of New York</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a fun attraction in East Harlem, the Museums here will not disappoint.<br><br>
+
+                            The most famous museum of the area is Museum of the City of New York, which has a donation based entrance. This museum houses very cool graffiti art, as well as the exhibit Timescapes, which displays the 5 boroughs and their history as one city. Check out this museum, as it is definitely worth a few hours of your time!<br><br>
+
+                            Another excellent museum choice is National Jazz Museum, a venue with performances, exhibitions, workshop, and tons of history. The National Jazz Museum seeks to educate society on the history and current status of the jazz movement. The museum offers many books and films at the visitor center for you to enjoy.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Of course, check out the website El Barrio for new information on the nightlife and attractions that are constantly updated in the area. Because of the vibrancy of East Harlem, there is always something new to try out and explore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The distinct feeling of East Harlem makes it a great platform for local artists, who can really attach to the energy and community of the neighborhood.<br><br>
+
+                            This vibe is expressed through El Museo del Barrio, the most famous art gallery of East Harlem. The admission here is free with a suggested donation, which is worth paying to learn about the hispanic cultures through art and exhibitions. Therefore, this gallery serves as an educational source in addition to showcasing the beautiful art.<br><br>
+
+                            Street art is definitely a movement in East Harlem, which you can view at the Graffiti Hall of Fame. Only the best local artists are showcased here, and with a constantly updated display, this very cool gallery is one to check out.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/debarrio.jpg" %}"/>
+                            <h6>El Museo del Barrio</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re looking for something a little more upscale, perhaps try Studio 323 New York. The artwork featured here is very complex and on multiple mediums, which will absolutely please the eye. This studio also offer antiques for viewing and purchase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/goliath.jpg" %}"/>
+                    <h6>Goliath RF</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>With many eclectic stores in the area, East Harlem provides an exceptional shopping experience to all who visit. First, visit Save a Thon Store, a fabric store that is fun to browse or shop at. The fabrics located here are constantly changing, and with very cheap prices, you can definitely find a cute selection to enjoy.<br><br>
+
+                    Or, if you’re more in the mood for finding fashionable products, check out Goliath RF. This store offers shoes in tees in many different styles and colors, making this a great place to shop around if you’re picky about selection.<br><br>
+
+                    For a variety of stores in one central location, visit East River Plaza. This shopping center has everything from Costco to Target, Bob’s Discount Furniture to Old Navy, and even BestBuy and Marshall’s. You will certainly find the department store that you are looking with a multitude of products available.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/success.jpg" %}"/>
+                    <h6>Success Academies</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re looking into East Harlem with children in mind, you’ll be pleased to find out that this neighborhood offers some top-notch educational programs at all levels.<br><br>
+
+                    First, check out Success Academies, who are distinguished because they serve all students, including those with special needs and English language learners. As a charter school, it is able to operate more independently, but are still required to pass the same student exams. This allows Success Academies to tailor their education while still remaining in the top 1% for math and top 3% for english. The only downside to this school is that students are chosen by random lottery.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, a school dedicated to top performers is Talented & Gifted School for Young Scholars. This is one of only three schools in Manhattan that accommodates only the highest achievers, and requires an admissions exam for entrance into the program.<br><br>
+                    Another community school is PS/IS 171 Patrick Henry Preparatory School, which is very highly ranked. This school is tailored for students of East Harlem, and exceeds all standards for education.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/crossfit.jpg" %}"/>
+                            <h6>Cross Fit Metropolis</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For some of the best gyms in the area, check out these finds in East Harlem.<br><br>
+
+                            One of the most highly regarded cross-fit locations is Cross-Fit Metropolis of East Harlem. If you’re looking for a new thing to try, the coaching and dedication that you find at Cross-Fit Metropolis cannot be beaten. With constantly new and updated workouts, you will never get bored of the cross-fit mentality.<br><br>
+
+                            Another great choice is New York Sports Club, which is known throughout the city. They provide many different classes for one flat rate, and with good service and consistency of routine, this is definitely a superb option to make your regular workout facility.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’d feel more motivated by a personal trainer, Hilary McLemore is one of the best of East Harlem. She offers in-home training and personalized plans to get you on track physically, and is able to adapt to your specific needs and environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>One of the premier hospitals of the East Harlem area is Mount Sinai, a 1,172 bed facility that was founded in 1852. The hospital is nationally acclaimed to be one of the best, especially in geriatrics and several sections of pediatrics. Providing many different programs to the East Harlem and Upper East Side areas, this hospital is definitely the first place you should visit if possible.<br><br>
+
+                            Or, check out Metropolitan Hospital Center, a community-based location with a great level of care considering the developing neighborhood. If you’re looking for a sense of the local community that you can trust to give you a high standard of medicinal care, this hospital is right for you.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/metrohospital.jpg" %}"/>
+                            <h6>Metropolitan Hospital Center</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>The last hospital in the area is Harlem Hospital Center, which provides many services to Harlem residents. The hospital has 286 beds and is a Level 1 Trauma Center, meaning that it contains units for many special and distinct services. With the ability to provide same-day surgery or emergency services, this hospital is a necessary resource in case of emergency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/harlempark.jpg" %}"/>
+                    <h6>Harlem River Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>One of the benefits of residing in East Harlem is the close access to many parks and green spaces.<br><br>
+
+                    Harlem River Park is one of these options, as it is over 5 acres of beautiful greenery with many facilities available. Residents love the basketball courts, baseball fields, handball courts, playgrounds, and picnic spaces, where they can spend the day in a variety of ways. The large spacing and location ensures that everyone can find something fun to do here!<br><br>
+
+                    Or, try Marcus Garvey Park if you’re looking for a park that contains everything from a pool to fitness equipment, basketball courts to playgrounds, and many more exciting amenities. This park is especially geared towards kids, as it offers many fun summer activities and swimming lessons to the younger population of East Harlem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=east harlem, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="googlemapsgenerator.com">googlemapsgenerator.com</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
