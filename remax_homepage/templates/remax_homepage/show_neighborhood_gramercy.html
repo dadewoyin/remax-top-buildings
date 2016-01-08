@@ -1,0 +1,343 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Gramercy is a safe and quiet approximately rectangular-shaped area named after the famous fenced-in private park Gramercy Park. The neighborhood is located next to Stuyvesant Town, Flatiron, and Midtown East, giving it great proximity to many nightlife options while still maintaining its private feel.<br><br>
+
+                The main attraction for those visiting the area is the famous Gramercy Park. Known for its privacy, only residents living around the park have a key to enter the facility. Therefore, Gramercy Park is renowned for being the only true private park in Manhattan. Even if you don’t live around its perimeter, you will love the view from outside, as Gramercy Park is on the U.S. National Register of Historic Places.<br><br>
+
+                Gramercy Park sets the tone for the entire neighborhood, which takes after its private and serene aura. The quaint shops and restaurants that dot the area are very charming, and Gramercy even offers elegant nightlife options for you to enjoy. Also, while walking the streets of Gramercy you’ll be able to view original townhouses of Greek Revival, Italianate, Gothic Revival and Victorian Gothic styles.<br><br>
+
+                Even with its magical appeal, the median prices for Gramercy are not much more expensive than the average New York City rental, making this an affordable and practical option for many prospective buyers/tenants. With 5 subway lines converging around the neighborhood, it also features convenient transportation, which leaves us with one question: what doesn’t Gramercy have?<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/gtavern.jpg" %}"/>
+                            <h6>Gramercy Tavern</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>To enjoy the high-end dining of Gramercy, try Juni. They offer meals as well as an individual lunch sampler with exquisite American style foods that will leave you fully satisfied. Or, come for dinner to choose the herbivore, omnivore, or chef’s tasting menus for a surprising and flavorful meal.<br><br>
+
+                            For another great meal, try Gramercy Tavern,  an American restaurant that also provides sampler platters with a variety of meats incorporated that will certainly leave you speechless. Choose to sit in the dining room and you will be greeted with a tasting menu with the best American foods, or choose the tavern for a more casual a-la-carte meal.<br><br>
+
+                            For an upscale Italian meal, make a reservation at Maialio. If you’re adventurous, try the Testarella, a suckling pig face. Or, opt for the Ci Pensiamo Noi option-leave yourself in our hands-for a four course meal of the chef’s choice.<br><br>
+
+                            For a royal excursion, have a cup of tea at Lady Mendi’s Tea Salon. Their beautiful ambience, centered around Victorian decorations, offers a realistic recreation of traditional tea rooms. Be sure to stay for the whole five course tea, and taste some pastries to go along with it.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For the everyday customer in Gramercy, Gila’s Nosh is a favorite. When you walk in, you will be greeted by Gila herself, and will continue to have personable service during your Mediterranean style meal.<br><br>
+
+                            If you’re looking to grab a quick lunch, try out Bite. They employ healthy combinations of sandwiches and other lunch delicacies in an unassuming location and a great price.<br><br>
+
+                            For a masterfully constructed fusion of two diverse cuisines, try Jack’s Sliders and Sushi. This jointly American and Japanese restaurant offers a variety of options to try out, with the dishes of choice being the sliders or the sushi.<br><br>
+
+                            Or, the Piccolo Cafe is sure to have some great Italian options for lunch, as well as dessert if you’re looking for a full meal. Choose from sandwiches, paninis, salads, and many egg combinations for the perfect lunchtime dish.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/irving.jpg" %}"/>
+                            <h6>Irving Farm Coffee Roasters</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re interested in some of the best coffee in Gramercy, try Irving Farm Coffee Roasters. They create many unique blends of coffee from all over the world, as well as sandwiches, salads, and other pastries at your convenience. Another artisanal coffee house in Gramercy is Pushcart Coffee. Complete with a variety of pastries to enjoy along with many different blends of coffee, Pushcart Coffee will definitely hit the spot for an afternoon break.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/rosebar.jpg" %}"/>
+                            <h6>Rose Bar</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>To try something more laid-back, stop by the Gramercy Park Bar. This sports bar offers great drinks and an appealing environment, but comes at the cost of a more expensive night.<br><br>
+
+                            For a classic bar outing with fantastic food and service, visit The Winslow. In addition to its food choices, it creates superb drinks with many options to choose from.<br><br>
+
+                            If you’re interested in a more energy-filled experience, check out Cibar. They have a great space to marvel at, accompanied with awesome bar food, classic drinks, and their own concoctions. You will surely enjoy your night by visiting any of these bars.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, if you’re looking for an upscale way to spend your evening, visit the Rose Bar. The romantic bohemian atmosphere will surely set the mood for a luxurious and whimsical night, complete with upscale cocktails at a big ticket price.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>While Gramercy isn’t exactly known for having the biggest club scene, you can still find what you are looking for right within the boundaries of this neighborhood.<br><br>
+
+                            If you’re lucky enough to gain a membership at The Players, you will certainly have many events to have fun with. This clubhouse is very exclusive and hosts private events with its several different rooms, all with a distinct style. For receptions, the Great Hall is the room of choice, with the Grill Room being more intimate and apt for conversation.<br><br>
+
+                            For a classic dance club experience located in the center of Gramercy, go to the Beauty Bar. Set in an old beauty parlor, this club even offers a manicure with a martini at certain times. You will surely enjoy the lovely vibe if you choose to spend the evening here.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/players.jpg" %}"/>
+                            <h6>The Players</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/traderjoegramercy.jpg" %}"/>
+                            <h6>Trader Joe's</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Groceries in Gramercy are facilitated by a wide variety of selections and specialty services to suit your every need.<br><br>
+
+                            For an amazing grocery store with specialty products, including fresh and organic food, Trader Joe’s is the place to shop. They provide many different items, including unique products that are affordable and high quality. Trader Joe’s also has many frozen choices to conveniently heat up if you are short of time.<br><br>
+
+                            If you’re very interested in health food at your grocery store, make Natural Green Market your primary supermarket. Besides many produce options, they offer choices for people that are gluten-free, vegan, and on other special dietary restrictions. They also have a fresh juice bar and make an assortment of specialty items.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Whatever your style, Gramercy is sure to have a great grocery selection for you to fit your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Whether it be a quick dry cleaning or custom tailoring, there are many terrific laundry services in Gramercy available for your use.<br><br>
+
+                            First, Crystal Dry Cleaners offers everything from tailoring to dry cleaning, as well as fine service.  For a reasonable price, you can get your clothing needs cared for in a short time period.<br><br>
+
+                            If your busy schedule cannot accommodate visiting the dry cleaners, try Sammy’s Dry Cleaners & Tailoring. They offer free pick-up and delivery services of your clothing, which is accompanied with amazing tailoring and dry cleaning. Their reliable service will definitely suit your needs.<br><br>
+
+                            For the technologically savvy, try out the mobile services of Hattan Cleaners. Their efficient dry cleaning and alterations will certainly add consistency to your schedule, and you can expect the best quality of their services.<br><br>
+
+                            So, wherever you choose, the laundry services of Gramercy will be sure to fit your individual circumstances.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/jazz.jpg" %}"/>
+                            <h6>Jazz Standard</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For a completely unique experience right in Gramercy, check out Brotherhood Synagogue if you’re interested in a religious service with a twist. Their Synaplex sabbath features different areas of service, yoga, and small group discussions. If you’re looking for some culture without religious influence, go to the theatre Repertorio Espanol. Their plays are entirely in Spanish and offer a great view into the Hispanic culture.<br><br>
+
+                            For those that are looking for some musical entertainment, the Irving Plaza supplies a beautiful music hall, complete with a ballroom, dance floor and lounge to let everyone enjoy their rock music. If jazz is more your style, visit Jazz Standard, which features an upscale evening and food at your disposal.<br><br>
+
+                            From a religious service to a foreign play, you will definitely receive a cultural form of entertainment in Gramercy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a taste of the upscale Gramercy Park lifestyle, stop into the National Arts Club. Founded in 1898, the National Arts Club is located in the Tilden Mansion, which has now been designated as a national landmark, and members have included three former presidents. This posh Victorian Club accepts only formal attire while hosting one of its art shows or events, with some events tailored only to members while others are open for the public.<br><br>
+
+                            Or, a modern gallery located in Gramercy is Decor Art Gallery. Functioning as both a store and gallery, residents can utilize their framing, stretching, and photo services or enjoy the beautiful gallery, which currently features collections by two artists.<br><br>
+
+                            For a lively and unique artistic experience, visit Performance Space 122. Their novelty art forms are taken from daring artists that want to make an impression on the world, as seen through Performance Space 122’s presentation and galleries. Most of their work is offered in the form of performance, so be prepared for a live view and experience.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/decorart.jpg" %}"/>
+                            <h6>Decor Art Gallery</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re interested in viewing some artwork while in Gramercy, there are many galleries with a diverse range of styles to choose from and enjoy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/bash.jpg" %}"/>
+                    <h6>Bash and Bow</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Shopping in Gramercy channels everything from a vintage flair to modern mom and pop stores, and you are sure to find something that is the perfect fit for you.<br><br>
+
+                    For the classic thrift shop experience, visit City Opera Thrift Shop. They offer everything from clothing to decor to jewelry, and all the necessities in between. The added benefit of shopping at a thrift store is that the prices are discounted! As thrift shops are no rarity in Gramercy, try the Vintage Thrift Shop if you’re looking for something different. They supply vintage items, including used decor, to add spice to your home decoration. The merchandise changes daily, so there is always something new for you to find. All proceeds from this thrift shop benefit the United Jewish Council of the East Side.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>If you’re more interested in cute, modern wear, look no further than Bash and Bow. With two side-by-side stores, Gift Atelier and Shoppe, the company offers home decor, such as candles and handmade lettering, as well as simple and modern women’s clothing.<br><br>
+
+                    So, regardless of your interests in the shopping world, Gramercy will fit your needs and provide you shopping options.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ps40.jpg" %}"/>
+                            <h6>PS-40 Augustus St. Gaudens</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>A child located in Gramercy will have many opportunities to excel in their studies due to the high level of education at the public schools. In terms of elementary school, PS-40 Augustus St. Gaudens offers a great education for young students. This school is very distinguished for its strong academics, and will yield a solid foundation for the child’s middle school and high school education. They also have recently incorporated Wellness In The Schools into their school, which provides a healthier and more substantial lunch for the students.<br><br>
+
+                            For a child looking for a technical high school, Baruch College Campus High School is an exceptional choice. As a high-quality technical school, Baruch is a strong competitor in college admissions, and will provide a great platform of academics. Admissions into this high school are competitive, so a child in Gramercy will have to strongly perform in order to remain in the neighborhood at this prestigious school.<br><br>
+
+                            Therefore, if you’re looking for a tremendous place to raise children, Gramercy has the high academic standard for your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Located in Gramercy, Baruch College is an esteemed choice for college students looking to study business or the arts and sciences. The college offers a diverse platform right in New York City, which affords many opportunities for its students. As a City University of New York, this public institution has cheaper tuition for in-state students, and enrolls around 14,000 undergraduates. This college would be a great choice for your children, as the admissions are selective and only accept 27% of applicants.<br><br>
+
+                            So, if you are looking for a continuing education right in the heart of New York City, Baruch College in Gramercy is the perfect choice.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/baruchgramercy.jpg" %}"/>
+                            <h6>Baruch College Campus</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pilates.jpg" %}"/>
+                            <h6>Gramercy Pilates</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking for yoga classes on a budget, Yoga to the People II is your place. For only five dollars a class, you can choose from a variety of options for the style of class that best suits your needs. Because you don’t have to sign up, you can walk right into the class of your choice. And if you need a mat rental, they offer a bargain at only two dollars.<br><br>
+
+                            Gramercy also offers many pilates options to tone your body while enjoying a workout. You can try Gramercy Pilates for a great experience, as they have daily classes to help you stay motivated to get in shape. With a large open green area that provides a lively and positive environment, you will surely love your experience at Gramercy Pilates. Or, Corpo Vita classes are pilates with a more personal environment, as individual trainers will push you to ensure that you are getting the full experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For an urgent care center located near Gramercy, the Beth Israel Medical Center would be the quickest and most convenient option.  However, if you are in need of a physician, Gramercy Park Physicians is an esteemed group located within Gramercy that would be able to aid your needs. The seven-doctor practice offers many services and performs a variety of procedures, all located in one accessible location. Because of their fast service, a doctor will be able to see you within 24 to 48 hours, ensuring that your health needs are taken care of, and can refer you to the Beth Israel Medical Center if needed. Therefore, Gramercy’s level of care is unparalleled and will leave you comfortable in the neighborhood.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/parkphysicians.jpg" %}"/>
+                            <h6>Gramercy Park Physicians</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/gramercypark.jpg" %}"/>
+                    <h6>Gramercy Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>One of the most serene and beautiful places in all of New York City is hidden in Gramercy, namely the Gramercy Park.<br><br>
+
+                    This park gains much of its serenity due to its privacy: there is no public access to the park, and only residents directly surrounding the area are awarded a key. In fact, there are only 383 keys in total, so most people who walk by the park cannot stop in for a peaceful visit.<br><br>
+
+                    Besides the rules of privacy, Gramercy Park also doesn’t allow photography, and commercial photos of the park were not released until a guest unintentionally released them against park rules. Besides the exclusivity of the interior, the park also mandates that there are no pets, no smoking, and other regulations.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>If you want to be sure that you can gain access to the park, however, all hope is not lost: if you stay at the Gramercy Park Hotel, they will escort you for private access. Otherwise, you’ll only be able to look from the outside wishing you had a key.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=gramercy, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="googlemapsgenerator.com">googlemapsgenerator.com</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
