@@ -1,0 +1,296 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                One of the many fast-growing uptown New York City neighborhoods, Inwood gets its unique feel from its sense of community and integrity to culture. Inwood is located at the very top of New York City, and is bordered by Washington Heights.<br><br>
+
+                Many people may discount Inwood for its distance from the main events of New York City, when in fact Inwood itself is a location-a beautiful haven with a small-town feel inside the city. The residents who live here absolutely love Inwood Hill Park, as it has endless facilities and athletic fields for everyone to enjoy. You can truly view some beautiful nature here, which feels like an escape from the rest of New York City.<br><br>
+
+                If you are worried about the transportation, it’s not as bad as you think. Inwood is very close to LaGuardia for airplane travel, and as for the city, the subway takes only 30 minutes to get to Times Square from Inwood. Many people are flocking to this area because they are realizing how great the location is within itself-with authentic restaurants and nightlife, there’s no need to even travel downtown.<br><br>
+
+                In terms of real estate, Inwood has grown in popularity tremendously over the last couple of years. The sale and rental prices, however, are still way below the median price for New York City, making this an affordable option for you to call home. With a hot real estate market, this neighborhood could also be a good investment for the future. Come check out some properties in this beautiful area today!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/beansandvines.jpg" %}"/>
+                            <h6>Beans-and-Vines</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The highly cultural aspects of this neighborhood make the food of Inwood even more delicious, as it is all authentic and homemade.<br><br>
+
+                            One of the best restaurants in the area is Beans and Vines, a tiny restaurant that is known for its Yuca fries and Gourmet Chimi. With delicious wine and coffee, this place serves up some of the best drinks, but the food may be the best part. The international feel to the restaurant only adds to its mystique and elegance, making it the perfect opportunity for a night out.<br><br>
+
+                            Another great choice is Indian Road Cafe, a popular American restaurant that serves up amazing food and drinks to boot. You can try everything from a banh mi sandwich to lobster mac and cheese at this electric joint, not to mention their delicious coffee and wine.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If instead you’re looking for a juicy steak, Guadalupe will definitely not disappoint. They are known for their currasco, sangria, and guacamole, as well as their other drinks which are sure to leave a buzz. Make sure that you try out this delectable treat before leaving Inwood!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For some of the best Chinese food of Inwood, try out Amy’s Restaurant. Known for their fresh noodles and exceptional delivery services, Amy’s will definitely provide you with a great quality of food for the price. Their menu is also healthier than most, ensuring that you will get a great meal that will sit well with you.<br><br>
+
+                            Another amazing Asian restaurant is Yummy Thai. Check out their eccentric ambience, fantastic drinks, and food to please at this Inwood restaurant. They are known for their spring rolls and pad thai, but you are free to venture out and try one of their many different options.<br><br>
+
+                            If you’re looking for a great breakfast stop or just something quick to eat, check out G’s Coffee Shop. All the residents here love the Mexican breakfast burrito, as well as quick tacos and convenience store. The hole in the wall will certainly impress and exceed all of your expectations.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/yummythai.jpg" %}"/>
+                            <h6>Yummy-Thai</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/inwoodlocal.jpg" %}"/>
+                            <h6>Inwood Local</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Even though the neighborhood is relatively quiet, the nightlife here in Inwood is always hopping.<br><br>
+
+                            First, check out Inwood Local, a fabulous bar with an extensive wine selection in addition to bar food to enjoy. They also have 16 beers on tap, 14 of those local selections, which really adds to the appeal of the bar. This bar can get really loud during busy hours, so if you’d like to have an energetic evening, Inwood Local is for you.<br><br>
+
+                            Another bar option is Corcho Wine Room, which offers some impeccable wine choices that match the caliber of live music that plays in the venue. Their bartender makes some terrific craft cocktails, and is very knowledgeable in wine selection, to select a perfect pairing for your dinner or just a casual drink. The cozy environment is a great place to catch up and savor a night with friends.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>The club nightlife in the Inwood area is also active and colorful, leaving you with a great night to dance and party away.<br><br>
+
+                            First, check out El Tina Bar, a Spanish dance club with drinks that are almost as good as the dancing! You will certainly lose track of time while enjoying your night here.<br><br>
+
+                            Or, try out Nitro if you’re really looking for a cool party and you’re ready to dance. Their small space makes dancing crowded and intense, so this is surely the main event of the night. Nitro has a really cool all-white venue with dry ice machines and other lighting techniques to make this night special.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/negro.jpeg" %}"/>
+                            <h6>Negro Claro</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another hip lounge is Negro Claro, located in the heart of Inwood with all of the tools necessary for the perfect party. Drawing a large young crowd, this club manages to keep everything upscale and orderly for the environment. You will definitely not be disappointed by the party that Negro Claro puts on through its great atmosphere.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/inwoodgourmet.jpg" %}"/>
+                            <h6>Inwood Gourmet</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>There are many great grocery stops for you to shop at in Inwood, all with local roots and environments!<br><br>
+
+                            First, check out Inwood Gourmet, a grocery store that offers specialty items like gourmet cheese and olives, as well as countless ingredients and prepackaged products. Run by a very friendly staff, you will certainly be welcomed as you enter one of the best grocery stores uptown, complete with many products that you cannot find elsewhere in this area. This store is definitely a resident favorite, so follow suit and shop here today.<br><br>
+
+                            If you want to try out another resident favorite, My Deli Grocery will be perfect for you. Run by locals, this homey shop makes quality food, and supplies convenience items for your use! Be sure to check out the reasonable prices and awesome environment.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, whether you’re looking for specialty items or a quick, cheap stop, Inwood has the ideal grocery store for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Inwood also has a great selection of laundromats for your clothing and dry cleaning needs.<br><br>
+
+                            Try out Alvin’s Crystal Cleaner for some reliable service at a reasonable price. With a quick turnaround time, you are sure to get a tremendous overall product by using these dry cleaners.<br><br>
+
+                            If you’re looking for a quality dry cleaning service, Starlight Dry Cleaners is your shop. They provide services of amazing quality and low prices, and still manage to have consistently friendly service throughout. This is definitely a wonderful stop if you don’t want to be disappointed by an inconsistent cleaner.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/starlight.jpg" %}"/>
+                            <h6>Starlight Dry Cleaners</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another awesome laundromat is Wash-Rite, a wash and fold and dry cleaning service located in Inwood. Their per-load prices are very cheap, and you can get your clothes back in no time! Wash-Rite is a great choice for anyone who doesn’t want to spend the extra time and money on laundry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/nostylgia.jpg" %}"/>
+                    <h6>Nostylgia</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Inwood also boasts some great shopping sites right within the neighborhood, perfect for a convenient and enjoyable day of purchasing.<br><br>
+
+                    If you’re interested in a gift shop and trinket shop located right in Inwood, Lucky Bamboo is the best stop for you. They have lovely jewelry, bamboo plants, teas, gift baskets, and more for you to purchase, as well as a focus on holistic practices. Even if you don’t buy something, come in to learn about their unique health methods and beautiful merchandise!<br><br>
+
+                    Another fantastic store for men is the clothing store Nostylgia. With handcrafted designs and beautiful fabrics, Nostylgia will definitely have a piece that you are looking for. They have recently partnered with a unique tea and chess company to give you a full body and mind experience while you shop.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>For a furniture store that is constantly offering deals and discounts, Sofa and Furniture Disassembly is the ideal place for you. Although they don’t sell furniture, they specialize in moving your large items into and within your house, as well as refurbishing old furniture that you may have. This is an ideal opportunity to perfectly place every item within your house, all for a reasonable price!<br><br>
+
+                    So, regardless of your shopping choice, Inwood will not disappoint.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/ps278.jpg" %}"/>
+                    <h6>PS MS 278 Paula Hedbavny School</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Because of its recent development, the educational system in Inwood mirrors the up-and-coming atmosphere of the neighborhood.<br><br>
+
+                    Check out PSMS 278 Paula Hedbavny School if you’d like an enriched and diverse education for your elementary school-aged child. With a focus on projects and multiple styles of learning in order to get results, Paula Hedbavny School still delivers great test results for the area. Come check out this desirable community that residents love today!<br><br>
+
+                    Another option for your children is PS 314 Muscota New School, an academic institution that builds its academic footings from the community up. These efforts of social education are very important in the character of the students, which is a distinguishing factor for this school.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, perhaps PS 366 Washington Heights Academy is the perfect institution for your child. They too focus on relationships as the primary motivator of academics, and have a detailed understanding of the learning process.<br><br>
+
+                    Any of these selections would be great choices for your child’s educational base.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/dyckman.jpg" %}"/>
+                            <h6>Dyckman Street and Vermilyea</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Inwood also sports some great gyms for you to keep in top shape while enjoying the beautiful neighborhood. If you’d like to stay in shape yourself, Inwood Hill Park is a marvelous option, or otherwise choose to enjoy one of the many gyms in the area.<br><br>
+
+                            One of America’s favorite workout facilities is Planet Fitness, an inexpensive choice for being able to use tons of high-end equipment. Because of their large location, they have supplied their facility with tons of workout gear, certainly enough to share with the wide array of gym members. So, if you’re looking for something simple, reliable, and member friendly, Planet Fitness is for you.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re big on boxing, DAS Boxing Center is the perfect training facility for you. Offering a variety of classes, including boxing, jiujitsu, karate, and more, the educated staff will help you achieve your top potential in any of these arts. Or, if taekwondo is more your style, check out Warrior Taekwondo. They are dedicated to bringing you a great education led by an international champion in the event.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In addition to great fitness care, the hospital care-for both you and your pets-is top notch at Inwood.<br><br>
+
+                            If your pet seems under the weather, the Inwood Medical Clinic may be able to help. They provide basic services, such as spay and neuter, check-ups, and vaccines, as well as more complicated treatments like testing, x-rays, and surgery. With specializations in puppies and seniors, this animal hospital is perfect for many of your animal needs.<br><br>
+
+                            Another high caliber clinic located within Inwood is a location of New York Presbyterian, which offers extensive health coverage for many of your medical needs. From surgery to emergency care, come here if you have an immediate problem and would like only the best of care.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/presbyterianinwood.jpg" %}"/>
+                            <h6>Presbyterian</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/inwoodpark.jpg" %}"/>
+                    <h6>Inwood Hill Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The main park located in Inwood is very large, named Inwood Hill Park. They offer everything from barbecue areas to tennis courts, basketball courts to roller hockey, as well as baseball field, fitness equipment, dog-friendly areas, soccer fields, hiking trails, nature centers, and so much more.<br><br>
+
+                    For runners and walkers, there is always a new trail and different path that you can check out for a diversified routine. An athlete will definitely enjoy the top-of-the-line courts and equipment available in the park, including fitness equipment, baseball field, handball fields, basketball courts, roller hockey, and soccer fields. There is surely a great opportunity for you to please every one of your family/friends if you take a trip to Inwood Hill Park.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, those looking for something less active can take a look at the beautiful wildlife dotting the landscape of Inwood Park; maybe you even want to have a picnic in the amazing area. Your children can play at any of the three playgrounds at the expansive park while you relax and take in the scenery.<br><br>
+                    Therefore, there are so many options for you to choose from for a wonderful day at Inwood Hill Park. Stop by today if you’re interested in anything from a day full of excitement to relaxation. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=inwood, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="http://googlemapsgenerator.com/">Google maps genhttps://ww.premiumlinkgenerator.com/erator</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
