@@ -1,0 +1,272 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Little Italy is one of the most classic neighborhoods in New York City, bordered by SoHo, Chinatown, and Nolita.<br><br>
+
+                This active neighborhood earned its name because of the high concentration of Italian immigrants that used to occupy the area. Today, Little Italy’s commerce centers around its restaurants and tourism, which are staples to this area because of its fantastic legacy and cultural history. Here you can find some of the best Italian restaurants in all of New York City, so if you’re looking for some genuine Little Italy pizza, you’ve come to the right place. Unsurprisingly, Italian food is basically the only cuisine that you can find here, but due to its close proximity to Chinatown, an entirely different culture is just a few blocks away.<br><br>
+
+                The heart of Little Italy lies in the residents, and while the neighborhood may be named after Italians, the area is becoming more and more diversified. While there is a significant population of Little Italy lifers, the turnaround rates for properties are high, to make way for an incoming younger generation. Still, property values are above the New York City average, meaning that the area is definitely still popular and in demand. If you want to be part of a cultural turning point in Little Italy, now is your chance to rent/buy!<br><br>
+
+                So, whether you’re interested in Little Italy pizzas or the iconic atmosphere of the neighborhood, Little Italy is the perfect place for you to call home.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/angelos.jpg" %}"/>
+                            <h6>Angelos</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The fine dining scene in Little Italy includes Italian, Italian, and more Italian food. While there are many tourist locations, you can easily find an authentic restaurant with some amazing food.<br><br>
+
+                            First, dine at Pellegrino’s Italian Restaurant if you’re looking to have a great night of food and fun. Try one of their fresh pasta dishes from their menu, or opt to request any Italian dish and they will make it for you. This impeccable service and location really make for a lovely night, complete with their amazing desserts.<br><br>
+
+                            Or, for the freshest pasta of the area, try Angelo’s, an institution of Little Italy. They prepare fresh pasta every day, and furnished with their quality sauces, the dishes here are amazing.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Be sure to stop by Ferrara Bakery and Cafe if you haven’t already had dessert. Known especially for their cannolis, Ferrara also offers a variety of pastries made fresh and delicious. Try the chocolate truffle cake if you like chocolate, or indulge in some of their New York Cheesecake.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re dining in Little Italy, the obvious favorite cuisine is Italian. Here, you’ll find the best in the city if you’re looking for a good meal.<br><br>
+
+                            For a classic Italian meal that brings old school flavor to all of its dishes, choose Benito One. In addition to the homey, authentic feel of the restaurant, the pastas that Benito produces are amazing and sure to please. Be sure to try some scrumptious bruschetta to start off your meal.<br><br>
+
+                            Or, for a high energy Italian joint that is sure to leave you excited about your meal, visit La Mela. They offer generous portions of their amazing pasta dishes and appetizers, with plenty of drinks to boot.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/gelato.jpg" %}"/>
+                            <h6>M’o jj Gelato</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For for a gelato shop to finish off your great Italian meal, look no further than M’O Il Gelato.  Whether you choose a classic gelato flavor or one of their special creations, M’O Il Gelato will definitely hit the spot. And, try their Gelato Panino, a sweet bread gelato sandwich, which is one of their signature dishes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/oniel.jpg" %}"/>
+                            <h6>Oniel's Grand Street</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>As Little Italy has expanded as a tourist destination, so have the choices of bars in the area.<br><br>
+
+                            Furnished with limited seating in the front for dinner and a bar area in the back, visit Onieal’s Grand Street for great dinner and a cocktail. With an upscale vibe, this place is the perfect spot to share a few drinks and some food with friends.<br><br>
+
+                            If classy is what you’re looking for, try La Compagnie de Vins Surnaturels. You can stop in for a top quality French dinner or just for drinks. They have an extensive wine list and the waiters are knowledgeable in finding the ideal wine for you, without being too expensive for the quality. Come here for a night of romance and fantastic wine if that sounds exciting to you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re interested in a classy club with plenty of energy, check out Goldbar. Dazzled with gold decorations, Goldbar offers great bottles and cocktails for you to enjoy. Just be sure that you are wearing the proper attire, as they do have a dress code.<br><br>
+
+                            For a speakeasy-style setting that will definitely occupy you for the night, visit The Mulberry Project. They have extraordinary cocktails and other drinks, as well as a DJ and constant music, making it a perfect dancing atmosphere. Their bartenders also are amazing at concocting fresh drinks to order based on your mood.<br><br>
+
+                            Or if you’re looking for a mixed seating style pool hall, try Tropical 128. In addition to the drinks, the vibe is always very fresh, and the music pumps through the night.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/tropical.jpg" %}"/>
+                            <h6>Tropical 128</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/dipalo.jpg" %}"/>
+                            <h6>Di Palo’s</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>While Little Italy is a small area to find many grocery stores, those that exist within the neighborhood are high-quality and satisfying.<br><br>
+
+                            Try New York Mart if you’re looking for a quick and efficient store to shop at without the hassle of big crowds. Furnished with an Asian influence from the surrounding neighborhood, New York Mart offers all basic items for everyday needs, as well as specialty foods to prepare Asian dishes.<br><br>
+
+                            Or, for an amazing Italian deli with the classic look and feel, visit Di Palo’s. They offer fresh cuts of many Italian meats, as well as high-quality cheese with a wide variety. They also have other items for sale, such as pre-made pasta, coffee, and Italian spices, making this a great stop for making an Italian meal.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Therefore, shopping in Little Italy is easy with the conveniences of terrific grocery stores, all set conveniently within the small neighborhood.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Little Italy also boasts very efficient laundromats, making living here even easier and opportune.<br><br>
+
+                            The highest rated laundromat in Little Italy is Jie Li Laundromat. They offer a fold, wash, and dry service for less than $1 per pound, as well as dry cleaning for more expensive items. The laundry may be even ready for the same day pickup, which is feasible due to their long hours.<br><br>
+
+                            And, there are many other smaller laundromats in the area that may be closer to you, so be sure to seek them out and enjoy quality service. Regardless of which laundromat you go to in Little Italy, you can be assured that this neighborhood offers the best buisnesses in laundry and dry cleaning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/capita.jpg" %}"/>
+                    <h6>Capita</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Besides the great food, there are many things to do in Little Italy while you’re enjoying the neighborhood.<br><br>
+
+                    First, as a tribute to the neighborhood, check out the Italian American Museum. They display many different Italian artifacts, such as old Italian newspapers in America, and various pieces of artwork constructed by Italian Americans. The goal of this museum is to celebrate the culture of Italian Americans who immigrated years ago, and the impact that they have on the world and Little Italy neighborhood.<br><br>
+
+                    If you’re in Little Italy at the right time, perhaps you will catch the San Gennaro Festival. Held annually, this festival offers a ton of food and entertainment for you to enjoy all day. The festival goes on for 11 days of parades, games, and lots of fun. Be sure to check out this homage to the authentic Italian era today.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, catch an event at Capitale, a great event space in Little Italy with a beautiful ballroom and catering services. They can make an amazing event for any occasion, and add a sense of elegance and charm to the evening.</p>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/piccolini.jpg" %}"/>
+                    <h6>Piccolini</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you’re trying to avoid the tourism of Little Italy, there are many authentic shops in the area that will offer you great clothing and products.<br><br>
+
+                    For a lovely vintage and consignment store, check out New & Almost New. With high fashion items with inspired taste, you will surely find something that you are looking for, even on a budget. This is a wonderful way to achieve the name brand look without paying the high prices.<br><br>
+
+                    Another quality vintage store is Ritual Vintage. They have a wide selection of items from many eras, and although the prices are high, they are affordable given the caliber of product.  You should definitely come even to see the great clothing that they have on display!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>If you have children and are looking for a superb store to find something for them, look no further than Piccolini. With great products at all age levels, Piccolini absolutely offers a fun and fresh perspective. They also have an iconic t-shirt that you can buy for the ideal present.<br><br>
+
+                    So, whatever your style or needs may be, Little Italy has the perfect store waiting for you.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/cordell.jpg" %}"/>
+                            <h6>Cordell Fitness</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Whether you’re starting to work out for the first time or are already seasoned, Little Italy’s gyms offer the perfect fitness locations to keep you at the top of your game.<br><br>
+
+                            First, if you’re already in great shape and looking for an extra workout, check out Soho Strength Lab. They provide personal training as well as classes, all with high intensity and a competitive atmosphere. Visit Soho Strength Lab if you are serious about getting in top shape and don’t mind the intimidation of peers.<br><br>
+
+                            Or, for an experience and gym more tailored to your personal level and style, try Cordell Fitness. Their independently owned gym employs the philosophy of comprehensive fitness, with many services available from their personal trainers. Without the competition in their environment and their space, Cordell Fitness will feel like an individual experience for you.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, try out one of these gyms today in Little Italy to get into great shape and enjoy working out.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>While there is not a hospital formally located in Little Italy and you’ll have to travel to a surrounding neighborhood, the doctors here can take care of many needs within the area for your convenience.<br><br>
+
+                            If your children have an aliment that they need treated, try Manhattan Pediatric Association. With great service and friendly staff, your children will definitely get the quality of care that they need. The doctors of the practice pay special attention to detail, ensuring that your children are in the best hands at a time of need.<br><br>
+
+                            Or, if you need an eye doctor, visit Horizon Vision. Their prescriptions offer a high level of precision, and they have glasses on site available for you to purchase for your convenience.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pediatric.jpg" %}"/>
+                            <h6>Manhattan Pediatric Association</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Lastly, if you’re looking for a family practice, Dr. Chiong will surely take care of you. Not often can you find a doctor with the level of care and precision of Dr. Chiong, as she will give her best effort to every situation. You can’t go wrong by visiting her practice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=little italy, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ww.premiumlinkgenerator.com/">premium link generator overview</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
