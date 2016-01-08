@@ -1,0 +1,320 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Recently broken off as the upper section of Little Italy, Nolita offers an amazing new and fashionable vibe. Nolita is bordered by Little Italy, SoHo, and Bowery.<br><br>
+
+                Rather than focus on Italian culture like its Southern counterpart, Nolita employs a diverse variety of cuisines and blend of lifestyles within the small area. The Nolita restaurants are among the most popular downtown, as Nolita offers both fine dining and casual options to suit any desire. The vibe when you walk down the streets is cozy yet cool, as Nolita has a distinctive style that everyone loves.<br><br>
+
+                What Nolita lacks in nightlife it definitely makes up for in its amazing shopping options. With boutiques ranging from internationally handpicked items to handmade leather bags, the Nolita shopping scene is high-fashion yet reasonably priced. There are also many other attractions to enjoy while in Nolita, such as pizza and candy tours, as well as fine art galleries. Many tourists who choose Nolita stay in the famous Nolitan hotel, which is located in the center of the action.<br><br>
+
+                With the convenient location nearby SoHo and Little Italy, as well as eight train lines that run through the neighborhood, Nolita is a well connected hub. Residents really like the freshness of the neighborhood as well as the amazing shopping scene that defines the area. Because the neighborhood is very new, prices for houses in this area are still variable and being established. Right now, the average rental prices lie below those of New York City’s, so it is a great time for an investment in Nolita.<br><br>
+
+                So whether you’re going to dine at the Nolita restaurants or enjoy a stay at the Nolitan Hotel, Nolita creates the perfect vibe and balance through its interesting tapestry of citizens.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/musket.jpg" %}"/>
+                            <h6>Musket Room</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Nolita offers some of the best fine dining options in all of New York City. For an exclusively pre fixe menu and an opportunity to upgrade to 12 courses from 10, Torrisi establishes a high grade of excellence for its customers. Their Italian food is very innovative, and with specialized wine pairings, you will never want to leave this small space.<br><br>
+
+                            If instead you’re looking for a new gem, try Musket Room. This team from New Zealand has impeccable attention to detail and puts a unique spin on all dishes to create amazing food. There are both a la carte dishes and a tasting menu available to maximize your enjoyment of this cuisine.<br><br>
+
+                            For some fine dining that you can savor from anytime between brunch and dinner, check out Public. Their deceptively small exterior yields a large room inside for plenty of customers to enjoy, with the most popular option being the tasting menu. With influences from Australia including kangaroo and wild boar, their exotic food will help you to appreciate new, amazing tastes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re looking for fantastic food in New York city, Nolita offers some of the best. With a wide variety of cuisines and prices, Nolita’s restaurants will definitely satisfy every palate.<br><br>
+
+                            For one of the most renowned Nolita restaurants, try out Cafe Habana and it will not disappoint. This restaurant creates Cuban and Mexican dishes with many selections to choose from. They are famous for their Cuban sandwich, a classic dish, and seasoned corn on the cob. Cafe Habana has authentic decorations and ambience as well, which is a lovely finish to a classic meal.<br><br>
+
+                            Or, perhaps you’re interested in indulging in some Italian food while enjoying an afternoon. If so, go to Cafetal Social Club. This small cafe has great service and amazing Italian food options, in addition to its coffee and desserts.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/habana.jpg" %}"/>
+                            <h6>Cafe Habana</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a quick bite to eat that will leave you satisfied, Piacere is the perfect stop. Whether you’re eating delivery or in house, the food will certainly be pleasing and enjoyable. They also offer other Italian dishes and dessert for you to finish off the meal. Be sure to try it while in Nolita!<br><br>
+
+                            So, regardless of your cuisine choice, Nolita’s wide variety of takeout will ensure your food fulfillment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/puck.jpg" %}"/>
+                    <h6>Puck Fair</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Nolita offers an interesting and authentic bar scene, with options ranging from an Irish pub to a traditional bar that also serves brunch.<br><br>
+
+                    If you’re interested in eating when you go out, Mother’s Ruin would be the perfect spot to spend your evening. The place is usually crowded, and it’s for a reason-the combination of amazing burgers and grilled cheese, drinks, and hangout spot leave everyone drawn into this tiny bar.  This is a great bar to enjoy the night away with friends.<br><br>
+
+                    For a wonderful dive bar that you will keep wanting to come back, visit Botanica Bar. This basement bar supplies cheap drinks, entertaining music, and a cool vibe to hang out at for a couple of drinks. They are known for their Ginger Yum Yum, so be sure to try it!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Puck Fair is another impeccable Nolita staple that creates an Irish pub environment, with food and drinks to boot. If you’re trying some food, check out the fish and chips or another authentic Irish dish, and you will be happy you did. Puck Fair also offers some great custom drinks and beer selection for you to party the night away.<br><br>
+
+                    So, whatever the occasion, Nolita has the perfect nightlife spot for you.</p>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/metfood.png" %}"/>
+                            <h6>Met Foodmarkets</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Nolita also offers many options for grocery shopping so that you don’t even have to leave the neighborhood for splendid products.<br><br>
+
+                            If you’re looking for a well-stocked grocery store that displays a wide variety of products, check out Met Foodmarkets. With frequent sales and adequate prices considering the neighborhood, Met Foodmarkets can easily function as your regular grocery store. Even if you just get a few items, you will certainly be satisfied with the level of quality.<br><br>
+
+                            A quicker choice to stop for is Soho Garden, a convenience store located in Nolita. They offer many fresh products, including fruit and flowers, as well as other grocery items to help you find a product on the go. Soho Garden is also cheaper than many of the surrounding stores, making it the perfect option for saving some money.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Whatever your choice, Nolita’s grocery markets are sure to please you and your wallet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you need a laundromat or dry cleaning service while in Nolita, there will definitely be a terrific selection right around the corner for quick and easy service.<br><br>
+
+                            If you’re close to Lin’s Laundromat, try out either the wash and fold services of the laundromat or the dry cleaning services that are also offered. At a reasonable price, Lin’s Laundromat is a great choice for your laundry needs.<br><br>
+
+                            Or, check out Zhang’s Dry Cleaners, which measures your payment by the pound and gets your laundry back to you very quickly. Together with their dry cleaning, Zhang’s is a one-stop shop for any cleaning of your clothes that you may need.<br><br>
+
+                            Another tremendous option located in Nolita is Nolita Cleaning Co, which offers a comprehensive service for its customers. They even have complimentary coffee as you pick up or drop off your laundry and dry cleaning, adding the perfect touch to exceptional service.<br><br>
+
+                            Choose any of these laundromats in Nolita and you will be greeted by amazing service and a high quality clean.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/papabubble.jpg" %}"/>
+                            <h6>Papabubble</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>As an up-and-coming neighborhood after breaking off from Little Italy recently, Nolita has some incredible finds for attractions to keep you occupied and amused.<br><br>
+
+                            If somehow you’re still hungry after eating all of the wonderful food in Nolita, hop on the pizza bus and take one of Scott’s Pizza Tours. An avid connoisseur of everything pizza, Scott will provide valuable information on the history and quality of pizza as you try various slices from throughout New York City. This attraction is very highly rated in Nolita, so you’ll certainly have a great experience too.<br><br>
+
+                            For those with a sweet tooth instead of savory, come watch fresh candy being made at Papabubble. With candy so fresh out of the machine that it is literally warm, Papabubble will amaze you with its selection and tastes. You have to try some candy today, especially with their free samples!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Basically, Nolita’s attractions are centered around food, which you will thoroughly have fun with while living here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If it’s art that you’re interested in, Nolita’s art galleries will not disappoint.<br><br>
+
+                            For a modern gallery that offers refreshing artwork, visit Gallery Nine5. Their space has a unique layout of display space, which reinforces the innovation of the constantly changing exhibitions. Come here if you want to enjoy the future of art in a great setting.<br><br>
+
+                            Or, if you like mobile artwork that involves doorways and other facades, Storefront for Art and Architecture would be the perfect place for you to visit. They have a huge amount of doorways and other wall-like structures that move around to fit the exhibit, which will leave you in awe. Storefront is a nonprofit organization, so they will certainly be providing you a high level of art purely for the merit of their vision.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/storefront.jpg" %}"/>
+                            <h6>Storefront for Art and Architecture</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Therefore, there is definitely not a shortage of fascinating art galleries to stop by and enjoy while in Nolita.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/pinkyotto.jpg" %}"/>
+                    <h6>Pinkyotto</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>For fashionistas and those who love an interesting wardrobe, Nolita’s boutiques are the perfect spot.<br><br>
+
+                    For a bold woman, Pinkyotto offers a beautiful collection of vibrant colors and prints that are a mix of vintage and modern designs. They are sure to provide a fresh update and style to your wardrobe.<br><br>
+
+                    If you love international travel and appreciate other styles, perhaps you would be interested in checking out Babel Fair. Handpicked from multiple countries and combined into one beautiful collection, Babel Fair has the ideal look for an aspiring traveler or international citizen.<br><br>
+
+                    Or, Nolita offers several high end boutiques that create luxurious clothes at great prices, like Skingrafts. These wearable clothes are of superb quality and durable, so you will be sure to get your bang for your buck.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>So, whatever your style may be, if you want to keep up with the latest fashions, Nolita is an amazing shopping destination.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/ms131.jpg" %}"/>
+                    <h6>MS 131 Dr. Sun Yat Sen Middle School</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The school zoning of Nolita severely favors the students of the neighborhood, as they are provided with a top-notch education at both the public elementary and middle schools. Every child in Nolita is zoned to the same schools, making the choice of public education very desirable.<br><br>
+
+                    In terms of elementary school, PS 130 Hernando de Soto Elementary School is the public school of Nolita. As this school services all children of the area, they specialize in finding the right learning style for each student to ensure their success. The elementary school also offers a talented and gifted (TAG) program for students who are excelling in the curriculum. Thus, regardless of the level, Hernando de Soto Elementary School is a great foundational base of education.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>For middle school options, MS 131 Dr. Sun Yat Sen Middle School is the best of the Nolita neighborhood. With a rigorous curriculum and a wide array of extracurriculars, this middle school is the perfect choice for those looking to get into a competitive public high school. The Dr. Sun Yat Sen Middle School even provides regents classes after school for a personalized session of high school classes to further challenge the students.<br><br>
+
+                    Therefore, the public school system in Nolita is very proficient and will offer your children amazing opportunities.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/modelfit.jpg" %}"/>
+                            <h6>Model Fit</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Within its small radius, Nolita presents many different fitness options with very distinct styles. Nolita provides all types and levels of fitness to its citizens, making this an impeccable place to stay fit in.<br><br>
+
+                            If you’ve never trained with a celebrity trainer before, maybe you can try it at Model Fit. The trainer, Jason, has trained many supermodels in keeping their bodies athletic and toned through small movements and dedicated energy. While you may not feel the exhaustion like at other gyms, modelFIT will help you to further strengthen your body and achieve a great shape. Be prepared to shell out a hefty sum for this gym, however, as celebrity trainers come at a cost!<br><br>
+
+                            For those who are more interested in the traditional personal training methods, check out Fit Crush NYC. These trainers will push you to your limits and beyond as they seek to increase your endurance, strength, and agility. Even though it is a high cost, Fit Crush will definitely exceed your expectations and get you into better shape quickly.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>There are many terrific options to check out for both traditional and nontraditional fitness in Nolita.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re in need of medical services ever while in Nolita, there is a convenient hospital located right in the heart of the neighborhood. Judson Health Center will definitely take care of many of your health needs, all for one pre-established baseline price that they will not increase on you. As part of Gouverneur Health, you can be assured of their level of service and fast wait times for urgent matters. Simply make an appointment and be taken care of by the best of the neighborhood! Nolita will always keep you feeling secure with its centrally located hospital at your disposal.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/judson.jpg" %}"/>
+                            <h6>Judson Health Center</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/desalvio.jpg" %}"/>
+                    <h6>DeSalvio Playground</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Although there are no official parks in the Nolita neighborhood, they do have two playgrounds, as well as a pop-up park in the winter for when its too cold to enjoy the outdoor conveniences.<br><br>
+
+                    The DeSalvio Playground is one of the two located in Nolita, and although small, offers the children and others looking to relax the perfect spot to hang out. Children love the playground areas located there, as well as a basketball court to have fun on.<br><br>
+
+                    And, if you’d still like to enjoy the greenery during the cold months of winter, Nolita has recently become home to a three-month pop-up park called Park Here located right on Mulberry Street. The free, warm park has many of the same amenities that you would find at an outdoor park, except instead located at OpenHouse Gallery!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>So, check out the great parks located in Nolita for some fun and a lovely opportunity to wind down.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=nolita, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="http://premiumlinkgenerator.com">premium link generator for 2016!</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
