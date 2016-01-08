@@ -1,0 +1,336 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Midtown East is a neighborhood located in the heart of New York City, and bordered by Lenox Hill, Murray Hill, and Midtown. The area is known as a jointly professional and residential environment, meaning that it is constantly abuzz with activity.<br><br>
+
+                In terms of attractions, many people recognize the area by its iconic buildings, such as the Chrysler Building, Empire State Building, and Saint Patrick’s Cathedral. Midtown East is also known for its large international community due to the United Nations’ and other consulates’ presence. Because of the many attractions within the small area, the number of Midtown East restaurants match the congregate of people, so there is always something new to see or eat!<br><br>
+
+                This particular part of Midtown is known as the corporate hub of New York City and thus it is very busy by day, with commuters going in and out of the train stations. The residential community comes to life at night, and therefore the nightlife scene is very active in Midtown East. With so many people present in the neighborhood, it is only natural for there to be many luxury boutiques and famous department stores right on 5th Avenue!<br><br>
+
+                Some of the most desirable real estate is present in Midtown East and many international investors and residents have been scooping up the already hot real estate available. It’s safe to say Midtown East will have a prosperous market in the foreseeable future, so consider a property in Midtown East today.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/cirque.jpg" %}"/>
+                            <h6>Le Cirque</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Reward your taste buds with some of New York City’s most exquisite dining options in Midtown East!<br><br>
+
+                            Start with the brand new Vitae, providing its customers with great food and drink with genuine hospitality. Priding themselves on finding the best ingredients from New York’s finest purveyors, pouring quality wines from all over the world, and combining old and new cocktail recipes, they will certainly provide you with luxury dining.<br><br>
+
+                            You can’t discuss Midtown East restaurants without mentioning the famous La Grenouille. Numerous prominent figures have eaten at this establishment, from entertainers such as Frank Sinatra and Madonna to the maestros of fashion such as Yves Saint Laurent and Christian Lacroix. Visit and become part of history while trying their fabulous French tasting menu!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another landmark and a paragon for Italian restaurants in Midtown is the historic Le Cirque. Founded by Sirio Maccioni in 1974, this family-owned establishment offers exquisite food and a unique ambience of a circus theme. Take a look at monkeys, circus balls, and tent shades as your food excites your palate just as much as the decorations provide a feast to the eyes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re the mood for gourmet quality food without the waits and high prices, Midtown East definitely has the restaurant for you.<br><br>
+
+                            One dish you will absolutely want to try in Midtown East is the French made Provincial rotisserie chicken at Chicken Provence. At a cheap price, this artisanal food’s quality cannot be beaten.<br><br>
+
+                            Famous for its pork belly sandwich, Num Pang Sandwich Shop brings authentic Cambodian dishes to the streets of New York in six different parts of the city! If you love the Vietnamese banh mi, then you will adore Cambodian sandwiches, which are equally as delicious and filling!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/tavern29.jpg" %}"/>
+                            <h6>Tavern29</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a more health conscious takeout option, check out Natureworks, a healthy alternative claiming to use real food with no artificial preservatives, no unhealthy fats, no fake anything. Treat your body to a mouth-watering plate of healthy goodness.<br><br>
+
+                            The selections and variety are endless in Midtown East, so try some food today!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/raines.jpg" %}"/>
+                            <h6>Raines Law Room</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Midtown East is known for being the center of the city’s thriving nightlife, so here are just a few places you can get your drink on at!<br><br>
+
+                            A Midtown exclusive, Tavern29 is accessible for the whole day and night, where you can savor an exquisite bottomless brunch and take advantage of their authentic German Biergarten. Enjoy your great food with a buzz at night!<br><br>
+
+                            Appreciate the charm of old New York and the modern 21st century at Aretsky’s Patroon. Within four levels of an iconic Manhattan townhouse, a stylish clientele enjoys everything from relaxed lunches to intimate celebrations to festive rooftop cocktails, with one of the culinary world’s finest photography collections as a backdrop. The quintessential place for either a romantic dinner or a huge private event, this place is sure to please all.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Last but not least is a very dark, intimate, and hidden but beautiful space: Raines Law Room at the William. Fashioned as a speakeasy, the classy environment and experience is reminiscent of the 1920s. From the secret entrance to the dim lighting, you will be teleported back to a place that Gatsby may have frequented. Take your significant other there and enjoy the old money ambiance of the Roaring Twenties.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>In an immense place like New York City, finding the perfect club can be difficult. Let us help you out with some amazing options in Midtown East.<br><br>
+
+                            Unlike a generic club, the Japanese inspired nightclub Tokya brings a new flavor the NYC club scene. The owner Roee Nahmani cleaned up the previous establishment and added gold tiles, black couches, and silvery walls onto which Tokyo art is projected. Enjoy the best mixes by resident DJs Tam Tam and Tom Hovav and some of the best sushi in NYC prepared by the renowned Eiji Takase.<br><br>
+
+                            Out of the melting pot of clubs comes Babylon Hookah Lounge. The venue serves bold flavored hookah, which is the main attraction. In addition, the club features delicious Middle Eastern foods and delicacies, belly dancers, and bottle service. The exotic environment and collection of fantastic music playing makes the whole experience truly one of a kind and unbeatable.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/tokya.jpg" %}"/>
+                            <h6>Tokya</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>The nightlife in Midtown isn’t complete without the addition of a notable LGBTQ friendly dance club. Evolve houses a bowling alley length bar, probably the longest in New York, with even a backyard to enjoy if you’re looking for some quiet. The bartender is always at your service and ready to pour you a generous cocktail. What better way to represent one of the city’s most energetic communities than through Evolve!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/grandcentralmarket.jpg" %}"/>
+                            <h6>Grand Central Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>A favorite of many residents in Midtown and other neighborhoods, Grand Central Market contains almost every grocery item you could need. The Market is set up in a European style, where the food and goods are displayed for the shoppers to see from different vendors. Take a break from Seamless and walk down to The Market, where you won’t be disappointed!<br><br>
+
+                            For the largest variety of foods and ingredients, look no further than Kalustyan’s. This place is a conservatory for every possible spice, condiment, and sauce known to man, from Indian to Ethiopian, and everything in between. To add a whole new level to your cooking, make sure to check out Kalustyan’s.<br><br>
+
+                            This Japanese grocery and takeout spot is one of few in Midtown. Dainobu holds over 3,000 items from Japan, which vary from Japanese sweets, snacks, and groceries to Bento boxes and deli foods. Change up your diet with some onigiri or seaweed salad. They offer numerous options, all for a great price!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Liox Cleaners offers an innovative and convenient service, much different than generic laundry and dry cleaning services. Through its pick-up and drop-off services, you may never have to get up again for your laundry services! All this is done online and confirmation can be done through text for your comfort.<br><br>
+
+                            Known for their care and personable service, Champion Cleaners is another neighborhood favorite. Josh and his staff give personalized service to each one of their clients and will remember their regular customers. The service of Champion Cleaners is known to be of high quality, and the best part is that it’s reasonably priced and inexpensive.<br><br>
+                            Much like Liox Cleaners, 11 Goodly Laundromat also employs a pick-up and drop-off service with impeccable quality. The staff is very friendly and the laundry typically has a quick turnaround time. If you’re on the go and need something done in a hurry, this is the place to go!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/champion.jpg" %}"/>
+                            <h6>Champion Cleaners</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/morgan.jpg" %}"/>
+                            <h6>Morgan Library</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>A complex of buildings in the heart of New York City, The Morgan Library & Museum began as the private library of financier Pierpont Morgan, one of the preeminent collectors and cultural benefactors in the United States. As early as 1890 Morgan had begun to assemble a collection of illuminated, literary, and historical manuscripts, early printed books, and old master drawings and prints. Don’t miss out on rare medieval manuscripts, ancient tablets, and various other historical artifacts.<br><br>
+
+                            The New York Transit Museum Gallery Annex & Store doubles as a trinket shop where you can find many subway themed items to a museum with small exhibits about train systems around the world. Housed inside Grand Central Station, there is no better place to learn more about the transit system!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Founded in 2002, 59E59 Theaters presents Off-Broadway productions by not-for-profit companies from across the United States and around the world. The theatre is a spectacular modern complex with three stages and a lively bar on the mezzanine level. There are three distinct venues inside, where you can enjoy multiple plays throughout the year!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you want to broaden your cultural horizon, don’t hesitate to visit the Korean Cultural Service NY. This unique art gallery contains some of the most profound Korean art and educated cultural professionals to enlighten you about Korean culture. In addition to the various art works, the gallery has regular movie showings on classics from Korean cinema. The incredible library contains a collection of hundreds of Korean works and a flood of information on the interesting culture.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/korean.jpg" %}"/>
+                            <h6>Korean Culture Service</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/kamakura.jpg" %}"/>
+                    <h6>Kamakura</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Midtown East boasts one of the most expensive and luxurious shopping scenes in the area, and you will certainly enjoy the wonderful service that accompanies these stores.<br><br>
+
+                    First, if you’d like to be treated like royalty, Kamakura will surely provide the experience. They offer handmade Japanese clothing that is the finest materials, and their formal wear is the main attraction. Customers love their work shirts, which are very high end, and rave about their professional and sleek appearance. This is definitely the store to try if you want a special and distinguished look to add to your wardrobe.<br><br>
+
+                    Also located in Midtown East is Saks Fifth Avenue, a store that is iconic to New York City and globally recognized. Even if you’re not in town during the renowned window displays of the holiday season, step inside if you want to encounter some of the highest end clothing money can buy. The store is expensive, yes, but customers love the impeccable quality and service of this store, which definitely makes up for the cost.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Another luxurious place to shop is Dover Street Market, a seven story avant garde shopping center. With various designers and displays throughout the floors, you will feel like you are in an art gallery more than a clothing store. Even if you cannot afford the expense of shopping here, be sure to get inspired by walking through the many floors!</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/preschool.jpg" %}"/>
+                            <h6>The International Preschool</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For your child to gain a head start in the academic world, many notable institutions are readily available within the Midtown East neighborhood.<br><br>
+
+                            For those wanting a truly global experience, The International Preschool is just perfect. The school has three different locations in Manhattan, each benefiting from the community and resources of its nearby neighborhood. The school places a large emphasis on its international community, through advocacy of native cultures present in the classroom and the celebration of them. NYC’s diversity is epitomized through the values of the school.<br><br>
+
+                            Another truly unique preschool is the Lyceum Kennedy French International School. LK follows the National French guidelines and chooses to follow a curriculum designed to give children a bilingual experience of both English and French. An early knowledge of French can help students become future citizens of the world. The school also offers after school programs, summer programs and even a vacation program!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Midtown East provides some of the best universities in all of New York City with a great education.<br><br>
+
+                            One of New York City’s most prominent business schools, Baruch College has produced many successful alumni with its business driven curriculum and programs. It was ranked as the #4 top public school by US News and for good reason. Many of the students have internships and full-time jobs at the most renowned financial institutions from Goldman Sachs to JP Morgan.<br><br>
+
+                            For the more creative and fashion inspired bunch, LIM College provides a fashion intensive program. Undergraduate students must complete internships during three of their four years at the college. During freshman year, students work in a retail environment for 150 hours; sophomore year includes another 150-hour work experience, either at the retail managerial level or in a corporate setting.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/dramatic.jpg" %}"/>
+                            <h6>American Academy of Dramatic Arts</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re looking for a career on Broadway or on the big screen, check out The American Academy of Dramatic Arts, which has produced many successful entertainers such as Stephen Amell, Danny DeVito, Grace Kelly, and numerous others. Its reputation as the oldest acting conservatory only stands to show for how long the institution has produced high caliber actors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/epichybridtraining.jpg" %}"/>
+                            <h6>Epic Hybrid Training</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>For most New Yorkers, fitness isn’t just a hobby, but a way of life. Here are some locations where you can bring out your inner athlete.<br><br>
+
+                            A popular fitness hub in Midtown East, Epic Hybrid Training is known for its rigor and dynamic classes, ranging from an obstacle circuit, high octane conditioning, dynamic core, yoga, combination workouts and more. The gym is run by world-class coaches, so become part of a challenging and fun environment!<br><br>
+
+                            If you’re looking for more personalized training without the extra cost, look no further than Atomic Total Fitness. The trainers Adam, Shawn, and Lorenzo personalize training based on needs, interests, and workout styles. The gym offers gymnastics, weight training, yoga, and kickboxing.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>At Inform Fitness, personal trainers are not only always available, they are required! Each exercise is overseen by a certified and experienced trainer who will guide you through various workouts that only take a maximum of 30 minutes! Inform Fitness’ revolutionary slow and rest method has proven to be successful and yield great results.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Illnesses and serious conditions need to be treated with the upmost care and urgency, so it’s only natural to be informed about the best medical services in Midtown East.<br><br>
+
+                            CityMD is known for their exceptional and quick service. Run by an incredibly friendly staff and kept in a clean, quiet environment, CityMD makes sure its patients are at ease as soon as they step inside the facility. No appointments are required and walk-ins are welcome, where Board-Certified doctors will be at your service in no time.<br><br>
+
+                            Filled with world class doctors and a helpful staff, the New York University Medical Center houses many departments from pediatrics to neurology. The hospital is a hotbed of research and education, always on top of the newest innovations and state-of-the-art technology. One can truly feel at ease knowing they’re being treated by some of the most intelligent medical professionals in the world!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nyumc.jpg" %}"/>
+                            <h6>New York University Medical Center</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=midtown east, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ww.premiumlinkgenerator.com/">premium link generator overview</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
