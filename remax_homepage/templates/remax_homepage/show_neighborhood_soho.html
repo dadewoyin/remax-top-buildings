@@ -1,0 +1,322 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Known as a stylish, young area, SoHo is one of New York City’s favorite neighborhoods. The area is bordered by West Village, Greenwich Village, Little Italy, and Tribeca.<br><br>
+
+                As one of the most fashionable neighborhoods, SoHo boasts a variety of shopping opportunities. Of course, they carry their fair share of franchise department stores and clothing shops, such as Bloomingdale’s and Uniqlo, but they are really known for their unique custom clothing made in some SoHo boutiques. Whether you’re interested in custom Japanese denim or constructing your own shirt with personalized fabric, SoHo boutiques are perfect for you.<br><br>
+
+                In addition, SoHo’s food is top-notch, especially through its presentation of many fantastic French restaurants. No matter what you’re in the mood for, there is definitely a restaurant in SoHo to cover your desires. Be sure to grab a bite before heading out to one of the artistic offerings of the city, which is sure to entertain you and amaze you. Therefore, from its great food selection to amazing art galleries and entertainment, SoHo is the perfect blend of amazing qualities.<br><br>
+
+                In terms of real estate, SoHo is one of the hottest neighborhoods right now, with average rental prices at almost 50% above New York City average. Although it may be expensive to snag one of these amazing properties, the incredible SoHo neighborhood will make up for your empty wallet, and buying an apartment here could be a wise investment in the future. Be sure to look into buying/renting a great property in SoHo today!<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/mercer.jpg" %}"/>
+                            <h6>The Mercer Kitchen</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>SoHo has some awesome restaurant stops for you to enjoy, regardless of your palate or cravings.<br><br>
+
+                            First, check out L’Ecole if you’re interested in finding upscale French food on a budget. This authentic French restaurant boasts chefs from the International Culinary Institute that are in their final phase of training, offering you exceptional food at discounted prices! With constant variations to the menu, you definitely want to try this incredible restaurant.<br><br>
+
+                            Or, if you’re a fan of Jean-Georges, try his American spin off called The Mercer Kitchen. He offers eight different menus for various times of the day and occasions, and the decor and sophistication of the restaurant add to the fancy environment. Reviewers love their diversity of menu and freshness of ingredients, which is sure to make a impeccable meal.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>One of the most famous restaurants of SoHo is Balthazar, an amazing French restaurant that specializes in their dough and pastries, although everything on the menu is to die for. Whether you opt for their sit-down restaurant or just try their delicious pastries, you will remember to come back.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re more in a hurry, SoHo can definitely fill your stomach with one of their tasty restaurant options.<br><br>
+
+                            The highest rated and most well loved takeout restaurant in SoHo is Korchma Taras Bulba, an Eastern European (Ukrainian/Russian) joint located at 357 Broadway. If you’re in the mood for trying something new, they employ many exotic dishes, such as calf’s tongue, traditional blinli with caviar, and a classic cured herring salad. But don’t be alarmed if this isn’t your style, as they also offer popular dishes such as dumplings, savory pies, and many chicken and beef dishes.<br><br>
+
+                            One of the liveliest restaurants in SoHo is La Esquina Corner Deli. This restaurant offers very fresh Mexican food at low prices, and the flavors are impeccable. Come here if you’d like a quick meal with a wide variety of tastes to please your palate.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/esquina.jpg" %}"/>
+                            <h6>La-Esquina-Corner-Deli</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a sweet treat in the neighborhood, Georgetown Cupcakes is the place to visit. This store is an alternate location of the famous cupcake store in Washington DC, and the quality of cupcakes live up to their legacy. With many different flavors that rotate each day, as well as seasonal flavors and classics, there is always something new to try and enjoy. Be careful, because these cupcakes can become addicting!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/theship.jpg" %}"/>
+                            <h6>The Ship</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Everyone knows that SoHo has some of the best nightlife in all of New York City, but not many know what bars this actually comprises of. Let me assure you, there are plenty to choose from that you will surely be satisfied with!<br><br>
+
+                            For an elegant night at a bar decorated with ship parts, check out The Ship. They have some small bites food for you to nibble on while you enjoy a cocktail from their extensive list of options. Residents love this bar because of its great ambience, trendy crowd, and amazing cocktail combinations. Come try out this small little bar today!<br><br>
+
+                            If you’re looking for a marvelous place to eat during your night out, absolutely visit Ed’s Lobster Bar. Even though the prices are on the higher end, the food is definitely worth it-this restaurant houses some of the best lobster in New York City. Don’t forget to try some drinks too, because they are beautifully concocted and paired with your meal. This is an incredible place for a night out with friends.
+
+</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try the renowned Pegu Club for the perfect combination of everything a good bar should have! The ambience exudes a friendly, vibrant atmosphere without being too crowded or rambunctious. As for the drinks, Pegu Club ensures that they are made to perfection, and will gladly tailor a drink for you that’s not on the menu. You should definitely try this place while in SoHo for some great drinks and a fabulous night.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>As one of the most active nighttime neighborhoods, SoHo also boasts some amazing clubs that all residents enjoy.<br><br>
+
+                            For a cute Asian-style club that is always crowded and lively, check out Mister H. This is one of the most popular clubs in the area due to its great service, vibe, and drinks. You will definitely be impressed by their drink selection, as well as excellent DJ services offered. Come check out Mister H today!<br><br>
+
+                            Or, if you’re interested in singing the night away at a karaoke club, you must try Baby Grand. With an exceptional selection of drinks accompanied by the karaoke queue, you will certainly have a wonderful time regardless of whether you sing or not. This club does get pretty crowded, however, so it may take some time for your song to queue on the main stage-a great platform for a performance!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/misterh.jpg" %}"/>
+                            <h6>Mister H</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/deluca.jpg" %}"/>
+                            <h6>Dean & Deluca</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>There are many diverse specialty grocery stores for you to try in SoHo, or you can stick to the classic favorites that are also in the area.<br><br>
+
+                            For a great upscale shopping experience, no one can match the prestige of Dean & Deluca.  Although this is not the primary grocery store for many residents due to the extremely high prices, Dean & Deluca is the best place to pick up a few specialty items/ingredients to enjoy a special occasion. With a huge location and great selection, you are bound to find something that you’re looking for.<br><br>
+
+                            Or, one of the cheapest grocery stores in SoHo is also a favorite: 21 Crosby Deli. They have amazing sandwiches, Asian food, as well as ingredients for you to make your own food. At the low prices, no one can beat this terrific bang for your buck.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re interested in travelling to Spain without ever leaving SoHo, Despana is the perfect place for you. Their Spanish grocery stocks specialty items that you can normally only find in Spain, making it a fantastic one-of-a-kind store to stock up on some unique ingredients!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>No need to worry about your laundry needs, because SoHo houses some great laundromats to take care of you.<br><br>
+
+                            First, check out My Fresh Shirt, which has recently changed management and is now much improved. With cell phone apps, pre-scheduled pickup and delivery, and clear prices, My Fresh Shirt makes your laundry experience as convenient as possible while averting and confusion on prices or delivery times. Their quality of service is also fantastic, so you will definitely have a good experience here.<br><br>
+
+                            There are also other new laundromats/dry cleaners in the area, such as Tober Cleaners, so be sure to check them out as well.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/angelika.jpg" %}"/>
+                            <h6>Angelika Film Center</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>The culture of SoHo emphasizes the up-and-coming arts and entertainment, which the attractions in the neighborhood completely reflect.<br><br>
+
+                            First, if you like viewing limited release films, especially in the indie genre, Angelika Film Center is the perfect entertainment for you. Because they carefully choose the films that they show, you are sure to get a great selection and will not be disappointed with their quality. With friendly service and a cozy cafe located in the lobby, this is definitely a tremendous option.<br><br>
+
+                            Or, for something with more activity, rent a Citi Bike! This is a superb form of transportation, and an easy way to get a better look around New York City. With many drop-off locations, you can reach your next destination and relax without worrying about losing your bike.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a memorable event that combines a scavenger hunt, murder mystery, and performance, check out Accomplice The Show. One of the best hidden gems of the area, this performance is one-of-a-kind, and the interactive components are sure to keep you entertained. Come check out this great location today!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>As an artistic hub of New York City, SoHo displays art galleries of all styles and price-points for you to enjoy.<br><br>
+
+                            One of the most expensive galleries in the area is Opera Gallery, a beautiful quaint location that belongs to an international district of galleries. They offer a ton of artwork in their exhibitions for you to admire, and display a variety of styles to please all types of viewers. Be sure to walk through Opera Gallery while in SoHo.<br><br>
+
+                            Or, check out AFA, another free gallery that you can feel free to peruse or even buy a unique piece. With so many different artists and collections, you will definitely like the selection that is on display at AFA. Even if you don’t buy anything, you will surely have a great experience looking around at the amazing artwork.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/afa.jpg" %}"/>
+                            <h6>AFA</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another contemporary gallery in SoHo is Pop International Gallery, which features some of the greatest living and famous artists of the time period, including Andy Warhol, Basquiat, and Haring. They also feature newer artists with artwork that is just as impressive, so be sure to check it out today.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/propercloth.jpg" %}"/>
+                    <h6>Proper Cloth</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>SoHo is also known as one of the best shopping neighborhoods in the area, so their selection of boutiques and unique stores will not disappoint.<br><br>
+
+                    If you’re looking for something different to add your clothing collection, Blue in Green is perfect for you. They offer premium Japanese denim, and they tailor and hem each pair of pants individually to ensure the ideal fit. They also carry Kapital clothing, another Japanese line of products, which is very popular and provides a great fit.<br><br>
+
+                    For an offbeat store that is definitely not for everyone, check out The Evolution Store. With a selection of skulls, anatomical jewelry, and posters galore, you are sure to find something unique as a gift for family and friends while visiting this store. They also have wonderful customer service to add to the experience!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Another great shopping site in SoHo is Proper Cloth, a men’s clothing store. With reasonable prices, customized fits, and a wide variety of fabrics, you can create any clothing to exactly suit your style! Their website also includes a detailed breakdown on the fabrics that they provide, so you can research before heading to the store for a quicker turnaround time.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/ischool.jpg" %}"/>
+                    <h6>NYC iSchool</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Although the schools in SoHo are not renowned among New York City, your children can still get a great education right within the neighborhood.<br><br>
+
+                    One of the selective schools located in SoHo is NYC iSchool, a public school that focuses on defining a new learning model that adapts to 21st century needs. With great individualized attention and dedication to the fulfillment of each student, NYC iSchool is an exceptional high school choice for many students. This school is relatively new, as it only opened in 2008, so your children will definitely acquire a fresh educational experience at this school.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Or, maybe your children want to attend Chelsea Career and Technical Education Center, which trains students in technical abilities to prepare them for jobs in the real world.With partners from various mechanical and other technical firms throughout the city, Chelsea Career and Technical Education Center does its best to equip each student with the tools necessary to succeed beyond the classroom.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ufc.jpg" %}"/>
+                            <h6>UFC Gym</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Getting in shape is no easy task, but SoHo makes it easy with its various options for gyms and fitness.<br><br>
+
+                            First, one of the most intense workout facilities in SoHo is UFC Gym. With a variety of classes and never having to pay more than one month for a membership, UFC is perfect for getting in shape at a low cost. They have many different classes that are tailored to various goals and exercises, so be sure to choose one that is best for you.<br><br>
+
+                            You may be surprised how difficult the workouts are at SLT, a pilates and yoga studio that focuses on reformer classes. You will definitely feel the burn at this facility, as each of these classes pushes you to your very limit without hesitation. With helpful and supportive instructors, SLT is a great environment to quickly get in shape.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another pilates and yoga facility is ZenGirl Fitness & Pilates, which offers everything from classes to personal training. They have a ton of different equipment to help you get in shape, and their classes are always filled quickly. This place has instructors with great credentials, so try out a class today.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re in need of a doctor, the SoHo area will provide you with great choices whose primary concern is your health.<br><br>
+
+                            For women who are looking for an OB/GYN, Spring OB/GYN is the perfect option. Their doctors are caring and attentive, and will guide you through each step of the pregnancy and birthing process. All of the doctors here are highly recommended by many residents in the area. Or, for something a little more unconventional, there is a Hypnobirth location in SoHo, which seeks to relieve all birthing pain and stress through self-hypnotism. If this sounds like it could work for you, check it out!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/springderm.jpg" %}"/>
+                            <h6>Spring Street Dermatology</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>A great dermatologist in the area is Spring Street Dermatology, which can take care of all of your skin problems. Their doctors are very empathetic to your situation, so you will definitely be in good hands if you visit this practice. Although the doctors are very busy, they will always see you in a time of need, and answer your questions. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=soho, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://www.premiumlinkgenerator.com/">premium link generator </a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
