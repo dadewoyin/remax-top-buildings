@@ -1,0 +1,365 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                The West Village is one of the most loved spots in New York City, due to its seamless integration of food, bars, and shopping into one quaint and adorable neighborhood. The area is bordered by Greenwich Village, Chelsea, and SoHo, and is located in the downtown area.<br><br>
+
+                Even though everything in the West Village appears to be charming and relaxed, the reality is that the neighborhood is always fast paced and lively. With so many residents, as well as tourists and residents from the surrounding neighborhoods, there are countless people ready to experience the enchantment of the West Village.<br><br>
+
+                The favorite spots of residents in the West Village are the West Village restaurants and bars. Offering an eclectic variety of restaurant options, there is a price point and cuisine to please everyone at one of their many venues. In terms of the West Village bar scene, they have more than enough choices to spend every night at a different location. This selection, as well as the supreme quality of all of these restaurants and bars, make West Village many people’s first choice for a night out.<br><br>
+
+                In terms of real estate, the high demand matches the high prices for the West Village area. Even though the median sale price decreased last year, the average rental price is still almost 50% above the New York City average. However, whatever the cost, the West Village apartments are worth the investment, as they will truly boost your standard of living.<br><br>
+
+                Therefore, whether you enjoy West Village restaurants and bars, the great shopping scene, or classic West Village apartments, you should definitely consider West Village for your next investment.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/theplace.jpg" %}"/>
+                            <h6>The Place</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking for some amazing food with diverse tastes, West Village has just the place for you.<br><br>
+
+                            First, check out Malatesta Trattoria, a low-key authentic Italian trattoria with homemade pastas that are a staple of this hidden West Village gem. With a variety of dishes and Italian decor, Malatesa Trattoria will leave you feeling like you escaped to Italy for the night.<br><br>
+
+                            If you are in the mood for something more romantic, then look no further than The Place.  The fireplace, candles, twinkly lights, and the Mediterranean/new-American menu ensure The Place is one of the most romantic spots in the West Village.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For one of the most upscale restaurants of the city, try Mas Farmhouse. This restaurant, although very expensive, offers farm to table dishes of the highest quality. Try out the chef’s tasting menu for the best picks of the menu, or adventure out for yourself with an original pick.<br><br>
+
+                            The array of different restaurants and cuisines make the West Village New York City’s food hotspot.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If interested in a quick and easy bite in the West Village, there are many takeout selections that will definitely not disappoint.<br><br>
+
+                            The West Village is full of oyster bars, and Pearl Oyster Bar is one of the best in Manhattan. If you are a seafood lover, the reasonable priced all seafood menu is sure to satisfy.<br><br>
+
+                            Or, visit the highest-rated takeout restaurant of the West Village, Taim. Their Middle Eastern food includes many vegetarian options, and they are known particularly for their falafel combinations. Take your pick of the green, red, or harissa falafel sandwich and enjoy the fabulous flavors.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/oyster.jpg" %}"/>
+                            <h6>Pearl Oyster Bar</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a marvelous Thai restaurant that will certainly delight your taste buds, try out Pinto. Be sure to sample one of their homemade drinks, including iced tea and lychee, and with their very reasonable prices, cost will certainly not be an issue. With traditional Thai fare as well as modern Thai concoctions for you to try out, Pinto will surely offer you something that tastes great.<br><br>
+
+                            If you’re looking for a healthy stop after an active day, Westville is the perfect restaurant choice for you. They provide your choice of ingredients for salads, sandwiches and more, as well as amazing fries if you’re feeling unhealthy. Be sure to check out this institution of West Village today.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/otherroom.jpg" %}"/>
+                            <h6>The Otherroom</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Whether you’re looking for a relaxed environment or a lively bar with entertainment, West Village has a great location for you to try.<br><br>
+
+                            One of the most successful bars of Manhattan is Employees Only, a lively setting of wonderful food and drinks within the West Village. A night there will be one of entertainment and surprise, with cocktails constantly being churned out by the polite staff. You will definitely cherish the night here at Employees Only as long as you’re okay with standing room only and a very crowded environment.<br><br>
+
+                            For a romantic ending to a night out, visit The Otheroom. Tucked away from the main attractions of the West Village, The Otheroom creates an amazing atmosphere of intimacy and coziness. You will certainly revel in the great setting as you enjoy a glass of wine and relax.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you’re interested in a hip bar located in the West Village, check out Greenwich Treehouse, a sporty location with superb beers. If you come during the happy hour, the prices are only $4! Greenwich Treehouse is never too overcrowded, so you will definitely like a quieter location if you’re looking to settle down.<br><br>
+
+                            Regardless of your choice, West Village absolutely has a fantastic bar for you to enjoy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For an even more exciting experience in the West Village, try out one of the many clubs in the area.<br><br>
+
+                            One of the best and most upscale clubs in all of New York City is the Top of The Standard, a very exclusive location in West Village. If you do manage to get in, you will enjoy views of New York City from every angle of the club, as well as amazing drinks-with a very high price tag. Or, for a more affordable venue to try out, visit Le Bain, which is also located in The Standard. This location has a more dance club environment, with great music and entertainment.<br><br>
+
+                            If you’re looking to find an event space that will definitely keep you dancing even when there is seemingly no music, you must try Quiet Events-Quiet Clubbing. With special headphones that you can change the station on to determine your DJ preferences, you will never be bored with the music selection!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/standard.jpg" %}"/>
+                            <h6>Top of the Standard</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/gourmet.jpg" %}"/>
+                            <h6>Gourmet Market</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Whether you’re looking to cook the most extravagant meal of your life or searching to stock up on everyday items, the grocery stores of West Village will definitely help you find what you need.<br><br>
+
+                            For ingredients of top quality and diversity, check out Gourmet Garage. They have the highest-end cheese, seafood, bread, produce, and other products, as well as pre-prepared dishes for your enjoyment. Be sure to find a secondary grocery store for your everyday needs, as these ingredients are only for special occasions!<br><br>
+
+                            If you’re searching for a store that delivers 24/7 and has a wide selection of products, you must try Abingdon Market. Their great service and convenience comes at a price, but it is well worth the costs due to their excellent products.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of the supermarket you choose, the West Village has plenty of aisles stocked up with groceries for you to purchase.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>West Village also has some exceptional laundromats and dry cleaning services to attend to all of your attire.<br><br>
+
+                            First, check out Christopher Street Cleaners for your laundry or dry cleaning needs, as they have very reasonable prices and are also attentive. Their reviewers have also cited that they are very skilled with tailoring and dry cleaning maintenance, making this a great option to choose as your laundromat.<br><br>
+
+                            Or, if you’re looking for a cheap and quick laundry services that has delivery for only one dollar, visit Jane Laundromat. You cannot beat the prices or the convenience of this laundromat, ensuring that you will get a good bang for your buck.<br><br>
+
+                            You’s Cornelia Street Laundromat is another wonderful choice for your clothing needs, as they also offer cheap services without skimping on the quality. With a quick turnaround and friendly service, this laundromat is a wash-and-fold favorite for many of the area.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/alchemical.jpg" %}"/>
+                            <h6>Alchemical Theatre Laboratory</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Because of the vibrant atmosphere of the West Village, there is always something new and exciting to try.<br><br>
+
+                            First, if you like the performing arts and are interested in recording studios, check out the Alchemical Theatre Laboratory. They offer a variety of performances that are constantly alternating, as well as acting and performance classes for those that wish to dive a little bit deeper into the performing arts. With a dynamic atmosphere and energy flowing throughout the studio, this is definitely an inspiring venue.<br><br>
+
+                            For some extraordinary jazz music with accompanying drinks and other games, try Fat Cat. They offer ping pong, pool, and shuffleboard, all while listening to some amazing live music and relaxing in the atmosphere of the venue. This place has something for everyone to try, so bring some friends and enjoy Fat Cat today.<br><br>
+
+                            Therefore, there is surely a great attraction waiting for you right in the West Village.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’re searching for jewelry and artwork that is selected with impeccable taste and style, Christopher 19 is the store for you. With quality jewelry that has been handpicked, as well as fine art lining the walls, there will definitely be a high class piece that you enjoy.<br><br>
+
+                            Or, check out Ivy’s if you’re looking for a homey art gallery with an adjustable space and dynamic artwork. Ivy’s displays predominantly contemporary artwork through all artistic mediums, including photography, paintings, and sculptures. Be sure to check it out today!<br><br>
+
+                            A more eclectic gallery choice would be Underline Gallery, located on West 14th Street. Through unusual mediums such as puppetry and dance, as well as more conventional forms like paintings, sculptures, books, and photography, Underline Gallery captures the creativity of the arts and its fluidity.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ivybrown.jpg" %}"/>
+                            <h6>Ivy Brown Gallery</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, the West Village certainly contains its fair share of art galleries filled with unusual and diverse styles for you to enjoy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/darling.jpg" %}"/>
+                    <h6>Darling</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Just like its diversity in artwork, West Village offers a variety of shopping styles within the small neighborhood. Whether you’re looking for a thrift store or boutique, West Village has it all.<br><br>
+
+                    One of the great thrift shops of the area is Housing Works Thrift Shop. They sell secondhand designer clothing at a very discounted price, so you can enjoy the luxury of this attire without the exorbitant costs. The store is also loved by residents of the West Village for supporting HIV/AIDS through its proceeds.<br><br>
+
+                    For a high-quality jewelry store in the West Village, check out Stick, Stone & Bone. They stock amazing crystals that are personally selected, as well as various trinkets to place around the house. With an attentive staff that seeks to take care of all of your needs, you cannot go wrong at this store. Or, Considerosity also offers a limited jewelery selection for you to take a look at, but they are more well known for their stationery and gifting materials. Stop in to pick out a reasonably priced product today!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>If you’re looking for a boutique within the West Village, look no further than Darling, a cute clothing store with a unique style. They carry many fashionable designers, all located within a beautiful West Village Townhouse. Check it out today if you are interested in picking out some new clothing.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#early">Early Education</a></li>
+                <li><a data-toggle="tab" href="#uni">University</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="early" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/ps41.jpg" %}"/>
+                            <h6>PS 41 Greenwich Village School</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>West Village has a very high caliber of education displayed through its public schools.<br><br>
+
+                            Send your children to PS 41 Greenwich Village School if you want them to receive one of the best educations in all of New York City. They surpass all of the educational benchmarks with flying colors, all while offering an education that is focused on each individual student and their success.  Their core values and great studying habits provide an amazing foundation for middle school and high school excellence.<br><br>
+
+                            In addition, PS 3 Charrette School is a strong academic option for elementary students. With a focus in the arts and attention to the diversity of the student body, Charrette distinguishes itself through its sense of community and coordination, all while offering a sense of individuality to each student to further develop themselves.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Regardless of which school you choose in the West Village district, you will not be disappointed by the quality.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>While the main university in the area is NYU, located in Greenwich Village, there are still a few options for universities located right in West Village.<br><br>
+
+                            If you’re interested in studying the arts, Pratt Institute has a satellite campus located right within West Village. They have created amazing graduate programs to enrich your artistic knowledge base along with the 3,000 undergraduates located on the main campus. Recently ranked first for fine arts programs, Pratt Institute is definitely top caliber if you are interested in the arts, and offers many different programs to choose from.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pratt.jpg" %}"/>
+                            <h6>Pratt Institute</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/equinoxwestvillage.jpg" %}"/>
+                            <h6>Equinox</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking to get a great workout in West Village, the gyms and fitness options will not disappoint.<br><br>
+
+                            For an exceptional workout with trainers that push you to your limit, try a session at DogPound. They offer a few different methods, including The Machine, a mix of many different exercises with no breaks in between, The Bomb which focuses on cardio and intensity, The Smash, weight and strength training, The Beast, with challenges to beat your best efforts, and The Booty, which focuses on the glutes. If one of these workouts sounds right for you, check out DogPound today!<br><br>
+
+                            Or, one of the highest-end gyms is Equinox, which offers a spa, gym, and many other amenities within its facility. With a membership, you can receive access to endless classes, as well as their other amenities on site. Their classes and personal training really show results, so membership at this club is definitely a great choice.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>West Village is also well-equipped with hospital and doctor facilities to assist you in any medical need.<br><br>
+
+                            If your animals are the ones feeling sick, no worries! Just stop by the West Village Veterinary Hospital. With veterinarians, surgery facilities, labs, and emergency care all located within the same building, this is the only place in the West Village to trust with all of your veterinary needs. They treat animals with respect and compassion, and will surely offer the same kindness to your pets should they need assistance.<br><br>
+
+                            For humans, there is a Beth Israel Medical Center located in the West Village, which is perfect as a primary care facility and regular doctors office. They also provide pediatric care for your children, at a completely clean and friendly facility. This Beth Israel Medical Center can also attend to any urgent care needs, even though it is not a hospital.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/westvillagevet.jpg" %}"/>
+                            <h6>West Village Veterinary Hospital</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/highline.jpg" %}"/>
+                    <h6>The High Line</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The West Village is home to perhaps the most parks in all of New York City, and their wide variety will leave you with options for for any occasion.<br><br>
+
+                    The most popular park of West Village is The High Line, a serene retreat from the bustle of New York City. Running over the city, The High Line offers beautiful views from every location. From tours to athletic events to artistic ventures, this park definitely will please adults and children alike. You have to visit to believe its spectacular location!<br><br>
+
+                    Or, if you prefer a walk through a quiet garden, Jefferson Market Garden will be perfect for you. This impeccably maintained garden features a private oasis that is run entirely by their volunteer organization. The entire atmosphere of Jefferson Market Garden is magical, so take a walk through it today./p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>If you have kids, then perhaps you’d like to take them to Downing Street Playground, home of the Sir Winston Churchill Square. Whether you’re looking to relax in the square or frolic around the playground, Downing Street Playground has something for everyone to enjoy.<br><br>
+
+                    So, check out one of these beautiful and amazing parks today if you are looking for some enjoyment in West Village.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=west village, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://www.premiumlinkgenerator.com/">premium link generator </a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
