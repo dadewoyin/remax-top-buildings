@@ -1,0 +1,323 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                The Flatiron District is a downtown neighborhood located near Gramercy Park and Chelsea, and named after the iconic Flatiron Building on 23rd Street.<br><br>
+
+                Because of its close proximity to the main attractions of New York City, as well as its professional appeal, the Flatiron District maintains a fusion of a working class and tourist environment. This neighborhood is lively and constantly offers new happenings, so you will always be busy if you end up in Flatiron.<br><br>
+
+                One of the main attractions of the Flatiron District is obviously the Flatiron Building, which was completed in 1902 and is now a National Historic Landmark. Countless tourists and residents alike flock to the Flatiron Building every day to enjoy its beauty and unusual shape. Right next to the Flatiron Building lies Madison Square Park, a beloved beautiful 6.2-acre public park. Madison Square Park has been serving New Yorkers with numerous art shows, music events, dance performances, and children’s activities throughout the years, and is a favorite for its annual street vendor gatherings.<br><br>
+
+                Flatiron is one of the most sought after areas Downtown, and as such, real estate prices are significantly higher than the New York City average. With a lower turnaround rate, you’ll be lucky to snag one of these amazingly located properties.<br><br>
+
+                Therefore, the Flatiron District is the perfect spot to experience the vibrancy of New York City while still maintaining a professional environment.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/burdick.jpg" %}"/>
+                            <h6>LA Burdick</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking to splurge, try the Southern restaurant Maysville. Even though this sandwich joint is slightly more expensive than an average New York meal, the quality matches the prices.<br><br>
+
+                            Of course, you can’t stay in Flatiron without trying Eataly, which houses a variety of smaller Italian restaurants at an affordable price. Offering a separate store for each aspect of Italian cuisine, they have been able to master each taste perfectly. Their complex includes a fine dining restaurant, Manzo, which you should try for a high quality experience. Be sure to stop by one of their dessert stores, like Il Gelato or their bakery Focaccia to finish off the meal!<br><br>
+
+                            If instead you’re interested in a sweet ending to a luxurious night, pick up handmade chocolates at L.A. Burdick. With gourmet pastries and speciality items, they are sure to end your dining with delight.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>If you’d like to try street vendor cuisine right on Madison Square Park, visit Broadway Bites or Madison Square Eats. Set up with multiple vendors and cuisines, they offer delicious choices at a reasonable cost. Some highlights of the vendors are Calexico’s Mexican food, Melt with its delicious ice cream sandwiches, and Roberta’s Pizza, but feel free to explore yourself!<br><br>
+
+                            Another hotspot of Madison Square Park is Shake Shack. Known for its exquisite hamburgers, shakes, and fries, you cannot beat the location while enjoying a bite to eat.<br><br>
+
+                            For a treat to cool off after an amazing lunch right near Madison Square Park, visit Ralph’s Famous Italian Ice. With dozens of flavors, from Rainbow Cookie to Malibu Bay Breeze and even Strawberry Margarita, you will surely find a unique taste to love.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/dough.jpg" %}"/>
+                            <h6>Dough Doughnuts</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, for a fantastic donut and a guilty pleasure, visit Dough Doughnuts. From Chocolate Salted Caramel to Passion Fruit to Dulce de Leche, they will leave you satisfied and wishing for more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/cellar.jpg" %}"/>
+                            <h6>The Cellar</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking to relax in a night of luxury, Flatiron has the perfect nightlife atmosphere for you!<br><br>
+
+                            Raines Law Room provides a romantic setting and usually quick seating at their quality cocktail lounge, and you will surely have a pleasant and relaxing experience. Or, try Dear Irving, another luxurious cocktail lounge that is owned by the same people as Raines Law Room, and offers live jazz music. For a night of full entertainment, try the NoMad Bar, a quintessential Flatiron stop complete with high-quality cocktails.<br><br>
+
+                            If you’re looking for something to eat while you enjoy your night, try The Cellar. It’s known for its mac and cheese, and the food is as delicious as their wine bar, which supplies many options in a cellar-esque setting. For something even more luxurious, visit the Flatiron Room. With its live jazz and blues, you will instantly feel the sense of opulence and leisure as you have fun at their fabulous whiskey bar.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So if you’re looking for a fabulous night of drinks and a relaxing time, check out the nightlife of Flatiron. You will not be disappointed!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Flatiron also houses some entertaining clubs if you are looking for a lively and fun night.<br><br>
+
+                            For a fun dance club with good vibes and fantastic drinks, visit Toshi’s Living Room. This place is especially known for its parties and special events, which adds to the experience. They will usually offer live music to complete the excitement of an amazing night.<br><br>
+
+                            Or, visit Room Service to be treated to a incredible scene for a weekend night, as it is only open on Thursdays, Fridays, and Saturdays. They have dancing, both with DJs and live bands, as well as drinks with impeccable service.<br><br>
+
+                            Therefore, regardless of the club you choose, Flatiron’s nightlife will employ some exciting entertainment for your satisfaction.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/toshisliving.jpeg" %}"/>
+                            <h6>Toshis Living Room</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/sunac.jpg" %}"/>
+                            <h6>Sunac Fancy Food</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In terms of grocery options, Flatiron supplies everything from specialty stores to organic food selections.<br><br>
+
+                            If you’re looking to try some ethnic food or specialty items, seek out Kalustyan’s. They offer many food items that are unique to certain cultures, and will allow you to experiment in cooking new and exciting foods. Kalustyan’s also produces international specialty food for you to love.
+                            <br><br>
+                            For a more traditional option with a great deli and organic foods, shop at Fairway Market. This supermarket can function as your default grocery store, or you can shop specifically for its meats and special items. Fairway Markets has distinguished itself as having a high level of service with employees that will be sure to help you out.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, for some upscale specialty items that are prepared for your convenience, try Sunac Fancy Food. They provide many different international items to enjoy, and use as many natural and fresh ingredients as possible.<br><br>
+
+                            Shopping in Flatiron is made easy with this wide variety of food choices and supermarkets.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Flatiron offers many professional laundry, dry cleaning, and tailoring services to aid in your clothing needs.<br><br>
+
+                            If you’re ever faced with the unfortunate situation of bedbugs in your house, call upon Bed Bug Laundry NYC. They offer pickup and delivery services all around New York City, and clean all of the laundry to make your job of getting rid of bedbugs so much easier. Their washes are also chemical free, so they are child and pet friendly.<br><br>
+
+                            For a traditional dry-cleaners, visit the Murray Hill Valet Service location. They provide many choices for dry cleaning, including a same day service, which is very convenient for your immediate needs. Their great service and reputation makes them an excellent selection for you.<br><br>
+
+                            So, whatever your laundry needs, Flatiron will certainly have an option for an amazing clean.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/culinaryed.jpg" %}"/>
+                            <h6>Institute of Culnary Education</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re feeling adventurous in Flatiron, try out a demo at the Institute of Culinary Education, which houses some of New York City’s most renowned chefs. Their classes will guide you and hone your skills, and they also employ walking tours of the markets and gardens if you’re looking for insight into finding the fresh food of the city.  Or, you may find yourself at one of the many events hosted at the Institute, whether it be a cooking class or formal banquet.<br><br>
+
+                            For those seeking an added thrill, visit Westside Rifle & Pistol Range. The only shooting range in New York City, this exhilarating adventure will be sure to create a memorable experience. And, New York City legislation does not require a permit to fire the .22 caliber rifle, making for a quick process of credentials so you can swiftly start your shooting experience.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Therefore, Flatiron will definitely provide exactly the type of entertainment that you are looking for.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>For some cultural insight and an amazing viewing experience in Flatiron, visit the art gallery Tibet House US. This gallery, founded on request from the Dalai Lama himself, provides a unique view into the beauty and elegance of Tibetan culture, and is part of a worldwide movement to keep Tibetan culture alive. While visiting, you can walk through the gallery and admire pieces of Tibetan culture, both modern and historic.<br><br>
+
+                            Or, to view some modern and cutting-edge artwork, try out the Lilac Gallery. They always have several different exhibitions to view, and their tasteful choices are sure to leave you feeling like an art connoisseur.<br><br>
+
+                            So, if you are looking to view some artwork conveniently located in Flatiron, these incredible galleries are sure to please.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/tibet.jpg" %}"/>
+                            <h6>Tibet House US</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>So, if you are looking to view some artwork conveniently located in Flatiron, these incredible galleries are sure to please.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/pippin.jpg" %}"/>
+                    <h6>Pippin Vintage Jewelry</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The shopping scene at Flatiron includes a diverse range of products, from classic jewelry to custom-made carpets. Your home decor will surely stand out after browsing all the stores that Flatiron has to offer.<br><br>
+
+                    For cute kitchen and bath items to furnish your house with, stop by Fish Eddys. They offer a variety of plating options, from China to mason jars, all in a charming setting for the customer to enjoy. Or, if you’re looking to tackle a bigger project such as carpeting, visit ABC Carpet and Home. Made with natural fibers, these custom carpets can be made in any material or shape, which is ideal for expressing your personal style.<br><br>
+
+                    If you’re interested in vintage items, the Flatiron District will not disappoint. Pippin Vintage Jewelry provides one-of-a-kind classic and unique jewelry, as well as a cute location. For the music-lover, Academy Records stocks a wide collection of CDs, vinyls, as well as the modern listening networks if you are not interested in their vintage material.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Regardless of your personal style or shopping desires, Flatiron will offer you the perfect store and a convenient location to satisfy your needs!</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/ballet.jpg" %}"/>
+                    <h6>Ballet Tech</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>If you have children living in Flatiron, you will not be disappointed with their quality of education or available greenery for free time.<br><br>
+
+                    Located in Flatiron, Ballet Tech is a premier public school dancing academy that offers admission based on talent to many age groups. Coupled with good academics, Ballet Tech is a great option for a dance-inclined child.<br><br>
+
+                    In terms of public high schools, Manhattan Village Academy and School of the Future High School both are focused on a high standard of academics, with School of the Future High School maintaining many connections with the art and technical world.  Also located in Flatiron is the Flatiron School, which employs premier computer science classes to build the code of the future. Regardless of the age level of education, Flatiron has a lot to offer in their public school systems.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/lotus.jpg" %}"/>
+                            <h6>Laughing Lotus</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>Unsurprisingly due to its amazing location, the Flatiron District has recently been nicknamed the Fitness District. The workout centers definitely live up to the new title, with these amenities being a key factor for residents of this area.<br><br>
+
+                            If you’re looking for a vibrant new workout opportunity, visit the 305 Fitness Center. This gym features a workout dance party style with a young, enthusiastic environment to accompany it.<br><br>
+
+                            Or, if you are looking for the perfect yoga spot, try Laughing Lotus. This yoga center features a unique combination of high energy yoga, and provides the ideal atmosphere for exercise.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For those looking for a country club-esque workout facility, the New York Health and Racquet Club is renowned for its amenities. They offer a pool, sun deck, steam room, and sauna along with their large workout facilities and classes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p> In case of an injury or sickness, the health quality of the Flatiron District is superb. You may want to check into the Bellevue Hospital Center. Distinguished as the oldest hospital that is still in operation, over 500,000 patients make rounds through Bellevue every year. Besides its great all-around service and care, Bellevue hosts the only Psychiatric Emergency Service for children in all of New York. In fact, patients travel from all over the city to this hospital, ensuring its quality and utility to Flatiron. There are also many options of distinction at any of the surrounding specialty medical centers that are at your disposal in the case of a rare circumstance. Whatever the ailment, Flatiron is sure to provide premier health care to its residents.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/bellevue.jpg" %}"/>
+                            <h6>Bellevue Hospital</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/madisonpark.jpg" %}"/>
+                    <h6>Madison Square Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Flatiron is located right next to Madison Square Park, where children and adults alike can savor their food options, greenery, and playground. Founded in 1847, this park is renowned for hosting many events and activities throughout the years alongside its iconic three statues. Madison Square Park features up-and-coming artwork for everyone to enjoy, with frequent exhibits as well as sculptures located throughout the park.  There are also constant events, including concerts and playground exhibits, for everyone to love. Or, come to the park to relax from the hustle and bustle of the Flatiron neighborhood and to have a good time. Regardless of your activity of choice, you will be sure to enjoy Flatiron’s beautiful Madison Square Park.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=flatiron, new york&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="http://premiumlinkgenerator.com">premium link generator for 2016!</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
