@@ -43,10 +43,12 @@
     min-width: 100%;
 }
 
+/* Text on top of neighborhood image in grid */
 .imgNeighborhoodName {
     margin-top: -90px;
     text-align: center;
     color: #FFFFFF;
+    position: absolute;
 }
 
 /* Link to "top" in neighborhood properties nav */
@@ -95,4 +97,15 @@
 }
 .map {
     margin-bottom: 5px; 
+}
+
+#neighborhoodsGrid img {
+    /*-webkit-transition: 0.3s;*/
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+
+#neighborhoodsGrid img:hover {
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
 }
