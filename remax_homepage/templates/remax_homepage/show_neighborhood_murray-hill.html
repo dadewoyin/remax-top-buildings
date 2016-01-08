@@ -1,0 +1,336 @@
+{% extends "remax_homepage/base.html" %}
+{% load staticfiles %}
+
+{% block title %} RE/MAX NYC | {{ neighborhood }} {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br>{{ name }}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">{{ neighborhood }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive center-block" src="{% static dir %}"/>
+        </div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                Murray Hill is a rectangular area in Midtown East, bordered by Turtle Bay, Kips Bay, and Midtown.<br><br>
+
+                This neighborhood is usually considered one of the most desirable ones in vicinity of Midtown business district due to its location and affordability. Murray Hill consists of a splendid mix of brownstone apartments, condominiums, coops, and row houses, which are classic characteristics of the Murray Hill Historic District. Murray Hill now is moving away from its traditionally quiet reputation towards hip and more fashionable, which is drawing in a younger crowd to the area.<br><br>
+
+                Known as much for its nightlife as its architecture and location, Murray Hill is a spot that you want to spend the night at. Whether a lively club or a relaxed bar, there is definitely a scene for everybody, even within the small area. Residents flock from all over New York City to experience this classic nightlife scene.<br><br>
+
+                While in the area, many people love to try the various restaurants, and with the diverse offerings from steak to Japanese, you will certainly enjoy the wide palate that Murray Hill provides. For any health considerations, the Murray Hill Medical Group will take care of your needs. Known for their great service and wide capabilities, Murray Hill Medical Group is a favorite for residents and visitors alike for their health concerns.<br><br>
+
+                In terms of real estate, Murray Hill offers considerably lower prices than other neighborhoods in the area. This makes the Murray Hill area a perfect place to consider for your next rental or purchase, as you will certainly get an exceptional bang for your buck. With an increased value based on units sold, as well as a dramatic increase of listings, it is the time to move to Murray Hill.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="neighborhoodProperties">
+        <li class="active"><a data-toggle="tab" href="#food">Food</a></li>
+        <li><a data-toggle="tab" href="#nightlife">Nightlife</a></li>
+        <li><a data-toggle="tab" href="#dailyerrands">Daily Errands</a></li>
+        <li><a data-toggle="tab" href="#attractions">Attractions</a></li>
+        <li><a data-toggle="tab" href="#shopping">Shopping</a></li>
+        <li><a data-toggle="tab" href="#school">School</a></li>
+        <li><a data-toggle="tab" href="#health">Health</a></li>
+        <li><a data-toggle="tab" href="#parks">Parks</a></li>
+        <li><a href="{% url "show_top_buildings" neighborhood=original %}">Top</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="food" class="tab-pane fade in active">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#fine">Fine Dining</a></li>
+                <li><a data-toggle="tab" href="#take">Takeout</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="fine" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/kajitsu.jpg" %}"/>
+                            <h6>Kajitsu</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking for a great place to eat in Murray Hill, their fine dining will not disappoint!<br><br>
+
+                            At the Japanese restaurant Kajitsu, there are numerous vegetarian and vegan choices furnished with attentive service. The owner and chef here are dedicated to pursuing a healthy lifestyle and an emphasis on every detail, as shown through their organic ingredients and elaborate dishes.<br><br>
+
+                            Or, check out La Brochette, a Kosher steakhouse with a great selection of sushi and sashimi. Not only is the food here irresistible, but also the ambiance is perfect for a romantic evening. With candles, delicious food, lovely decorations, and thoughtful service, taking your date here for an amorous dinner can never go wrong.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>For a traditional American cuisine with personal chef service, Juni on 31st Street between Madison Avenue and 5th Avenue is your best choice. With exquisite layouts of all the dishes, dining here not only pleases the palate but excites your eyes. For dinner, you can simply choose from herbivore, omnivore, and chef’s tasting menus, and then your personal chef will carefully select ingredients accordingly to prepare a series of dishes for you to enjoy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="take" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>There are many casual dining selections in Murray Hill that will definitely keep you coming back for more.<br><br>
+
+                            First, check out Chicken Provence, which is a place that supplies various types of delicious chicken dishes. Even though this restaurant has a few tables and seats inside, the restaurant is used predominantly for takeout and delivery. As a result, they are experts with time management, and before you know it, you can walk away with a mouthwatering sandwich or a rotisserie meal with any types of sides you like.<br><br>
+
+                            If you like anything spicy, you should certainly try Mapo Tofu, located on Lexington Avenue between 39th Street and 40th Street. Named after one of the well-known Chinese spicy dishes made with tofu and shredded pork, this restaurant employs a tremendous selection of Chinese food. Dan Dan Noodles are highly recommended because of their delectable smell and taste.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/bareburger.jpg" %}"/>
+                            <h6>Bareburger</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Another restaurant to visit is Pio Pio, which offers authentic Latin American and Peruvian cuisine. While only paying for one dish, you can order a matador combo that is more than enough for sharing between two, ensuring that you get a great bang for your buck. Also, this restaurant was highly acclaimed, as it was one of the top Favorite Restaurants in New York on Yelp.<br><br>
+
+                            If you’re interested in a well-made burger without paying an exorbitant price, check out Bareburger on 3rd Avenue between 34th Street and 35th Street. You can have your burger custom-made so that its exactly the style and taste you’re craving.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nightlife" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#bar">Bar</a></li>
+                <li><a data-toggle="tab" href="#club">Club</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="bar" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/teds.jpg" %}"/>
+                            <h6>Ted's Corner Tavern</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>In addition to great restaurants, the bars of Murray Hill will definitely impress.<br><br>
+
+                            Try out Ted’s Corner Tavern, which offers not only superb drinks but also a cozy warm ambiance with a sense of history. With a few drinks in this relaxed environment, you can feel the history and magic associated with this tavern.<br><br>
+
+                            Any New York City resident must visit a rooftop bar if they’re over 21 years old, where they will be able to admire the breathtaking skyline of one the greatest cities in the world while enjoying a casual drink and friendly conversations. Pod 39 Hotel Rooftop Lounge & Bar on the rooftop of Pod 39 Hotel on 39th Street between Lexington and 3rd Avenue provides all of these extraordinary features, and is furnished with vintage furniture and decorations.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Bar Rua on 3rd Avenue between 33rd Street and 34th Street is a sports bar with happy hour throughout the weekdays. You can watch your favorite games with a group of friends while enjoying a pitcher of beer along with snacks and awesome service.<br><br>
+
+                            Yearning a drink at a comfy and cozy place? Go check out Raines Law Room at the William. Uncountable liquor bottles are artistically yet casually arranged on the shelves on the walls, giving this space a sense of art and class.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="club" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Murray Hill’s nightlife scene definitely extends to clubbing, and there are many great options within the area.<br><br>
+
+                            Babylon Hookah Lounge, as you can probably tell by the name, provides a fantastic selection of drinks and hookah with assorted flavors. A DJ and belly dancers are featured here during the weekends. It is a great place with a loose ambiance where you can just let go and dance away all you want.<br><br>
+
+                            If you’d like an amazing view of the iconic Empire State Building and Chrysler Building, check out Rare View Rooftop, a New Yorker favorite.  As the rooftop deck opens early, you’ll have plenty of time to grab a seat while waiting for the nighttime festivities. Sipping your drink while watching the light of Empire State flickering and changing colors is absolutely memorable.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/babylon.jpg" %}"/>
+                            <h6>Babylon</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dailyerrands" class="tab-pane fade in"><br>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#grocery">Grocery</a></li>
+                <li><a data-toggle="tab" href="#laundry">Laundry</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="grocery" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>One of the perks of living in Murray Hill is that even though they are known for their nightlife, their everyday amenities are high-quality as well.<br><br>
+
+                            First, try 765 Produce if you’re looking to find something fresh and exciting to add to your grocery list. Whether you’re trying to find ingredients or an already prepared meal, 765 Produce definitely has what you’re looking for. They offer large takeout boxes for you to fill with the food of your choice if you’re buying from their fresh selection, or else a regular shopping area for your basic grocery needs.<br><br>
+
+                            If you’re looking for more of a convenience store-type setting, Elly’s Deli is the place for you. Their main attraction is their deli, where they can make you sandwiches or slice meats for you to take home. They also stock many snacks, drinks, and basic ingredients for your primary grocery needs. </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="laundry" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>If you need to clean your clothes after endless nights of events, Murray Hill has the ideal laundromat for you.<br><br>
+
+                            One of the best parts about Champion Cleaners is the service. You know that when the first thing people talk about is the amazing attention to detail and kind welcome, your experience here will definitely be enjoyable. They have a satisfaction guarantee and a high quality clean, perfect for anyone’s needs.<br><br>
+
+                            For those who are busy or lazy, 11 Goodly Laundromat is the choice for you. With free pickup and delivery, this laundromat offers a great standard of service. Or, some residents choose to do the wash-and-fold themselves, which is cheap and quick at this efficient store.<br><br>
+
+                            Another resident favorite is Cambridge Cleaners & Valets, which is a resident favorite. People love the quality, reasonable costs, respectful service, and overall experience that they receive at Cambridge. This is truly a laundromat that has everything you could hope for.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="attractions" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#shows">Shows & Museums</a></li>
+                <li><a data-toggle="tab" href="#art">Art Galley</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="shows" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/pierpont.jpg" %}"/>
+                            <h6>Pierpont Morgan Library</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking to relax and enjoy some of the great attractions in the area, look no further than Murray Hill itself.<br><br>
+
+                            The most popular attraction of the neighborhood is The Morgan Library & Museum, a historical site that houses some of the most beautiful relics of history. If you’re interested in viewing anything from famous manuscripts to books, music to drawings, or even ancient works of art, visit The Morgan today. Although admission is reasonably priced, if you come on Free Friday, your admission is free!<br><br>
+
+                            Another cultural hub located in Murray Hill is Scandinavia House, a collection of works to represent the Swedish, Finnish, Danish, Icelandic, and Norwegian cultures. They offer movies from these countries, as well as art exhibits which are representative of the culture of Scandinavia. This collection is truly fascinating and informative, so be sure to try it out today!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Check out one of these culture centers today to step back and admire great pieces of history.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Along with the cultural attractions, there are beautiful art galleries to visit and enjoy in Murray Hill.<br><br>
+
+                            First, an art gallery that also offers framing and repair services for your art is Decor Art Gallery. If you’re using one of those services, they have free delivery and complete the job to a great caliber and attention to detail. The gallery displays a variety of pieces, from classic to modern, that are appealing to many age groups. This gallery is definitely one to stop at today!<br><br>
+
+                            Another dual framing shop and art gallery is Galleria on Third, an art gallery owned by an artist that is very interested in talking about all works, whether you bring them in or are looking at the gallery. With a fine selection of artwork that you can take a look at while waiting for your framing job to be completed, this is the perfect combination of art and service.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/decor.jpg" %}"/>
+                            <h6>Decor Art Gallery</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopping" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/pookie.jpg" %}"/>
+                    <h6>Pookie & Sebastian</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Murray Hill residents love to shop! There are a ton of great boutiques and stores to choose from within this small neighborhood.<br><br>
+
+                    Located on 3rd Avenue between 35th and 36th Street, Pookie & Sebastian is a boutique shop that specializes in women’s clothes. You can find a lovely selection of cute tops, capris, denim, and jewelry here, as well as attentive and considerate service. The atmosphere here is fun and flirtatious, which is reflected in their clothing and style. You will definitely enjoy this different and fresh contemporary boutique.<br><br>
+                    Another terrific choice is Reverence Apparel, located on 36th Street between 2nd Avenue and 3rd Avenue. They specialize in comfort and athletic wear that is both inspirational and stylish. Check out one of their tops or leggings to be the best dressed at your next athletic class.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Ladies, if you’re trying to find an exceptional lingerie store, look no further than Linda’s Bra Salon. They will personally measure you and ensure that you have the best bras to fit your body! Plus, they carry swimwear during the summer, as well as underwear for the whole year. This is absolutely a place that you would want to try.</p>
+                </div>
+            </div>
+        </div>
+        <div id="school" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/ps281.jpg" %}"/>
+                    <h6>PS 281 The River School</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>The education of the entirety of Midtown East is high-quality and full of waitlists, but thanks to the new addition of an elementary school in Murray Hill, getting into a great school for your child is one step easier.<br><br>
+
+                    The fabulous new school that is just opening is PS 281 The River School. Located in District 2, this school does not yet have much information, except that it is expected to dramatically reduce the waitlists at other Midtown East elementary schools. There are very high expectations for this fantastic new opportunity for your children.<br><br>
+
+                    One of the most sought after elementary schools currently in Midtown East is PS 59 Beekman Hill International School. The entire school was just redone in 1992, complete with a new exterior, roof terrace, multipurpose room, teacher’s lounge, computer room, and a room dedicated to the arts. Aside from the marvelous upgrades, residents love this school because of its great academics and placement into middle and high schools.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>A high school is also located in the Murray Hill area, namely, Murray Hill Academy. This high school is dedicated to many interactions between student and teacher so that the student can feel emotional and school support during their learning. With an emphasis on support, Murray Hill Academy surely has a lot to offer to all of its students.</p>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-pane fade in">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#gym">Gym</a></li>
+                <li><a data-toggle="tab" href="#hospital">Hospital</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="gym" class="tab-pane fade in active"><br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/solace.jpg" %}"/>
+                            <h6>CrossFit Solace</h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>If you’re looking to work out within the area of Murray Hill, the gyms and fitness places will not disappoint.<br><br>
+
+                            First, Blink Fitness is a great option if you’re looking for a simple, clean space with reliable equipment to work out at. Its bright and colorful space offers the energy that you desire, and the affordable prices just sweeten the deal. With a variety of classes to choose from as well as a large space to work out at on your own, anything is possible at this Blink location.<br><br>
+
+                            Or, check out Absolute Fitness if you’d like a great experience with personal trainers geared towards weight loss. They have convenient 30 minute sessions, so you can easily fit fitness into your everyday schedule.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Of course, there is a crossfit located in the area, named CrossFit Solace. While their emphasis is on the foundation and proper technique, once you get started you will not believe how much information there is to learn about this unique exercise. They provide top equipment in a clean space, which is perfect for any fitness plan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hospital" class="tab-pane fade in"><br>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Murray Hill is also very well equipped with hospitals and healthcare facilities right within the neighborhood, so you will not have to worry about your health needs.<br><br>
+
+                            First, if your pet is in need of care in Murray Hill, don’t worry: the Murray Hill Pet Hospital is here to help! These veterinarians are focused on providing a premier level of care and individualized attention to each of their patients. Their services include preventive medical care, x-rays, surgery, and labs for your pet to use.<br><br>
+
+                            For more serious situations, New York Doctors Walk-in Urgent Care is conveniently located in Murray Hill. Besides urgent care, they also offer general care, physicals, labs, and vaccines, making this a great place to be your primary doctors office. They also have an extensive collection of articles on various conditions for you to read about and get informed.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-responsive" src="{% static "images/nydoctors.jpg" %}"/>
+                            <h6>New York Doctors Walk-in Urgent Care</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Or, try out Murray Hill Medical Group, which has doctors of nearly every specialty, including cardiology, dermatology, gynecology, rheumatology, podiatry, and many more. Their doctors have a reputation for a high level of care, so you will definitely be treated well while at this facility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="parks" class="tab-pane fade in"><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-responsive" src="{% static "images/vartan.jpg" %}"/>
+                    <h6>St. Vartan Park</h6>
+                </div>
+                <div class="col-lg-8">
+                    <p>Even though the neighborhood is small, Murray Hill also provides some great green areas for children to play and adults to relax at.<br><br>
+
+                    First, check out St. Vartan Park, a facility that offers amenities ranging from baseball fields and basketball courts to football fields and playgrounds. There is also a lot of green space to enjoy a picnic or a stroll through the fresh air, which is a perfect place to collect your thoughts or just unwind. The park was recently renovated in 2000, and now features new playground equipment, benches, curbs, and fences, which only adds to the appeal of the beautiful space. Be sure to check out this location today!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Another park located in the Murray Hill area is Murray Hill Playground, which is much smaller yet exciting for kids! There are handball courts on the premises, as well as an open grassy area to lounge around on. You should definitely try out this gem if you are looking for a treat!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<div class="container">
+    <div class="col-xs-12">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=murray hill, new york&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com
+        </a></small></div><div><small><a href="https://ultimatewebtraffic.com/">buy website traffic</a></small></div></iframe>
+    </div>
+</div><br><br>
+
+{% endblock content %}
