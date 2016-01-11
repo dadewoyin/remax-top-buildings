@@ -15,8 +15,8 @@ $(document).ready(function(){
             "filter":"grayscale(0%)"});
         }, function(){
         $(this).prev().css({
-            "-webkit-filter":"grayscale(100%)",
-            "filter":"grayscale(100%)"
+            "-webkit-filter":"grayscale(60%)",
+            "filter":"grayscale(60%)"
         });
     });
 });

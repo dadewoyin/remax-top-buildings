@@ -36,11 +36,6 @@
     padding-right: 10px;
 }
 
-/* Move content from behind nav */
-.padding {
-    padding-top: 40px;  
-}
-
 /* Show More Page Header */
 .floatleft {
     float: left;    
@@ -57,7 +52,7 @@
 }
 
 #pageFooter {
-    background-color: #000000;
+    background-color: #2c2c2c;
     /*background-color: #B41C30;*/
     color: #FFFFFF;
 }
@@ -80,9 +75,11 @@
 /* Coloring effect for grid of neighborhood images */
 #neighborhoodsGrid img {
     /*-webkit-transition: 0.3s;*/
-    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-    filter: grayscale(100%);
-    padding-bottom: 30px;
+    -webkit-filter: grayscale(60%); /* Chrome, Safari, Opera */
+    filter: grayscale(60%);
+    padding-bottom: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 #neighborhoodsGrid img:hover {
@@ -90,11 +87,25 @@
     filter: grayscale(0%);
 }
 
+/* Get rid of padding on grid of neighborhoods */
+#neighborhoodsGrid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#neighborhoodsGrid div {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 /* Text on top of neighborhood image in grid */
 .imgNeighborhoodName {
     margin-top: -120px;
     text-align: center;
     color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
 }
 
