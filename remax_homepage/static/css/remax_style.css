@@ -10,7 +10,7 @@
 
 /* Splash screen */
 #loader div {
-    position: absolute;
+    position: fixed;
     background: url("http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif");
     background-repeat: no-repeat;
     background-position: center;
@@ -20,7 +20,7 @@
 }
 
 #loader {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     background-color: #FFFFFF;
@@ -105,7 +105,6 @@
     margin-top: -120px;
     text-align: center;
     color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
 }
 
@@ -155,4 +154,72 @@
 }
 .map {
     margin-bottom: 5px; 
+}
+
+#contactline {
+    background-color: black;
+    width: 60px;
+    height: 2px;
+    margin: auto;
+}
+#form {
+    width: 300px;
+    margin: auto;
+    padding-top: 30px;
+}
+.forminput {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+    height: 30px;
+    border-radius: 3px;
+}
+.selectinput {
+    margin-bottom: 20px;
+}
+#textarea {
+    height: 150px;
+}
+#submit {
+    width: 70px;
+    margin: auto;
+    margin-bottom: 30px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #515151;
+    border: none;
+    color: white;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+}
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center; 
+}
+.socialmedia {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.socialicon {
+    width: 40px;
+    height: 40px;
+    margin-right: 3px;
+    text-decoration: none;
+}
+.link:hover {
+    text-decoration: none;
+}
+.centered {
+    width: 325px;
+    margin: auto;
+    padding-bottom: 30px;
 }

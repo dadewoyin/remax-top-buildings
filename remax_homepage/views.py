@@ -33,3 +33,6 @@ def show_building_profile(request, neighborhood, rank):
         "remax_homepage/show_building_profile_"+neighborhood+"-"+rank+".html", 
         {"rank": rank,
          "neighborhood": neighborhood.title().replace("-", " ")})
+
+def contact_page(request):
+    return render(request, "remax_homepage/contact_page.html", {})
