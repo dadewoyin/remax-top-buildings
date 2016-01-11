@@ -1,18 +1,51 @@
+* {
+    font-family: "Lora";
+}
+
+/* Delete gradient and apply white background */
+#pageHeader {
+    background-image: none;
+    background-color: #FFFFFF;
+}
+
+/* Splash screen */
+#loader div {
+    position: absolute;
+    background: url("http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 600;
+    width: 100%;
+    height: 100%;
+}
+
+#loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 10;
+}
+
 #compLogo {
+    padding-top: 3px;
     height: 45px;
 }
 
 #headerSearch {
     padding-right: 10px;
 }
+
 /* Move content from behind nav */
 .padding {
     padding-top: 40px;  
 }
+
 /* Show More Page Header */
 .floatleft {
     float: left;    
 }
+
 .rating {
     padding-top: 0px;   
 }
@@ -24,7 +57,8 @@
 }
 
 #pageFooter {
-    background-color: #B41C30;
+    background-color: #000000;
+    /*background-color: #B41C30;*/
     color: #FFFFFF;
 }
 
@@ -43,9 +77,22 @@
     min-width: 100%;
 }
 
+/* Coloring effect for grid of neighborhood images */
+#neighborhoodsGrid img {
+    /*-webkit-transition: 0.3s;*/
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    padding-bottom: 30px;
+}
+
+#neighborhoodsGrid img:hover {
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
+}
+
 /* Text on top of neighborhood image in grid */
 .imgNeighborhoodName {
-    margin-top: -90px;
+    margin-top: -120px;
     text-align: center;
     color: #FFFFFF;
     position: absolute;
@@ -97,15 +144,4 @@
 }
 .map {
     margin-bottom: 5px; 
-}
-
-#neighborhoodsGrid img {
-    /*-webkit-transition: 0.3s;*/
-    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-    filter: grayscale(100%);
-}
-
-#neighborhoodsGrid img:hover {
-    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
-    filter: grayscale(0%);
 }
