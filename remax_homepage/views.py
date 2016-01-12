@@ -36,3 +36,9 @@ def show_building_profile(request, neighborhood, rank):
 
 def contact_page(request):
     return render(request, "remax_homepage/contact_page.html", {})
+
+def privacy_page(request):
+    return render(request, "remax_homepage/privacy_page.html", {})
+
+def terms_of_use(request):
+    return render(request, "remax_homepage/terms_of_use.html", {})

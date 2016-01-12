@@ -11,4 +11,6 @@ urlpatterns = [
     url(r"^top/(?P<neighborhood>.*)/(?P<rank>[0-9]+)$", views.show_building_profile, name="show_building_profile"),
     url(r"^top/(?P<neighborhood>.*)$", views.show_top_buildings, name="show_top_buildings"),
     url(r"^contact$", views.contact_page, name="contact_page"),
+    url(r"^privacy-policy$", views.privacy_page, name="privacy_page"),
+    url(r"^terms-of-use$", views.terms_of_use, name="terms_of_use"),
 ]
